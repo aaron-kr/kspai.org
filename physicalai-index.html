@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>한국피지컬AI학회 | Korean Society of Physical AI</title>
+<meta name="description" content="한국피지컬AI학회 및 한국피지컬AI교육연구소 - 물리적 세계와 인공지능의 융합 연구">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-deep: #0a0e17;
+  --bg-card: #111827;
+  --bg-card-hover: #1a2332;
+  --accent-cyan: #06d6a0;
+  --accent-blue: #118ab2;
+  --accent-warm: #ef8354;
+  --text-primary: #e8edf5;
+  --text-secondary: #8b95a8;
+  --text-muted: #5a6478;
+  --border-subtle: rgba(255,255,255,0.06);
+  --border-accent: rgba(6,214,160,0.25);
+  --glow-cyan: rgba(6,214,160,0.15);
+  --glow-blue: rgba(17,138,178,0.12);
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ── UTILITY ── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.en { font-family: 'Space Grotesk', sans-serif; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+.accent { color: var(--accent-cyan); }
+.accent-warm { color: var(--accent-warm); }
+
+/* ── ANIMATED BACKGROUND ── */
+.bg-grid {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(6,214,160,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6,214,160,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.bg-glow {
+  position: fixed; z-index: 0; pointer-events: none;
+  width: 600px; height: 600px; border-radius: 50%;
+  filter: blur(120px); opacity: 0.4;
+}
+.bg-glow-1 { top: -200px; right: -100px; background: var(--glow-blue); }
+.bg-glow-2 { bottom: -200px; left: -100px; background: var(--glow-cyan); opacity: 0.2; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10,14,23,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: all 0.3s ease;
+}
+nav .container {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none; color: var(--text-primary);
+}
+.nav-logo-icon {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 900; font-size: 14px; color: var(--bg-deep);
+  letter-spacing: -0.5px;
+}
+.nav-logo-text { font-weight: 700; font-size: 15px; letter-spacing: -0.3px; }
+.nav-logo-text .sub { font-size: 11px; color: var(--text-secondary); font-weight: 400; display: block; line-height: 1.2; margin-top: 1px; }
+.nav-links { display: flex; gap: 6px; list-style: none; }
+.nav-links a {
+  color: var(--text-secondary); text-decoration: none;
+  padding: 8px 16px; border-radius: var(--radius-sm);
+  font-size: 14px; font-weight: 500; transition: all 0.2s;
+}
+.nav-links a:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+.nav-links a.active { color: var(--accent-cyan); }
+.lang-toggle {
+  font-size: 12px; padding: 6px 12px;
+  border: 1px solid var(--border-subtle); border-radius: 20px;
+  color: var(--text-secondary); background: transparent;
+  cursor: pointer; transition: all 0.2s;
+}
+.lang-toggle:hover { border-color: var(--accent-cyan); color: var(--accent-cyan); }
+
+.mobile-menu-btn { display: none; background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 24px; }
+
+/* ── HERO ── */
+.hero {
+  position: relative; z-index: 1;
+  min-height: 100vh; display: flex; align-items: center;
+  padding-top: 64px;
+}
+.hero-inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center;
+  padding: 80px 0;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 16px 6px 8px;
+  background: rgba(6,214,160,0.08);
+  border: 1px solid var(--border-accent);
+  border-radius: 20px;
+  font-size: 12px; color: var(--accent-cyan);
+  margin-bottom: 28px;
+  animation: fadeSlideUp 0.8s ease-out;
+}
+.hero-badge-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent-cyan);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+.hero h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 900; line-height: 1.2;
+  letter-spacing: -1.5px;
+  margin-bottom: 10px;
+  animation: fadeSlideUp 0.8s ease-out 0.1s both;
+}
+.hero h1 .line2 {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-subtitle-en {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px; color: var(--text-secondary);
+  font-weight: 500; margin-bottom: 32px;
+  animation: fadeSlideUp 0.8s ease-out 0.2s both;
+}
+.hero-desc {
+  font-size: 16px; color: var(--text-secondary);
+  line-height: 1.9; max-width: 520px;
+  margin-bottom: 40px;
+  animation: fadeSlideUp 0.8s ease-out 0.3s both;
+}
+.hero-actions {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  animation: fadeSlideUp 0.8s ease-out 0.4s both;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: var(--radius-sm);
+  font-size: 14px; font-weight: 600; text-decoration: none;
+  transition: all 0.3s ease; cursor: pointer; border: none;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  color: var(--bg-deep);
+  box-shadow: 0 4px 24px rgba(6,214,160,0.25);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(6,214,160,0.35); }
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+}
+.btn-outline:hover { border-color: var(--accent-cyan); color: var(--accent-cyan); }
+
+/* Hero Visual */
+.hero-visual {
+  position: relative; display: flex; justify-content: center;
+  animation: fadeSlideUp 1s ease-out 0.3s both;
+}
+.hero-orb {
+  width: 400px; height: 400px; position: relative;
+}
+.hero-orb-ring {
+  position: absolute; border-radius: 50%;
+  border: 1px solid rgba(6,214,160,0.12);
+  animation: spinSlow 20s linear infinite;
+}
+.hero-orb-ring:nth-child(1) { inset: 0; }
+.hero-orb-ring:nth-child(2) { inset: 30px; border-color: rgba(17,138,178,0.15); animation-direction: reverse; animation-duration: 15s; }
+.hero-orb-ring:nth-child(3) { inset: 60px; border-color: rgba(6,214,160,0.08); animation-duration: 25s; }
+.hero-orb-center {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px; height: 160px;
+  background: radial-gradient(circle, rgba(6,214,160,0.2), rgba(17,138,178,0.1), transparent);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+}
+.hero-orb-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--accent-cyan);
+  text-transform: uppercase; letter-spacing: 2px;
+  text-align: center; line-height: 1.6;
+}
+.hero-orb-dot {
+  position: absolute; width: 8px; height: 8px;
+  background: var(--accent-cyan);
+  border-radius: 50;
+  box-shadow: 0 0 12px var(--accent-cyan);
+}
+.hero-orb-dot:nth-child(5) { top: 0; left: 50%; transform: translateX(-50%); }
+.hero-orb-dot:nth-child(6) { bottom: 30px; right: 30px; background: var(--accent-blue); box-shadow: 0 0 12px var(--accent-blue); }
+.hero-orb-dot:nth-child(7) { bottom: 30px; left: 30px; background: var(--accent-warm); box-shadow: 0 0 12px var(--accent-warm); }
+
+@keyframes spinSlow { to { transform: rotate(360deg); } }
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── STATS BAR ── */
+.stats-bar {
+  position: relative; z-index: 1;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 48px 0;
+}
+.stats-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.stat-item { text-align: center; }
+.stat-number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 36px; font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 4px;
+}
+.stat-label { font-size: 13px; color: var(--text-secondary); }
+
+/* ── SECTIONS ── */
+section {
+  position: relative; z-index: 1;
+  padding: 100px 0;
+}
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--accent-cyan);
+  text-transform: uppercase; letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+.section-title {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 800; letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+.section-subtitle {
+  font-size: 16px; color: var(--text-secondary);
+  max-width: 600px; margin-bottom: 56px;
+}
+
+/* ── ABOUT (Two Orgs) ── */
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.org-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  transition: all 0.3s ease;
+  position: relative; overflow: hidden;
+}
+.org-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue));
+  opacity: 0; transition: opacity 0.3s ease;
+}
+.org-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); }
+.org-card:hover::before { opacity: 1; }
+.org-card:nth-child(2)::before {
+  background: linear-gradient(90deg, var(--accent-warm), #e76f51);
+}
+.org-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; margin-bottom: 24px;
+}
+.org-icon.society { background: rgba(6,214,160,0.1); color: var(--accent-cyan); }
+.org-icon.institute { background: rgba(239,131,84,0.1); color: var(--accent-warm); }
+.org-name { font-size: 22px; font-weight: 800; margin-bottom: 4px; }
+.org-name-en {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px; color: var(--text-muted);
+  margin-bottom: 20px;
+}
+.org-desc {
+  font-size: 15px; color: var(--text-secondary);
+  line-height: 1.9; margin-bottom: 24px;
+}
+.org-features { list-style: none; }
+.org-features li {
+  padding: 8px 0;
+  font-size: 14px; color: var(--text-secondary);
+  display: flex; align-items: center; gap: 10px;
+}
+.org-features li::before {
+  content: '→'; color: var(--accent-cyan); font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.org-card:nth-child(2) .org-features li::before { color: var(--accent-warm); }
+
+/* ── RESEARCH AREAS ── */
+.research-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.research-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 36px 28px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+.research-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+.research-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px; color: var(--text-muted);
+  margin-bottom: 16px; letter-spacing: 1px;
+}
+.research-title {
+  font-size: 17px; font-weight: 700;
+  margin-bottom: 10px;
+}
+.research-desc {
+  font-size: 13px; color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ── NEWS / ANNOUNCEMENTS ── */
+.news-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.news-main {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(6,214,160,0.06), rgba(17,138,178,0.04));
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  position: relative; overflow: hidden;
+}
+.news-main::after {
+  content: ''; position: absolute; top: -50%; right: -20%;
+  width: 400px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(6,214,160,0.06), transparent);
+  pointer-events: none;
+}
+.news-tag {
+  display: inline-block;
+  padding: 4px 12px; border-radius: 4px;
+  font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+.news-tag.announcement { background: rgba(6,214,160,0.15); color: var(--accent-cyan); }
+.news-tag.event { background: rgba(239,131,84,0.15); color: var(--accent-warm); }
+.news-tag.call { background: rgba(17,138,178,0.15); color: var(--accent-blue); }
+.news-title { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+.news-excerpt { font-size: 15px; color: var(--text-secondary); line-height: 1.8; }
+.news-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; color: var(--text-muted);
+  margin-top: 16px;
+}
+
+.news-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+.news-item:hover { border-color: var(--border-accent); }
+.news-item .news-title { font-size: 17px; }
+.news-item .news-excerpt { font-size: 14px; }
+
+/* ── MEMBERSHIP CTA ── */
+.cta-section {
+  text-align: center;
+  padding: 100px 0;
+}
+.cta-box {
+  background: linear-gradient(135deg, rgba(6,214,160,0.08), rgba(17,138,178,0.05));
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  padding: 72px 48px;
+  max-width: 800px; margin: 0 auto;
+  position: relative; overflow: hidden;
+}
+.cta-box::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(6,214,160,0.05), transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(17,138,178,0.05), transparent 50%);
+  pointer-events: none;
+}
+.cta-title {
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 800; letter-spacing: -0.5px;
+  margin-bottom: 16px; position: relative;
+}
+.cta-desc {
+  font-size: 16px; color: var(--text-secondary);
+  margin-bottom: 36px; position: relative;
+}
+
+/* ── FOOTER ── */
+footer {
+  position: relative; z-index: 1;
+  border-top: 1px solid var(--border-subtle);
+  padding: 64px 0 40px;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.footer-brand { }
+.footer-logo {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 16px;
+}
+.footer-logo-icon {
+  width: 32px; height: 32px;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 900; font-size: 12px; color: var(--bg-deep);
+}
+.footer-logo-name { font-weight: 700; font-size: 15px; }
+.footer-about { font-size: 13px; color: var(--text-secondary); line-height: 1.8; max-width: 320px; }
+.footer-col-title {
+  font-size: 12px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--text-muted); margin-bottom: 20px;
+}
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a {
+  font-size: 14px; color: var(--text-secondary);
+  text-decoration: none; transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--accent-cyan); }
+.footer-bottom {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 24px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-copy { font-size: 12px; color: var(--text-muted); }
+.footer-contact-info { font-size: 12px; color: var(--text-muted); }
+.footer-contact-info a { color: var(--accent-cyan); text-decoration: none; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 968px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+  .hero-desc { margin-left: auto; margin-right: auto; }
+  .hero-actions { justify-content: center; }
+  .hero-visual { order: -1; }
+  .hero-orb { width: 280px; height: 280px; }
+  .about-grid { grid-template-columns: 1fr; }
+  .research-grid { grid-template-columns: 1fr 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .news-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .mobile-menu-btn { display: block; }
+  .hero-inner { padding: 40px 0; }
+  .research-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  .cta-box { padding: 48px 24px; }
+  .org-card { padding: 32px 24px; }
+  .news-main { padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Background Effects -->
+<div class="bg-grid"></div>
+<div class="bg-glow bg-glow-1"></div>
+<div class="bg-glow bg-glow-2"></div>
+
+<!-- ─── NAVIGATION ─── -->
+<nav>
+  <div class="container">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon en">PAI</div>
+      <div class="nav-logo-text">
+        한국피지컬AI학회
+        <span class="sub en">KSPAI</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about" class="active">소개</a></li>
+      <li><a href="#research">연구분야</a></li>
+      <li><a href="#news">소식</a></li>
+      <li><a href="#join">회원가입</a></li>
+      <li><a href="#contact">문의</a></li>
+    </ul>
+    <button class="lang-toggle en" onclick="alert('Language toggle coming soon!')">EN / KO</button>
+    <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span class="en" style="font-weight:500;">Founding 2025</span>
+        </div>
+        <h1>
+          물리 세계를 이해하는<br>
+          <span class="line2">지능의 새로운 지평</span>
+        </h1>
+        <p class="hero-subtitle-en en">Korean Society of Physical AI &amp; Research Institute</p>
+        <p class="hero-desc">
+          한국피지컬AI학회는 물리적 세계와 인공지능의 융합을 선도하는 학술 공동체입니다. 
+          로보틱스, 체화지능, 자율시스템, 디지털 트윈 등 피지컬 AI의 핵심 분야를 연구하고 
+          차세대 융합 인재를 양성합니다.
+        </p>
+        <div class="hero-actions">
+          <a href="#join" class="btn btn-primary en">Join Us →</a>
+          <a href="#about" class="btn btn-outline">학회소개 보기</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-orb">
+          <div class="hero-orb-ring"></div>
+          <div class="hero-orb-ring"></div>
+          <div class="hero-orb-ring"></div>
+          <div class="hero-orb-center">
+            <div class="hero-orb-label">Physical<br>AI</div>
+          </div>
+          <div class="hero-orb-dot"></div>
+          <div class="hero-orb-dot"></div>
+          <div class="hero-orb-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── STATS BAR ─── -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number en">6+</div>
+        <div class="stat-label">핵심 연구 분야</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number en">2</div>
+        <div class="stat-label">산하 기관</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number en">2025</div>
+        <div class="stat-label">창립 연도</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number en">∞</div>
+        <div class="stat-label">가능성</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── ABOUT ─── -->
+<section id="about">
+  <div class="container">
+    <div class="section-label mono">About Us</div>
+    <h2 class="section-title">두 기관, 하나의 비전</h2>
+    <p class="section-subtitle">피지컬 AI의 학술 연구와 교육을 통합적으로 추진하는 자매 기관입니다.</p>
+
+    <div class="about-grid">
+      <!-- Society Card -->
+      <div class="org-card">
+        <div class="org-icon society">🏛</div>
+        <h3 class="org-name">한국피지컬AI학회</h3>
+        <p class="org-name-en en">Korean Society of Physical AI (KSPAI)</p>
+        <p class="org-desc">
+          피지컬 AI 분야의 학술 연구, 국내외 학술대회 개최, 논문 심사 및 출판, 
+          산학연 협력을 통한 기술 발전을 선도하는 학술 단체입니다.
+        </p>
+        <ul class="org-features">
+          <li>학술 논문지 발간 및 논문 투고 시스템</li>
+          <li>연차 학술대회 및 워크숍 개최</li>
+          <li>국제 학술 교류 및 협력</li>
+          <li>산학연 공동 연구 프로젝트</li>
+          <li>학회지 및 뉴스레터 발행</li>
+        </ul>
+      </div>
+
+      <!-- Institute Card -->
+      <div class="org-card">
+        <div class="org-icon institute">🔬</div>
+        <h3 class="org-name">한국피지컬AI교육연구소</h3>
+        <p class="org-name-en en">Korean Institute of Physical AI Education &amp; Research</p>
+        <p class="org-desc">
+          피지컬 AI 분야의 교육 과정 개발, 인력 양성, 실습 프로그램 운영 및 
+          교육 연구를 전문적으로 수행하는 연구소입니다.
+        </p>
+        <ul class="org-features">
+          <li>피지컬 AI 교육 커리큘럼 개발</li>
+          <li>교원 연수 및 전문 인력 양성</li>
+          <li>교육용 실습 콘텐츠 제작</li>
+          <li>교육 효과성 연구 및 평가</li>
+          <li>산업체 맞춤형 교육 프로그램</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── RESEARCH AREAS ─── -->
+<section id="research" style="background: rgba(255,255,255,0.01);">
+  <div class="container">
+    <div class="section-label mono">Research Areas</div>
+    <h2 class="section-title">연구 분야</h2>
+    <p class="section-subtitle">피지컬 AI의 핵심 기술과 응용 분야를 탐구합니다.</p>
+
+    <div class="research-grid">
+      <div class="research-card">
+        <div class="research-num mono">01</div>
+        <h3 class="research-title">체화 지능<br><span class="en" style="font-size:13px;color:var(--text-muted);">Embodied Intelligence</span></h3>
+        <p class="research-desc">물리적 신체를 통해 환경과 상호작용하며 학습하는 AI 시스템 연구. 감각-운동 통합과 인지 발달 모델링.</p>
+      </div>
+      <div class="research-card">
+        <div class="research-num mono">02</div>
+        <h3 class="research-title">자율 로보틱스<br><span class="en" style="font-size:13px;color:var(--text-muted);">Autonomous Robotics</span></h3>
+        <p class="research-desc">범용 로봇, 휴머노이드, 자율주행 시스템 등 물리적 환경에서 자율적으로 동작하는 지능형 시스템.</p>
+      </div>
+      <div class="research-card">
+        <div class="research-num mono">03</div>
+        <h3 class="research-title">디지털 트윈 & 시뮬레이션<br><span class="en" style="font-size:13px;color:var(--text-muted);">Digital Twin &amp; Simulation</span></h3>
+        <p class="research-desc">물리 기반 시뮬레이션, 합성 데이터 생성, 가상 환경에서의 AI 훈련 및 검증 기술.</p>
+      </div>
+      <div class="research-card">
+        <div class="research-num mono">04</div>
+        <h3 class="research-title">센서 융합 & 인지<br><span class="en" style="font-size:13px;color:var(--text-muted);">Sensor Fusion &amp; Perception</span></h3>
+        <p class="research-desc">시각, 촉각, 청각 등 다중 감각 데이터의 통합 처리와 물리 세계의 이해 기술.</p>
+      </div>
+      <div class="research-card">
+        <div class="research-num mono">05</div>
+        <h3 class="research-title">산업 응용<br><span class="en" style="font-size:13px;color:var(--text-muted);">Industrial Applications</span></h3>
+        <p class="research-desc">스마트 제조, 의료 로봇, 물류 자동화, 스마트 공간 등 산업 현장에서의 피지컬 AI 적용.</p>
+      </div>
+      <div class="research-card">
+        <div class="research-num mono">06</div>
+        <h3 class="research-title">AI 안전 & 윤리<br><span class="en" style="font-size:13px;color:var(--text-muted);">Safety &amp; Ethics</span></h3>
+        <p class="research-desc">물리적 AI 시스템의 안전성, 인간-로봇 상호작용의 윤리적 프레임워크, 규제 및 표준화.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── NEWS ─── -->
+<section id="news">
+  <div class="container">
+    <div class="section-label mono">News &amp; Announcements</div>
+    <h2 class="section-title">소식</h2>
+    <p class="section-subtitle">학회와 연구소의 최신 소식을 전합니다.</p>
+
+    <div class="news-grid">
+      <div class="news-main">
+        <span class="news-tag announcement en">ANNOUNCEMENT</span>
+        <h3 class="news-title">한국피지컬AI학회 창립총회 안내</h3>
+        <p class="news-excerpt">
+          한국피지컬AI학회의 창립총회가 개최될 예정입니다. 피지컬 AI 분야에 관심 있는 
+          연구자, 교육자, 산업체 관계자 여러분의 많은 참여 부탁드립니다. 
+          학회의 비전과 방향, 초대 임원 선출, 사업 계획 등이 논의됩니다.
+        </p>
+        <p class="news-date mono">일정 확정 후 공지 예정</p>
+      </div>
+      <div class="news-item">
+        <span class="news-tag call en">CALL FOR PAPERS</span>
+        <h3 class="news-title">창간호 논문 모집 (준비중)</h3>
+        <p class="news-excerpt">학회 학술지 창간호 발간을 위한 논문 모집이 준비되고 있습니다.</p>
+        <p class="news-date mono">Coming Soon</p>
+      </div>
+      <div class="news-item">
+        <span class="news-tag event en">EVENT</span>
+        <h3 class="news-title">제1회 학술대회 (준비중)</h3>
+        <p class="news-excerpt">제1회 한국피지컬AI학회 학술대회 개최가 계획되고 있습니다.</p>
+        <p class="news-date mono">Coming Soon</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MEMBERSHIP CTA ─── -->
+<section id="join" class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <div class="section-label mono" style="text-align:center;">Membership</div>
+      <h2 class="cta-title">함께 만들어가는<br>피지컬 AI의 미래</h2>
+      <p class="cta-desc">
+        연구자, 교육자, 대학원생, 산업체 관계자 등<br>
+        피지컬 AI에 관심 있는 모든 분의 참여를 환영합니다.
+      </p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;">
+        <a href="mailto:contact@physicalai.or.kr" class="btn btn-primary en">회원가입 문의 →</a>
+        <a href="#contact" class="btn btn-outline">연락처 보기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label mono">Contact</div>
+    <h2 class="section-title">연락처</h2>
+    <p class="section-subtitle">학회 및 연구소에 대한 문의사항이 있으시면 연락해 주세요.</p>
+
+    <div class="about-grid">
+      <div class="org-card" style="padding:36px 32px;">
+        <h3 style="font-size:17px;font-weight:700;margin-bottom:20px;">한국피지컬AI학회</h3>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.2;">
+          📧 <span class="en">contact@physicalai.or.kr</span><br>
+          📍 소재지 확정 후 공지 예정<br>
+          📞 연락처 확정 후 공지 예정
+        </div>
+      </div>
+      <div class="org-card" style="padding:36px 32px;">
+        <h3 style="font-size:17px;font-weight:700;margin-bottom:20px;">한국피지컬AI교육연구소</h3>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.2;">
+          📧 <span class="en">edu@physicalai.or.kr</span><br>
+          📍 소재지 확정 후 공지 예정<br>
+          📞 연락처 확정 후 공지 예정
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon en">PAI</div>
+          <div class="footer-logo-name">한국피지컬AI학회</div>
+        </div>
+        <p class="footer-about">
+          물리적 세계와 인공지능의 융합을 선도하는 학술 공동체. 
+          체화지능, 로보틱스, 자율시스템, 디지털 트윈 등 
+          피지컬 AI의 핵심 분야를 연구합니다.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-col-title">학회</h4>
+        <ul class="footer-links">
+          <li><a href="#about">학회소개</a></li>
+          <li><a href="#research">연구분야</a></li>
+          <li><a href="#">임원진</a></li>
+          <li><a href="#">정관</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">학술활동</h4>
+        <ul class="footer-links">
+          <li><a href="#">학술대회</a></li>
+          <li><a href="#">논문투고</a></li>
+          <li><a href="#">학회지</a></li>
+          <li><a href="#">세미나</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">참여</h4>
+        <ul class="footer-links">
+          <li><a href="#join">회원가입</a></li>
+          <li><a href="#news">공지사항</a></li>
+          <li><a href="#contact">문의하기</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy en">© 2025 Korean Society of Physical AI (KSPAI). All rights reserved.</span>
+      <span class="footer-contact-info en">
+        <a href="mailto:contact@physicalai.or.kr">contact@physicalai.or.kr</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// Nav active state on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const top = section.offsetTop - 100;
+    if (scrollY >= top) current = section.getAttribute('id');
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+  });
+});
+
+// Intersection Observer for fade-in animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.org-card, .research-card, .news-item, .news-main, .stat-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
