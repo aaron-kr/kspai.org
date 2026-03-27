@@ -1,0 +1,69 @@
+<section id="news">
+  <div class="container">
+    <div class="section-label mono" data-i18n="news.label">News &amp; Announcements</div>
+    <h2 class="section-title" data-i18n="news.title">소식</h2>
+    <p class="section-subtitle" data-i18n="news.subtitle">
+      학회와 연구소의 최신 소식을 전합니다.
+    </p>
+
+    <div class="news-grid">
+      {% assign posts = site.posts %}
+      {% for post in posts %}
+
+        {% if forloop.first %}
+        <!-- ── Featured / Main news item ── -->
+        <div class="news-main">
+          <span class="news-tag {{ post.tag_class }} en">
+            <span data-lang="ko">{{ post.tag_ko }}</span>
+            <span data-lang="en">{{ post.tag_en }}</span>
+          </span>
+          <h3 class="news-title">
+            <span data-lang="ko">{{ post.title_ko }}</span>
+            <span data-lang="en">{{ post.title_en }}</span>
+          </h3>
+          <p class="news-excerpt">
+            <span data-lang="ko">{{ post.excerpt_ko }}</span>
+            <span data-lang="en">{{ post.excerpt_en }}</span>
+          </p>
+          <p class="news-date mono">
+            <span data-lang="ko">{{ post.date_display_ko }}</span>
+            <span data-lang="en">{{ post.date_display_en }}</span>
+          </p>
+        </div>
+
+        {% else %}
+        <!-- ── Secondary news items ── -->
+        <div class="news-item">
+          <span class="news-tag {{ post.tag_class }} en">
+            <span data-lang="ko">{{ post.tag_ko }}</span>
+            <span data-lang="en">{{ post.tag_en }}</span>
+          </span>
+          <h3 class="news-title">
+            <span data-lang="ko">{{ post.title_ko }}</span>
+            <span data-lang="en">{{ post.title_en }}</span>
+          </h3>
+          <p class="news-excerpt">
+            <span data-lang="ko">{{ post.excerpt_ko }}</span>
+            <span data-lang="en">{{ post.excerpt_en }}</span>
+          </p>
+          <p class="news-date mono">
+            <span data-lang="ko">{{ post.date_display_ko }}</span>
+            <span data-lang="en">{{ post.date_display_en }}</span>
+          </p>
+        </div>
+        {% endif %}
+
+      {% endfor %}
+    </div>
+
+    <!-- ── "View all news" link (appears when there are many posts) ── -->
+    {% if site.posts.size > 4 %}
+    <div style="text-align:center;margin-top:40px;">
+      <a href="{{ '/news/' | relative_url }}" class="btn btn-outline" data-i18n="news.viewall">
+        모든 소식 보기
+      </a>
+    </div>
+    {% endif %}
+
+  </div>
+</section>

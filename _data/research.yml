@@ -1,0 +1,51 @@
+# Research areas data
+# Add a new area by copying a block below.
+# The site will automatically render it in the Research section.
+
+- num: "01"
+  title_ko: "체화 지능"
+  title_en: "Embodied Intelligence"
+  subtitle_ko: "Embodied Intelligence"
+  subtitle_en: "체화 지능"
+  desc_ko: "물리적 신체를 통해 환경과 상호작용하며 학습하는 AI 시스템 연구. 감각-운동 통합과 인지 발달 모델링."
+  desc_en: "AI systems that learn through physical interaction with their environment. Research on sensorimotor integration and cognitive development modeling."
+
+- num: "02"
+  title_ko: "자율 로보틱스"
+  title_en: "Autonomous Robotics"
+  subtitle_ko: "Autonomous Robotics"
+  subtitle_en: "자율 로보틱스"
+  desc_ko: "범용 로봇, 휴머노이드, 자율주행 시스템 등 물리적 환경에서 자율적으로 동작하는 지능형 시스템."
+  desc_en: "Intelligent systems operating autonomously in physical environments, including general-purpose robots, humanoids, and autonomous vehicles."
+
+- num: "03"
+  title_ko: "디지털 트윈 & 시뮬레이션"
+  title_en: "Digital Twin & Simulation"
+  subtitle_ko: "Digital Twin & Simulation"
+  subtitle_en: "디지털 트윈 & 시뮬레이션"
+  desc_ko: "물리 기반 시뮬레이션, 합성 데이터 생성, 가상 환경에서의 AI 훈련 및 검증 기술."
+  desc_en: "Physics-based simulation, synthetic data generation, and AI training and validation in virtual environments."
+
+- num: "04"
+  title_ko: "센서 융합 & 인지"
+  title_en: "Sensor Fusion & Perception"
+  subtitle_ko: "Sensor Fusion & Perception"
+  subtitle_en: "센서 융합 & 인지"
+  desc_ko: "시각, 촉각, 청각 등 다중 감각 데이터의 통합 처리와 물리 세계의 이해 기술."
+  desc_en: "Integrated processing of multimodal sensory data — vision, touch, and audio — for understanding the physical world."
+
+- num: "05"
+  title_ko: "산업 응용"
+  title_en: "Industrial Applications"
+  subtitle_ko: "Industrial Applications"
+  subtitle_en: "산업 응용"
+  desc_ko: "스마트 제조, 의료 로봇, 물류 자동화, 스마트 공간 등 산업 현장에서의 피지컬 AI 적용."
+  desc_en: "Applying Physical AI in industry: smart manufacturing, medical robotics, logistics automation, and intelligent spaces."
+
+- num: "06"
+  title_ko: "AI 안전 & 윤리"
+  title_en: "Safety & Ethics"
+  subtitle_ko: "Safety & Ethics"
+  subtitle_en: "AI 안전 & 윤리"
+  desc_ko: "물리적 AI 시스템의 안전성, 인간-로봇 상호작용의 윤리적 프레임워크, 규제 및 표준화."
+  desc_en: "Safety of physical AI systems, ethical frameworks for human-robot interaction, regulation, and standardization."

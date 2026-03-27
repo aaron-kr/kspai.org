@@ -1,0 +1,30 @@
+<nav>
+  <div class="container">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">
+      <div class="nav-logo-icon en">PAI</div>
+      <div class="nav-logo-text">
+        한국피지컬AI학회
+        <span class="sub en">KSPAI</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#about"    data-i18n="nav.about">소개</a></li>
+      <li><a href="#research" data-i18n="nav.research">연구분야</a></li>
+      <li><a href="#news"     data-i18n="nav.news">소식</a></li>
+      <li><a href="#join"     data-i18n="nav.join">회원가입</a></li>
+      <li><a href="#contact"  data-i18n="nav.contact">문의</a></li>
+    </ul>
+
+    <div style="display:flex;align-items:center;gap:8px;">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="theme-icon">☀️</span>
+      </button>
+      <button class="lang-toggle en" onclick="toggleLang()" aria-label="Switch to English">EN</button>
+    </div>
+
+    <button class="mobile-menu-btn"
+      onclick="document.querySelector('.nav-links').classList.toggle('show')"
+      aria-label="Toggle menu">☰</button>
+  </div>
+</nav>

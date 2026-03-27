@@ -1,0 +1,44 @@
+title: 한국피지컬AI학회
+title_en: Korean Society of Physical AI
+description: 물리적 세계와 인공지능의 융합을 선도하는 학술 공동체
+url: "https://kspai.org"
+baseurl: ""
+
+# ── Build settings ──
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# ── Sass ──
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+# ── Collections (future use) ──
+collections:
+  members:
+    output: false
+  activities:
+    output: false
+
+# ── Defaults ──
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# ── Exclude from processing ──
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - .sass-cache
+  - vendor
+  - "*.sh"
