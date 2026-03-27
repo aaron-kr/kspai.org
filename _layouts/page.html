@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<article class="page-article">
+  <div class="container">
+
+    <div class="page-header">
+      {% if page.tag_class %}
+      <span class="news-tag {{ page.tag_class }} en">{{ page.label_en }}</span>
+      {% endif %}
+      <h1 class="page-title">
+        <span data-lang="ko">{{ page.title_ko | default: page.title }}</span>
+        <span data-lang="en">{{ page.title_en | default: page.title }}</span>
+      </h1>
+      {% if page.subtitle_ko %}
+      <p class="page-subtitle">
+        <span data-lang="ko">{{ page.subtitle_ko }}</span>
+        <span data-lang="en">{{ page.subtitle_en }}</span>
+      </p>
+      {% endif %}
+    </div>
+
+    <div class="page-body">
+      {{ content }}
+    </div>
+
+    <div class="page-back">
+      <a href="{{ '/' | relative_url }}" class="btn btn-outline">← <span data-lang="ko">홈으로</span><span data-lang="en">Back to Home</span></a>
+    </div>
+
+  </div>
+</article>

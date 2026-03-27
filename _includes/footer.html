@@ -15,30 +15,30 @@
       <div>
         <h4 class="footer-col-title" data-i18n="footer.col.society">학회</h4>
         <ul class="footer-links">
-          <li><a href="#about"    data-i18n="footer.society.about">학회소개</a></li>
-          <li><a href="#research" data-i18n="footer.society.research">연구분야</a></li>
-          <li><a href="#"         data-i18n="footer.society.officers">임원진</a></li>
-          <li><a href="#"         data-i18n="footer.society.bylaws">정관</a></li>
+          <li><a href="{{ '/#about'     | relative_url }}" data-i18n="footer.society.about">학회소개</a></li>
+          <li><a href="{{ '/#research'  | relative_url }}" data-i18n="footer.society.research">연구분야</a></li>
+          <li><a href="{{ '/officers/'  | relative_url }}" data-i18n="footer.society.officers">임원진</a></li>
+          <li><a href="{{ '/bylaws/'    | relative_url }}" data-i18n="footer.society.bylaws">정관</a></li>
         </ul>
       </div>
 
       <div>
         <h4 class="footer-col-title" data-i18n="footer.col.academic">학술활동</h4>
         <ul class="footer-links">
-          <li><a href="#" data-i18n="footer.academic.conf">학술대회</a></li>
-          <li><a href="#" data-i18n="footer.academic.submit">논문투고</a></li>
-          <li><a href="#" data-i18n="footer.academic.journal">학회지</a></li>
-          <li><a href="#" data-i18n="footer.academic.seminar">세미나</a></li>
+          <li><a href="{{ '/conferences/' | relative_url }}" data-i18n="footer.academic.conf">학술대회</a></li>
+          <li><a href="{{ '/submit/'      | relative_url }}" data-i18n="footer.academic.submit">논문투고</a></li>
+          <li><a href="{{ '/journal/'     | relative_url }}" data-i18n="footer.academic.journal">학회지</a></li>
+          <li><a href="{{ '/seminars/'    | relative_url }}" data-i18n="footer.academic.seminar">세미나</a></li>
         </ul>
       </div>
 
       <div>
         <h4 class="footer-col-title" data-i18n="footer.col.join">참여</h4>
         <ul class="footer-links">
-          <li><a href="#join"    data-i18n="footer.join.membership">회원가입</a></li>
-          <li><a href="#news"    data-i18n="footer.join.notice">공지사항</a></li>
-          <li><a href="#contact" data-i18n="footer.join.contact">문의하기</a></li>
-          <li><a href="#"        data-i18n="footer.join.privacy">개인정보처리방침</a></li>
+          <li><a href="{{ '/#join'     | relative_url }}" data-i18n="footer.join.membership">회원가입</a></li>
+          <li><a href="{{ '/#news'     | relative_url }}" data-i18n="footer.join.notice">공지사항</a></li>
+          <li><a href="{{ '/#contact'  | relative_url }}" data-i18n="footer.join.contact">문의하기</a></li>
+          <li><a href="{{ '/privacy/'  | relative_url }}" data-i18n="footer.join.privacy">개인정보처리방침</a></li>
         </ul>
       </div>
 
@@ -49,7 +49,7 @@
         © {{ 'now' | date: "%Y" }} Korean Society of Physical AI (KSPAI). All rights reserved.
       </span>
       <span class="footer-contact-info en">
-        <a href="mailto:contact@kspai.org">contact@kspai.org</a>
+        <a href="mailto:contact@physicalai.or.kr">contact@physicalai.or.kr</a>
       </span>
     </div>
   </div>
