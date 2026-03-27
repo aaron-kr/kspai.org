@@ -60,3 +60,35 @@ document.querySelectorAll(
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   observer.observe(el);
 });
+
+// ── Transparent nav over hero ──
+(function() {
+  const nav  = document.querySelector('nav');
+  const hero = document.querySelector('.hero');
+  if (!nav || !hero) return;
+
+  // IntersectionObserver fires when the hero's BOTTOM EDGE
+  // crosses the top of the viewport (rootMargin nudges by nav height)
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        nav.classList.remove('nav-scrolled');   // over hero → transparent
+      } else {
+        nav.classList.add('nav-scrolled');      // past hero → solid
+      }
+    },
+    {
+      // Fire when the hero bottom edge hits the nav bottom (64px)
+      rootMargin: '-64px 0px 0px 0px',
+      threshold: 0
+    }
+  );
+
+  observer.observe(hero);
+
+  // Handle initial load position (e.g. user reloads mid-page)
+  const rect = hero.getBoundingClientRect();
+  if (rect.bottom <= 64) {
+    nav.classList.add('nav-scrolled');
+  }
+})();

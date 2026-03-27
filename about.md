@@ -34,7 +34,7 @@ permalink: /about/
       <div class="org-icon society" style="margin-bottom:0;">🏛</div>
       <div>
         <p class="org-name-en en" style="margin-bottom:4px;">Korean Society of Physical AI</p>
-        <p class="mono" style="font-size:11px;color:var(--text-muted);">kspai.org · contact@physicalai.or.kr</p>
+        <p class="mono" style="font-size:11px;color:var(--text-muted);">kspai.org · contact@kspai.org</p>
       </div>
     </div>
     <p class="page-section-text">
@@ -85,7 +85,7 @@ permalink: /about/
       <div class="org-icon institute" style="margin-bottom:0;">🔬</div>
       <div>
         <p class="org-name-en en" style="margin-bottom:4px;">Korean Institute of Physical AI Education & Research</p>
-        <p class="mono" style="font-size:11px;color:var(--text-muted);">edu@physicalai.or.kr</p>
+        <p class="mono" style="font-size:11px;color:var(--text-muted);">edu@kspai.org</p>
       </div>
     </div>
     <p class="page-section-text">

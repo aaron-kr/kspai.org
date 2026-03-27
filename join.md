@@ -167,8 +167,8 @@ permalink: /join/
     <span data-lang="en">For membership inquiries, please contact us by email and we will respond promptly.</span>
   </p>
   <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;">
-    <a href="mailto:contact@physicalai.or.kr" class="btn btn-primary en">
-      contact@physicalai.or.kr →
+    <a href="mailto:contact@kspai.org" class="btn btn-primary en">
+      contact@kspai.org →
     </a>
   </div>
 </div>

@@ -23,7 +23,7 @@ permalink: /contact/
           <span class="contact-detail-icon">📧</span>
           <div>
             <span class="contact-detail-label mono">EMAIL</span>
-            <a href="mailto:contact@physicalai.or.kr" class="en contact-link">contact@physicalai.or.kr</a>
+            <a href="mailto:contact@kspai.org" class="en contact-link">contact@kspai.org</a>
           </div>
         </div>
         <div class="contact-detail-row">
@@ -64,7 +64,7 @@ permalink: /contact/
           <span class="contact-detail-icon">📧</span>
           <div>
             <span class="contact-detail-label mono">EMAIL</span>
-            <a href="mailto:edu@physicalai.or.kr" class="en contact-link">edu@physicalai.or.kr</a>
+            <a href="mailto:edu@kspai.org" class="en contact-link">edu@kspai.org</a>
           </div>
         </div>
         <div class="contact-detail-row">
@@ -102,7 +102,7 @@ permalink: /contact/
       </span>
       <div>
         <p>
-          <a href="mailto:contact@physicalai.or.kr" class="contact-link en">contact@physicalai.or.kr</a><br>
+          <a href="mailto:contact@kspai.org" class="contact-link en">contact@kspai.org</a><br>
           <span data-lang="ko">회원 유형, 가입 절차, 회비 관련 문의</span>
           <span data-lang="en">Membership types, application procedure, and dues</span>
         </p>
@@ -114,7 +114,7 @@ permalink: /contact/
       </span>
       <div>
         <p>
-          <a href="mailto:contact@physicalai.or.kr" class="contact-link en">contact@physicalai.or.kr</a><br>
+          <a href="mailto:paper@kspai.org" class="contact-link en">paper@kspai.org</a><br>
           <span data-lang="ko">투고 규정, 심사 절차, 창간호 관련 문의</span>
           <span data-lang="en">Submission guidelines, review process, and inaugural issue</span>
         </p>
@@ -126,7 +126,7 @@ permalink: /contact/
       </span>
       <div>
         <p>
-          <a href="mailto:contact@physicalai.or.kr" class="contact-link en">contact@physicalai.or.kr</a><br>
+          <a href="mailto:contact@kspai.org" class="contact-link en">contact@kspai.org</a><br>
           <span data-lang="ko">학술대회 일정, 발표 신청, 후원 문의</span>
           <span data-lang="en">Conference schedule, presentation applications, and sponsorship</span>
         </p>
@@ -138,7 +138,7 @@ permalink: /contact/
       </span>
       <div>
         <p>
-          <a href="mailto:edu@physicalai.or.kr" class="contact-link en">edu@physicalai.or.kr</a><br>
+          <a href="mailto:edu@kspai.org" class="contact-link en">edu@kspai.org</a><br>
           <span data-lang="ko">교육 과정, 연수 프로그램, 콘텐츠 개발 문의</span>
           <span data-lang="en">Curriculum, training programs, and content development</span>
         </p>
@@ -150,7 +150,7 @@ permalink: /contact/
       </span>
       <div>
         <p>
-          <a href="mailto:contact@physicalai.or.kr" class="contact-link en">contact@physicalai.or.kr</a><br>
+          <a href="mailto:contact@kspai.org" class="contact-link en">contact@kspai.org</a><br>
           <span data-lang="ko">산학 협력, MOU, 공동 연구 제안</span>
           <span data-lang="en">Industry collaboration, MOU, and joint research proposals</span>
         </p>

@@ -61,7 +61,10 @@ permalink: /officers/
       <div class="officer-card">
         <div class="officer-avatar">👤</div>
         <div class="officer-info">
-          <p class="officer-name">NAME</p>
+          <p class="officer-name">
+            <span data-lang="ko">김주리</span>
+            <span data-lang="en">Julie Kim</span>
+          </p>
           <p class="officer-affil">
             <span data-lang="ko">원광대학교</span>
             <span data-lang="en">Wonkwang University</span>
@@ -78,7 +81,10 @@ permalink: /officers/
       <div class="officer-card">
         <div class="officer-avatar">👤</div>
         <div class="officer-info">
-          <p class="officer-name">NAME</p>
+          <p class="officer-name">
+            <span data-lang="ko">김세민</span>
+            <span data-lang="en">Semin Kim</span>
+          </p>
           <p class="officer-affil">
             <span data-lang="ko">전주교육대학교</span>
             <span data-lang="en">Jeonju National University of Education</span>
@@ -95,7 +101,10 @@ permalink: /officers/
       <div class="officer-card">
         <div class="officer-avatar">👤</div>
         <div class="officer-info">
-          <p class="officer-name">NAME</p>
+          <p class="officer-name">
+            <span data-lang="ko">장봉석</span>
+            <span data-lang="en">Bong-suk Jang</span>
+          </p>
           <p class="officer-affil">
             <span data-lang="ko">국립목포대학교</span>
             <span data-lang="en">Mokpo National University</span>
@@ -110,9 +119,14 @@ permalink: /officers/
         <span data-lang="en">VP, English Journal Division</span>
       </h3>
       <div class="officer-card">
-        <div class="officer-avatar">👤</div>
+        <div class="officer-avatar">
+          <img src="/assets/images/aaron-profile.jpg" alt="Aaron" />
+        </div>
         <div class="officer-info">
-          <p class="officer-name">NAME</p>
+          <p class="officer-name">
+            <span data-lang="ko">에런스노버거</span>
+            <span data-lang="en">Aaron Snowberger</span>
+          </p>
           <p class="officer-affil">
             <span data-lang="ko">국립한밭대학교</span>
             <span data-lang="en">Hanbat National University</span>
@@ -129,7 +143,10 @@ permalink: /officers/
       <div class="officer-card">
         <div class="officer-avatar">👤</div>
         <div class="officer-info">
-          <p class="officer-name">NAME</p>
+          <p class="officer-name">
+            <span data-lang="ko">강선경</span>
+            <span data-lang="en">Sungyung Kang</span>
+          </p>
           <p class="officer-affil">
             <span data-lang="ko">원광대학교</span>
             <span data-lang="en">Wonkwang University</span>
@@ -146,7 +163,10 @@ permalink: /officers/
       <div class="officer-card">
         <div class="officer-avatar">👤</div>
         <div class="officer-info">
-          <p class="officer-name">NAME</p>
+          <p class="officer-name">
+            <span data-lang="ko">박지현</span>
+            <span data-lang="en">Jihyun Park</span>
+          </p>
           <p class="officer-affil">
             <span data-lang="ko">우석대학교</span>
             <span data-lang="en">Woosuk University</span>
@@ -163,7 +183,10 @@ permalink: /officers/
       <div class="officer-card">
         <div class="officer-avatar">👤</div>
         <div class="officer-info">
-          <p class="officer-name">NAME</p>
+          <p class="officer-name">
+            <span data-lang="ko">문채영</span>
+            <span data-lang="en">Cheyoung Mun</span>
+          </p>
           <p class="officer-affil">
             <span data-lang="ko">우송정보대학</span>
             <span data-lang="en">Woosong University of Information</span>
@@ -190,7 +213,10 @@ permalink: /officers/
       <div class="officer-card">
         <div class="officer-avatar">👤</div>
         <div class="officer-info">
-          <p class="officer-name">NAME</p>
+          <p class="officer-name">
+            <span data-lang="ko">김영태</span>
+            <span data-lang="en">Young-tae Kim</span>
+          </p>
           <p class="officer-affil">
             <span data-lang="ko">호서대학교</span>
             <span data-lang="en">Hoseo University</span>
