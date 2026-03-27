@@ -9,11 +9,11 @@
     </a>
 
     <ul class="nav-links">
-      <li><a href="#about"    data-i18n="nav.about">소개</a></li>
-      <li><a href="#research" data-i18n="nav.research">연구분야</a></li>
-      <li><a href="#news"     data-i18n="nav.news">소식</a></li>
-      <li><a href="#join"     data-i18n="nav.join">회원가입</a></li>
-      <li><a href="#contact"  data-i18n="nav.contact">문의</a></li>
+      <li><a href="{{ '/about/'    | relative_url }}" data-i18n="nav.about"    {% if page.url contains '/about'    %}class="active"{% endif %}>소개</a></li>
+      <li><a href="{{ '/research/' | relative_url }}" data-i18n="nav.research" {% if page.url contains '/research' %}class="active"{% endif %}>연구분야</a></li>
+      <li><a href="{{ '/news/'     | relative_url }}" data-i18n="nav.news"     {% if page.url contains '/news'     %}class="active"{% endif %}>소식</a></li>
+      <li><a href="{{ '/join/'     | relative_url }}" data-i18n="nav.join"     {% if page.url contains '/join'     %}class="active"{% endif %}>회원가입</a></li>
+      <li><a href="{{ '/contact/'  | relative_url }}" data-i18n="nav.contact"  {% if page.url contains '/contact'  %}class="active"{% endif %}>문의</a></li>
     </ul>
 
     <div style="display:flex;align-items:center;gap:8px;">

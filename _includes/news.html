@@ -1,7 +1,13 @@
 <section id="news">
   <div class="container">
     <div class="section-label mono" data-i18n="news.label">News &amp; Announcements</div>
-    <h2 class="section-title" data-i18n="news.title">소식</h2>
+    <div class="section-title-row">
+      <h2 class="section-title" data-i18n="news.title">소식</h2>
+      <a href="{{ '/news/' | relative_url }}" class="section-page-link">
+        <span data-lang="ko">모든 소식 →</span>
+        <span data-lang="en">All news →</span>
+      </a>
+    </div>
     <p class="section-subtitle" data-i18n="news.subtitle">
       학회와 연구소의 최신 소식을 전합니다.
     </p>
@@ -11,7 +17,6 @@
       {% for post in posts %}
 
         {% if forloop.first %}
-        <!-- ── Featured / Main news item ── -->
         <div class="news-main">
           <span class="news-tag {{ post.tag_class }} en">
             <span data-lang="ko">{{ post.tag_ko }}</span>
@@ -30,9 +35,7 @@
             <span data-lang="en">{{ post.date_display_en }}</span>
           </p>
         </div>
-
         {% else %}
-        <!-- ── Secondary news items ── -->
         <div class="news-item">
           <span class="news-tag {{ post.tag_class }} en">
             <span data-lang="ko">{{ post.tag_ko }}</span>
@@ -55,15 +58,5 @@
 
       {% endfor %}
     </div>
-
-    <!-- ── "View all news" link (appears when there are many posts) ── -->
-    {% if site.posts.size > 4 %}
-    <div style="text-align:center;margin-top:40px;">
-      <a href="{{ '/news/' | relative_url }}" class="btn btn-outline" data-i18n="news.viewall">
-        모든 소식 보기
-      </a>
-    </div>
-    {% endif %}
-
   </div>
 </section>

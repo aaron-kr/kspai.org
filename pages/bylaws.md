@@ -81,7 +81,7 @@ permalink: /bylaws/
 
 <div class="page-section">
   <p class="page-section-text" style="font-size:13px;color:var(--text-muted);">
-    <span data-lang="ko">문의사항: <a href="mailto:contact@physicalai.or.kr" style="color:var(--accent-primary);">contact@physicalai.or.kr</a></span>
-    <span data-lang="en">Inquiries: <a href="mailto:contact@physicalai.or.kr" style="color:var(--accent-primary);">contact@physicalai.or.kr</a></span>
+    <span data-lang="ko">문의사항: <a href="mailto:contact@kspai.org" style="color:var(--accent-primary);">contact@kspai.org</a></span>
+    <span data-lang="en">Inquiries: <a href="mailto:contact@kspai.org" style="color:var(--accent-primary);">contact@kspai.org</a></span>
   </p>
 </div>

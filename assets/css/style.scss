@@ -1031,3 +1031,200 @@ footer {
   .journal-meta-grid { grid-template-columns: 1fr; }
   .page-article     { padding: 100px 0 60px; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   APPEND these rules to the end of assets/css/style.scss
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── SECTION TITLE ROW (title + page link side by side) ── */
+.section-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.section-title-row .section-title {
+  margin-bottom: 0;   /* override default — spacing handled by row */
+}
+.section-page-link {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent-primary);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s, transform 0.2s;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+.section-page-link:hover {
+  opacity: 0.8;
+  border-bottom-color: var(--accent-primary);
+  transform: translateX(2px);
+}
+
+/* ── ABOUT FULL PAGE ── */
+.about-full-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  margin-bottom: 24px;
+}
+.about-full-header {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.about-features-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 20px; margin-top: 8px;
+}
+.about-feature-item {
+  display: flex; gap: 14px; align-items: flex-start;
+}
+.about-feature-icon {
+  font-size: 22px; flex-shrink: 0;
+  width: 36px; text-align: center;
+  padding-top: 2px;
+}
+.about-feature-item strong { display: block; font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.about-feature-item p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+
+/* ── RESEARCH FULL PAGE ── */
+.research-full-grid {
+  display: flex; flex-direction: column;
+  gap: 16px;
+}
+.research-full-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 28px 32px;
+  display: flex; gap: 28px; align-items: flex-start;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.research-full-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-md);
+}
+.research-full-num {
+  font-size: 13px; color: var(--accent-primary);
+  letter-spacing: 1px; min-width: 28px;
+  padding-top: 3px; flex-shrink: 0;
+}
+.research-full-body { flex: 1; }
+.research-full-title {
+  font-size: 18px; font-weight: 700;
+  margin-bottom: 2px;
+}
+.research-full-subtitle {
+  font-size: 13px; color: var(--text-muted);
+  font-family: 'Space Grotesk', sans-serif;
+  margin-bottom: 10px;
+}
+.research-full-desc {
+  font-size: 14px; color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ── NEWS FULL PAGE ── */
+.news-list {
+  display: flex; flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.news-list-item {
+  display: flex; gap: 24px; align-items: flex-start;
+  padding: 24px 28px;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background 0.2s;
+}
+.news-list-item:last-child { border-bottom: none; }
+.news-list-item:hover { background: var(--bg-card-hover); }
+.news-list-tag-date {
+  display: flex; flex-direction: column; gap: 8px;
+  min-width: 140px; flex-shrink: 0;
+}
+.news-list-tag-date .news-date { margin-top: 0; }
+.news-list-body { flex: 1; }
+.news-list-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+
+/* ── JOIN PAGE ── */
+.join-steps {
+  display: flex; flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-top: 8px;
+}
+.join-step {
+  display: flex; gap: 24px; align-items: flex-start;
+  padding: 24px 28px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.join-step:last-child { border-bottom: none; }
+.join-step-num {
+  font-size: 13px; color: var(--accent-primary);
+  letter-spacing: 1px; min-width: 28px;
+  padding-top: 3px; flex-shrink: 0;
+}
+.join-step strong { display: block; font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+.join-step p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+
+/* ── CONTACT FULL PAGE ── */
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 24px; margin-bottom: 0;
+}
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+}
+.contact-card-title {
+  font-size: 20px; font-weight: 800;
+  margin-bottom: 4px; letter-spacing: -0.3px;
+}
+.contact-details {
+  margin-top: 24px;
+  display: flex; flex-direction: column; gap: 0;
+}
+.contact-detail-row {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.contact-detail-row:last-child { border-bottom: none; }
+.contact-detail-icon { font-size: 16px; flex-shrink: 0; width: 24px; padding-top: 1px; }
+.contact-detail-label {
+  display: block; font-size: 10px; color: var(--text-muted);
+  letter-spacing: 1.5px; margin-bottom: 3px;
+}
+.contact-link {
+  font-size: 14px; color: var(--accent-primary);
+  text-decoration: none; transition: opacity 0.2s;
+}
+.contact-link:hover { opacity: 0.75; text-decoration: underline; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .about-features-grid  { grid-template-columns: 1fr; }
+  .contact-grid         { grid-template-columns: 1fr; }
+  .research-full-card   { flex-direction: column; gap: 12px; }
+  .news-list-item       { flex-direction: column; gap: 10px; }
+  .news-list-tag-date   { flex-direction: row; align-items: center; min-width: unset; }
+  .section-title-row    { flex-direction: column; align-items: flex-start; gap: 6px; }
+}
+@media (max-width: 480px) {
+  .about-full-card { padding: 24px; }
+  .contact-card    { padding: 28px 24px; }
+  .join-step       { flex-direction: column; gap: 8px; }
+}

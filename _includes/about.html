@@ -1,14 +1,19 @@
 <section id="about">
   <div class="container">
     <div class="section-label mono" data-i18n="about.label">About Us</div>
-    <h2 class="section-title" data-i18n="about.title">두 기관, 하나의 비전</h2>
+    <div class="section-title-row">
+      <h2 class="section-title" data-i18n="about.title">두 기관, 하나의 비전</h2>
+      <a href="{{ '/about/' | relative_url }}" class="section-page-link">
+        <span data-lang="ko">자세히 보기 →</span>
+        <span data-lang="en">Full page →</span>
+      </a>
+    </div>
     <p class="section-subtitle" data-i18n="about.subtitle">
       피지컬 AI의 학술 연구와 교육을 통합적으로 추진하는 자매 기관입니다.
     </p>
 
     <div class="about-grid">
 
-      <!-- Society Card -->
       <div class="org-card">
         <div class="org-icon society">🏛</div>
         <h3 class="org-name" data-i18n="society.name">한국피지컬AI학회</h3>
@@ -25,7 +30,6 @@
         </ul>
       </div>
 
-      <!-- Institute Card -->
       <div class="org-card">
         <div class="org-icon institute">🔬</div>
         <h3 class="org-name" data-i18n="institute.name">한국피지컬AI교육연구소</h3>

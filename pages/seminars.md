@@ -42,7 +42,7 @@ permalink: /seminars/
     <span data-lang="ko">세미나 일정 안내를 받고 싶으신 분은 이메일로 연락해 주세요.</span>
     <span data-lang="en">To receive seminar announcements, please contact us by email.</span>
   </p>
-  <a href="mailto:contact@physicalai.or.kr" class="btn btn-primary en" style="margin-top:8px;">
-    contact@physicalai.or.kr
+  <a href="mailto:contact@kspai.org" class="btn btn-primary en" style="margin-top:8px;">
+    contact@kspai.org
   </a>
 </div>

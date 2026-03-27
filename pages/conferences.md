@@ -68,7 +68,7 @@ permalink: /conferences/
     <span data-lang="ko">학술대회 발표 및 논문 투고에 관심 있으신 분은 아래로 문의해 주세요.</span>
     <span data-lang="en">If you are interested in presenting or submitting a paper, please contact us below.</span>
   </p>
-  <a href="mailto:contact@physicalai.or.kr" class="btn btn-primary en" style="margin-top:8px;">
-    contact@physicalai.or.kr
+  <a href="mailto:paper@kspai.org" class="btn btn-primary en" style="margin-top:8px;">
+    paper@kspai.org
   </a>
 </div>

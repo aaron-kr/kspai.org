@@ -72,8 +72,8 @@ permalink: /submit/
         <span data-lang="ko">정규 논문</span><span data-lang="en">Full Paper</span>
       </span>
       <div>
-        <p><span data-lang="ko">8–16 페이지 분량의 완성된 연구 논문</span>
-           <span data-lang="en">Completed research article, 8–16 pages</span></p>
+        <p><span data-lang="ko">6-8 페이지 분량의 완성된 연구 논문</span>
+           <span data-lang="en">Completed research article, 6-8 pages</span></p>
       </div>
     </div>
     <div class="bylaws-chapter">
@@ -106,7 +106,7 @@ permalink: /submit/
     <span data-lang="ko">논문 투고에 관한 문의는 편집위원회로 연락 주세요.</span>
     <span data-lang="en">For questions about paper submission, please contact the editorial board.</span>
   </p>
-  <a href="mailto:contact@physicalai.or.kr" class="btn btn-primary en" style="margin-top:8px;">
-    contact@physicalai.or.kr
+  <a href="mailto:paper@kspai.org" class="btn btn-primary en" style="margin-top:8px;">
+    paper@kspai.org
   </a>
 </div>

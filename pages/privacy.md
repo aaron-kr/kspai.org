@@ -112,7 +112,7 @@ permalink: /privacy/
       </strong>
       <span data-lang="ko">소속:</span><span data-lang="en">Organization:</span>
       한국피지컬AI학회<br>
-      📧 <a href="mailto:contact@physicalai.or.kr" style="color:var(--accent-primary);">contact@physicalai.or.kr</a>
+      📧 <a href="mailto:contact@kspai.org" style="color:var(--accent-primary);">contact@kspai.org</a>
     </div>
   </div>
 </div>
