@@ -309,11 +309,6 @@ nav:not(.nav-scrolled) .nav-logo-icon {
   border: 1px solid rgba(255,255,255,0.25);
 }
 
-/* Nav links */
-nav:not(.nav-scrolled) .nav-links a         { color: rgba(255,255,255,0.80); }
-nav:not(.nav-scrolled) .nav-links a:hover   { color: #ffffff; background: rgba(255,255,255,0.10); }
-nav:not(.nav-scrolled) .nav-links a.active  { color: #ffffff; }
-
 /* Theme toggle button */
 nav:not(.nav-scrolled) .theme-toggle {
   background: rgba(255,255,255,0.10);
