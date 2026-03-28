@@ -5,14 +5,14 @@ function toggleTheme() {
   const next = current === 'light' ? 'dark' : 'light';
   html.setAttribute('data-theme', next);
   localStorage.setItem('kspai-theme', next);
-  document.querySelector('.theme-icon').textContent = next === 'dark' ? '🌙' : '☀️';
+  document.querySelector('.theme-icon').textContent = next === 'dark' ? '☀️' : '🌙';
 }
 
 // Restore saved theme preference (icon only — theme applied in <head> inline script)
 document.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem('kspai-theme') || 'light';
   const icon = document.querySelector('.theme-icon');
-  if (icon) icon.textContent = saved === 'dark' ? '🌙' : '☀️';
+  if (icon) icon.textContent = saved === 'dark' ? '☀️' : '🌙';
 });
 
 // ── Smooth scroll ──
