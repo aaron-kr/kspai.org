@@ -625,7 +625,7 @@ nav:not(.nav-scrolled) .nav-logo-img { filter: none; }
   padding: 14px 28px; border-radius: var(--radius-sm);
   font-size: 14px; font-weight: 600; text-decoration: none;
   transition: all 0.3s ease; cursor: pointer; border: none;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  background: linear-gradient(135deg, var(--accent-primary) 30%, var(--accent-secondary));
   color: #fff;
   box-shadow: 0 4px 24px rgba(245,46,60,0.35);
 }
@@ -745,7 +745,7 @@ nav:not(.nav-scrolled) .nav-logo-img { filter: none; }
 .stat-number {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 36px; font-weight: 700;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  background: linear-gradient(180deg, var(--accent-primary) 30%, var(--accent-secondary));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 4px;
@@ -981,7 +981,7 @@ section {
   transition: all 0.3s ease; cursor: pointer; border: none;
 }
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  background: linear-gradient(135deg, var(--accent-primary) 30%, var(--accent-secondary));
   color: #fff;
   box-shadow: 0 4px 24px rgba(245,46,60,0.22);
 }
