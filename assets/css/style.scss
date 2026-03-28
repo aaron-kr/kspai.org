@@ -590,13 +590,17 @@ nav:not(.nav-scrolled) .mobile-menu-btn:hover { background: rgba(255,255,255,0.1
   top: 64px; left: 0; right: 0;
   background: var(--nav-bg);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-subtle);
   z-index: 99;
 
   /* Slide animation */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
+}
+
+/* ADD this right after the .mobile-menu block: */
+.mobile-menu[data-open="true"] {
+  border-bottom: 1px solid var(--border-subtle);
 }
 .mobile-menu:not([hidden]) {
   max-height: 80vh;
