@@ -413,6 +413,56 @@ nav:not(.nav-scrolled) .nav-logo-img {
   filter: brightness(0) invert(1);  /* forces white — remove if logo is already light-colored */
 }
 
+/* ════════════════════════════════════════════════════════════
+   LOGO DISPLAY — light / dark switching
+   ════════════════════════════════════════════════════════════ */
+
+/* ── NAV logo sizing ── */
+.nav-logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ── Which logo shows when ──
+   Default (light theme, scrolled = light bg): show dark logo */
+.nav-logo-img--dark  { display: block; }
+.nav-logo-img--light { display: none;  }
+
+/* Over hero (transparent nav, any theme): show light logo */
+nav:not(.nav-scrolled) .nav-logo-img--dark  { display: none;  }
+nav:not(.nav-scrolled) .nav-logo-img--light { display: block; }
+
+/* Dark theme, scrolled (dark bg): show light logo */
+[data-theme="dark"] nav.nav-scrolled .nav-logo-img--dark  { display: none;  }
+[data-theme="dark"] nav.nav-scrolled .nav-logo-img--light { display: block; }
+
+/* ── FOOTER logo ── */
+.footer-logo-img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ── PAGE HERO logo mark (optional) ── */
+.page-hero-logo {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+/* ── Remove any leftover filter tricks from previous patches ──
+   Now that we're using real files, no CSS inversion needed.   */
+nav:not(.nav-scrolled) .nav-logo-img { filter: none; }
+.footer-logo-img                     { filter: none; }
+
 /* ════════════════════════════════════
    HERO — full-width deep blue
    ════════════════════════════════════ */

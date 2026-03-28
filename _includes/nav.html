@@ -1,7 +1,12 @@
 <nav>
   <div class="container">
     <a href="{{ '/' | relative_url }}" class="nav-logo">
-      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="KSPAI" class="nav-logo-img" />
+      <!-- Dark logo: shown on light nav (scrolled, light theme) -->
+      <img src="{{ '/assets/images/logo-dark.png' | relative_url }}"
+          alt="KSPAI" class="nav-logo-img nav-logo-img--dark" />
+      <!-- Light logo: shown on dark nav (over hero, or dark theme) -->
+      <img src="{{ '/assets/images/logo-light.png' | relative_url }}"
+          alt="KSPAI" class="nav-logo-img nav-logo-img--light" />
       <div class="nav-logo-text">
         한국피지컬AI학회
         <span class="sub en">KSPAI</span>
