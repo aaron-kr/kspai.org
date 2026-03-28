@@ -604,6 +604,7 @@ nav:not(.nav-scrolled) .mobile-menu-btn:hover { background: rgba(255,255,255,0.1
 }
 /* Remove [hidden] attr behavior for animation — JS removes it */
 .mobile-menu[hidden] { display: block !important; max-height: 0; }
+.mobile-menu:not([hidden]) { max-height: 80vh; overflow-y: auto; }
 
 .mobile-menu-inner {
   padding: 12px 16px 24px;
