@@ -1,0 +1,29 @@
+<div class="page-hero" {% if page.hero_image %}style="--hero-bg-image: url('{{ page.hero_image }}')"{% endif %}>
+  <!-- Reuse the same warm glow blobs from the main hero -->
+  <div class="hero-bg-warm-1"></div>
+  <div class="hero-bg-warm-2"></div>
+
+  <div class="container">
+    <div class="page-hero-inner">
+
+      {% if page.tag_class %}
+      <span class="news-tag {{ page.tag_class }} en page-hero-tag">
+        {{ page.label_en }}
+      </span>
+      {% endif %}
+
+      <h1 class="page-hero-title">
+        <span data-lang="ko">{{ page.title_ko | default: page.title }}</span>
+        <span data-lang="en">{{ page.title_en | default: page.title }}</span>
+      </h1>
+
+      {% if page.subtitle_ko %}
+      <p class="page-hero-subtitle">
+        <span data-lang="ko">{{ page.subtitle_ko }}</span>
+        <span data-lang="en">{{ page.subtitle_en }}</span>
+      </p>
+      {% endif %}
+
+    </div>
+  </div>
+</div>

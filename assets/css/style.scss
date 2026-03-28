@@ -1446,3 +1446,99 @@ footer {
   .contact-card    { padding: 28px 24px; }
   .join-step       { flex-direction: column; gap: 8px; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   PAGE HERO (mini)
+   APPEND to the end of assets/css/style.scss
+
+   Reuses all --hero-* CSS variables from the main hero.
+   No new color/font values needed — just height and layout tweaks.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Container ── */
+.page-hero {
+  position: relative;
+  z-index: 1;
+  padding-top: 64px;             /* clear fixed nav */
+  overflow: hidden;
+
+  /* Same gradient as main hero — all variables already defined */
+  background:
+    var(--hero-bg-image, none),
+    linear-gradient(145deg, var(--hero-bg-from) 0%, var(--hero-bg-to) 100%);
+  background-size: cover, cover;
+  background-position: center, center;
+
+  /* Height: much shorter than the full hero */
+  min-height: clamp(180px, 28vh, 300px);
+
+  display: flex;
+  align-items: flex-end;         /* content sits at the bottom of the band */
+}
+
+/* Reuse the warm glow blobs — same classes, same CSS */
+/* (hero-bg-warm-1 and hero-bg-warm-2 rules already exist — no change needed) */
+
+/* ── Inner layout ── */
+.page-hero-inner {
+  padding: 40px 0 44px;
+  position: relative;
+  z-index: 1;
+  max-width: 760px;              /* don't let titles stretch too wide */
+}
+
+/* ── Tag (ANNOUNCEMENT / EVENT / etc.) ── */
+.page-hero-tag {
+  margin-bottom: 14px;
+  /* Override tag colors for legibility on dark hero background */
+  background: rgba(255,255,255,0.10) !important;
+  color: rgba(255,255,255,0.75)  !important;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+/* ── Title ── */
+.page-hero-title {
+  font-family: var(--font-title-en);
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+  color: var(--hero-text);
+  margin: 0 0 12px;
+}
+
+/* ── Subtitle ── */
+.page-hero-subtitle {
+  font-size: clamp(14px, 1.6vw, 17px);
+  color: var(--hero-text-sub);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0;
+}
+
+/* ── Adjust page-article spacing when hero is present ──
+   Without hero the article has top padding for the fixed nav.
+   With hero it doesn't need that — the hero already cleared the nav. */
+.page-article {
+  padding: 120px 0 80px;        /* default: no hero */
+}
+.page-article--has-hero {
+  padding: 60px 0 80px;         /* hero handles the top spacing */
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .page-hero {
+    min-height: clamp(160px, 26vh, 240px);
+    align-items: flex-end;
+  }
+  .page-hero-inner {
+    padding: 32px 0 36px;
+  }
+  .page-hero-title {
+    letter-spacing: -1px;
+  }
+  .page-article--has-hero {
+    padding: 40px 0 60px;
+  }
+}
