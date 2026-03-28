@@ -299,6 +299,11 @@ nav.nav-scrolled {
   border-bottom: 1px solid var(--border-subtle);
 }
 
+/* ADD this alongside nav.nav-scrolled: */
+nav:not(.nav-scrolled) {
+  border-bottom-color: transparent;
+}
+
 /* ── Nav text over the hero (transparent state) ── */
 /* Logo */
 nav:not(.nav-scrolled) .nav-logo-text       { color: #ffffff; }
