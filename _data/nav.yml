@@ -1,0 +1,70 @@
+# ═══════════════════════════════════════════════════════════════
+#  _data/nav.yml  —  Site navigation structure
+#
+#  Each top-level item is either:
+#    • A DIRECT LINK:  set url, no items list
+#    • A DROPDOWN:     no url, set items list
+#
+#  Inside a dropdown items list:
+#    • Normal item:  title_ko, title_en, url
+#    • Divider:      divider: true  (just this one key)
+#
+#  i18n keys are optional — if omitted the title fields are used directly.
+# ═══════════════════════════════════════════════════════════════
+
+- title_ko: "소개"
+  title_en: "About"
+  i18n: "nav.about"
+  items:
+    - title_ko: "학회소개"
+      title_en: "About KSPAI"
+      url: /about/
+    - title_ko: "임원진"
+      title_en: "Officers"
+      url: /officers/
+    - title_ko: "정관"
+      title_en: "Bylaws"
+      url: /bylaws/
+
+- title_ko: "연구분야"
+  title_en: "Research"
+  i18n: "nav.research"
+  url: /research/
+
+- title_ko: "학술활동"
+  title_en: "Academic"
+  i18n: "nav.academic"
+  items:
+    - title_ko: "학술대회"
+      title_en: "Conferences"
+      url: /conferences/
+    - title_ko: "논문투고"
+      title_en: "Submit a Paper"
+      url: /submit/
+    - divider: true
+    - title_ko: "학회지"
+      title_en: "Journal"
+      url: /journal/
+    - title_ko: "세미나"
+      title_en: "Seminars"
+      url: /seminars/
+
+- title_ko: "소식"
+  title_en: "News"
+  i18n: "nav.news"
+  url: /news/
+
+- title_ko: "참여"
+  title_en: "Participate"
+  i18n: "nav.participate"
+  items:
+    - title_ko: "회원가입"
+      title_en: "Membership"
+      url: /join/
+    - title_ko: "문의하기"
+      title_en: "Contact"
+      url: /contact/
+    - divider: true
+    - title_ko: "개인정보처리방침"
+      title_en: "Privacy Policy"
+      url: /privacy/

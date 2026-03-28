@@ -343,10 +343,22 @@ nav:not(.nav-scrolled) .nav-links.show {
   border-bottom-color: rgba(255,255,255,0.10);
 }
 
+/* ── NAV LAYOUT ── */
 nav .container {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 64px;
+  gap: 8px;
 }
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
 .nav-logo {
   display: flex; align-items: center; gap: 12px;
   text-decoration: none; color: var(--text-primary);
@@ -364,7 +376,17 @@ nav .container {
   font-size: 11px; color: var(--text-secondary);
   font-weight: 400; display: block; line-height: 1.2; margin-top: 1px;
 }
-.nav-links { display: flex; gap: 6px; list-style: none; }
+/* ── NAV LINKS LIST ── */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+.nav-item { position: relative; }
+
 .nav-links a {
   color: var(--text-secondary); text-decoration: none;
   padding: 8px 16px; border-radius: var(--radius-sm);
@@ -372,6 +394,28 @@ nav .container {
 }
 .nav-links a:hover  { color: var(--text-primary); background: rgba(37,99,235,0.06); }
 .nav-links a.active { color: var(--accent-blue); }
+
+/* ── BASE NAV LINK / BUTTON ── */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-title-en);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s, background 0.2s;
+  line-height: 1;
+}
+.nav-link:hover { color: var(--text-primary); background: rgba(37,133,243,0.07); }
+.nav-link[aria-current="page"] { color: var(--accent-primary); }
 
 .lang-toggle {
   font-size: 12px; padding: 6px 12px;
@@ -411,6 +455,210 @@ nav .container {
    so a dark logo stays visible on the blue background */
 nav:not(.nav-scrolled) .nav-logo-img {
   filter: brightness(0) invert(1);  /* forces white — remove if logo is already light-colored */
+}
+
+/* Transparent nav — override text color */
+nav:not(.nav-scrolled) .nav-link         { color: rgba(255,255,255,0.75); }
+nav:not(.nav-scrolled) .nav-link:hover   { color: #fff; background: rgba(255,255,255,0.10); }
+nav:not(.nav-scrolled) .nav-link[aria-current="page"] { color: var(--accent-primary); }
+
+/* ── DROPDOWN TOGGLE — chevron indicator ── */
+.nav-dropdown-toggle::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 5px;
+  /* chevron drawn with clip-path — no emoji, no icon font */
+  background: currentColor;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transition: transform 0.2s ease;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+.nav-dropdown-toggle[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+/* ── DROPDOWN PANEL ── */
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 180px;
+  z-index: 200;
+
+  /* Hidden state */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-6px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+}
+
+/* Open state — toggled via JS (.is-open) OR CSS hover */
+.nav-item--dropdown:hover .nav-dropdown,
+.nav-item--dropdown.is-open .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Bridge gap between button and panel so mouse doesn't "fall through" */
+.nav-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -10px; left: 0; right: 0;
+  height: 10px;
+}
+
+.nav-dropdown-inner {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+/* Slightly offset dropdown when it would clip left edge */
+.nav-item--dropdown:first-child .nav-dropdown {
+  left: 0;
+  transform: translateX(0);
+}
+.nav-item--dropdown:first-child .nav-dropdown::before { left: 0; }
+.nav-item--dropdown:first-child:hover .nav-dropdown,
+.nav-item--dropdown:first-child.is-open .nav-dropdown {
+  transform: translateX(0) translateY(0);
+}
+
+/* ── DROPDOWN ITEMS ── */
+.nav-dropdown-item {
+  display: block;
+  padding: 9px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-dropdown-item:hover {
+  color: var(--accent-primary);
+  background: rgba(37,133,243,0.06);
+}
+
+/* Active page inside dropdown */
+.nav-dropdown-item[aria-current="page"] {
+  color: var(--accent-primary);
+  background: rgba(37,133,243,0.05);
+}
+
+.nav-dropdown-divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 4px 8px;        /* inset from the panel edges like al-folio */
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE MENU
+   ═══════════════════════════════════════════════════════════════ */
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 22px;
+  padding: 8px;
+  line-height: 1;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s;
+}
+.mobile-menu-btn:hover { background: rgba(37,133,243,0.07); }
+nav:not(.nav-scrolled) .mobile-menu-btn { color: #fff; }
+nav:not(.nav-scrolled) .mobile-menu-btn:hover { background: rgba(255,255,255,0.10); }
+
+/* Mobile panel — sits below the nav bar, full width */
+.mobile-menu {
+  position: absolute;
+  top: 64px; left: 0; right: 0;
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+  z-index: 99;
+
+  /* Slide animation */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.mobile-menu:not([hidden]) {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+/* Remove [hidden] attr behavior for animation — JS removes it */
+.mobile-menu[hidden] { display: block !important; max-height: 0; }
+
+.mobile-menu-inner {
+  padding: 12px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobile-menu-group {
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.mobile-menu-group:last-child { border-bottom: none; }
+
+.mobile-menu-group-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-primary);
+  padding: 10px 8px 6px;
+}
+
+.mobile-menu-item {
+  display: block;
+  padding: 10px 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s, background 0.15s;
+}
+.mobile-menu-item:hover {
+  color: var(--accent-primary);
+  background: rgba(37,133,243,0.06);
+}
+
+/* Direct-link items (no group header) get slightly more prominence */
+.mobile-menu-item--direct {
+  font-size: 15px;
+  color: var(--text-primary);
+  padding: 12px 8px;
+}
+
+/* ── RESPONSIVE BREAKPOINTS ── */
+@media (max-width: 860px) {
+  /* Hide desktop nav, show hamburger */
+  .nav-links        { display: none; }
+  .mobile-menu-btn  { display: block; }
+}
+
+@media (min-width: 861px) {
+  /* Ensure mobile menu never shows on desktop */
+  .mobile-menu      { display: none !important; }
 }
 
 /* ════════════════════════════════════════════════════════════

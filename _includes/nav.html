@@ -1,35 +1,121 @@
 <nav>
   <div class="container">
+
+    <!-- Logo -->
     <a href="{{ '/' | relative_url }}" class="nav-logo">
-      <!-- Dark logo: shown on light nav (scrolled, light theme) -->
-      <img src="{{ '/assets/images/logo-dark.png' | relative_url }}"
-          alt="KSPAI" class="nav-logo-img nav-logo-img--dark" />
-      <!-- Light logo: shown on dark nav (over hero, or dark theme) -->
+      <img src="{{ '/assets/images/logo-dark.png'  | relative_url }}"
+           alt="KSPAI" class="nav-logo-img nav-logo-img--dark" />
       <img src="{{ '/assets/images/logo-light.png' | relative_url }}"
-          alt="KSPAI" class="nav-logo-img nav-logo-img--light" />
+           alt="KSPAI" class="nav-logo-img nav-logo-img--light" />
       <div class="nav-logo-text">
         한국피지컬AI학회
-        <span class="sub en">Korean Society of Physical AI</span>
+        <span class="sub en">KSPAI</span>
       </div>
     </a>
 
+    <!-- Desktop nav — built from _data/nav.yml -->
     <ul class="nav-links">
-      <li><a href="{{ '/about/'    | relative_url }}" data-i18n="nav.about"    {% if page.url contains '/about'    %}class="active"{% endif %}>소개</a></li>
-      <li><a href="{{ '/research/' | relative_url }}" data-i18n="nav.research" {% if page.url contains '/research' %}class="active"{% endif %}>연구분야</a></li>
-      <li><a href="{{ '/news/'     | relative_url }}" data-i18n="nav.news"     {% if page.url contains '/news'     %}class="active"{% endif %}>소식</a></li>
-      <li><a href="{{ '/join/'     | relative_url }}" data-i18n="nav.join"     {% if page.url contains '/join'     %}class="active"{% endif %}>회원가입</a></li>
-      <li><a href="{{ '/contact/'  | relative_url }}" data-i18n="nav.contact"  {% if page.url contains '/contact'  %}class="active"{% endif %}>문의</a></li>
+      {% for item in site.data.nav %}
+      {% if item.items %}
+
+        <!-- Dropdown item -->
+        <li class="nav-item nav-item--dropdown">
+          <button class="nav-link nav-dropdown-toggle"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  {% if item.i18n %}data-i18n="{{ item.i18n }}"{% endif %}>
+            <span data-lang="ko">{{ item.title_ko }}</span>
+            <span data-lang="en">{{ item.title_en }}</span>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <div class="nav-dropdown-inner">
+              {% for sub in item.items %}
+                {% if sub.divider %}
+                <div class="nav-dropdown-divider" role="separator"></div>
+                {% else %}
+                <a href="{{ sub.url | relative_url }}"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   {% if page.url == sub.url %}aria-current="page"{% endif %}>
+                  <span data-lang="ko">{{ sub.title_ko }}</span>
+                  <span data-lang="en">{{ sub.title_en }}</span>
+                </a>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </li>
+
+      {% else %}
+
+        <!-- Direct link item -->
+        <li class="nav-item">
+          <a href="{{ item.url | relative_url }}"
+             class="nav-link"
+             {% if item.i18n %}data-i18n="{{ item.i18n }}"{% endif %}
+             {% if page.url == item.url %}aria-current="page"{% endif %}>
+            <span data-lang="ko">{{ item.title_ko }}</span>
+            <span data-lang="en">{{ item.title_en }}</span>
+          </a>
+        </li>
+
+      {% endif %}
+      {% endfor %}
     </ul>
 
-    <div style="display:flex;align-items:center;gap:8px;">
+    <!-- Controls -->
+    <div class="nav-controls">
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-        <span class="theme-icon">🌙</span>
+        <span class="theme-icon">☀️</span>
       </button>
       <button class="lang-toggle en" onclick="toggleLang()" aria-label="Switch to English">EN</button>
     </div>
 
+    <!-- Hamburger -->
     <button class="mobile-menu-btn"
-      onclick="document.querySelector('.nav-links').classList.toggle('show')"
-      aria-label="Toggle menu">☰</button>
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            onclick="toggleMobileMenu(this)">☰</button>
+
   </div>
+
+  <!-- Mobile menu panel — also built from _data/nav.yml -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="mobile-menu-inner">
+      {% for item in site.data.nav %}
+
+        {% if item.items %}
+        <!-- Mobile dropdown group -->
+        <div class="mobile-menu-group">
+          <div class="mobile-menu-group-title">
+            <span data-lang="ko">{{ item.title_ko }}</span>
+            <span data-lang="en">{{ item.title_en }}</span>
+          </div>
+          {% for sub in item.items %}
+            {% unless sub.divider %}
+            <a href="{{ sub.url | relative_url }}" class="mobile-menu-item"
+               {% if page.url == sub.url %}aria-current="page"{% endif %}>
+              <span data-lang="ko">{{ sub.title_ko }}</span>
+              <span data-lang="en">{{ sub.title_en }}</span>
+            </a>
+            {% endunless %}
+          {% endfor %}
+        </div>
+
+        {% else %}
+        <!-- Mobile direct link -->
+        <div class="mobile-menu-group">
+          <a href="{{ item.url | relative_url }}"
+             class="mobile-menu-item mobile-menu-item--direct"
+             {% if page.url == item.url %}aria-current="page"{% endif %}>
+            <span data-lang="ko">{{ item.title_ko }}</span>
+            <span data-lang="en">{{ item.title_en }}</span>
+          </a>
+        </div>
+        {% endif %}
+
+      {% endfor %}
+    </div>
+  </div>
+
 </nav>
