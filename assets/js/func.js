@@ -65,7 +65,8 @@ document.querySelectorAll(
 (function() {
   const nav  = document.querySelector('nav');
   const hero = document.querySelector('.hero');
-  if (!nav || !hero) return;
+  if (!nav) return;
+  if (!hero) { nav.classList.add('nav-scrolled'); return; }
 
   // IntersectionObserver fires when the hero's BOTTOM EDGE
   // crosses the top of the viewport (rootMargin nudges by nav height)
