@@ -2161,3 +2161,309 @@ footer {
   .conf-featured-card { padding: 28px 22px; }
   .conf-meta-row { gap: 14px; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   KSPAI STYLE PATCH — Tier 2 Pages (about.md, seminars.md)
+   APPEND these rules to the end of assets/css/style.scss
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── GREETING CARD (about.md) ── */
+.greeting-card {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.greeting-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+}
+.greeting-quote-mark {
+  font-family: var(--font-title-en);
+  font-size: 120px;
+  line-height: 0.7;
+  color: var(--accent-primary);
+  opacity: 0.15;
+  flex-shrink: 0;
+  user-select: none;
+  padding-top: 16px;
+}
+.greeting-body { flex: 1; }
+.greeting-text {
+  font-size: 16px;
+  line-height: 2.0;
+  color: var(--text-body);
+  margin-bottom: 28px;
+}
+.greeting-text p { margin-bottom: 1.2em; }
+.greeting-text p:last-child { margin-bottom: 0; }
+.greeting-sig {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-subtle);
+}
+.greeting-sig-avatar {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-blue-700), var(--color-blue-900));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+}
+.greeting-sig-name { font-size: 15px; font-weight: 700; }
+.greeting-sig-title { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+/* ── FOUNDING TIMELINE (about.md) ── */
+.timeline {
+  position: relative;
+  padding-left: 32px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px; top: 8px; bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary), transparent);
+  border-radius: 2px;
+}
+.timeline-item {
+  position: relative;
+  padding: 0 0 32px 24px;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-dot {
+  position: absolute;
+  left: -25px;
+  top: 6px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  border: 2px solid var(--bg-base);
+  box-shadow: 0 0 0 2px var(--accent-primary);
+}
+.timeline-dot.pending {
+  background: var(--border-subtle);
+  box-shadow: 0 0 0 2px var(--border-subtle);
+}
+.timeline-year {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent-primary);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+.timeline-year.pending { color: var(--text-muted); }
+.timeline-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.timeline-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ── MISSION PILLARS GRID (about.md) ── */
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 8px;
+}
+.mission-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.mission-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-md);
+}
+.mission-icon {
+  font-size: 28px;
+  margin-bottom: 14px;
+  display: block;
+}
+.mission-title {
+  font-family: var(--font-title-en);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.mission-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ── SCOPE CALLOUT (about.md) ── */
+.scope-box {
+  background: linear-gradient(135deg, rgba(37,133,243,0.06), rgba(36,255,252,0.03));
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
+}
+.scope-box-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-primary);
+  margin-bottom: 14px;
+}
+.scope-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.scope-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  background: rgba(37,133,243,0.07);
+  border: 1px solid var(--border-blue);
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+/* ── SEMINAR SERIES CARDS (seminars.md) ── */
+.seminar-series-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 36px 40px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.seminar-series-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-md);
+}
+.seminar-series-card::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.seminar-series-card:hover::after { transform: scaleX(1); }
+.seminar-series-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.seminar-series-icon {
+  width: 48px; height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(37,133,243,0.10);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.seminar-series-name {
+  font-family: var(--font-title-en);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 2px;
+}
+.seminar-series-en {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+.seminar-series-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.seminar-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+.seminar-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.seminar-meta-label {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+.seminar-meta-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ── PARTICIPATION GRID (seminars.md) ── */
+.participate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+.participate-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.participate-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.participate-title {
+  font-family: var(--font-title-en);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.participate-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .greeting-card { flex-direction: column; gap: 0; padding: 32px 24px; }
+  .greeting-quote-mark { display: none; }
+  .mission-grid { grid-template-columns: 1fr 1fr; }
+  .participate-grid { grid-template-columns: 1fr; }
+  .seminar-series-card { padding: 28px 24px; }
+}
+@media (max-width: 480px) {
+  .mission-grid { grid-template-columns: 1fr; }
+  .greeting-card { padding: 24px; }
+}
