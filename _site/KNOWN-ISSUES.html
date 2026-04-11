@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Known Issues &amp; Fixes | Korean Society of Physical AI</title>
+  <meta name="description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
+  <meta property="og:title" content="Known Issues &amp; Fixes">
+  <meta property="og:description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
+  <meta property="og:url" content="http://localhost:4000/KNOWN-ISSUES.html">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Space Grotesk (EN titles) + Noto Sans KR (KO body option A) + Outfit (KO body option B) -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Pretendard (KO primary + KO/EN body) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+  
+  <!-- JetBrains Mono (monospace labels — keep) -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Theme: apply saved preference immediately to prevent flash -->
+  <script>
+    (function() {
+      var theme = localStorage.getItem('kspai-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      var lang = localStorage.getItem('kspai-lang') || 'ko';
+      document.documentElement.setAttribute('lang', lang);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Background Effects -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <nav>
+  <div class="container">
+
+    <!-- Logo -->
+    <a href="/" class="nav-logo">
+      <img src="/assets/images/logo-dark.png"
+           alt="KSPAI" class="nav-logo-img nav-logo-img--dark" />
+      <img src="/assets/images/logo-light.png"
+           alt="KSPAI" class="nav-logo-img nav-logo-img--light" />
+      <div class="nav-logo-text">
+        한국피지컬AI학회
+        <span class="sub en">KSPAI</span>
+      </div>
+    </a>
+
+    <!-- Desktop nav — built from _data/nav.yml -->
+    <ul class="nav-links">
+      
+      
+
+        <!-- Dropdown item -->
+        <li class="nav-item nav-item--dropdown">
+          <button class="nav-link nav-dropdown-toggle"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  data-i18n="nav.about">
+            <span data-lang="ko">소개</span>
+            <span data-lang="en">About</span>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <div class="nav-dropdown-inner">
+              
+                
+                <a href="/about/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">학회소개</span>
+                  <span data-lang="en">About KSPAI</span>
+                </a>
+                
+              
+                
+                <a href="/officers/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">임원진</span>
+                  <span data-lang="en">Officers</span>
+                </a>
+                
+              
+                
+                <a href="/bylaws/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">정관</span>
+                  <span data-lang="en">Bylaws</span>
+                </a>
+                
+              
+            </div>
+          </div>
+        </li>
+
+      
+      
+      
+
+        <!-- Direct link item -->
+        <li class="nav-item">
+          <a href="/research/"
+             class="nav-link"
+             data-i18n="nav.research"
+             >
+            <span data-lang="ko">연구분야</span>
+            <span data-lang="en">Research</span>
+          </a>
+        </li>
+
+      
+      
+      
+
+        <!-- Dropdown item -->
+        <li class="nav-item nav-item--dropdown">
+          <button class="nav-link nav-dropdown-toggle"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  data-i18n="nav.academic">
+            <span data-lang="ko">학술활동</span>
+            <span data-lang="en">Academic</span>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <div class="nav-dropdown-inner">
+              
+                
+                <a href="/conferences/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">학술대회</span>
+                  <span data-lang="en">Conferences</span>
+                </a>
+                
+              
+                
+                <a href="/submit/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">논문투고</span>
+                  <span data-lang="en">Submit a Paper</span>
+                </a>
+                
+              
+                
+                <div class="nav-dropdown-divider" role="separator"></div>
+                
+              
+                
+                <a href="/journal/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">학회지</span>
+                  <span data-lang="en">Journal</span>
+                </a>
+                
+              
+                
+                <a href="/seminars/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">세미나</span>
+                  <span data-lang="en">Seminars</span>
+                </a>
+                
+              
+            </div>
+          </div>
+        </li>
+
+      
+      
+      
+
+        <!-- Direct link item -->
+        <li class="nav-item">
+          <a href="/news/"
+             class="nav-link"
+             data-i18n="nav.news"
+             >
+            <span data-lang="ko">소식</span>
+            <span data-lang="en">News</span>
+          </a>
+        </li>
+
+      
+      
+      
+
+        <!-- Dropdown item -->
+        <li class="nav-item nav-item--dropdown">
+          <button class="nav-link nav-dropdown-toggle"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  data-i18n="nav.participate">
+            <span data-lang="ko">참여</span>
+            <span data-lang="en">Participate</span>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <div class="nav-dropdown-inner">
+              
+                
+                <a href="/join/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">회원가입</span>
+                  <span data-lang="en">Membership</span>
+                </a>
+                
+              
+                
+                <a href="/contact/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">문의하기</span>
+                  <span data-lang="en">Contact</span>
+                </a>
+                
+              
+                
+                <div class="nav-dropdown-divider" role="separator"></div>
+                
+              
+                
+                <a href="/privacy/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">개인정보처리방침</span>
+                  <span data-lang="en">Privacy Policy</span>
+                </a>
+                
+              
+            </div>
+          </div>
+        </li>
+
+      
+      
+    </ul>
+
+    <!-- Controls -->
+    <div class="nav-controls">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="theme-icon">☀️</span>
+      </button>
+      <button class="lang-toggle en" onclick="toggleLang()" aria-label="Switch to English">EN</button>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="mobile-menu-btn"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            onclick="toggleMobileMenu(this)">☰</button>
+
+  </div>
+
+  <!-- Mobile menu panel — also built from _data/nav.yml -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="mobile-menu-inner">
+      
+
+        
+        <!-- Mobile dropdown group -->
+        <div class="mobile-menu-group">
+          <div class="mobile-menu-group-title">
+            <span data-lang="ko">소개</span>
+            <span data-lang="en">About</span>
+          </div>
+          
+            
+            <a href="/about/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">학회소개</span>
+              <span data-lang="en">About KSPAI</span>
+            </a>
+            
+          
+            
+            <a href="/officers/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">임원진</span>
+              <span data-lang="en">Officers</span>
+            </a>
+            
+          
+            
+            <a href="/bylaws/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">정관</span>
+              <span data-lang="en">Bylaws</span>
+            </a>
+            
+          
+        </div>
+
+        
+
+      
+
+        
+        <!-- Mobile direct link -->
+        <div class="mobile-menu-group">
+          <a href="/research/"
+             class="mobile-menu-item mobile-menu-item--direct"
+             >
+            <span data-lang="ko">연구분야</span>
+            <span data-lang="en">Research</span>
+          </a>
+        </div>
+        
+
+      
+
+        
+        <!-- Mobile dropdown group -->
+        <div class="mobile-menu-group">
+          <div class="mobile-menu-group-title">
+            <span data-lang="ko">학술활동</span>
+            <span data-lang="en">Academic</span>
+          </div>
+          
+            
+            <a href="/conferences/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">학술대회</span>
+              <span data-lang="en">Conferences</span>
+            </a>
+            
+          
+            
+            <a href="/submit/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">논문투고</span>
+              <span data-lang="en">Submit a Paper</span>
+            </a>
+            
+          
+            
+          
+            
+            <a href="/journal/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">학회지</span>
+              <span data-lang="en">Journal</span>
+            </a>
+            
+          
+            
+            <a href="/seminars/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">세미나</span>
+              <span data-lang="en">Seminars</span>
+            </a>
+            
+          
+        </div>
+
+        
+
+      
+
+        
+        <!-- Mobile direct link -->
+        <div class="mobile-menu-group">
+          <a href="/news/"
+             class="mobile-menu-item mobile-menu-item--direct"
+             >
+            <span data-lang="ko">소식</span>
+            <span data-lang="en">News</span>
+          </a>
+        </div>
+        
+
+      
+
+        
+        <!-- Mobile dropdown group -->
+        <div class="mobile-menu-group">
+          <div class="mobile-menu-group-title">
+            <span data-lang="ko">참여</span>
+            <span data-lang="en">Participate</span>
+          </div>
+          
+            
+            <a href="/join/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">회원가입</span>
+              <span data-lang="en">Membership</span>
+            </a>
+            
+          
+            
+            <a href="/contact/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">문의하기</span>
+              <span data-lang="en">Contact</span>
+            </a>
+            
+          
+            
+          
+            
+            <a href="/privacy/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">개인정보처리방침</span>
+              <span data-lang="en">Privacy Policy</span>
+            </a>
+            
+          
+        </div>
+
+        
+
+      
+    </div>
+  </div>
+
+</nav>
+
+
+  <main>
+    
+  <div class="page-hero" >
+  <!-- Reuse the same warm glow blobs from the main hero -->
+  <div class="hero-bg-warm-1"></div>
+  <div class="hero-bg-warm-2"></div>
+
+  <div class="container">
+    <div class="page-hero-inner">
+
+      
+
+      <h1 class="page-hero-title">
+        <span data-lang="ko">Known Issues &amp; Fixes</span>
+        <span data-lang="en">Known Issues &amp; Fixes</span>
+      </h1>
+
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+<article class="page-article page-article--has-hero">
+  <div class="container">
+
+    
+
+    <div class="page-body">
+      <h1 id="known-issues--fixes">Known Issues &amp; Fixes</h1>
+
+<p>A record of bugs discovered and resolved during development. Useful context when debugging regressions or understanding why certain patterns exist in the code.</p>
+
+<hr />
+
+<h2 id="bug-1--jekyll-not-building-nojekyll-file">Bug 1 — Jekyll not building (<code class="language-plaintext highlighter-rouge">.nojekyll</code> file)</h2>
+
+<p><strong>Symptom:</strong> GitHub Pages serves raw HTML files with Liquid tags visible as literal text. SCSS not compiled. Includes not resolved.</p>
+
+<p><strong>Root cause:</strong> A <code class="language-plaintext highlighter-rouge">.nojekyll</code> file in the repo root tells GitHub Pages to skip Jekyll entirely and serve files statically. This was added during the original static-site phase to prevent Jekyll from trying to process plain HTML.</p>
+
+<p><strong>Fix:</strong> Delete <code class="language-plaintext highlighter-rouge">.nojekyll</code> from the repo root.</p>
+
+<p><strong>Status:</strong> Fixed. Do not re-add <code class="language-plaintext highlighter-rouge">.nojekyll</code>.</p>
+
+<hr />
+
+<h2 id="bug-2--mobile-menu-not-working">Bug 2 — Mobile menu not working</h2>
+
+<p><strong>Symptom:</strong> Tapping the hamburger (☰) button on mobile did nothing. No error visible in console on iOS Safari.</p>
+
+<p><strong>Root cause:</strong> <code class="language-plaintext highlighter-rouge">nav.html</code> contains <code class="language-plaintext highlighter-rouge">onclick="toggleMobileMenu(this)"</code> but <code class="language-plaintext highlighter-rouge">toggleMobileMenu()</code> was never appended to <code class="language-plaintext highlighter-rouge">func.js</code>. The function simply didn’t exist. The same was true for the desktop dropdown click handlers.</p>
+
+<p><strong>Fix:</strong> Added <code class="language-plaintext highlighter-rouge">toggleMobileMenu()</code>, <code class="language-plaintext highlighter-rouge">closeMobileMenu()</code>, desktop dropdown JS, and Escape key handler to <code class="language-plaintext highlighter-rouge">func.js</code>.</p>
+
+<p><strong>Status:</strong> Fixed in <code class="language-plaintext highlighter-rouge">func.js</code>.</p>
+
+<hr />
+
+<h2 id="bug-3--intersectionobserver-variable-name-conflict">Bug 3 — <code class="language-plaintext highlighter-rouge">IntersectionObserver</code> variable name conflict</h2>
+
+<p><strong>Symptom:</strong> Scroll fade-in animations or nav transparency stopped working intermittently, depending on browser/order of execution.</p>
+
+<p><strong>Root cause:</strong> Both the scroll fade-in block and the nav transparency IIFE declared <code class="language-plaintext highlighter-rouge">const observer = new IntersectionObserver(...)</code>. In strict mode or certain V8 versions, the second declaration shadowed or conflicted with the first within the same module scope.</p>
+
+<p><strong>Fix:</strong> Renamed to <code class="language-plaintext highlighter-rouge">fadeObserver</code> (scroll fade-in) and <code class="language-plaintext highlighter-rouge">heroObserver</code> (nav transparency).</p>
+
+<p><strong>Status:</strong> Fixed in <code class="language-plaintext highlighter-rouge">func.js</code>. Never reuse <code class="language-plaintext highlighter-rouge">observer</code> as a bare variable name in this file.</p>
+
+<hr />
+
+<h2 id="bug-4--nav-border-bottom-line-visible-over-hero">Bug 4 — Nav <code class="language-plaintext highlighter-rouge">border-bottom</code> line visible over hero</h2>
+
+<p><strong>Symptom:</strong> A 1px horizontal line was visible at the bottom of the nav bar when the nav should have been fully transparent over the hero section. CSS DevTools showed <code class="language-plaintext highlighter-rouge">border-bottom: 1px solid transparent</code> being overridden.</p>
+
+<p><strong>Root cause:</strong> A cascade specificity collision caused by three interacting rules:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">.mobile-menu { border-bottom: 1px solid var(--border-subtle); }</code> — base rule sets a visible border on the mobile menu panel</li>
+  <li><code class="language-plaintext highlighter-rouge">.mobile-menu[hidden] { display: block !important; }</code> — specificity <code class="language-plaintext highlighter-rouge">0,2,0</code> (class + attribute) — makes the hidden menu technically rendered (just zero height) on all screen sizes</li>
+  <li><code class="language-plaintext highlighter-rouge">@media (min-width: 861px) { .mobile-menu { display: none !important; } }</code> — specificity <code class="language-plaintext highlighter-rouge">0,1,0</code> (class only) — loses to rule 2 because <code class="language-plaintext highlighter-rouge">!important</code> + lower specificity</li>
+</ol>
+
+<p>The result: on desktop, <code class="language-plaintext highlighter-rouge">.mobile-menu</code> was <code class="language-plaintext highlighter-rouge">display: block</code> with <code class="language-plaintext highlighter-rouge">max-height: 0</code> and <code class="language-plaintext highlighter-rouge">overflow: hidden</code> — invisible to users, but the <code class="language-plaintext highlighter-rouge">border-bottom</code> on the zero-height element still painted as a 1px line right at the bottom edge of the nav bar.</p>
+
+<p><strong>Fix:</strong></p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* Remove from .mobile-menu base rule: */</span>
+<span class="nl">border-bottom</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">border-subtle</span><span class="p">);</span>  <span class="cm">/* ← DELETE */</span>
+
+<span class="cm">/* Add separately, only when open: */</span>
+<span class="nc">.mobile-menu</span><span class="o">[</span><span class="nt">data-open</span><span class="o">=</span><span class="s2">"true"</span><span class="o">]</span> <span class="p">{</span>
+  <span class="nl">border-bottom</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">border-subtle</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Additional guard added:</strong></p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">nav</span><span class="nd">:not</span><span class="o">(</span><span class="nc">.nav-scrolled</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nl">border-bottom-color</span><span class="p">:</span> <span class="nb">transparent</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>This higher-specificity rule (<code class="language-plaintext highlighter-rouge">0,2,0</code>) overrides any lingering <code class="language-plaintext highlighter-rouge">border-bottom</code> values from the base <code class="language-plaintext highlighter-rouge">nav</code> rule (<code class="language-plaintext highlighter-rouge">0,1,0</code>) regardless of cascade order.</p>
+
+<p><strong>Status:</strong> Fixed in <code class="language-plaintext highlighter-rouge">style.scss</code>.</p>
+
+<hr />
+
+<h2 id="bug-5--nav-transparent-on-all-pages-not-just-homepage">Bug 5 — Nav transparent on all pages, not just homepage</h2>
+
+<p><strong>Symptom:</strong> On inner pages (<code class="language-plaintext highlighter-rouge">/about/</code>, <code class="language-plaintext highlighter-rouge">/privacy/</code>, etc.), the nav background was transparent and text was white, making it invisible or unreadable over the page’s light background.</p>
+
+<p><strong>Root cause:</strong> The <code class="language-plaintext highlighter-rouge">IntersectionObserver</code> IIFE in <code class="language-plaintext highlighter-rouge">func.js</code> returned early with <code class="language-plaintext highlighter-rouge">return</code> when no <code class="language-plaintext highlighter-rouge">.hero</code> element was found, leaving the nav in its default CSS state — which is <code class="language-plaintext highlighter-rouge">background: transparent</code>.</p>
+
+<p><strong>Fix:</strong></p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// BEFORE:</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">nav</span> <span class="o">||</span> <span class="o">!</span><span class="nx">hero</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+
+<span class="c1">// AFTER:</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">nav</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">hero</span><span class="p">)</span> <span class="p">{</span> <span class="nx">nav</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">'</span><span class="s1">nav-scrolled</span><span class="dl">'</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>When there is no hero, <code class="language-plaintext highlighter-rouge">.nav-scrolled</code> is immediately applied, giving the nav its solid background.</p>
+
+<p><strong>Status:</strong> Fixed in <code class="language-plaintext highlighter-rouge">func.js</code>.</p>
+
+<hr />
+
+<h2 id="pending--watch-list">Pending / Watch list</h2>
+
+<h3 id="hero-background-none-flash-on-slow-connections">Hero <code class="language-plaintext highlighter-rouge">background: none</code> flash on slow connections</h3>
+<p>When the page loads, <code class="language-plaintext highlighter-rouge">--hero-bg-image</code> defaults to <code class="language-plaintext highlighter-rouge">none</code> in CSS. If a <code class="language-plaintext highlighter-rouge">hero_image</code> is set via front matter and the image loads slowly, there may be a brief flash of the gradient-only background before the image appears. Mitigation: use well-optimized images and consider a CSS <code class="language-plaintext highlighter-rouge">background-color</code> fallback matching the gradient start color.</p>
+
+<h3 id="pretendard-cdn-availability">Pretendard CDN availability</h3>
+<p>Pretendard Variable is loaded from <code class="language-plaintext highlighter-rouge">cdn.jsdelivr.net</code>. If jsDelivr has an outage, Korean body text falls back to Noto Sans KR (Google Fonts). Both are listed in the font stack — no action needed, just awareness.</p>
+
+<h3 id="data-i18n-on-button-elements"><code class="language-plaintext highlighter-rouge">data-i18n</code> on <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> elements</h3>
+<p>The <code class="language-plaintext highlighter-rouge">lang.js</code> engine uses <code class="language-plaintext highlighter-rouge">el.textContent = entry[lang]</code> which on a <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> with a <code class="language-plaintext highlighter-rouge">::after</code> pseudo-element (like the dropdown chevron) can cause the chevron to disappear if the button’s text content is replaced. Currently avoided because the chevron is drawn with CSS <code class="language-plaintext highlighter-rouge">clip-path</code> on <code class="language-plaintext highlighter-rouge">::after</code> — it is not a text character and survives <code class="language-plaintext highlighter-rouge">textContent</code> replacement. Do not change the chevron to a text/emoji character.</p>
+
+<h3 id="superwide-monitor-3660px-hero">Superwide monitor (3660px) hero</h3>
+<p>Hero height is capped at <code class="language-plaintext highlighter-rouge">clamp(600px, 80vh, 820px)</code> to prevent an overwhelming full-screen hero on ultrawide displays. The <code class="language-plaintext highlighter-rouge">.hero-inner</code> grid uses <code class="language-plaintext highlighter-rouge">max-width: 1200px</code> via <code class="language-plaintext highlighter-rouge">.container</code>. If the owner ever requests a wider content area, the <code class="language-plaintext highlighter-rouge">max-width</code> in <code class="language-plaintext highlighter-rouge">.container</code> is the knob to turn — currently at <code class="language-plaintext highlighter-rouge">1200px</code>.</p>
+
+    </div>
+
+    <div class="page-back">
+      <a href="/" class="btn btn-outline">
+        ← <span data-lang="ko">홈으로</span><span data-lang="en">Back to Home</span>
+      </a>
+    </div>
+
+  </div>
+</article>
+
+  </main>
+
+  <footer>
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="/assets/images/logo-light.png"
+              alt="KSPAI" class="footer-logo-img" />
+          <div class="footer-logo-name">한국피지컬AI학회
+            <span class="sub en">Korean Society of Physical AI</span>
+          </div>
+        </div>
+        <p class="footer-about" data-i18n="footer.about">
+          물리적 세계와 인공지능의 융합을 선도하는 학술 공동체. 체화지능, 로보틱스, 자율시스템, 디지털 트윈 등 피지컬 AI의 핵심 분야를 연구합니다.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer.col.society">학회</h4>
+        <ul class="footer-links">
+          <li><a href="/about/" data-i18n="footer.society.about">학회소개</a></li>
+          <li><a href="/research/" data-i18n="footer.society.research">연구분야</a></li>
+          <li><a href="/officers/" data-i18n="footer.society.officers">임원진</a></li>
+          <li><a href="/bylaws/" data-i18n="footer.society.bylaws">정관</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer.col.academic">학술활동</h4>
+        <ul class="footer-links">
+          <li><a href="/conferences/" data-i18n="footer.academic.conf">학술대회</a></li>
+          <li><a href="/submit/" data-i18n="footer.academic.submit">논문투고</a></li>
+          <li><a href="/journal/" data-i18n="footer.academic.journal">학회지</a></li>
+          <li><a href="/seminars/" data-i18n="footer.academic.seminar">세미나</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer.col.join">참여</h4>
+        <ul class="footer-links">
+          <li><a href="/join/" data-i18n="footer.join.membership">회원가입</a></li>
+          <li><a href="/news/" data-i18n="footer.join.notice">공지사항</a></li>
+          <li><a href="/contact/" data-i18n="footer.join.contact">문의하기</a></li>
+          <li><a href="/privacy/" data-i18n="footer.join.privacy">개인정보처리방침</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-watermark">
+      <img src="/assets/images/logo-dark.png"
+          alt="KSPAI" class="footer-logo-img" />
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy en">
+        © 2026 Korean Society of Physical AI (KSPAI). All rights reserved.
+      </span>
+      <span class="footer-contact-info en">
+        <a href="mailto:contact@kspai.org">contact@kspai.org</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/assets/js/lang.js" defer></script>
+  <script src="/assets/js/func.js" defer></script>
+
+</body>
+</html>

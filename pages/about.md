@@ -261,7 +261,7 @@ permalink: /about/
       </div>
       <p class="mission-desc">
         <span data-lang="ko">학술지 「피지컬 AI 연구」 발행 및 엄격한 동료 심사를 통해 피지컬 AI 분야의 연구 수준을 높입니다.</span>
-        <span data-lang="en">Advancing research quality in Physical AI through the publication of <em>Physical AI Research</em> (PAIJ) and rigorous peer review.</span>
+        <span data-lang="en">Advancing research quality in Physical AI through the publication of <em>Physical AI Research</em> (JKPAI) and rigorous peer review.</span>
       </p>
     </div>
     <div class="mission-card">
@@ -521,11 +521,11 @@ permalink: /about/
       </div>
       <div class="timeline-title" style="color: var(--text-muted);">
         <span data-lang="ko">학술지 「피지컬 AI 연구」 창간호 발행</span>
-        <span data-lang="en">Inaugural issue of <em>Physical AI Research</em> (PAIJ)</span>
+        <span data-lang="en">Inaugural issue of <em>Physical AI Research</em> (JKPAI)</span>
       </div>
       <p class="timeline-desc">
-        <span data-lang="ko">학회지 「피지컬 AI 연구(Physical AI Research, PAIJ)」 제1권 제1호 발행.</span>
-        <span data-lang="en">Publication of Volume 1, Issue 1 of <em>Physical AI Research</em> (PAIJ).</span>
+        <span data-lang="ko">학회지 「피지컬 AI 연구(Physical AI Research, JKPAI)」 제1권 제1호 발행.</span>
+        <span data-lang="en">Publication of Volume 1, Issue 1 of <em>Physical AI Research</em> (JKPAI).</span>
       </p>
     </div>
 

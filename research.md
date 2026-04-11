@@ -25,7 +25,7 @@ permalink: /research/
     <span data-lang="en">Core Research Areas</span>
   </h2>
 
-  <div class="research-full-grid">
+  <div class="research-grid">
     {% for area in site.data.research %}
     <div class="research-full-card">
       <div class="research-full-num mono">{{ area.num }}</div>

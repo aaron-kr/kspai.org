@@ -1618,6 +1618,7 @@ footer {
 /* ── RESEARCH FULL PAGE ── */
 .research-full-grid {
   display: flex; flex-direction: column;
+  // display: grid; grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
 }
 .research-full-card {

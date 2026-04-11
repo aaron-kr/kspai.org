@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한국피지컬AI학회 | Korean Society of Physical AI</title>
+  <meta name="description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
+  <meta property="og:title" content="한국피지컬AI학회">
+  <meta property="og:description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
+  <meta property="og:url" content="http://localhost:4000/">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Space Grotesk (EN titles) + Noto Sans KR (KO body option A) + Outfit (KO body option B) -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Pretendard (KO primary + KO/EN body) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+  
+  <!-- JetBrains Mono (monospace labels — keep) -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Theme: apply saved preference immediately to prevent flash -->
+  <script>
+    (function() {
+      var theme = localStorage.getItem('kspai-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      var lang = localStorage.getItem('kspai-lang') || 'ko';
+      document.documentElement.setAttribute('lang', lang);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Background Effects -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <nav>
+  <div class="container">
+
+    <!-- Logo -->
+    <a href="/" class="nav-logo">
+      <img src="/assets/images/logo-dark.png"
+           alt="KSPAI" class="nav-logo-img nav-logo-img--dark" />
+      <img src="/assets/images/logo-light.png"
+           alt="KSPAI" class="nav-logo-img nav-logo-img--light" />
+      <div class="nav-logo-text">
+        한국피지컬AI학회
+        <span class="sub en">KSPAI</span>
+      </div>
+    </a>
+
+    <!-- Desktop nav — built from _data/nav.yml -->
+    <ul class="nav-links">
+      
+      
+
+        <!-- Dropdown item -->
+        <li class="nav-item nav-item--dropdown">
+          <button class="nav-link nav-dropdown-toggle"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  data-i18n="nav.about">
+            <span data-lang="ko">소개</span>
+            <span data-lang="en">About</span>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <div class="nav-dropdown-inner">
+              
+                
+                <a href="/about/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">학회소개</span>
+                  <span data-lang="en">About KSPAI</span>
+                </a>
+                
+              
+                
+                <a href="/officers/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">임원진</span>
+                  <span data-lang="en">Officers</span>
+                </a>
+                
+              
+                
+                <a href="/bylaws/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">정관</span>
+                  <span data-lang="en">Bylaws</span>
+                </a>
+                
+              
+            </div>
+          </div>
+        </li>
+
+      
+      
+      
+
+        <!-- Direct link item -->
+        <li class="nav-item">
+          <a href="/research/"
+             class="nav-link"
+             data-i18n="nav.research"
+             >
+            <span data-lang="ko">연구분야</span>
+            <span data-lang="en">Research</span>
+          </a>
+        </li>
+
+      
+      
+      
+
+        <!-- Dropdown item -->
+        <li class="nav-item nav-item--dropdown">
+          <button class="nav-link nav-dropdown-toggle"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  data-i18n="nav.academic">
+            <span data-lang="ko">학술활동</span>
+            <span data-lang="en">Academic</span>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <div class="nav-dropdown-inner">
+              
+                
+                <a href="/conferences/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">학술대회</span>
+                  <span data-lang="en">Conferences</span>
+                </a>
+                
+              
+                
+                <a href="/submit/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">논문투고</span>
+                  <span data-lang="en">Submit a Paper</span>
+                </a>
+                
+              
+                
+                <div class="nav-dropdown-divider" role="separator"></div>
+                
+              
+                
+                <a href="/journal/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">학회지</span>
+                  <span data-lang="en">Journal</span>
+                </a>
+                
+              
+                
+                <a href="/seminars/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">세미나</span>
+                  <span data-lang="en">Seminars</span>
+                </a>
+                
+              
+            </div>
+          </div>
+        </li>
+
+      
+      
+      
+
+        <!-- Direct link item -->
+        <li class="nav-item">
+          <a href="/news/"
+             class="nav-link"
+             data-i18n="nav.news"
+             >
+            <span data-lang="ko">소식</span>
+            <span data-lang="en">News</span>
+          </a>
+        </li>
+
+      
+      
+      
+
+        <!-- Dropdown item -->
+        <li class="nav-item nav-item--dropdown">
+          <button class="nav-link nav-dropdown-toggle"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  data-i18n="nav.participate">
+            <span data-lang="ko">참여</span>
+            <span data-lang="en">Participate</span>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <div class="nav-dropdown-inner">
+              
+                
+                <a href="/join/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">회원가입</span>
+                  <span data-lang="en">Membership</span>
+                </a>
+                
+              
+                
+                <a href="/contact/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">문의하기</span>
+                  <span data-lang="en">Contact</span>
+                </a>
+                
+              
+                
+                <div class="nav-dropdown-divider" role="separator"></div>
+                
+              
+                
+                <a href="/privacy/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">개인정보처리방침</span>
+                  <span data-lang="en">Privacy Policy</span>
+                </a>
+                
+              
+            </div>
+          </div>
+        </li>
+
+      
+      
+    </ul>
+
+    <!-- Controls -->
+    <div class="nav-controls">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="theme-icon">☀️</span>
+      </button>
+      <button class="lang-toggle en" onclick="toggleLang()" aria-label="Switch to English">EN</button>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="mobile-menu-btn"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            onclick="toggleMobileMenu(this)">☰</button>
+
+  </div>
+
+  <!-- Mobile menu panel — also built from _data/nav.yml -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="mobile-menu-inner">
+      
+
+        
+        <!-- Mobile dropdown group -->
+        <div class="mobile-menu-group">
+          <div class="mobile-menu-group-title">
+            <span data-lang="ko">소개</span>
+            <span data-lang="en">About</span>
+          </div>
+          
+            
+            <a href="/about/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">학회소개</span>
+              <span data-lang="en">About KSPAI</span>
+            </a>
+            
+          
+            
+            <a href="/officers/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">임원진</span>
+              <span data-lang="en">Officers</span>
+            </a>
+            
+          
+            
+            <a href="/bylaws/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">정관</span>
+              <span data-lang="en">Bylaws</span>
+            </a>
+            
+          
+        </div>
+
+        
+
+      
+
+        
+        <!-- Mobile direct link -->
+        <div class="mobile-menu-group">
+          <a href="/research/"
+             class="mobile-menu-item mobile-menu-item--direct"
+             >
+            <span data-lang="ko">연구분야</span>
+            <span data-lang="en">Research</span>
+          </a>
+        </div>
+        
+
+      
+
+        
+        <!-- Mobile dropdown group -->
+        <div class="mobile-menu-group">
+          <div class="mobile-menu-group-title">
+            <span data-lang="ko">학술활동</span>
+            <span data-lang="en">Academic</span>
+          </div>
+          
+            
+            <a href="/conferences/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">학술대회</span>
+              <span data-lang="en">Conferences</span>
+            </a>
+            
+          
+            
+            <a href="/submit/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">논문투고</span>
+              <span data-lang="en">Submit a Paper</span>
+            </a>
+            
+          
+            
+          
+            
+            <a href="/journal/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">학회지</span>
+              <span data-lang="en">Journal</span>
+            </a>
+            
+          
+            
+            <a href="/seminars/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">세미나</span>
+              <span data-lang="en">Seminars</span>
+            </a>
+            
+          
+        </div>
+
+        
+
+      
+
+        
+        <!-- Mobile direct link -->
+        <div class="mobile-menu-group">
+          <a href="/news/"
+             class="mobile-menu-item mobile-menu-item--direct"
+             >
+            <span data-lang="ko">소식</span>
+            <span data-lang="en">News</span>
+          </a>
+        </div>
+        
+
+      
+
+        
+        <!-- Mobile dropdown group -->
+        <div class="mobile-menu-group">
+          <div class="mobile-menu-group-title">
+            <span data-lang="ko">참여</span>
+            <span data-lang="en">Participate</span>
+          </div>
+          
+            
+            <a href="/join/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">회원가입</span>
+              <span data-lang="en">Membership</span>
+            </a>
+            
+          
+            
+            <a href="/contact/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">문의하기</span>
+              <span data-lang="en">Contact</span>
+            </a>
+            
+          
+            
+          
+            
+            <a href="/privacy/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">개인정보처리방침</span>
+              <span data-lang="en">Privacy Policy</span>
+            </a>
+            
+          
+        </div>
+
+        
+
+      
+    </div>
+  </div>
+
+</nav>
+
+
+  <main>
+    <section class="hero" style="--hero-bg-image: url('/assets/images/hero.jpg')">  <!-- Warm glow accents within the blue hero -->
+  <div class="hero-bg-warm-1"></div>
+  <div class="hero-bg-warm-2"></div>
+
+  <!-- Floating research topic chips (decorative, desktop only) -->
+  <div class="hero-chips" aria-hidden="true">
+    <span class="hero-chip" style="top:18%;right:8%;">Embodied Intelligence</span>
+    <span class="hero-chip" style="top:40%;right:2%;">Digital Twin</span>
+    <span class="hero-chip" style="bottom:28%;right:9%;">Autonomous Systems</span>
+    <span class="hero-chip" style="bottom:14%;right:22%;">Sensor Fusion</span>
+    <span class="hero-chip" style="top:28%;right:44%;">로보틱스</span>
+  </div>
+
+  <!-- Video (if applicable)-->
+  <video class="hero-video-bg" autoplay muted loop playsinline>
+    <source src="/assets/video/hero.mp4" type="video/mp4">
+  </video>
+
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- ── LEFT: Text ── -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span class="en" style="font-weight:600;" data-i18n="hero.badge">창립 2025</span>
+        </div>
+
+        <h1>
+          <span data-i18n="hero.title.1">물리 세계를 이해하는</span><br>
+          <span class="line2" data-i18n="hero.title.2">지능의 새로운 지평</span>
+        </h1>
+
+        <p class="hero-subtitle-en en" data-i18n="hero.subtitle">
+          Korean Society of Physical AI &amp; Research Institute
+        </p>
+
+        <p class="hero-desc" data-i18n="hero.desc">
+          한국피지컬AI학회는 물리적 세계와 인공지능의 융합을 선도하는 학술 공동체입니다. 로보틱스, 체화지능, 자율시스템, 디지털 트윈 등 피지컬 AI의 핵심 분야를 연구하고 차세대 융합 인재를 양성합니다.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#join"  class="btn btn-hero-primary en" data-i18n="hero.btn.join">회원가입 →</a>
+          <a href="#about" class="btn btn-hero-outline"   data-i18n="hero.btn.about">학회소개 보기</a>
+        </div>
+      </div>
+
+      <!-- ── RIGHT: Visual Orb ── -->
+      <!-- 
+      <div class="hero-visual">
+        <div class="hero-orb">
+          <div class="hero-orb-ring"></div>
+          <div class="hero-orb-ring"></div>
+          <div class="hero-orb-ring"></div>
+          <div class="hero-orb-center">
+            <div class="hero-orb-label">Physical<br>AI</div>
+          </div>
+          <div class="hero-orb-dot"></div>
+          <div class="hero-orb-dot"></div>
+          <div class="hero-orb-dot"></div>
+        </div>
+      </div>
+      -->
+      <div class="hero-visual">
+        <div class="hero-logo-display">
+          <img src="/assets/images/logo.png"
+              alt="한국피지컬AI학회"
+              class="hero-logo-img" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number en">6+</div>
+        <div class="stat-label" data-i18n="stat.research">핵심 연구 분야</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number en">2</div>
+        <div class="stat-label" data-i18n="stat.orgs">산하 기관</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number en">2025</div>
+        <div class="stat-label" data-i18n="stat.founded">창립 연도</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number en">∞</div>
+        <div class="stat-label" data-i18n="stat.potential">가능성</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container">
+    <div class="section-label mono" data-i18n="about.label">About Us</div>
+    <div class="section-title-row">
+      <h2 class="section-title" data-i18n="about.title">두 기관, 하나의 비전</h2>
+      <a href="/about/" class="section-page-link">
+        <span data-lang="ko">자세히 보기 →</span>
+        <span data-lang="en">Full page →</span>
+      </a>
+    </div>
+    <p class="section-subtitle" data-i18n="about.subtitle">
+      피지컬 AI의 학술 연구와 교육을 통합적으로 추진하는 자매 기관입니다.
+    </p>
+
+    <div class="about-grid">
+
+      <div class="org-card">
+        <div class="org-icon society">🏛</div>
+        <h3 class="org-name" data-i18n="society.name">한국피지컬AI학회</h3>
+        <p class="org-name-en en" data-i18n="society.name.en">Korean Society of Physical AI (KSPAI)</p>
+        <p class="org-desc" data-i18n="society.desc">
+          피지컬 AI 분야의 학술 연구, 국내외 학술대회 개최, 논문 심사 및 출판, 산학연 협력을 통한 기술 발전을 선도하는 학술 단체입니다.
+        </p>
+        <ul class="org-features">
+          <li data-i18n="society.f1">학술 논문지 발간 및 논문 투고 시스템</li>
+          <li data-i18n="society.f2">연차 학술대회 및 워크숍 개최</li>
+          <li data-i18n="society.f3">국제 학술 교류 및 협력</li>
+          <li data-i18n="society.f4">산학연 공동 연구 프로젝트</li>
+          <li data-i18n="society.f5">학회지 및 뉴스레터 발행</li>
+        </ul>
+      </div>
+
+      <div class="org-card">
+        <div class="org-icon institute">🔬</div>
+        <h3 class="org-name" data-i18n="institute.name">한국피지컬AI교육연구소</h3>
+        <p class="org-name-en en" data-i18n="institute.name.en">Korean Institute of Physical AI Education &amp; Research</p>
+        <p class="org-desc" data-i18n="institute.desc">
+          피지컬 AI 분야의 교육 과정 개발, 인력 양성, 실습 프로그램 운영 및 교육 연구를 전문적으로 수행하는 연구소입니다.
+        </p>
+        <ul class="org-features">
+          <li data-i18n="institute.f1">피지컬 AI 교육 커리큘럼 개발</li>
+          <li data-i18n="institute.f2">교원 연수 및 전문 인력 양성</li>
+          <li data-i18n="institute.f3">교육용 실습 콘텐츠 제작</li>
+          <li data-i18n="institute.f4">교육 효과성 연구 및 평가</li>
+          <li data-i18n="institute.f5">산업체 맞춤형 교육 프로그램</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="research" class="research-section">
+  <div class="container">
+    <div class="section-label mono" data-i18n="research.label">Research Areas</div>
+    <div class="section-title-row">
+      <h2 class="section-title" data-i18n="research.title">연구 분야</h2>
+      <a href="/research/" class="section-page-link">
+        <span data-lang="ko">자세히 보기 →</span>
+        <span data-lang="en">Full page →</span>
+      </a>
+    </div>
+    <p class="section-subtitle" data-i18n="research.subtitle">
+      피지컬 AI의 핵심 기술과 응용 분야를 탐구합니다.
+    </p>
+
+    <div class="research-grid">
+      
+      <div class="research-card">
+        <div class="research-num mono">01</div>
+        <h3 class="research-title">
+          <span data-lang="ko">체화 지능</span>
+          <span data-lang="en">Embodied Intelligence</span>
+          <br>
+          <span class="research-subtitle-lang">
+            <span data-lang="ko">Embodied Intelligence</span>
+            <span data-lang="en">체화 지능</span>
+          </span>
+        </h3>
+        <p class="research-desc">
+          <span data-lang="ko">물리적 신체를 통해 환경과 상호작용하며 학습하는 AI 시스템 연구. 감각-운동 통합과 인지 발달 모델링.</span>
+          <span data-lang="en">AI systems that learn through physical interaction with their environment. Research on sensorimotor integration and cognitive development modeling.</span>
+        </p>
+      </div>
+      
+      <div class="research-card">
+        <div class="research-num mono">02</div>
+        <h3 class="research-title">
+          <span data-lang="ko">자율 로보틱스</span>
+          <span data-lang="en">Autonomous Robotics</span>
+          <br>
+          <span class="research-subtitle-lang">
+            <span data-lang="ko">Autonomous Robotics</span>
+            <span data-lang="en">자율 로보틱스</span>
+          </span>
+        </h3>
+        <p class="research-desc">
+          <span data-lang="ko">범용 로봇, 휴머노이드, 자율주행 시스템 등 물리적 환경에서 자율적으로 동작하는 지능형 시스템.</span>
+          <span data-lang="en">Intelligent systems operating autonomously in physical environments, including general-purpose robots, humanoids, and autonomous vehicles.</span>
+        </p>
+      </div>
+      
+      <div class="research-card">
+        <div class="research-num mono">03</div>
+        <h3 class="research-title">
+          <span data-lang="ko">디지털 트윈 & 시뮬레이션</span>
+          <span data-lang="en">Digital Twin & Simulation</span>
+          <br>
+          <span class="research-subtitle-lang">
+            <span data-lang="ko">Digital Twin & Simulation</span>
+            <span data-lang="en">디지털 트윈 & 시뮬레이션</span>
+          </span>
+        </h3>
+        <p class="research-desc">
+          <span data-lang="ko">물리 기반 시뮬레이션, 합성 데이터 생성, 가상 환경에서의 AI 훈련 및 검증 기술.</span>
+          <span data-lang="en">Physics-based simulation, synthetic data generation, and AI training and validation in virtual environments.</span>
+        </p>
+      </div>
+      
+      <div class="research-card">
+        <div class="research-num mono">04</div>
+        <h3 class="research-title">
+          <span data-lang="ko">센서 융합 & 인지</span>
+          <span data-lang="en">Sensor Fusion & Perception</span>
+          <br>
+          <span class="research-subtitle-lang">
+            <span data-lang="ko">Sensor Fusion & Perception</span>
+            <span data-lang="en">센서 융합 & 인지</span>
+          </span>
+        </h3>
+        <p class="research-desc">
+          <span data-lang="ko">시각, 촉각, 청각 등 다중 감각 데이터의 통합 처리와 물리 세계의 이해 기술.</span>
+          <span data-lang="en">Integrated processing of multimodal sensory data — vision, touch, and audio — for understanding the physical world.</span>
+        </p>
+      </div>
+      
+      <div class="research-card">
+        <div class="research-num mono">05</div>
+        <h3 class="research-title">
+          <span data-lang="ko">산업 응용</span>
+          <span data-lang="en">Industrial Applications</span>
+          <br>
+          <span class="research-subtitle-lang">
+            <span data-lang="ko">Industrial Applications</span>
+            <span data-lang="en">산업 응용</span>
+          </span>
+        </h3>
+        <p class="research-desc">
+          <span data-lang="ko">스마트 제조, 의료 로봇, 물류 자동화, 스마트 공간 등 산업 현장에서의 피지컬 AI 적용.</span>
+          <span data-lang="en">Applying Physical AI in industry: smart manufacturing, medical robotics, logistics automation, and intelligent spaces.</span>
+        </p>
+      </div>
+      
+      <div class="research-card">
+        <div class="research-num mono">06</div>
+        <h3 class="research-title">
+          <span data-lang="ko">AI 안전 & 윤리</span>
+          <span data-lang="en">Safety & Ethics</span>
+          <br>
+          <span class="research-subtitle-lang">
+            <span data-lang="ko">Safety & Ethics</span>
+            <span data-lang="en">AI 안전 & 윤리</span>
+          </span>
+        </h3>
+        <p class="research-desc">
+          <span data-lang="ko">물리적 AI 시스템의 안전성, 인간-로봇 상호작용의 윤리적 프레임워크, 규제 및 표준화.</span>
+          <span data-lang="en">Safety of physical AI systems, ethical frameworks for human-robot interaction, regulation, and standardization.</span>
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <div class="container">
+    <div class="section-label mono" data-i18n="news.label">News &amp; Announcements</div>
+    <div class="section-title-row">
+      <h2 class="section-title" data-i18n="news.title">소식</h2>
+      <a href="/news/" class="section-page-link">
+        <span data-lang="ko">모든 소식 →</span>
+        <span data-lang="en">All news →</span>
+      </a>
+    </div>
+    <p class="section-subtitle" data-i18n="news.subtitle">
+      학회와 연구소의 최신 소식을 전합니다.
+    </p>
+
+    <div class="news-grid">
+      
+      
+
+        
+        <div class="news-main">
+          <span class="news-tag announcement en">
+            <span data-lang="ko">ANNOUNCEMENT</span>
+            <span data-lang="en">ANNOUNCEMENT</span>
+          </span>
+          <h3 class="news-title">
+            <span data-lang="ko">한국피지컬AI학회 창립총회 안내</span>
+            <span data-lang="en">Inaugural General Assembly of KSPAI</span>
+          </h3>
+          <p class="news-excerpt">
+            <span data-lang="ko">한국피지컬AI학회의 창립총회가 개최될 예정입니다. 피지컬 AI 분야에 관심 있는 연구자, 교육자, 산업체 관계자 여러분의 많은 참여 부탁드립니다. 학회의 비전과 방향, 초대 임원 선출, 사업 계획 등이 논의됩니다.</span>
+            <span data-lang="en">The inaugural general assembly of KSPAI will be held soon. We welcome researchers, educators, and industry professionals with an interest in Physical AI. The assembly will cover the society's vision, election of founding officers, and strategic plans.</span>
+          </p>
+          <p class="news-date mono">
+            <span data-lang="ko">일정 확정 후 공지 예정</span>
+            <span data-lang="en">Date to be announced</span>
+          </p>
+        </div>
+        
+
+      
+
+        
+        <div class="news-item">
+          <span class="news-tag call en">
+            <span data-lang="ko">CALL FOR PAPERS</span>
+            <span data-lang="en">CALL FOR PAPERS</span>
+          </span>
+          <h3 class="news-title">
+            <span data-lang="ko">창간호 논문 모집 (준비중)</span>
+            <span data-lang="en">Call for Papers — Inaugural Issue (In Preparation)</span>
+          </h3>
+          <p class="news-excerpt">
+            <span data-lang="ko">학회 학술지 창간호 발간을 위한 논문 모집이 준비되고 있습니다.</span>
+            <span data-lang="en">Paper submissions for the inaugural issue of the society journal are being prepared.</span>
+          </p>
+          <p class="news-date mono">
+            <span data-lang="ko">Coming Soon</span>
+            <span data-lang="en">Coming Soon</span>
+          </p>
+        </div>
+        
+
+      
+
+        
+        <div class="news-item">
+          <span class="news-tag event en">
+            <span data-lang="ko">EVENT</span>
+            <span data-lang="en">EVENT</span>
+          </span>
+          <h3 class="news-title">
+            <span data-lang="ko">제1회 학술대회 (준비중)</span>
+            <span data-lang="en">1st Annual Conference (In Preparation)</span>
+          </h3>
+          <p class="news-excerpt">
+            <span data-lang="ko">제1회 한국피지컬AI학회 학술대회 개최가 계획되고 있습니다.</span>
+            <span data-lang="en">The 1st KSPAI Annual Conference is currently being planned.</span>
+          </p>
+          <p class="news-date mono">
+            <span data-lang="ko">Coming Soon</span>
+            <span data-lang="en">Coming Soon</span>
+          </p>
+        </div>
+        
+
+      
+    </div>
+  </div>
+</section>
+
+<section id="join" class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <div class="section-label mono" style="text-align:center;" data-i18n="cta.label">Membership</div>
+      <h2 class="cta-title" data-i18n="cta.title" data-i18n-html>
+        함께 만들어가는<br>피지컬 AI의 미래
+      </h2>
+      <p class="cta-desc" data-i18n="cta.desc">
+        연구자, 교육자, 대학원생, 산업체 관계자 등 피지컬 AI에 관심 있는 모든 분의 참여를 환영합니다.
+      </p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;">
+        <a href="/join/" class="btn btn-primary en" data-i18n="cta.btn.join">
+          회원가입 안내 →
+        </a>
+        <a href="/contact/" class="btn btn-outline" data-i18n="cta.btn.contact">연락처 보기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-label mono" data-i18n="contact.label">Contact</div>
+    <div class="section-title-row">
+      <h2 class="section-title" data-i18n="contact.title">연락처</h2>
+      <a href="/contact/" class="section-page-link">
+        <span data-lang="ko">문의 페이지 →</span>
+        <span data-lang="en">Full contact →</span>
+      </a>
+    </div>
+    <p class="section-subtitle" data-i18n="contact.subtitle">
+      학회 및 연구소에 대한 문의사항이 있으시면 연락해 주세요.
+    </p>
+
+    <div class="about-grid">
+      <div class="org-card" style="padding:36px 32px;">
+        <h3 style="font-size:17px;font-weight:700;margin-bottom:20px;"
+            data-i18n="contact.society">한국피지컬AI학회</h3>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.4;">
+          📧 <a href="mailto:contact@kspai.org" style="color:var(--accent-primary);" class="en">contact@kspai.org</a><br>
+          📍 <span data-i18n="contact.address">소재지 확정 후 공지 예정</span><br>
+          📞 <span data-i18n="contact.phone">연락처 확정 후 공지 예정</span>
+        </div>
+      </div>
+
+      <div class="org-card" style="padding:36px 32px;">
+        <h3 style="font-size:17px;font-weight:700;margin-bottom:20px;"
+            data-i18n="contact.institute">한국피지컬AI교육연구소</h3>
+        <div style="font-size:14px;color:var(--text-secondary);line-height:2.4;">
+          📧 <a href="mailto:edu@kspai.org" style="color:var(--accent-primary);" class="en">edu@kspai.org</a><br>
+          📍 <span data-i18n="contact.address">소재지 확정 후 공지 예정</span><br>
+          📞 <span data-i18n="contact.phone">연락처 확정 후 공지 예정</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  </main>
+
+  <footer>
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="/assets/images/logo-light.png"
+              alt="KSPAI" class="footer-logo-img" />
+          <div class="footer-logo-name">한국피지컬AI학회
+            <span class="sub en">Korean Society of Physical AI</span>
+          </div>
+        </div>
+        <p class="footer-about" data-i18n="footer.about">
+          물리적 세계와 인공지능의 융합을 선도하는 학술 공동체. 체화지능, 로보틱스, 자율시스템, 디지털 트윈 등 피지컬 AI의 핵심 분야를 연구합니다.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer.col.society">학회</h4>
+        <ul class="footer-links">
+          <li><a href="/about/" data-i18n="footer.society.about">학회소개</a></li>
+          <li><a href="/research/" data-i18n="footer.society.research">연구분야</a></li>
+          <li><a href="/officers/" data-i18n="footer.society.officers">임원진</a></li>
+          <li><a href="/bylaws/" data-i18n="footer.society.bylaws">정관</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer.col.academic">학술활동</h4>
+        <ul class="footer-links">
+          <li><a href="/conferences/" data-i18n="footer.academic.conf">학술대회</a></li>
+          <li><a href="/submit/" data-i18n="footer.academic.submit">논문투고</a></li>
+          <li><a href="/journal/" data-i18n="footer.academic.journal">학회지</a></li>
+          <li><a href="/seminars/" data-i18n="footer.academic.seminar">세미나</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer.col.join">참여</h4>
+        <ul class="footer-links">
+          <li><a href="/join/" data-i18n="footer.join.membership">회원가입</a></li>
+          <li><a href="/news/" data-i18n="footer.join.notice">공지사항</a></li>
+          <li><a href="/contact/" data-i18n="footer.join.contact">문의하기</a></li>
+          <li><a href="/privacy/" data-i18n="footer.join.privacy">개인정보처리방침</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-watermark">
+      <img src="/assets/images/logo-dark.png"
+          alt="KSPAI" class="footer-logo-img" />
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy en">
+        © 2026 Korean Society of Physical AI (KSPAI). All rights reserved.
+      </span>
+      <span class="footer-contact-info en">
+        <a href="mailto:contact@kspai.org">contact@kspai.org</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/assets/js/lang.js" defer></script>
+  <script src="/assets/js/func.js" defer></script>
+
+</body>
+</html>

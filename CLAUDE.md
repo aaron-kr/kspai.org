@@ -269,9 +269,9 @@ When the assembly happens: uncomment the HTML comment, change the President plac
 
 ## Journal & submission system
 
-The journal `피지컬 AI 연구` (Physical AI Research, PAIJ) uses email submission for now:
+The journal `피지컬 AI 연구` (Physical AI Research, JKPAI) uses email submission for now:
 - **Submission email:** `paper@physicalai.or.kr`
-- **Email subject format:** `[PAIJ 논문투고] 논문 제목`
+- **Email subject format:** `[JKPAI 논문투고] 논문 제목`
 - **Template location:** `assets/files/kspai-journal-template.hwp`
 - Conference paper template: pending inaugural conference — placeholder on `/conferences/`
 - Online submission portal: planned for professional rebuild phase

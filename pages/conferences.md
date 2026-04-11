@@ -181,21 +181,22 @@ permalink: /conferences/
     <span data-lang="en">Paper Templates</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko">학술대회 발표 논문은 아래 양식을 사용하여 작성합니다. 학술지(PAIJ) 논문과 학술대회 발표 논문의 양식이 다르오니 반드시 해당 양식을 사용하시기 바랍니다.</span>
-    <span data-lang="en">Conference presentation papers must use the template below. Note that the conference template and the journal (PAIJ) template are different — please use the correct version for each venue.</span>
+    <span data-lang="ko">학술대회 발표 논문은 아래 양식을 사용하여 작성합니다. 학술지(JKPAI) 논문과 학술대회 발표 논문의 양식이 다르오니 반드시 해당 양식을 사용하시기 바랍니다.</span>
+    <span data-lang="en">Conference presentation papers must use the template below. Note that the conference template and the journal (JKPAI) template are different — please use the correct version for each venue.</span>
   </p>
 
+<div class="about-grid">
   <div class="download-card">
     <div class="download-card-icon">📄</div>
     <div class="download-card-body">
       <div class="download-badge"><span data-lang="ko">학술지 논문 양식</span><span data-lang="en">Journal Template</span></div>
       <div class="download-card-title">
-        <span data-lang="ko">피지컬 AI 연구 (PAIJ) 논문 양식 — HWP</span>
-        <span data-lang="en">Physical AI Research (PAIJ) Paper Template — HWP</span>
+        <span data-lang="ko">피지컬 AI 연구 (JKPAI) 논문 양식 — HWP</span>
+        <span data-lang="en">Physical AI Research (JKPAI) Paper Template — HWP</span>
       </div>
       <p class="download-card-desc">
         <span data-lang="ko">학술지 「피지컬 AI 연구」에 투고하는 논문에 사용합니다.</span>
-        <span data-lang="en">For papers submitted to the journal <em>Physical AI Research</em> (PAIJ).</span>
+        <span data-lang="en">For papers submitted to the journal <em>Physical AI Research</em> (JKPAI).</span>
       </p>
     </div>
     <div class="download-card-actions">
@@ -228,6 +229,7 @@ permalink: /conferences/
   </div>
 </div>
 
+</div>
 <!-- ════════════════════════════════
      UPCOMING CONFERENCE
      ════════════════════════════════ -->
@@ -341,7 +343,7 @@ permalink: /conferences/
         <strong><span data-lang="ko">우수 논문 시상</span><span data-lang="en">Awards</span></strong>
         <p>
           <span data-lang="ko">학술대회에서 발표된 우수 논문에 대해 최우수상, 우수상, 대학(원)생 경진대회 수상 등을 수여할 예정입니다. 수상 논문의 학술지 투고를 장려합니다.</span>
-          <span data="data-lang-en">Outstanding papers presented at the conference will be recognized with Best Paper Award, Excellence Award, and Student Competition awards. Award recipients are encouraged to submit their papers to the PAIJ journal.</span>
+          <span data="data-lang-en">Outstanding papers presented at the conference will be recognized with Best Paper Award, Excellence Award, and Student Competition awards. Award recipients are encouraged to submit their papers to the JKPAI journal.</span>
         </p>
       </div>
     </div>
