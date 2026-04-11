@@ -4,6 +4,32 @@ This file gives a new Claude instance full context on the KSPAI website project 
 
 ---
 
+## ⚠️ Jekyll / GitHub Pages build notes
+
+### CLAUDE.md must be excluded from Jekyll processing
+**Bug fixed 2025:** CLAUDE.md caused a GitHub Pages build failure with:
+> "Invalid syntax for include tag. File contains invalid characters or sequences"
+
+**Root cause:** Jekyll processes all `.md` files at the repo root through the Liquid engine (even without front matter). The file responsibilities table contained a literal `{%- include -%}` tag (without a filename), which is invalid Liquid syntax.
+
+**Fix applied — two parts:**
+
+1. **`_config.yml`** — add to the `exclude` list:
+   ```yaml
+   exclude:
+     - CLAUDE.md
+     - PAGE-HERO-GUIDE.md
+     - Gemfile
+     - Gemfile.lock
+   ```
+   *(README.md is excluded by Jekyll's built-in defaults.)*
+
+2. **This file** — the problematic table cell now uses `{%- raw -%}` escaping. See the File Responsibilities section below.
+
+**Rule for future AI instances:** Never write bare `{%` or `{{` sequences in CLAUDE.md, README.md, or any root-level `.md` file unless they are inside a `{% raw %}...{% endraw %}` block.
+
+---
+
 ## What this project is
 
 Two sister Korean academic organizations share one website:
@@ -119,7 +145,7 @@ Three anchor colors defined by the owner:
 - **Bright blue:** `#2585f3`
 - **Electric cyan:** `#24fffc`
 
-```scss
+```
 --accent-primary:   #00c8c5 / #24fffc  (light/dark — cyan leads)
 --accent-secondary: #2585f3             (bright blue)
 --accent-dark:      #0a4c81             (deep navy)
@@ -133,7 +159,7 @@ The warm/red accent was intentionally shifted from the original orange-red to tr
 
 ## Typography
 
-```scss
+```
 --font-title-en: 'Space Grotesk', 'Outfit', sans-serif;
 --font-body-ko:  'Pretendard Variable', 'Pretendard', 'Noto Sans KR', sans-serif;
 --font-mono:     'JetBrains Mono', monospace;
@@ -173,6 +199,23 @@ Original `IntersectionObserver` IIFE returned early if no `.hero` was found, lea
 
 **Fix:** `if (!hero) { nav.classList.add('nav-scrolled'); return; }`
 
+### 6. CLAUDE.md causes Jekyll build failure ← NEW
+**Symptom:** GitHub Pages build fails with "Invalid syntax for include tag" pointing to CLAUDE.md.
+
+**Root cause:** Jekyll runs Liquid templating on all `.md` files at the repo root (even without front matter). Any bare `{%` or `{{` sequence is interpreted as a Liquid tag. `{% include %}` without a filename argument is invalid Liquid syntax.
+
+**Fix:** Add `CLAUDE.md` and `PAGE-HERO-GUIDE.md` to the `exclude` list in `_config.yml`:
+```yaml
+exclude:
+  - CLAUDE.md
+  - PAGE-HERO-GUIDE.md
+  - Gemfile
+  - Gemfile.lock
+```
+`README.md` is already excluded by Jekyll's built-in defaults.
+
+**Rule:** Never write bare `{%` or `{{` in any root-level `.md` file. Use `(% include %)` in plain text descriptions, or `raw`/`endraw` blocks if Liquid examples are required.
+
 ---
 
 ## File responsibilities
@@ -186,27 +229,29 @@ Original `IntersectionObserver` IIFE returned early if no `.hero` was found, lea
 | `_includes/head.html` | Anti-flash inline script, font links | No content |
 | `_layouts/default.html` | Wraps all pages with nav + footer | No content sections |
 | `_layouts/page.html` | Standalone page wrapper with conditional mini hero | No nav/footer |
-| `index.html` | Only front matter + `{% include %}` calls | No inline styles/scripts |
+| `index.html` | Homepage: front matter + include calls only | No inline styles/scripts |
 
 ---
 
 ## Pages inventory
 
-| URL | File | Notes |
-|---|---|---|
-| `/` | `index.html` | Homepage, all sections |
-| `/about/` | `about.md` | Society + institute intro |
-| `/research/` | `research.md` | Reads `_data/research.yml` |
-| `/news/` | `news.md` | All posts list |
-| `/join/` | `join.md` | Membership types + process |
-| `/contact/` | `contact.md` | Contact routing by topic |
-| `/officers/` | `officers.md` | Founder/president hidden in HTML comment |
-| `/bylaws/` | `bylaws.md` | Chapter outline, full text TBD |
-| `/conferences/` | `conferences.md` | Event cards |
-| `/submit/` | `submit.md` | Paper submission scope + types |
-| `/journal/` | `journal.md` | Journal metadata + inaugural issue |
-| `/seminars/` | `seminars.md` | Seminar series |
-| `/privacy/` | `privacy.md` | Korean + English bilingual policy |
+| URL | File | Status | Notes |
+|---|---|---|---|
+| `/` | `index.html` | ✅ Live | Homepage, all sections |
+| `/about/` | `about.md` | ✅ Live | Society + institute intro |
+| `/research/` | `research.md` | ✅ Live | Reads `_data/research.yml` |
+| `/news/` | `news.md` | ✅ Live | All posts list |
+| `/join/` | `join.md` | ✅ Live | Membership types + process |
+| `/contact/` | `contact.md` | ✅ Live | Contact routing by topic |
+| `/officers/` | `officers.md` | ✅ Live | Founder/president hidden in HTML comment |
+| `/bylaws/` | `bylaws.md` | ✅ Live | Chapter outline, full text TBD |
+| `/conferences/` | `conferences.md` | ✅ Rebuilt | CFP guide + template download |
+| `/submit/` | `submit.md` | ✅ Rebuilt | Full submission guide + HWP template download |
+| `/journal/` | `journal.md` | ✅ Rebuilt | Full regulations (5 sections) |
+| `/seminars/` | `seminars.md` | ✅ Rebuilt | Seminar series + schedule |
+| `/privacy/` | `privacy.md` | ✅ Live | Korean + English bilingual policy |
+
+**Template file required:** `assets/files/kspai-journal-template.hwp` — the HWP template download button on `/submit/` and `/conferences/` points here. Create the `assets/files/` directory and place the file there before deploying.
 
 ---
 
@@ -222,8 +267,20 @@ When the assembly happens: uncomment the HTML comment, change the President plac
 
 ---
 
+## Journal & submission system
+
+The journal `피지컬 AI 연구` (Physical AI Research, PAIJ) uses email submission for now:
+- **Submission email:** `paper@physicalai.or.kr`
+- **Email subject format:** `[PAIJ 논문투고] 논문 제목`
+- **Template location:** `assets/files/kspai-journal-template.hwp`
+- Conference paper template: pending inaugural conference — placeholder on `/conferences/`
+- Online submission portal: planned for professional rebuild phase
+
+---
+
 ## Reference sites
 
+- **klife.re.kr** (삶의질정보학회) — sister society co-founded by the same professor. Used as structural template for nav, journal regulations, submission guide, and bylaws. Do not copy content verbatim; adapt for Physical AI context.
 - **KUPAC** (Kyoto University Physical AI Community) — content/structure model, inspired the news/activities approach and blue color palette
 - **al-folio** Jekyll theme — nav data-driven pattern reference (`_data/navigation.yml`)
 
@@ -231,10 +288,12 @@ When the assembly happens: uncomment the HTML comment, change the President plac
 
 ## What's coming next
 
-The owner has mentioned these upcoming needs:
-- A professional company may build a full site with forum + paper submission system — this Jekyll site is the interim/placeholder
 - Officer profile photos for `/officers/` once available
 - Hero section background image or video
 - ISSN and journal volume info after launch
+- Editorial board composition (after inaugural general assembly)
+- Conference paper HWP template
+- Online paper submission portal (professional rebuild phase)
+- A professional company may build a full site with forum + paper submission system — this Jekyll site is the interim/placeholder
 
 When continuing in a new chat, the owner may simply say "계속" (continue) — check this file and the README first to get oriented before asking clarifying questions.
