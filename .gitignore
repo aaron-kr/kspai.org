@@ -1,0 +1,21 @@
+# Jekyll generated files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby/Bundler files
+.bundle/
+vendor/bundle/
+vendor/ruby/
+Gemfile.lock
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor Settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
