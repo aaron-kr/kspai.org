@@ -371,9 +371,9 @@ nav .container {
   font-weight: 900; font-size: 13px; color: #fff;
   letter-spacing: -0.5px;
 }
-.nav-logo-text { font-weight: 700; font-size: 15px; letter-spacing: -0.3px; }
+.nav-logo-text { font-weight: 700; font-size: 15px; }
 .nav-logo-text .sub {
-  font-size: 11px; color: var(--text-secondary);
+  font-size: 10px; color: var(--text-secondary);
   font-weight: 400; display: block; line-height: 1.2; margin-top: 1px;
 }
 /* ── NAV LINKS LIST ── */
@@ -444,11 +444,12 @@ nav .container {
 
 /* Nav image */
 .nav-logo-img {
-  width: 36px;
-  height: 36px;
+  // width: 36px;
+  height: 24px;
   object-fit: contain;
-  border-radius: 8px;
+  // border-radius: 8px;
   display: block;
+  margin-top: 2px;
 }
 
 /* On the transparent nav (over hero), boost brightness slightly
@@ -672,7 +673,7 @@ nav:not(.nav-scrolled) .mobile-menu-btn:hover { background: rgba(255,255,255,0.1
 
 /* ── NAV logo sizing ── */
 .nav-logo-img {
-  height: 36px;
+  height: 24px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -694,7 +695,7 @@ nav:not(.nav-scrolled) .nav-logo-img--light { display: block; }
 
 /* ── FOOTER logo ── */
 .footer-logo-img {
-  height: 32px;
+  height: 24px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -966,9 +967,9 @@ nav:not(.nav-scrolled) .nav-logo-img { filter: none; }
 }
 
 .hero-logo-img {
-  max-width: 280px;
-  max-height: 280px;
-  width: 100%;
+  // max-width: 280px;
+  // max-height: 280px;
+  // width: 100%;
   object-fit: contain;
   /* Subtle glow effect on the dark blue background */
   filter: drop-shadow(0 0 40px rgba(99, 102, 241, 0.35))
@@ -1275,7 +1276,7 @@ footer {
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 48px; margin-bottom: 48px;
 }
-.footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+// .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
 .footer-logo-icon {
   width: 32px; height: 32px;
   background: linear-gradient(135deg, var(--color-blue-500), var(--color-blue-800));
@@ -1283,7 +1284,7 @@ footer {
   display: flex; align-items: center; justify-content: center;
   font-weight: 900; font-size: 12px; color: #fff;
 }
-.footer-logo-name { font-weight: 700; font-size: 15px; color: var(--footer-text); }
+.footer-logo-name { font-weight: 700; font-size: 14px; color: var(--footer-text); opacity: 0.8; margin: 6px 0;}
 .footer-about { font-size: 13px; color: var(--footer-muted); line-height: 1.8; max-width: 320px; }
 .footer-col-title {
   font-size: 11px; font-weight: 700;
@@ -1303,6 +1304,7 @@ footer {
   display: flex; justify-content: space-between; align-items: center;
 }
 .footer-copy { font-size: 12px; color: var(--footer-muted); }
+.footer-copy a { color: var(--accent-primary); text-decoration: none; }
 .footer-contact-info { font-size: 12px; color: var(--footer-muted); }
 .footer-contact-info a { color: var(--accent-primary); text-decoration: none; }
 
