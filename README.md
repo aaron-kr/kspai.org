@@ -285,9 +285,12 @@ Dropdown menus open on CSS hover (desktop) and JS click (touch/keyboard). They c
 bundle install          # first time only
 bundle exec jekyll serve --livereload
 # open http://localhost:4000
+
+npm install             # first time only (lint tooling)
+npm run lint:css        # Stylelint (assets/css/style.scss)
 ```
 
-Requirements: Ruby ≥ 3.1, Bundler
+Requirements: Ruby ≥ 3.1, Bundler. CI runs Stylelint on every push to `main`.
 
 ---
 

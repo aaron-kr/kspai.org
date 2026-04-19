@@ -1861,8 +1861,8 @@ footer {
 
 /* NOTE: The download-card, regulation-block, fee-table, and
    page-jumpnav classes are currently defined inline in each page
-   via <style> blocks. For production, move those inline styles
-   here and remove the <style> tags from the .md files. */
+   via \3c style> blocks. For production, move those inline styles
+   here and remove the \3c style> tags from the .md files. */
 
 @keyframes pulse {
   0% { opacity: 1; }

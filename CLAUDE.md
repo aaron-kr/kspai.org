@@ -286,6 +286,35 @@ The journal `피지컬 AI 연구` (Physical AI Research, JKPAI) uses email submi
 
 ---
 
+## Code quality
+
+**Stylelint** — `.stylelintrc.json` (extends `stylelint-config-standard-scss`). Checks `assets/css/style.scss`.
+
+Several rules are disabled due to false positives or format preferences: `no-descending-specificity`, `declaration-block-single-line-max-declarations`, `rule-empty-line-before`, `at-rule-empty-line-before`, `comment-empty-line-before`, `no-invalid-position-declaration` (Jekyll `---` front matter at top of SCSS file), `scss/operator-no-newline-before` and `scss/operator-no-unspaced` (SCSS parser misidentifies CSS function arguments and comment `*/` as arithmetic operators).
+
+**GitHub Actions CI** — `.github/workflows/lint.yml`. Runs Stylelint on every push/PR to `main`.
+
+```bash
+npm run lint:css      # Stylelint over assets/css/style.scss
+```
+
+**History (April 2026):** Modernized rgba → `rgb()` notation throughout `style.scss` (auto-fixed). `.gitignore` updated to exclude `node_modules/` and `package-lock.json`.
+
+---
+
+## AI-assisted development
+
+When using Claude Code or any AI assistant on this codebase:
+
+- **Jekyll `---` front matter in `style.scss` is required** — Jekyll needs it to recognize the file for Sass compilation. Never remove the two `---` lines at the top.
+- **Never write bare `{%` or `{{` in CLAUDE.md or any root-level `.md` file** — Jekyll runs Liquid on all root `.md` files and invalid Liquid syntax breaks the GitHub Pages build. Write "include tag" in plain text, not the actual tag syntax. See the Jekyll build notes at the top of this file.
+- **Run `npm run lint:css` after any SCSS change** — or let CI catch it on push.
+- **No custom Ruby plugins** — `safe: true` in `_config.yml`. GitHub Pages compatibility is a hard constraint. Do not suggest gems not on the whitelist.
+- **Content is data-driven** — news items as `_posts/*.md`, research areas via `_data/research.yml`, nav via `_data/nav.yml`. Rarely need to touch HTML templates for content updates.
+- **No `.nojekyll` file** — its presence silently disables all Jekyll processing (Sass, Liquid, includes). If the site appears as raw HTML, check for this file first.
+
+---
+
 ## What's coming next
 
 - Officer profile photos for `/officers/` once available
