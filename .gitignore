@@ -23,4 +23,3 @@ Thumbs.db
 # Node / npm (used for lint tooling)
 node_modules/
 npm-debug.log*
-package-lock.json
