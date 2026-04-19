@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "lint:css": "stylelint assets/css/style.scss"
+    "lint:css": "stylelint assets/css/style.scss --fix"
   },
   "devDependencies": {
     "postcss-scss": "^4.0.9",
