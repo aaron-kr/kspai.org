@@ -7,6 +7,7 @@ subtitle_ko: 한국피지컬AI학회 임원진 및 조직 구성
 subtitle_en: Leadership and organizational structure of KSPAI
 label_en: ORGANIZATION
 tag_class: call
+description: 한국피지컬AI학회(KSPAI) 임원진 소개 — 회장, 부회장단, 감사 등 조직 구성.
 permalink: /officers/
 ---
 

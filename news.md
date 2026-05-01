@@ -5,6 +5,7 @@ title_ko: 소식
 title_en: News & Announcements
 subtitle_ko: 한국피지컬AI학회 최신 소식 및 공지사항
 subtitle_en: Latest news and announcements from KSPAI
+description: 한국피지컬AI학회(KSPAI) 최신 소식, 공지사항, 학술대회 일정 및 논문 모집 안내.
 permalink: /news/
 ---
 

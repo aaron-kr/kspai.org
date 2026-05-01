@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kspai.org/sitemap.xml

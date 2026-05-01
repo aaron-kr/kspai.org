@@ -5,6 +5,7 @@ title_ko: 연구 분야
 title_en: Research Areas
 subtitle_ko: 한국피지컬AI학회 핵심 연구 분야
 subtitle_en: Core research areas of the Korean Society of Physical AI
+description: 한국피지컬AI학회의 6대 핵심 연구 분야: 로보틱스, 체화지능, 자율시스템, 디지털 트윈, 인간-로봇 상호작용, 피지컬 AI 교육.
 permalink: /research/
 ---
 

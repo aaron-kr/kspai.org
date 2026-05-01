@@ -5,6 +5,7 @@ title_ko: 회원 가입 안내
 title_en: Membership
 subtitle_ko: 한국피지컬AI학회 회원 가입 안내
 subtitle_en: Join the Korean Society of Physical AI
+description: 한국피지컬AI학회(KSPAI) 회원 가입 안내. 정회원, 준회원, 기관회원 유형과 혜택, 가입 절차를 확인하세요.
 permalink: /join/
 ---
 

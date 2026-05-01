@@ -1,9 +1,11 @@
 ---
 layout: page
+title: 학술지
 title_ko: 학술지
 title_en: Physical AI Research (JKPAI)
 subtitle_ko: 피지컬 AI 연구 — 학술지 소개 및 규정
 subtitle_en: Journal overview, submission, review &amp; ethics regulations
+description: 한국피지컬AI학회 학술지 「피지컬 AI 연구」(JKPAI) 소개, 투고규정, 발행규정, 심사규정, 연구윤리규정 안내.
 permalink: /journal/
 ---
 

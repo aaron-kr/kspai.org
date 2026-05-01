@@ -5,6 +5,7 @@ title_ko: 개인정보처리방침
 title_en: Privacy Policy
 subtitle_ko: 한국피지컬AI학회 개인정보 처리방침
 subtitle_en: Korean Society of Physical AI — Privacy Policy
+description: 한국피지컬AI학회(KSPAI) 개인정보처리방침 — 수집 항목, 이용 목적, 보유 기간, 제3자 제공, 이용자 권리.
 permalink: /privacy/
 ---
 

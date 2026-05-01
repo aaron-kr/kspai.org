@@ -1,9 +1,11 @@
 ---
 layout: page
+title: 세미나
 title_ko: 세미나
 title_en: Seminars & Lectures
 subtitle_ko: 한국피지컬AI학회 세미나 시리즈
 subtitle_en: KSPAI Seminar Series &amp; Special Lectures
+description: 한국피지컬AI학회(KSPAI) 세미나 시리즈 안내 — KSPAI 콜로퀴엄, 연구윤리 세미나, 산학연 워크숍, 국제 특별 강연.
 permalink: /seminars/
 ---
 

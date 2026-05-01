@@ -5,6 +5,7 @@ title_ko: 문의하기
 title_en: Contact Us
 subtitle_ko: 한국피지컬AI학회 및 교육연구소 문의처
 subtitle_en: Get in touch with KSPAI and the Research Institute
+description: 한국피지컬AI학회(KSPAI) 문의처 안내. 회원가입, 논문투고, 학술대회, 교육 프로그램 및 협력 제안 관련 연락처를 확인하세요.
 permalink: /contact/
 ---
 

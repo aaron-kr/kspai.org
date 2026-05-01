@@ -1,9 +1,11 @@
 ---
 layout: page
+title: 논문투고안내
 title_ko: 논문투고안내
 title_en: Paper Submission Guide
 subtitle_ko: 피지컬 AI 연구 논문지 원고 모집
 subtitle_en: Call for Papers — Physical AI Research (JKPAI)
+description: 한국피지컬AI학회 학술지(JKPAI) 논문 투고 안내 — 연구 범위, 작성 요령, 투고 방법, 심사 절차, 게재료 안내.
 permalink: /submit/
 ---
 

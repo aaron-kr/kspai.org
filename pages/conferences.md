@@ -1,9 +1,11 @@
 ---
 layout: page
+title: 학술대회
 title_ko: 학술대회
 title_en: Conferences & Events
 subtitle_ko: 한국피지컬AI학회 학술행사 안내
 subtitle_en: KSPAI Academic Conferences, Seminars &amp; Workshops
+description: 한국피지컬AI학회(KSPAI) 학술대회 안내 — 예정 학술행사, 발표 논문 안내, 논문 양식 다운로드.
 permalink: /conferences/
 ---
 
