@@ -68,7 +68,7 @@
   --text-primary:   #0d1b2a;   /* very dark navy, not pure black */
   --text-body:      #2c3e50;
   --text-secondary: #5a6e82;
-  --text-muted:     #8fa4b8;
+  --text-muted:     #637c94;
  
   --border-subtle:  rgba(10,76,129,0.07);
   --border-accent:  rgba(0,200,197,0.20);
@@ -137,7 +137,7 @@
   --text-primary:   #e4f0fc;
   --text-body:      #b8cfe4;
   --text-secondary: #7a9ab8;
-  --text-muted:     #445e78;
+  --text-muted:     #6a88a2;
  
   --border-subtle:  rgba(36,255,252,0.06);
   --border-accent:  rgba(36,255,252,0.18);
@@ -152,7 +152,7 @@
   --footer-bg:   #020810;
   --footer-text: #b8cfe4;
   --footer-muted: #445e78;
-  --footer-link:  #5a7a98;
+  --footer-link:  #7a9ab8;
   --footer-link-hover: #24fffc;
   --footer-border: rgba(255,255,255,0.05);
  
@@ -190,6 +190,59 @@
    ════════════════════════════════════ */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+
+/* ════════════════════════════════════
+   ACCESSIBILITY — Skip link
+   ════════════════════════════════════ */
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: 8px;
+  z-index: 9999;
+  padding: 10px 18px;
+  background: var(--accent-secondary, #2585f3);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* ════════════════════════════════════
+   ACCESSIBILITY — Focus styles
+   ════════════════════════════════════ */
+/* Visible focus ring for all interactive elements */
+:focus-visible {
+  outline: 3px solid var(--accent-secondary, #2585f3);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Remove default outline only when :focus-visible is supported */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Slightly tighter ring for small controls */
+.theme-toggle:focus-visible,
+.lang-toggle:focus-visible,
+.mobile-menu-btn:focus-visible {
+  outline: 3px solid var(--accent-secondary, #2585f3);
+  outline-offset: 2px;
+}
+
+/* Ensure nav links/buttons have visible focus */
+.nav-link:focus-visible,
+.nav-dropdown-item:focus-visible,
+.mobile-menu-item:focus-visible {
+  outline: 3px solid var(--accent-secondary, #2585f3);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
 
 body {
   font-family: var(--font-body-ko);
@@ -2474,4 +2527,21 @@ footer {
 @media (max-width: 480px) {
   .mission-grid { grid-template-columns: 1fr; }
   .greeting-card { padding: 24px; }
+}
+
+/* ════════════════════════════════════
+   ACCESSIBILITY — Reduced motion
+   ════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hero-badge-dot { animation: none; }
+  .hero-chip      { animation: none; }
+  .hero-orb-ring  { animation: none; }
 }

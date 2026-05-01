@@ -1,9 +1,11 @@
 {
   "scripts": {
-    "lint:css": "stylelint assets/css/style.scss --fix"
+    "lint:css": "stylelint assets/css/style.scss --fix",
+    "compress-images": "node scripts/compress-images.mjs"
   },
   "devDependencies": {
     "postcss-scss": "^4.0.9",
+    "sharp": "^0.33.5",
     "stylelint": "^17.8.0",
     "stylelint-config-standard-scss": "^17.0.0"
   }
