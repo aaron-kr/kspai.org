@@ -3,9 +3,9 @@ layout: page
 title: 문의
 title_ko: 문의하기
 title_en: Contact Us
-subtitle_ko: 한국피지컬AI학회 및 교육연구소 문의처
+subtitle_ko: 한국피지컬인공지능학회 및 교육연구소 문의처
 subtitle_en: Get in touch with KSPAI and the Research Institute
-description: 한국피지컬AI학회(KSPAI) 문의처 안내. 회원가입, 논문투고, 학술대회, 교육 프로그램 및 협력 제안 관련 연락처를 확인하세요.
+description: 한국피지컬인공지능학회(KSPAI) 문의처 안내. 회원가입, 논문투고, 학술대회, 교육 프로그램 및 협력 제안 관련 연락처를 확인하세요.
 permalink: /contact/
 ---
 
@@ -13,9 +13,9 @@ permalink: /contact/
   <div class="contact-grid">
 
     <div class="contact-card">
-      <div class="org-icon society" style="margin-bottom:20px;">🏛</div>
+      <div class="org-icon society">🏛</div>
       <h2 class="contact-card-title">
-        <span data-lang="ko">한국피지컬AI학회</span>
+        <span data-lang="ko">한국피지컬인공지능학회</span>
         <span data-lang="en">Korean Society of Physical AI</span>
       </h2>
       <p class="org-name-en en">KSPAI</p>
@@ -54,7 +54,7 @@ permalink: /contact/
     </div>
 
     <div class="contact-card">
-      <div class="org-icon institute" style="margin-bottom:20px;">🔬</div>
+      <div class="org-icon institute">🔬</div>
       <h2 class="contact-card-title">
         <span data-lang="ko">한국피지컬AI교육연구소</span>
         <span data-lang="en">Korean Institute of Physical AI Education & Research</span>

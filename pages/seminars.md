@@ -3,172 +3,11 @@ layout: page
 title: 세미나
 title_ko: 세미나
 title_en: Seminars & Lectures
-subtitle_ko: 한국피지컬AI학회 세미나 시리즈
+subtitle_ko: 한국피지컬인공지능학회 세미나 시리즈
 subtitle_en: KSPAI Seminar Series &amp; Special Lectures
-description: 한국피지컬AI학회(KSPAI) 세미나 시리즈 안내 — KSPAI 콜로퀴엄, 연구윤리 세미나, 산학연 워크숍, 국제 특별 강연.
+description: 한국피지컬인공지능학회(KSPAI) 세미나 시리즈 안내 — KSPAI 콜로퀴엄, 연구윤리 세미나, 산학연 워크숍, 국제 특별 강연.
 permalink: /seminars/
 ---
-
-<style>
-/* ── Seminar series card ── */
-.seminar-series-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 36px 40px;
-  margin-bottom: 20px;
-  position: relative;
-  overflow: hidden;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.seminar-series-card:hover {
-  border-color: var(--border-accent);
-  box-shadow: var(--shadow-md);
-}
-.seminar-series-card::after {
-  content: '';
-  position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
-  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-  transform: scaleX(0); transform-origin: left;
-  transition: transform 0.3s ease;
-}
-.seminar-series-card:hover::after { transform: scaleX(1); }
-
-.seminar-series-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-.seminar-series-icon {
-  width: 48px; height: 48px;
-  border-radius: var(--radius-md);
-  background: rgba(37,133,243,0.10);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 22px;
-  flex-shrink: 0;
-}
-.seminar-series-name {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  margin-bottom: 2px;
-}
-.seminar-series-en {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--text-muted);
-  letter-spacing: 0.5px;
-}
-.seminar-series-desc {
-  font-size: 14px;
-  color: var(--text-secondary);
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-.seminar-meta-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border-subtle);
-}
-.seminar-meta-item {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.seminar-meta-label {
-  font-size: 10px;
-  font-family: var(--font-mono);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--text-muted);
-}
-.seminar-meta-value {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-/* ── Past seminar list ── */
-.seminar-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-}
-.seminar-list-item {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  padding: 20px 24px;
-  border-bottom: 1px solid var(--border-subtle);
-  transition: background 0.15s;
-}
-.seminar-list-item:last-child { border-bottom: none; }
-.seminar-list-item:hover { background: var(--bg-card-hover); }
-.seminar-list-date {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--accent-primary);
-  min-width: 80px;
-  flex-shrink: 0;
-  padding-top: 3px;
-  letter-spacing: 0.5px;
-}
-.seminar-list-body { flex: 1; }
-.seminar-list-title {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-.seminar-list-speaker {
-  font-size: 12px;
-  color: var(--text-muted);
-}
-
-/* ── How to participate ── */
-.participate-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 8px;
-}
-.participate-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 24px;
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-.participate-icon {
-  font-size: 24px;
-  flex-shrink: 0;
-  padding-top: 2px;
-}
-.participate-title {
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-.participate-desc {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.7;
-}
-
-@media (max-width: 640px) {
-  .seminar-series-card { padding: 28px 24px; }
-  .seminar-list-item { flex-direction: column; gap: 6px; }
-  .seminar-list-date { min-width: unset; }
-  .participate-grid { grid-template-columns: 1fr; }
-}
-</style>
 
 <div class="page-article page-article--has-hero">
 <div class="container">
@@ -182,7 +21,7 @@ permalink: /seminars/
     <span data-lang="en">Seminar Series Overview</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko">한국피지컬AI학회는 정기 연차 학술대회 외에도 다양한 세미나와 특별 강연을 운영합니다. 피지컬 AI 분야의 최전선 연구자, 산업 전문가, 해외 석학을 초청하여 최신 연구 성과와 기술 동향을 공유하는 자리입니다. 학회 회원과 비회원 모두 참여 가능합니다.</span>
+    <span data-lang="ko">한국피지컬인공지능학회는 정기 연차 학술대회 외에도 다양한 세미나와 특별 강연을 운영합니다. 피지컬 AI 분야의 최전선 연구자, 산업 전문가, 해외 석학을 초청하여 최신 연구 성과와 기술 동향을 공유하는 자리입니다. 학회 회원과 비회원 모두 참여 가능합니다.</span>
     <span data-lang="en">Beyond its annual conference, KSPAI organizes a range of seminars and special lectures. These events invite leading researchers, industry experts, and international scholars in Physical AI to share the latest research outcomes and technology trends. Both members and non-members are welcome to participate.</span>
   </p>
 </div>
@@ -245,7 +84,7 @@ permalink: /seminars/
       </div>
     </div>
     <p class="seminar-series-desc">
-      <span data-lang="ko">연구자들의 올바른 연구 윤리 의식 함양을 위한 정기 교육 세미나입니다. 표절, 위조·변조, 저자 표시, 이해충돌 등 연구자가 반드시 알아야 할 연구윤리 사항을 다룹니다. 한국피지컬AI학회에 논문을 투고하는 연구자에게 적극 권장합니다.</span>
+      <span data-lang="ko">연구자들의 올바른 연구 윤리 의식 함양을 위한 정기 교육 세미나입니다. 표절, 위조·변조, 저자 표시, 이해충돌 등 연구자가 반드시 알아야 할 연구윤리 사항을 다룹니다. 한국피지컬인공지능학회에 논문을 투고하는 연구자에게 적극 권장합니다.</span>
       <span data-lang="en">A regular educational seminar to foster sound research ethics awareness among researchers. Topics include plagiarism, fabrication and falsification, authorship, and conflict of interest — the essential research ethics knowledge every researcher needs. Strongly recommended for researchers submitting to KSPAI journals.</span>
     </p>
     <div class="seminar-meta-row">
@@ -351,12 +190,12 @@ permalink: /seminars/
     </div>
   </div>
 
-  <div style="margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap;">
-    <a href="/news/" class="btn btn-primary" style="font-size: 13px; padding: 11px 22px;">
+  <div class="section-actions">
+    <a href="/news/" class="btn btn-primary btn-sm">
       <span data-lang="ko">최신 소식 보기 →</span>
       <span data-lang="en">Latest News →</span>
     </a>
-    <a href="/contact/" class="btn btn-outline" style="font-size: 13px; padding: 11px 22px;">
+    <a href="/contact/" class="btn btn-outline btn-sm">
       <span data-lang="ko">세미나 문의</span>
       <span data-lang="en">Seminar Inquiry</span>
     </a>
@@ -402,8 +241,8 @@ permalink: /seminars/
           <span data-lang="ko">콜로퀴엄 발표를 희망하시는 연구자는 학회 이메일로 발표 주제 및 초록을 보내주시면 편집위원회에서 검토 후 연락드립니다.</span>
           <span data-lang="en">Researchers interested in speaking at the colloquium are welcome to send their proposed topic and abstract to the Society email; the editorial committee will follow up.</span>
         </p>
-        <div style="margin-top: 12px;">
-          <a href="mailto:contact@physicalai.or.kr" style="font-size: 13px; color: var(--accent-primary); text-decoration: none;">contact@physicalai.or.kr →</a>
+        <div class="participate-card-link">
+          <a href="mailto:contact@physicalai.or.kr">contact@physicalai.or.kr →</a>
         </div>
       </div>
     </div>
@@ -419,8 +258,8 @@ permalink: /seminars/
           <span data-lang="ko">세미나 참가 신청은 각 행사 공지에 포함된 링크를 통해 진행합니다. 대부분의 세미나는 무료로 운영되며 비회원도 참가 가능합니다.</span>
           <span data-lang="en">Registration for individual seminars is handled through the link included in each event announcement. Most seminars are free and open to non-members.</span>
         </p>
-        <div style="margin-top: 12px;">
-          <a href="/news/" style="font-size: 13px; color: var(--accent-primary); text-decoration: none;">
+        <div class="participate-card-link">
+          <a href="/news/">
             <span data-lang="ko">공지사항 확인 →</span>
             <span data-lang="en">Check announcements →</span>
           </a>
@@ -453,8 +292,8 @@ permalink: /seminars/
           <span data-lang="ko">대학, 연구소, 기업에서 공동으로 세미나를 주최하고자 하신다면 학회 이메일로 제안해 주시기 바랍니다.</span>
           <span data-lang="en">Universities, research institutes, and companies interested in co-hosting a seminar are welcome to send a proposal to the Society.</span>
         </p>
-        <div style="margin-top: 12px;">
-          <a href="/contact/" style="font-size: 13px; color: var(--accent-primary); text-decoration: none;">
+        <div class="participate-card-link">
+          <a href="/contact/">
             <span data-lang="ko">문의하기 →</span>
             <span data-lang="en">Contact us →</span>
           </a>
@@ -465,20 +304,20 @@ permalink: /seminars/
 </div>
 
 <!-- Cross-link to conferences -->
-<div class="page-section" style="padding-top: 0;">
-  <div class="about-full-card" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+<div class="page-section page-section--compact">
+  <div class="about-full-card about-full-card--flex-row">
     <div>
-      <p style="font-size: 11px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary); margin-bottom: 6px;">Related</p>
-      <strong style="font-size: 17px;">
+      <p class="meta-label">Related</p>
+      <strong class="about-full-card-title">
         <span data-lang="ko">연차 학술대회</span>
         <span data-lang="en">Annual Academic Conference</span>
       </strong>
-      <p style="font-size: 14px; color: var(--text-secondary); margin-top: 6px;">
+      <p class="about-full-card-body">
         <span data-lang="ko">세미나 외에도 연차 학술대회에서 연구 성과를 발표하실 수 있습니다.</span>
         <span data-lang="en">In addition to seminars, you can present your research at the annual academic conference.</span>
       </p>
     </div>
-    <a href="/conferences/" class="btn btn-outline" style="white-space: nowrap;">
+    <a href="/conferences/" class="btn btn-outline">
       <span data-lang="ko">학술대회 안내 →</span>
       <span data-lang="en">Conferences →</span>
     </a>

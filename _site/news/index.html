@@ -3,12 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  
+  
+
   <title>소식 | Korean Society of Physical AI</title>
-  <meta name="description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
-  <meta property="og:title" content="소식">
-  <meta property="og:description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
-  <meta property="og:url" content="http://localhost:4000/news/">
-  <meta property="og:type" content="website">
+  <meta name="description" content="한국피지컬인공지능학회(KSPAI) 최신 소식, 공지사항, 학술대회 일정 및 논문 모집 안내.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="http://localhost:4000/news/">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="소식">
+  <meta property="og:description" content="한국피지컬인공지능학회(KSPAI) 최신 소식, 공지사항, 학술대회 일정 및 논문 모집 안내.">
+  <meta property="og:url"         content="http://localhost:4000/news/">
+  <meta property="og:type"        content="website">
+  <meta property="og:image"       content="http://localhost:4000/assets/images/og-default.png">
+  <meta property="og:locale"      content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name"   content="Korean Society of Physical AI">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="소식">
+  <meta name="twitter:description" content="한국피지컬인공지능학회(KSPAI) 최신 소식, 공지사항, 학술대회 일정 및 논문 모집 안내.">
+  <meta name="twitter:image"       content="http://localhost:4000/assets/images/og-default.png">
+  <meta name="twitter:site"        content="@kspai_org">
+
+  <!-- hreflang: bilingual site serves KO and EN from same URL -->
+  <link rel="alternate" hreflang="ko" href="http://localhost:4000/news/">
+  <link rel="alternate" hreflang="en" href="http://localhost:4000/news/">
+  <link rel="alternate" hreflang="x-default" href="http://localhost:4000/news/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +52,9 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg">
 
 
+  <!-- Structured Data — Organization (home page only) -->
+  
+
   <!-- Theme: apply saved preference immediately to prevent flash -->
   <script>
     (function() {
@@ -40,12 +68,15 @@
 
 <body>
 
-  <!-- Background Effects -->
-  <div class="bg-grid"></div>
-  <div class="bg-glow bg-glow-1"></div>
-  <div class="bg-glow bg-glow-2"></div>
+  <!-- Skip to main content (accessibility) -->
+  <a class="skip-link" href="#main-content">본문으로 건너뛰기 / Skip to main content</a>
 
-  <nav>
+  <!-- Background Effects -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <nav aria-label="주 내비게이션 / Main navigation">
   <div class="container">
 
     <!-- Logo -->
@@ -55,13 +86,13 @@
       <img src="/assets/images/logo-light.png"
            alt="KSPAI" class="nav-logo-img nav-logo-img--light" />
       <div class="nav-logo-text">
-        한국피지컬AI학회
+        한국피지컬인공지능학회
         <span class="sub en">Korean Society of Physical AI</span>
       </div>
     </a>
 
     <!-- Desktop nav — built from _data/nav.yml -->
-    <ul class="nav-links">
+    <ul class="nav-links" role="list" aria-label="사이트 메뉴 / Site menu">
       
       
 
@@ -265,22 +296,23 @@
 
     <!-- Controls -->
     <div class="nav-controls">
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-        <span class="theme-icon">☀️</span>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="테마 전환 / Toggle theme">
+        <span class="theme-icon" aria-hidden="true">☀️</span>
       </button>
       <button class="lang-toggle en" onclick="toggleLang()" aria-label="Switch to English">EN</button>
     </div>
 
     <!-- Hamburger -->
     <button class="mobile-menu-btn"
-            aria-label="Toggle menu"
+            aria-label="메뉴 열기 / Open menu"
             aria-expanded="false"
-            onclick="toggleMobileMenu(this)">☰</button>
+            aria-controls="mobile-menu"
+            onclick="toggleMobileMenu(this)"><span aria-hidden="true">☰</span></button>
 
   </div>
 
   <!-- Mobile menu panel — also built from _data/nav.yml -->
-  <div class="mobile-menu" id="mobile-menu" hidden>
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="모바일 메뉴 / Mobile menu" hidden>
     <div class="mobile-menu-inner">
       
 
@@ -443,7 +475,7 @@
 </nav>
 
 
-  <main>
+  <main id="main-content">
     
   <div class="page-hero" >
   <!-- Reuse the same warm glow blobs from the main hero -->
@@ -462,7 +494,7 @@
 
       
       <p class="page-hero-subtitle">
-        <span data-lang="ko">한국피지컬AI학회 최신 소식 및 공지사항</span>
+        <span data-lang="ko">한국피지컬인공지능학회 최신 소식 및 공지사항</span>
         <span data-lang="en">Latest news and announcements from KSPAI</span>
       </p>
       
@@ -485,17 +517,17 @@
 
   <!-- Featured / most recent post -->
   
-  <div class="news-main" style="margin-bottom:32px;">
+  <div class="news-main news-main--spaced">
     <span class="news-tag announcement en">
       <span data-lang="ko">ANNOUNCEMENT</span>
       <span data-lang="en">ANNOUNCEMENT</span>
     </span>
-    <h2 class="news-title" style="font-size:26px;">
-      <span data-lang="ko">한국피지컬AI학회 창립총회 안내</span>
+    <h2 class="news-title">
+      <span data-lang="ko">한국피지컬인공지능학회 창립총회 안내</span>
       <span data-lang="en">Inaugural General Assembly of KSPAI</span>
     </h2>
     <p class="news-excerpt">
-      <span data-lang="ko">한국피지컬AI학회의 창립총회가 개최될 예정입니다. 피지컬 AI 분야에 관심 있는 연구자, 교육자, 산업체 관계자 여러분의 많은 참여 부탁드립니다. 학회의 비전과 방향, 초대 임원 선출, 사업 계획 등이 논의됩니다.</span>
+      <span data-lang="ko">한국피지컬인공지능학회의 창립총회가 개최될 예정입니다. 피지컬 AI 분야에 관심 있는 연구자, 교육자, 산업체 관계자 여러분의 많은 참여 부탁드립니다. 학회의 비전과 방향, 초대 임원 선출, 사업 계획 등이 논의됩니다.</span>
       <span data-lang="en">The inaugural general assembly of KSPAI will be held soon. We welcome researchers, educators, and industry professionals with an interest in Physical AI. The assembly will cover the society's vision, election of founding officers, and strategic plans.</span>
     </p>
     <p class="news-date mono">
@@ -510,11 +542,11 @@
     
     <div class="news-list-item">
       <div class="news-list-tag-date">
-        <span class="news-tag call en" style="margin-bottom:0;">
+        <span class="news-tag call en">
           <span data-lang="ko">CALL FOR PAPERS</span>
           <span data-lang="en">CALL FOR PAPERS</span>
         </span>
-        <span class="news-date mono" style="margin-top:0;">
+        <span class="news-date mono">
           <span data-lang="ko">Coming Soon</span>
           <span data-lang="en">Coming Soon</span>
         </span>
@@ -524,7 +556,7 @@
           <span data-lang="ko">창간호 논문 모집 (준비중)</span>
           <span data-lang="en">Call for Papers — Inaugural Issue (In Preparation)</span>
         </h3>
-        <p class="news-excerpt" style="font-size:14px;">
+        <p class="news-excerpt">
           <span data-lang="ko">학회 학술지 창간호 발간을 위한 논문 모집이 준비되고 있습니다.</span>
           <span data-lang="en">Paper submissions for the inaugural issue of the society journal are being prepared.</span>
         </p>
@@ -533,11 +565,11 @@
     
     <div class="news-list-item">
       <div class="news-list-tag-date">
-        <span class="news-tag event en" style="margin-bottom:0;">
+        <span class="news-tag event en">
           <span data-lang="ko">EVENT</span>
           <span data-lang="en">EVENT</span>
         </span>
-        <span class="news-date mono" style="margin-top:0;">
+        <span class="news-date mono">
           <span data-lang="ko">Coming Soon</span>
           <span data-lang="en">Coming Soon</span>
         </span>
@@ -547,8 +579,8 @@
           <span data-lang="ko">제1회 학술대회 (준비중)</span>
           <span data-lang="en">1st Annual Conference (In Preparation)</span>
         </h3>
-        <p class="news-excerpt" style="font-size:14px;">
-          <span data-lang="ko">제1회 한국피지컬AI학회 학술대회 개최가 계획되고 있습니다.</span>
+        <p class="news-excerpt">
+          <span data-lang="ko">제1회 한국피지컬인공지능학회 학술대회 개최가 계획되고 있습니다.</span>
           <span data-lang="en">The 1st KSPAI Annual Conference is currently being planned.</span>
         </p>
       </div>
@@ -573,7 +605,7 @@
 
   </main>
 
-  <footer>
+  <footer aria-label="사이트 푸터 / Site footer">
   <div class="container">
     <div class="footer-grid">
 
@@ -581,7 +613,7 @@
         <div class="footer-logo">
           <img src="/assets/images/logo-light.png"
               alt="KSPAI" class="footer-logo-img" />
-          <div class="footer-logo-name">한국피지컬AI학회
+          <div class="footer-logo-name">한국피지컬인공지능학회
             <span class="sub en">Korean Society of Physical AI</span>
           </div>
         </div>
@@ -624,11 +656,11 @@
     <div class="footer-bottom">
       <span class="footer-copy en">
         © 2026 Korean Society of Physical AI (KSPAI). All rights reserved.<br>
-        Built by <a href="https://aaron.kr" target="_blank" rel="noopener">Aaron.kr</a> &bull; Hero img by <a href="https://easy-peasy.ai/ai-image-generator/images/fusion-quantum-ai-technology-advanced-algorithms-quantum-computing" target="_blank" rel="noopener">Easy-Peasy.ai</a>
+        Built by <a href="https://aaron.kr" target="_blank" rel="noopener" aria-label="Aaron.kr (새 탭에서 열림 / opens in new tab)">Aaron.kr</a> &bull; Hero img by <a href="https://easy-peasy.ai/ai-image-generator/images/fusion-quantum-ai-technology-advanced-algorithms-quantum-computing" target="_blank" rel="noopener" aria-label="Easy-Peasy.ai hero image source (새 탭에서 열림 / opens in new tab)">Easy-Peasy.ai</a>
       </span>
-      <div class="footer-watermark">
+      <div class="footer-watermark" aria-hidden="true">
         <img src="/assets/images/logo-dark.png"
-            alt="KSPAI" class="footer-logo-img" />
+            alt="" class="footer-logo-img" />
       </div>
       <span class="footer-contact-info en">
         <a href="mailto:contact@kspai.org">contact@kspai.org</a>

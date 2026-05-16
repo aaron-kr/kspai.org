@@ -1,7 +1,7 @@
 # SEO Completeness Audit — physical-ai-home (kspai.org)
 
 **Audited:** 2026-05-01  
-**Site:** Korean Society of Physical AI (한국피지컬AI학회) — https://kspai.org  
+**Site:** Korean Society of Physical AI (한국피지컬인공지능학회) — https://kspai.org  
 **Stack:** Jekyll + jekyll-sitemap + jekyll-feed, GitHub Pages  
 
 ---
@@ -41,7 +41,7 @@
 
 **After:** Title logic now uses Liquid conditionals:
 - Inner pages: `{page.title} | Korean Society of Physical AI` (e.g., "학회소개 | Korean Society of Physical AI" — 39 chars)
-- Home page: `Korean Society of Physical AI — 한국피지컬AI학회` (52 chars)
+- Home page: `Korean Society of Physical AI — 한국피지컬인공지능학회` (52 chars)
 
 `title` field added to: `pages/conferences.md`, `pages/journal.md`, `pages/seminars.md`, `pages/submit.md`, `pages/about.md` (pages folder version).
 
@@ -145,7 +145,7 @@ Jekyll copies root-level files to `_site/`, so this will be served at `https://k
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "한국피지컬AI학회",
+  "name": "한국피지컬인공지능학회",
   "alternateName": "Korean Society of Physical AI",
   "abbreviation": "KSPAI",
   "url": "https://kspai.org",

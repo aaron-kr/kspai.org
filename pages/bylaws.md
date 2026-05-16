@@ -3,18 +3,18 @@ layout: page
 title: 정관
 title_ko: 정관
 title_en: Bylaws
-subtitle_ko: 한국피지컬AI학회 정관
+subtitle_ko: 한국피지컬인공지능학회 정관
 subtitle_en: Articles of Association — Korean Society of Physical AI
 label_en: GOVERNANCE
 tag_class: call
-description: 한국피지컬AI학회(KSPAI) 정관 — 학회 명칭, 목적, 회원, 임원, 총회, 이사회, 재정, 보칙으로 구성된 규약.
+description: 한국피지컬인공지능학회(KSPAI) 정관 — 학회 명칭, 목적, 회원, 임원, 총회, 이사회, 재정, 보칙으로 구성된 규약.
 permalink: /bylaws/
 ---
 
-<div class="coming-soon-banner" style="margin-bottom:48px;">
-  <span class="mono" style="font-size:12px;color:var(--accent-primary);">※</span>
-  <span data-lang="ko">정관 전문은 창립총회 이후 게시됩니다.</span>
-  <span data-lang="en">The full bylaws will be published following the inaugural general assembly.</span>
+<div class="coming-soon-banner">
+  <span class="mono">※</span>
+  <span data-lang="ko">{{ site.data.bylaws.status.note_ko }}</span>
+  <span data-lang="en">{{ site.data.bylaws.status.note_en }}</span>
 </div>
 
 <div class="page-section">
@@ -28,61 +28,27 @@ permalink: /bylaws/
   </p>
 
   <div class="bylaws-toc">
+    {% for chapter in site.data.bylaws.chapters %}
     <div class="bylaws-chapter">
-      <span class="bylaws-num mono">제 1 장</span>
+      <span class="bylaws-num mono">{{ chapter.num }}</span>
       <div>
-        <strong><span data-lang="ko">총칙</span><span data-lang="en">General Provisions</span></strong>
-        <p><span data-lang="ko">학회의 명칭, 목적, 소재지</span><span data-lang="en">Name, purpose, and location of the Society</span></p>
+        <strong>
+          <span data-lang="ko">{{ chapter.title_ko }}</span>
+          <span data-lang="en">{{ chapter.title_en }}</span>
+        </strong>
+        <p>
+          <span data-lang="ko">{{ chapter.desc_ko }}</span>
+          <span data-lang="en">{{ chapter.desc_en }}</span>
+        </p>
       </div>
     </div>
-    <div class="bylaws-chapter">
-      <span class="bylaws-num mono">제 2 장</span>
-      <div>
-        <strong><span data-lang="ko">회원</span><span data-lang="en">Membership</span></strong>
-        <p><span data-lang="ko">회원의 자격, 권리, 의무</span><span data-lang="en">Membership qualifications, rights, and obligations</span></p>
-      </div>
-    </div>
-    <div class="bylaws-chapter">
-      <span class="bylaws-num mono">제 3 장</span>
-      <div>
-        <strong><span data-lang="ko">임원</span><span data-lang="en">Officers</span></strong>
-        <p><span data-lang="ko">임원의 종류, 선출, 임기</span><span data-lang="en">Types, election, and term of officers</span></p>
-      </div>
-    </div>
-    <div class="bylaws-chapter">
-      <span class="bylaws-num mono">제 4 장</span>
-      <div>
-        <strong><span data-lang="ko">총회</span><span data-lang="en">General Assembly</span></strong>
-        <p><span data-lang="ko">총회의 구성, 소집, 의결</span><span data-lang="en">Composition, convening, and resolutions of the general assembly</span></p>
-      </div>
-    </div>
-    <div class="bylaws-chapter">
-      <span class="bylaws-num mono">제 5 장</span>
-      <div>
-        <strong><span data-lang="ko">이사회</span><span data-lang="en">Board of Directors</span></strong>
-        <p><span data-lang="ko">이사회의 구성 및 운영</span><span data-lang="en">Composition and operation of the Board</span></p>
-      </div>
-    </div>
-    <div class="bylaws-chapter">
-      <span class="bylaws-num mono">제 6 장</span>
-      <div>
-        <strong><span data-lang="ko">재정</span><span data-lang="en">Finance</span></strong>
-        <p><span data-lang="ko">회비, 예산, 결산</span><span data-lang="en">Dues, budget, and financial statements</span></p>
-      </div>
-    </div>
-    <div class="bylaws-chapter">
-      <span class="bylaws-num mono">제 7 장</span>
-      <div>
-        <strong><span data-lang="ko">보칙</span><span data-lang="en">Supplementary Provisions</span></strong>
-        <p><span data-lang="ko">정관의 개정, 해산</span><span data-lang="en">Amendment of bylaws and dissolution</span></p>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </div>
 
 <div class="page-section">
-  <p class="page-section-text" style="font-size:13px;color:var(--text-muted);">
-    <span data-lang="ko">문의사항: <a href="mailto:contact@kspai.org" style="color:var(--accent-primary);">contact@kspai.org</a></span>
-    <span data-lang="en">Inquiries: <a href="mailto:contact@kspai.org" style="color:var(--accent-primary);">contact@kspai.org</a></span>
+  <p class="bylaws-contact">
+    <span data-lang="ko">문의사항: <a href="mailto:contact@kspai.org">contact@kspai.org</a></span>
+    <span data-lang="en">Inquiries: <a href="mailto:contact@kspai.org">contact@kspai.org</a></span>
   </p>
 </div>

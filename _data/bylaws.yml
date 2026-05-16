@@ -1,0 +1,50 @@
+# ═══════════════════════════════════════════════════════════════
+#  _data/bylaws.yml — Bylaws structure for /bylaws/ page
+# ═══════════════════════════════════════════════════════════════
+
+status:
+  note_ko: 정관 전문은 창립총회 이후 게시됩니다.
+  note_en: The full bylaws will be published following the inaugural general assembly.
+
+chapters:
+  - num: 제 1 장
+    title_ko: 총칙
+    title_en: General Provisions
+    desc_ko: 학회의 명칭, 목적, 소재지
+    desc_en: Name, purpose, and location of the Society
+
+  - num: 제 2 장
+    title_ko: 회원
+    title_en: Membership
+    desc_ko: 회원의 자격, 권리, 의무
+    desc_en: Membership qualifications, rights, and obligations
+
+  - num: 제 3 장
+    title_ko: 임원
+    title_en: Officers
+    desc_ko: 임원의 종류, 선출, 임기
+    desc_en: Types, election, and term of officers
+
+  - num: 제 4 장
+    title_ko: 총회
+    title_en: General Assembly
+    desc_ko: 총회의 구성, 소집, 의결
+    desc_en: Composition, convening, and resolutions of the general assembly
+
+  - num: 제 5 장
+    title_ko: 이사회
+    title_en: Board of Directors
+    desc_ko: 이사회의 구성 및 운영
+    desc_en: Composition and operation of the Board
+
+  - num: 제 6 장
+    title_ko: 재정
+    title_en: Finance
+    desc_ko: 회비, 예산, 결산
+    desc_en: Dues, budget, and financial statements
+
+  - num: 제 7 장
+    title_ko: 보칙
+    title_en: Supplementary Provisions
+    desc_ko: 정관의 개정, 해산
+    desc_en: Amendment of bylaws and dissolution

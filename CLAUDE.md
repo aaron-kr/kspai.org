@@ -33,7 +33,7 @@ This file gives a new Claude instance full context on the KSPAI website project 
 ## What this project is
 
 Two sister Korean academic organizations share one website:
-- **한국피지컬AI학회** (Korean Society of Physical AI, KSPAI) — `kspai.org`
+- **한국피지컬인공지능학회** (Korean Society of Physical AI, KSPAI) — `kspai.org`
 - **한국피지컬AI교육연구소** (Korean Institute of Physical AI Education & Research)
 
 The site is fully bilingual (Korean/English), built with Jekyll, hosted on GitHub Pages at `https://github.com/aaron-kr/physical-ai-home`.

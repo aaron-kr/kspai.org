@@ -1660,6 +1660,9 @@ footer {
   padding-bottom: 24px;
   border-bottom: 1px solid var(--border-subtle);
 }
+.about-full-header .org-icon { margin-bottom: 0; }
+.about-full-header .org-name-en { margin-bottom: 4px; }
+.about-full-header .mono { font-size: 11px; color: var(--text-muted); }
 .about-features-grid {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 20px; margin-top: 8px;
@@ -1771,6 +1774,7 @@ footer {
   border-radius: var(--radius-lg);
   padding: 40px 36px;
 }
+.contact-card .org-icon { margin-bottom: 20px; }
 .contact-card-title {
   font-size: 20px; font-weight: 800;
   margin-bottom: 4px; letter-spacing: -0.3px;
@@ -2515,6 +2519,9 @@ footer {
   color: var(--text-secondary);
   line-height: 1.7;
 }
+.participate-card-link { margin-top: 12px; }
+.participate-card a { font-size: 13px; color: var(--accent-primary); text-decoration: none; }
+.participate-card a:hover { text-decoration: underline; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
@@ -2527,6 +2534,209 @@ footer {
 @media (max-width: 480px) {
   .mission-grid { grid-template-columns: 1fr; }
   .greeting-card { padding: 24px; }
+}
+
+/* ── PAST CONFERENCE LIST (conferences.md) ── */
+.past-conf-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.past-conf-item {
+  display: flex; gap: 20px; align-items: center;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background 0.2s;
+}
+.past-conf-item:last-child { border-bottom: none; }
+.past-conf-item:hover { background: var(--bg-card-hover); }
+.past-conf-year {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-primary);
+  min-width: 60px;
+  flex-shrink: 0;
+}
+.past-conf-name { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+.past-conf-sub  { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+/* ── PAST SEMINAR LIST (seminars.md) ── */
+.seminar-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.seminar-list-item {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background 0.15s;
+}
+.seminar-list-item:last-child { border-bottom: none; }
+.seminar-list-item:hover { background: var(--bg-card-hover); }
+.seminar-list-date {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent-primary);
+  min-width: 80px;
+  flex-shrink: 0;
+  padding-top: 3px;
+  letter-spacing: 0.5px;
+}
+.seminar-list-body { flex: 1; }
+.seminar-list-title  { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.seminar-list-speaker { font-size: 12px; color: var(--text-muted); }
+
+/* ── UTILITY: button/action rows ── */
+.section-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* ── UTILITY: small mono uppercase meta label ── */
+.meta-label {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent-primary);
+  margin-bottom: 6px;
+}
+
+/* ── DOWNLOAD CARD: orange/warm variant ── */
+.download-card--warm {
+  border-color: rgba(240,112,48,0.25);
+  background: linear-gradient(135deg, rgba(240,112,48,0.05), rgba(37,133,243,0.03));
+}
+.download-card--warm .download-card-icon { background: rgba(240,112,48,0.10); }
+.download-card--warm .download-badge {
+  color: var(--accent-orange);
+  border-color: rgba(240,112,48,0.25);
+}
+
+/* ── BTN: disabled / coming-soon state ── */
+.btn-disabled {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 22px; border-radius: var(--radius-sm);
+  font-size: 13px; font-weight: 600;
+  background: transparent;
+  border: 1px solid var(--accent-orange);
+  color: var(--accent-orange);
+  opacity: 0.55;
+  cursor: not-allowed;
+  white-space: nowrap;
+}
+
+/* ── ABOUT: org name and sub inside about-full-header ── */
+.about-org-name { font-size: 18px; font-weight: 700; }
+.about-org-sub  { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+
+/* ── ABOUT FULL CARD: horizontal flex layout ── */
+.about-full-card--flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ── TIMELINE: pending title color ── */
+.timeline-title--pending { color: var(--text-muted); }
+
+/* ── OFFICERS: modifier classes ── */
+.coming-soon-banner { margin-bottom: 48px; }
+.officers-grid--2col { grid-template-columns: repeat(2, 1fr); }
+.officer-card--placeholder { max-width: 480px; opacity: 0.7; }
+.officer-note { font-size: 12px; color: var(--accent-primary); margin-top: 4px; }
+.download-card-actions .btn { white-space: nowrap; }
+
+/* ── PAGE SECTION: compact (no top padding) ── */
+.page-section--compact { padding-top: 0; }
+
+/* ── SUBMIT: scope sub-label ── */
+.submit-scope-sub { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+
+/* ── SUBMIT / JOURNAL: inline code block for reference examples ── */
+.ref-example-block {
+  margin-top: 12px; padding: 14px 16px;
+  background: var(--bg-card); border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  font-size: 12px; color: var(--text-secondary); line-height: 1.9;
+}
+.ref-example-block-label {
+  margin-bottom: 8px;
+  font-family: var(--font-mono); font-size: 10px;
+  text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary);
+}
+
+/* ── EMAIL BLOCK: label / code inside email-block ── */
+.email-block-label {
+  font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--text-muted); white-space: nowrap;
+}
+.email-block code { color: var(--text-primary); }
+.email-block + .email-block { margin-top: 8px; }
+
+/* ── FEE TABLE: first column always left-aligned bold ── */
+.fee-table td:first-child { text-align: left; font-weight: 600; }
+
+/* ── FEE NOTE (small ※ note below fee table) ── */
+.fee-note {
+  font-size: 12px; color: var(--text-muted);
+  margin-top: 12px; line-height: 1.7;
+}
+
+/* ── CONTACT: narrow wrapper ── */
+.contact-narrow { max-width: 560px; }
+.contact-card-desc { font-size: 13px; color: var(--text-secondary); margin-top: 8px; }
+
+/* ── ABOUT FULL CARD: related/crosslink content ── */
+.about-full-card-title { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+.about-full-card-body  { font-size: 14px; color: var(--text-secondary); }
+
+/* ── BTN: small size modifier ── */
+.btn-sm { font-size: 13px; padding: 9px 18px; }
+
+/* ── PRIVACY PAGE ── */
+.privacy-officer-card { padding: 28px 32px; max-width: 480px; }
+.privacy-officer-body { font-size: 14px; line-height: 2.2; color: var(--text-secondary); }
+.privacy-officer-name { color: var(--text-primary); display: block; margin-bottom: 8px; }
+.privacy-officer-body a { color: var(--accent-primary); }
+.privacy-effective-date { font-size: 12px; color: var(--text-muted); margin-top: 24px; }
+
+/* ── BYLAWS: small contact note ── */
+.bylaws-contact {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.bylaws-contact a { color: var(--accent-primary); text-decoration: none; }
+.bylaws-contact a:hover { text-decoration: underline; }
+
+/* ── JOIN PAGE: CTA block ── */
+.cta-box--flush { margin-top: 0; }
+.cta-title--sm  { font-size: 26px; }
+.cta-actions    { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; }
+
+/* ── UTILITY ── */
+.text-center { text-align: center; }
+
+/* ── NEWS PAGE ── */
+.coming-soon-banner .mono { font-size: 12px; color: var(--accent-primary); }
+.news-main--spaced { margin-bottom: 32px; }
+.news-main .news-title { font-size: 26px; }
+.news-list-tag-date .news-tag { margin-bottom: 0; }
+.news-list-body .news-excerpt { font-size: 14px; }
+
+/* ── RESPONSIVE for new classes ── */
+@media (max-width: 640px) {
+  .seminar-list-item { flex-direction: column; gap: 6px; }
+  .seminar-list-date { min-width: unset; }
 }
 
 /* ════════════════════════════════════

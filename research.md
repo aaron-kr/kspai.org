@@ -3,9 +3,9 @@ layout: page
 title: 연구분야
 title_ko: 연구 분야
 title_en: Research Areas
-subtitle_ko: 한국피지컬AI학회 핵심 연구 분야
+subtitle_ko: 한국피지컬인공지능학회 핵심 연구 분야
 subtitle_en: Core research areas of the Korean Society of Physical AI
-description: 한국피지컬AI학회의 6대 핵심 연구 분야: 로보틱스, 체화지능, 자율시스템, 디지털 트윈, 인간-로봇 상호작용, 피지컬 AI 교육.
+description: 한국피지컬인공지능학회의 6대 핵심 연구 분야: 로보틱스, 체화지능, 자율시스템, 디지털 트윈, 인간-로봇 상호작용, 피지컬 AI 교육.
 permalink: /research/
 ---
 
@@ -58,7 +58,7 @@ permalink: /research/
     <span data-lang="ko">피지컬 AI 연구에 관심 있는 연구자와 기관의 참여를 환영합니다. 공동 연구, 학술대회 발표, 논문 투고 등 다양한 방식으로 학회 활동에 참여하실 수 있습니다.</span>
     <span data-lang="en">We welcome researchers and institutions interested in Physical AI research. You can participate in society activities through collaborative research, conference presentations, paper submissions, and more.</span>
   </p>
-  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;">
+  <div class="section-actions">
     <a href="{{ '/submit/' | relative_url }}" class="btn btn-primary">
       <span data-lang="ko">논문 투고 →</span><span data-lang="en">Submit a Paper →</span>
     </a>

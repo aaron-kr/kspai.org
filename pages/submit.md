@@ -5,98 +5,9 @@ title_ko: 논문투고안내
 title_en: Paper Submission Guide
 subtitle_ko: 피지컬 AI 연구 논문지 원고 모집
 subtitle_en: Call for Papers — Physical AI Research (JKPAI)
-description: 한국피지컬AI학회 학술지(JKPAI) 논문 투고 안내 — 연구 범위, 작성 요령, 투고 방법, 심사 절차, 게재료 안내.
+description: 한국피지컬인공지능학회 학술지(JKPAI) 논문 투고 안내 — 연구 범위, 작성 요령, 투고 방법, 심사 절차, 게재료 안내.
 permalink: /submit/
 ---
-
-<style>
-/* ── Download card ── */
-.download-card {
-  background: linear-gradient(135deg, rgba(37,133,243,0.07), rgba(36,255,252,0.04));
-  border: 1px solid var(--border-accent);
-  border-radius: var(--radius-lg);
-  padding: 28px 32px;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-bottom: 56px;
-}
-.download-card-icon {
-  font-size: 32px;
-  flex-shrink: 0;
-  width: 60px; height: 60px;
-  display: flex; align-items: center; justify-content: center;
-  background: rgba(37,133,243,0.10);
-  border-radius: var(--radius-md);
-}
-.download-card-body { flex: 1; }
-.download-card-title { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
-.download-card-desc  { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
-.download-card-actions { display: flex; gap: 10px; flex-wrap: wrap; flex-shrink: 0; }
-.download-card-actions .btn { white-space: nowrap; }
-.download-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-family: var(--font-mono); font-size: 10px;
-  text-transform: uppercase; letter-spacing: 1px;
-  color: var(--accent-primary);
-  padding: 3px 10px;
-  border: 1px solid var(--border-accent);
-  border-radius: 20px;
-  margin-bottom: 8px;
-}
-@media (max-width: 640px) {
-  .download-card { flex-direction: column; align-items: flex-start; padding: 24px; }
-  .download-card-actions { width: 100%; }
-  .download-card-actions .btn { width: 100%; justify-content: center; }
-}
-
-/* ── Fee table ── */
-.fee-table-wrapper { overflow-x: auto; margin-top: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); }
-.fee-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-.fee-table th {
-  background: rgba(37,133,243,0.06);
-  padding: 12px 16px;
-  text-align: center;
-  font-weight: 600;
-  color: var(--text-primary);
-  white-space: nowrap;
-  border-bottom: 1px solid var(--border-subtle);
-}
-.fee-table td {
-  padding: 11px 16px;
-  text-align: center;
-  color: var(--text-secondary);
-  border-bottom: 1px solid var(--border-subtle);
-}
-.fee-table tr:last-child td { border-bottom: none; }
-.fee-table tr:hover td { background: var(--bg-card-hover); }
-
-/* ── Submission note box ── */
-.submit-note {
-  display: flex; align-items: flex-start; gap: 12px;
-  background: rgba(37,133,243,0.05);
-  border: 1px solid rgba(37,133,243,0.15);
-  border-radius: var(--radius-md);
-  padding: 16px 20px;
-  font-size: 13px; color: var(--text-secondary); line-height: 1.7;
-  margin-bottom: 20px;
-}
-.submit-note-icon { font-size: 18px; flex-shrink: 0; padding-top: 1px; }
-
-/* ── Email code block ── */
-.email-block {
-  margin-top: 12px;
-  padding: 12px 18px;
-  background: var(--bg-card);
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-subtle);
-  font-family: var(--font-mono);
-  font-size: 13px;
-  display: flex; align-items: center; gap: 10px;
-}
-.email-block a { color: var(--accent-primary); text-decoration: none; }
-.email-block a:hover { text-decoration: underline; }
-</style>
 
 <div class="page-article page-article--has-hero">
 <div class="container">
@@ -134,48 +45,48 @@ permalink: /submit/
     <span data-lang="en">Call for Papers</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko">한국피지컬AI학회는 학술지 <strong>「피지컬 AI 연구」(Physical AI Research, JKPAI)</strong>를 통해 피지컬 AI 분야의 이론적·응용적 연구 논문을 상시 접수합니다. 로보틱스, 체화지능, 자율시스템, 디지털 트윈, 인간-로봇 상호작용, 피지컬 AI 교육 및 이와 융합된 제반 분야의 독창적인 연구 성과를 발표할 수 있는 공개적 학술 플랫폼입니다. 학계, 산업체, 대학원생 모든 연구자의 적극적인 참여를 환영합니다.</span>
+    <span data-lang="ko">한국피지컬인공지능학회는 학술지 <strong>「피지컬 AI 연구」(Physical AI Research, JKPAI)</strong>를 통해 피지컬 AI 분야의 이론적·응용적 연구 논문을 상시 접수합니다. 로보틱스, 체화지능, 자율시스템, 디지털 트윈, 인간-로봇 상호작용, 피지컬 AI 교육 및 이와 융합된 제반 분야의 독창적인 연구 성과를 발표할 수 있는 공개적 학술 플랫폼입니다. 학계, 산업체, 대학원생 모든 연구자의 적극적인 참여를 환영합니다.</span>
     <span data-lang="en">The Korean Society of Physical AI (KSPAI) invites submissions to its peer-reviewed journal, <strong><em>Physical AI Research</em> (JKPAI)</strong>. The journal publishes original theoretical and applied research in robotics, embodied intelligence, autonomous systems, digital twins, human-robot interaction, Physical AI education, and related interdisciplinary fields. We welcome contributions from researchers in academia, industry, and graduate programs.</span>
   </p>
 
-  <div class="journal-meta-grid" style="margin-top: 0;">
+  <div class="journal-meta-grid">
     <div class="journal-meta-item">
-      <span style="font-size: 11px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary);">JOURNAL</span>
+      <span class="meta-label">JOURNAL</span>
       <strong>
         <span data-lang="ko">피지컬 AI 연구 (JKPAI)</span>
         <span data-lang="en">Physical AI Research (JKPAI)</span>
       </strong>
     </div>
     <div class="journal-meta-item">
-      <span style="font-size: 11px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary);">PUBLISHER</span>
+      <span class="meta-label">PUBLISHER</span>
       <strong>
-        <span data-lang="ko">한국피지컬AI학회 (KSPAI)</span>
+        <span data-lang="ko">한국피지컬인공지능학회 (KSPAI)</span>
         <span data-lang="en">Korean Society of Physical AI (KSPAI)</span>
       </strong>
     </div>
     <div class="journal-meta-item">
-      <span style="font-size: 11px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary);">FREQUENCY</span>
+      <span class="meta-label">FREQUENCY</span>
       <strong>
         <span data-lang="ko">연 2회 발행 (6월, 12월 예정)</span>
         <span data-lang="en">Twice yearly (June & December, planned)</span>
       </strong>
     </div>
     <div class="journal-meta-item">
-      <span style="font-size: 11px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary);">ISSN</span>
+      <span class="meta-label">ISSN</span>
       <strong>
         <span data-lang="ko">창간 후 부여 예정</span>
         <span data-lang="en">To be assigned upon inaugural issue</span>
       </strong>
     </div>
     <div class="journal-meta-item">
-      <span style="font-size: 11px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary);">LANGUAGE</span>
+      <span class="meta-label">LANGUAGE</span>
       <strong>
         <span data-lang="ko">국문 또는 영문</span>
         <span data-lang="en">Korean or English</span>
       </strong>
     </div>
     <div class="journal-meta-item">
-      <span style="font-size: 11px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary);">REVIEW</span>
+      <span class="meta-label">REVIEW</span>
       <strong>
         <span data-lang="ko">이중 익명 심사 (3인)</span>
         <span data-lang="en">Double-blind peer review (3 reviewers)</span>
@@ -201,7 +112,7 @@ permalink: /submit/
       <span class="research-num">01</span>
       <div>
         <strong><span data-lang="ko">로보틱스 분과</span><span data-lang="en">Robotics Track</span></strong>
-        <div style="font-size: 12px; color: var(--text-muted); margin-top: 3px;">
+        <div class="submit-scope-sub">
           <span data-lang="ko">로보틱스 및 자율이동</span>
           <span data-lang="en">Robotics & Autonomous Mobility</span>
         </div>
@@ -211,7 +122,7 @@ permalink: /submit/
       <span class="research-num">02</span>
       <div>
         <strong><span data-lang="ko">체화지능 분과</span><span data-lang="en">Embodied Intelligence Track</span></strong>
-        <div style="font-size: 12px; color: var(--text-muted); margin-top: 3px;">
+        <div class="submit-scope-sub">
           <span data-lang="ko">체화지능 및 감각운동 통합</span>
           <span data-lang="en">Embodied AI & Sensorimotor Integration</span>
         </div>
@@ -221,7 +132,7 @@ permalink: /submit/
       <span class="research-num">03</span>
       <div>
         <strong><span data-lang="ko">자율시스템 분과</span><span data-lang="en">Autonomous Systems Track</span></strong>
-        <div style="font-size: 12px; color: var(--text-muted); margin-top: 3px;">
+        <div class="submit-scope-sub">
           <span data-lang="ko">자율시스템 설계 및 제어</span>
           <span data-lang="en">Autonomous System Design & Control</span>
         </div>
@@ -231,7 +142,7 @@ permalink: /submit/
       <span class="research-num">04</span>
       <div>
         <strong><span data-lang="ko">디지털 트윈 분과</span><span data-lang="en">Digital Twin Track</span></strong>
-        <div style="font-size: 12px; color: var(--text-muted); margin-top: 3px;">
+        <div class="submit-scope-sub">
           <span data-lang="ko">디지털 트윈 모델링 및 응용</span>
           <span data-lang="en">Digital Twin Modeling & Applications</span>
         </div>
@@ -241,7 +152,7 @@ permalink: /submit/
       <span class="research-num">05</span>
       <div>
         <strong><span data-lang="ko">인간-로봇 상호작용 분과</span><span data-lang="en">HRI Track</span></strong>
-        <div style="font-size: 12px; color: var(--text-muted); margin-top: 3px;">
+        <div class="submit-scope-sub">
           <span data-lang="ko">인간-로봇 상호작용 및 인터페이스</span>
           <span data-lang="en">Human-Robot Interaction & Interface</span>
         </div>
@@ -251,7 +162,7 @@ permalink: /submit/
       <span class="research-num">06</span>
       <div>
         <strong><span data-lang="ko">피지컬 AI 교육 분과</span><span data-lang="en">Education Track</span></strong>
-        <div style="font-size: 12px; color: var(--text-muted); margin-top: 3px;">
+        <div class="submit-scope-sub">
           <span data-lang="ko">피지컬 AI 교육·커리큘럼 연구</span>
           <span data-lang="en">Physical AI Education & Curriculum</span>
         </div>
@@ -338,8 +249,8 @@ permalink: /submit/
           <span data-lang="ko">본문 내 [1], [1-3], [1,2,5] 형식으로 인용하며, 참고문헌 목록은 인용 순서대로 영어로 작성합니다.</span>
           <span data-lang="en">Use numbered in-text citations: [1], [1-3], [1,2,5]. The reference list follows citation order and must be written in English.</span>
         </p>
-        <div style="margin-top: 12px; padding: 14px 16px; background: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); font-size: 12px; color: var(--text-secondary); line-height: 1.9;">
-          <div style="margin-bottom: 8px; font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary);">Format Examples</div>
+        <div class="ref-example-block">
+          <div class="ref-example-block-label">Format Examples</div>
           <div>[1] G. D. Hong, S. M. Kim, &amp; S. Y. Ahn (2025). A Study on Embodied Intelligence Control. <em>Physical AI Research</em>, 1(1), 1–8. DOI: 10.xxxxx/JKPAI.1.1.001</div>
           <div>[2] G. D. Hong. (2025). Robotic locomotion via embodied learning. In <em>Proc. KSPAI 2025 Annual Conference</em> (pp. 45–52). KSPAI.</div>
           <div>[3] A. A. Author &amp; B. B. Author. (2024). <em>Title of book.</em> Seoul: University Press.</div>
@@ -382,7 +293,7 @@ permalink: /submit/
       <div>
         <strong><span data-lang="ko">회원 확인</span><span data-lang="en">Membership</span></strong>
         <p>
-          <span data-lang="ko">논문 저자 전원이 한국피지컬AI학회 회원임을 확인합니다. 미가입 저자는 <a href="/join/">회원가입 안내</a>를 참조하거나 학회 이메일로 문의하시기 바랍니다.</span>
+          <span data-lang="ko">논문 저자 전원이 한국피지컬인공지능학회 회원임을 확인합니다. 미가입 저자는 <a href="/join/">회원가입 안내</a>를 참조하거나 학회 이메일로 문의하시기 바랍니다.</span>
           <span data-lang="en">All co-authors must be members of KSPAI. Non-members should refer to the <a href="/join/">membership page</a> or contact the Society.</span>
         </p>
       </div>
@@ -408,11 +319,11 @@ permalink: /submit/
           <span data-lang="en">Attach both files and send to the address below. Use the following subject line format:</span>
         </p>
         <div class="email-block">
-          <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); white-space: nowrap;">Subject:</span>
-          <code style="color: var(--text-primary);">[JKPAI 논문투고] 논문 제목</code>
+          <span class="email-block-label">Subject:</span>
+          <code>[JKPAI 논문투고] 논문 제목</code>
         </div>
-        <div class="email-block" style="margin-top: 8px;">
-          <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); white-space: nowrap;">To:</span>
+        <div class="email-block">
+          <span class="email-block-label">To:</span>
           <a href="mailto:paper@physicalai.or.kr">paper@physicalai.or.kr</a>
         </div>
       </div>
@@ -469,14 +380,14 @@ permalink: /submit/
       </thead>
       <tbody>
         <tr>
-          <td style="text-align: left; font-weight: 600;"><span data-lang="ko">일반</span><span data-lang="en">Regular</span></td>
+          <td><span data-lang="ko">일반</span><span data-lang="en">Regular</span></td>
           <td>150,000원</td>
           <td><span data-lang="ko">+20,000원/쪽</span><span data-lang="en">+₩20,000/pp.</span></td>
           <td><span data-lang="ko">+30,000원/쪽</span><span data-lang="en">+₩30,000/pp.</span></td>
           <td>+150,000원</td>
         </tr>
         <tr>
-          <td style="text-align: left; font-weight: 600;"><span data-lang="ko">학생 제1저자</span><span data-lang="en">Student 1st Author</span></td>
+          <td><span data-lang="ko">학생 제1저자</span><span data-lang="en">Student 1st Author</span></td>
           <td>100,000원</td>
           <td><span data-lang="ko">+20,000원/쪽</span><span data-lang="en">+₩20,000/pp.</span></td>
           <td><span data-lang="ko">+30,000원/쪽</span><span data-lang="en">+₩30,000/pp.</span></td>
@@ -486,7 +397,7 @@ permalink: /submit/
     </table>
   </div>
 
-  <p style="font-size: 12px; color: var(--text-muted); margin-top: 12px; line-height: 1.7;">
+  <p class="fee-note">
     <span data-lang="ko">※ 위 게재료는 2025년 기준이며, 학회 운영 이사회 결정에 따라 변경될 수 있습니다.<br>
     ※ 학생 제1저자 할인은 투고 시 재학 증명서(또는 학생증 사본) 제출이 필요합니다.</span>
     <span data-lang="en">※ Fees are as of 2025 and are subject to change by the Board of Directors.<br>
@@ -502,13 +413,13 @@ permalink: /submit/
     <span data-lang="ko">문의</span>
     <span data-lang="en">Contact</span>
   </h2>
-  <div style="max-width: 560px;">
+  <div class="contact-narrow">
     <div class="contact-card">
       <p class="contact-card-title">
         <span data-lang="ko">피지컬 AI 연구 편집 사무국</span>
         <span data-lang="en">JKPAI Editorial Office</span>
       </p>
-      <p style="font-size: 13px; color: var(--text-secondary); margin-top: 8px;">
+      <p class="contact-card-desc">
         <span data-lang="ko">논문 투고 및 심사 관련 문의는 아래 이메일로 연락하시기 바랍니다.</span>
         <span data-lang="en">For all submission and review inquiries, please contact us by email.</span>
       </p>

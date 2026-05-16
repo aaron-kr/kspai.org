@@ -1,0 +1,88 @@
+# ═══════════════════════════════════════════════════════════════
+#  _data/officers.yml — Officer roster for /officers/ page
+#
+#  Status block: current operational mode of the society
+#  President block: placeholder until inaugural assembly
+#  vice_presidents: ordered list of VPs
+#  auditors: auditor(s)
+#  founder_note: hidden comment for future reveal (not rendered)
+# ═══════════════════════════════════════════════════════════════
+
+status:
+  banner_ko: 비상대책위원회 체제 운영 중
+  banner_en: Operating under Emergency Planning Committee
+  note_ko: 창립총회 이후 정식 임원진이 선출될 예정입니다.
+  note_en: Formal officers will be elected following the inaugural general assembly.
+
+president:
+  placeholder_ko: 비상대책위원회 체제 운영 중
+  placeholder_en: Operating under Emergency Planning Committee
+  note_ko: 창립총회 후 선출 예정
+  note_en: To be elected at the inaugural general assembly
+
+vice_presidents:
+  - role_ko: 이사회 부의장 겸 학술부회장
+    role_en: Board Vice-Chair & VP, Academic Affairs
+    name_ko: 에런스노버거
+    name_en: Aaron Snowberger
+    affil_ko: 국립한밭대학교
+    affil_en: Hanbat National University
+
+  - role_ko: 이사회 의장 겸 총무부회장
+    role_en: Board Chair & VP, General Affairs
+    name_ko: 김세민
+    name_en: Semin Kim
+    affil_ko: 전주교육대학교
+    affil_en: Jeonju National University of Education
+    note_ko: 공동편집위원장(2)
+    note_en: Co-Editor-in-Chief (2)
+
+  - role_ko: 논문지부회장
+    role_en: VP, Journal Division
+    name_ko: 장봉석
+    name_en: Bong-suk Jang
+    affil_ko: 국립목포대학교
+    affil_en: Mokpo National University
+    note_ko: 공동편집위원장(1)
+    note_en: Co-Editor-in-Chief (1)
+
+  - role_ko: 대외협력부회장
+    role_en: VP, External Relations
+    name_ko: 강선경
+    name_en: Sungyung Kang
+    affil_ko: 원광대학교
+    affil_en: Wonkwang University
+
+  - role_ko: 기획부회장
+    role_en: VP, Planning
+    name_ko: 박지현
+    name_en: Jihyun Park
+    affil_ko: 우석대학교
+    affil_en: Woosuk University
+
+  - role_ko: 특임부회장
+    role_en: VP, Special Affairs
+    name_ko: 문형진
+    name_en: Hyeongjin Moon
+    affil_ko: 성결대학교
+    affil_en: Sungkyul University
+
+auditors:
+  - role_ko: 감사
+    role_en: Auditor
+    name_ko: 김영태
+    name_en: Young-tae Kim
+    affil_ko: 호서대학교
+    affil_en: Hoseo University
+
+# ── Hidden — reveal after inaugural general assembly ──
+# founder:
+#   role_ko: 설립자 / 이사회 의장
+#   role_en: Founder / Board Chair
+#   name_ko: (이름)
+#   affil_ko: 전주교육대학교
+#   affil_en: Jeonju National University of Education
+# president_actual:
+#   name_ko: (이름)
+#   affil_ko: 원광대학교
+#   affil_en: Wonkwang University

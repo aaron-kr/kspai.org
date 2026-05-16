@@ -3,9 +3,9 @@ layout: page
 title: 회원가입
 title_ko: 회원 가입 안내
 title_en: Membership
-subtitle_ko: 한국피지컬AI학회 회원 가입 안내
+subtitle_ko: 한국피지컬인공지능학회 회원 가입 안내
 subtitle_en: Join the Korean Society of Physical AI
-description: 한국피지컬AI학회(KSPAI) 회원 가입 안내. 정회원, 준회원, 기관회원 유형과 혜택, 가입 절차를 확인하세요.
+description: 한국피지컬인공지능학회(KSPAI) 회원 가입 안내. 정회원, 준회원, 기관회원 유형과 혜택, 가입 절차를 확인하세요.
 permalink: /join/
 ---
 
@@ -15,7 +15,7 @@ permalink: /join/
     <span data-lang="en">Member Benefits</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko">한국피지컬AI학회 회원이 되시면 다음과 같은 혜택을 누리실 수 있습니다.</span>
+    <span data-lang="ko">한국피지컬인공지능학회 회원이 되시면 다음과 같은 혜택을 누리실 수 있습니다.</span>
     <span data-lang="en">As a member of KSPAI, you will enjoy the following benefits.</span>
   </p>
 
@@ -157,9 +157,9 @@ permalink: /join/
   </div>
 </div>
 
-<div class="cta-box" style="margin-top:0;">
-  <div class="section-label mono" style="text-align:center;">Contact</div>
-  <h2 class="cta-title" style="font-size:26px;">
+<div class="cta-box cta-box--flush">
+  <div class="section-label mono text-center">Contact</div>
+  <h2 class="cta-title cta-title--sm">
     <span data-lang="ko">가입 문의</span>
     <span data-lang="en">Membership Inquiry</span>
   </h2>
@@ -167,7 +167,7 @@ permalink: /join/
     <span data-lang="ko">가입 관련 문의는 학회 이메일로 연락해 주시면 빠르게 안내해 드리겠습니다.</span>
     <span data-lang="en">For membership inquiries, please contact us by email and we will respond promptly.</span>
   </p>
-  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;">
+  <div class="cta-actions">
     <a href="mailto:contact@kspai.org" class="btn btn-primary en">
       contact@kspai.org →
     </a>

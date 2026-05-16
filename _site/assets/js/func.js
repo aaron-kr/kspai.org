@@ -139,7 +139,8 @@ function closeMobileMenu(menu, btn) {
   menu.setAttribute('data-open', 'false');
   if (btn) {
     btn.setAttribute('aria-expanded', 'false');
-    btn.textContent = '☰';
+    btn.setAttribute('aria-label', '메뉴 열기 / Open menu');
+    btn.innerHTML = '<span aria-hidden="true">☰</span>';
   }
   setTimeout(() => { menu.hidden = true; }, 300);
 }
@@ -159,7 +160,8 @@ function toggleMobileMenu(btn) {
       menu.setAttribute('data-open', 'true');
     });
     btn.setAttribute('aria-expanded', 'true');
-    btn.textContent = '✕';
+    btn.setAttribute('aria-label', '메뉴 닫기 / Close menu');
+    btn.innerHTML = '<span aria-hidden="true">✕</span>';
   }
 }
 

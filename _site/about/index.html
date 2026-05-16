@@ -3,12 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  
+  
+
   <title>학회소개 | Korean Society of Physical AI</title>
-  <meta name="description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
-  <meta property="og:title" content="학회소개">
-  <meta property="og:description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
-  <meta property="og:url" content="http://localhost:4000/about/">
-  <meta property="og:type" content="website">
+  <meta name="description" content="한국피지컬인공지능학회(KSPAI)의 설립 배경, 비전, 미션, 연혁 및 자매 기관 한국피지컬AI교육연구소 소개.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="http://localhost:4000/about/">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="학회소개">
+  <meta property="og:description" content="한국피지컬인공지능학회(KSPAI)의 설립 배경, 비전, 미션, 연혁 및 자매 기관 한국피지컬AI교육연구소 소개.">
+  <meta property="og:url"         content="http://localhost:4000/about/">
+  <meta property="og:type"        content="website">
+  <meta property="og:image"       content="http://localhost:4000/assets/images/og-default.png">
+  <meta property="og:locale"      content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name"   content="Korean Society of Physical AI">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="학회소개">
+  <meta name="twitter:description" content="한국피지컬인공지능학회(KSPAI)의 설립 배경, 비전, 미션, 연혁 및 자매 기관 한국피지컬AI교육연구소 소개.">
+  <meta name="twitter:image"       content="http://localhost:4000/assets/images/og-default.png">
+  <meta name="twitter:site"        content="@kspai_org">
+
+  <!-- hreflang: bilingual site serves KO and EN from same URL -->
+  <link rel="alternate" hreflang="ko" href="http://localhost:4000/about/">
+  <link rel="alternate" hreflang="en" href="http://localhost:4000/about/">
+  <link rel="alternate" hreflang="x-default" href="http://localhost:4000/about/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +52,9 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg">
 
 
+  <!-- Structured Data — Organization (home page only) -->
+  
+
   <!-- Theme: apply saved preference immediately to prevent flash -->
   <script>
     (function() {
@@ -40,12 +68,15 @@
 
 <body>
 
-  <!-- Background Effects -->
-  <div class="bg-grid"></div>
-  <div class="bg-glow bg-glow-1"></div>
-  <div class="bg-glow bg-glow-2"></div>
+  <!-- Skip to main content (accessibility) -->
+  <a class="skip-link" href="#main-content">본문으로 건너뛰기 / Skip to main content</a>
 
-  <nav>
+  <!-- Background Effects -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <nav aria-label="주 내비게이션 / Main navigation">
   <div class="container">
 
     <!-- Logo -->
@@ -55,13 +86,13 @@
       <img src="/assets/images/logo-light.png"
            alt="KSPAI" class="nav-logo-img nav-logo-img--light" />
       <div class="nav-logo-text">
-        한국피지컬AI학회
+        한국피지컬인공지능학회
         <span class="sub en">Korean Society of Physical AI</span>
       </div>
     </a>
 
     <!-- Desktop nav — built from _data/nav.yml -->
-    <ul class="nav-links">
+    <ul class="nav-links" role="list" aria-label="사이트 메뉴 / Site menu">
       
       
 
@@ -265,22 +296,23 @@
 
     <!-- Controls -->
     <div class="nav-controls">
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-        <span class="theme-icon">☀️</span>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="테마 전환 / Toggle theme">
+        <span class="theme-icon" aria-hidden="true">☀️</span>
       </button>
       <button class="lang-toggle en" onclick="toggleLang()" aria-label="Switch to English">EN</button>
     </div>
 
     <!-- Hamburger -->
     <button class="mobile-menu-btn"
-            aria-label="Toggle menu"
+            aria-label="메뉴 열기 / Open menu"
             aria-expanded="false"
-            onclick="toggleMobileMenu(this)">☰</button>
+            aria-controls="mobile-menu"
+            onclick="toggleMobileMenu(this)"><span aria-hidden="true">☰</span></button>
 
   </div>
 
   <!-- Mobile menu panel — also built from _data/nav.yml -->
-  <div class="mobile-menu" id="mobile-menu" hidden>
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="모바일 메뉴 / Mobile menu" hidden>
     <div class="mobile-menu-inner">
       
 
@@ -443,7 +475,7 @@
 </nav>
 
 
-  <main>
+  <main id="main-content">
     
   <div class="page-hero" >
   <!-- Reuse the same warm glow blobs from the main hero -->
@@ -462,7 +494,7 @@
 
       
       <p class="page-hero-subtitle">
-        <span data-lang="ko">한국피지컬AI학회 및 한국피지컬AI교육연구소 소개</span>
+        <span data-lang="ko">한국피지컬인공지능학회 및 한국피지컬AI교육연구소 소개</span>
         <span data-lang="en">About the Korean Society of Physical AI and its sister institute</span>
       </p>
       
@@ -479,141 +511,366 @@
     
 
     <div class="page-body">
-      <div class="page-section">
-  <h2 class="page-section-title">
-    <span data-lang="ko">설립 배경 및 비전</span>
-    <span data-lang="en">Background &amp; Vision</span>
-  </h2>
-  <p class="page-section-text">
-    <span data-lang="ko">피지컬 AI(Physical AI)는 디지털 지능이 물리적 세계와 실시간으로 상호작용하는 차세대 인공지능의 핵심 패러다임입니다. 로보틱스, 자율시스템, 체화지능, 디지털 트윈을 아우르는 이 분야는 산업, 의료, 교육, 국방 전반에 걸쳐 광범위한 영향을 미치고 있습니다.</span>
-    <span data-lang="en">Physical AI is the core paradigm of next-generation artificial intelligence, in which digital intelligence interacts with the physical world in real time. Encompassing robotics, autonomous systems, embodied intelligence, and digital twins, this field has wide-ranging impact across industry, medicine, education, and defense.</span>
-  </p>
-  <p class="page-section-text">
-    <span data-lang="ko">한국피지컬AI학회는 이 분야의 국내 학술 연구를 선도하고, 연구자·교육자·산업 전문가 간의 교류를 촉진하기 위해 2025년에 설립되었습니다. 자매 기관인 한국피지컬AI교육연구소와 함께 연구와 교육의 두 축을 담당합니다.</span>
-    <span data-lang="en">The Korean Society of Physical AI was established in 2025 to lead domestic academic research in this field and to promote exchange between researchers, educators, and industry professionals. Together with its sister organization, the Korean Institute of Physical AI Education &amp; Research, it drives both the research and educational dimensions of the field.</span>
-  </p>
-</div>
+      <div class="page-article page-article--has-hero">
+<div class="container">
 
-<div class="page-section">
+<!-- ════════════════════════════════
+     GREETING
+     ════════════════════════════════ -->
+<div class="page-section" id="greeting">
   <h2 class="page-section-title">
-    <span data-lang="ko">한국피지컬AI학회 (KSPAI)</span>
-    <span data-lang="en">Korean Society of Physical AI (KSPAI)</span>
+    <span data-lang="ko">설립자 인사말</span>
+    <span data-lang="en">Founder's Greeting</span>
   </h2>
 
-  <div class="about-full-card">
-    <div class="about-full-header">
-      <div class="org-icon society" style="margin-bottom:0;">🏛</div>
-      <div>
-        <p class="org-name-en en" style="margin-bottom:4px;">Korean Society of Physical AI</p>
-        <p class="mono" style="font-size:11px;color:var(--text-muted);">kspai.org · contact@kspai.org</p>
+  <div class="greeting-card">
+    <div class="greeting-quote-mark">"</div>
+    <div class="greeting-body">
+      <div class="greeting-text">
+        <p>
+          <span data-lang="ko">피지컬 AI(Physical AI)는 디지털 지능이 물리적 세계와 만나는 경계에서 탄생하는 새로운 패러다임입니다. 로봇이 사람의 손길처럼 섬세하게 물체를 다루고, 자율 시스템이 복잡한 환경을 스스로 이해하며, 디지털 트윈이 현실의 쌍둥이로서 의사결정을 돕는 시대가 빠르게 다가오고 있습니다.</span>
+          <span data-lang="en">Physical AI is a new paradigm born at the boundary where digital intelligence meets the physical world. The era is rapidly approaching in which robots manipulate objects with the delicacy of human hands, autonomous systems independently understand complex environments, and digital twins serve as real-world counterparts that inform decision-making.</span>
+        </p>
+        <p>
+          <span data-lang="ko">한국은 세계 최고 수준의 제조업 기반과 ICT 인프라를 바탕으로 피지컬 AI 분야에서 선도적인 역할을 담당할 역량을 충분히 갖추고 있습니다. 그러나 이 잠재력이 실현되기 위해서는 학문적 토대를 다지고, 연구자와 교육자, 산업체 전문가들이 함께 모일 구심점이 필요합니다.</span>
+          <span data-lang="en">Korea possesses the capacity to play a leading role in Physical AI, grounded in its world-class manufacturing base and ICT infrastructure. Yet realizing that potential requires a solid academic foundation and a gathering point where researchers, educators, and industry professionals can come together.</span>
+        </p>
+        <p>
+          <span data-lang="ko">한국피지컬인공지능학회와 한국피지컬AI교육연구소는 바로 그 구심점이 되고자 설립되었습니다. 연구의 최전선에서 이루어지는 발견들이 교육 현장과 산업 현장으로 이어지고, 다시 새로운 연구의 씨앗이 되는 선순환의 생태계를 만들어 나가겠습니다. 피지컬 AI의 미래를 함께 만들어갈 여러분의 동참을 환영합니다.</span>
+          <span data-lang="en">The Korean Society of Physical AI and the Korean Institute of Physical AI Education and Research were established to be exactly that gathering point. We will build a virtuous ecosystem in which discoveries at the research frontier flow into education and industry, and in turn give rise to new research. We warmly welcome you to join us in shaping the future of Physical AI.</span>
+        </p>
       </div>
-    </div>
-    <p class="page-section-text">
-      <span data-lang="ko">한국피지컬AI학회는 피지컬 AI 분야의 학술 연구를 진흥하고, 국내외 연구자 간의 학문적 교류를 도모하는 비영리 학술 단체입니다. 학술지 발간, 국제·국내 학술대회 개최, 논문 심사, 산학연 협력 연구 등을 통해 피지컬 AI 기술의 발전에 기여합니다.</span>
-      <span data-lang="en">KSPAI is a non-profit academic society promoting scholarly research in Physical AI and facilitating academic exchange between domestic and international researchers. The society contributes to the advancement of Physical AI through journal publication, domestic and international conferences, paper review, and industry–academia–research collaborative projects.</span>
-    </p>
-    <div class="about-features-grid">
-      <div class="about-feature-item">
-        <span class="about-feature-icon">📄</span>
+      <div class="greeting-sig">
+        <div class="greeting-sig-avatar">🤖</div>
         <div>
-          <strong><span data-lang="ko">학술지 발간</span><span data-lang="en">Journal Publication</span></strong>
-          <p><span data-lang="ko">피지컬 AI 전문 학술지 발간 및 논문 투고 시스템 운영</span><span data-lang="en">Publication of a specialized Physical AI journal and management of a paper submission system</span></p>
-        </div>
-      </div>
-      <div class="about-feature-item">
-        <span class="about-feature-icon">🎓</span>
-        <div>
-          <strong><span data-lang="ko">학술대회</span><span data-lang="en">Conferences</span></strong>
-          <p><span data-lang="ko">연차 학술대회, 워크숍, 특별 세미나 개최</span><span data-lang="en">Annual conferences, workshops, and special seminars</span></p>
-        </div>
-      </div>
-      <div class="about-feature-item">
-        <span class="about-feature-icon">🌐</span>
-        <div>
-          <strong><span data-lang="ko">국제 교류</span><span data-lang="en">International Exchange</span></strong>
-          <p><span data-lang="ko">해외 학회 및 연구기관과의 협력 네트워크 구축</span><span data-lang="en">Building a cooperative network with overseas societies and research institutions</span></p>
-        </div>
-      </div>
-      <div class="about-feature-item">
-        <span class="about-feature-icon">🔗</span>
-        <div>
-          <strong><span data-lang="ko">산학연 협력</span><span data-lang="en">Industry–Academia Collaboration</span></strong>
-          <p><span data-lang="ko">기업·대학·연구소 간 공동 연구 프로젝트 촉진</span><span data-lang="en">Facilitating joint research projects between companies, universities, and research institutes</span></p>
+          <div class="greeting-sig-name">
+            <span data-lang="ko">한국피지컬인공지능학회 설립자·이사회 의장</span>
+            <span data-lang="en">Founder &amp; Board Chair, KSPAI</span>
+          </div>
+          <div class="greeting-sig-title">
+            <span data-lang="ko">한국피지컬인공지능학회 / 한국피지컬AI교육연구소</span>
+            <span data-lang="en">Korean Society of Physical AI / Korean Institute of Physical AI Education &amp; Research</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="page-section">
+<!-- ════════════════════════════════
+     ABOUT THE SOCIETY
+     ════════════════════════════════ -->
+<div class="page-section" id="society">
   <h2 class="page-section-title">
-    <span data-lang="ko">한국피지컬AI교육연구소</span>
-    <span data-lang="en">Korean Institute of Physical AI Education &amp; Research</span>
+    <span data-lang="ko">학회 소개</span>
+    <span data-lang="en">About the Society</span>
   </h2>
+  <p class="page-section-text">
+    <span data-lang="ko"><strong>한국피지컬인공지능학회(KSPAI)</strong>는 피지컬 AI 분야의 학술 연구와 기술 발전을 선도하기 위해 2025년 설립된 국내 최초의 피지컬 AI 전문 학술단체입니다. 로보틱스, 체화지능, 자율시스템, 디지털 트윈, 인간-로봇 상호작용 등을 핵심 연구 분야로 삼으며, 학술지 발행·학술대회 개최·산학연 협력을 통해 피지컬 AI 생태계를 구축해 나갑니다.</span>
+    <span data-lang="en">The <strong>Korean Society of Physical AI (KSPAI)</strong> was founded in 2025 as Korea's first dedicated academic society for Physical AI. With robotics, embodied intelligence, autonomous systems, digital twins, and human-robot interaction as its core research areas, KSPAI advances the Physical AI ecosystem through journal publication, academic conferences, and industry–academia–research collaboration.</span>
+  </p>
+
+  <div class="mission-grid">
+    <div class="mission-card">
+      <span class="mission-icon">📖</span>
+      <div class="mission-title">
+        <span data-lang="ko">학술 연구</span>
+        <span data-lang="en">Scholarly Research</span>
+      </div>
+      <p class="mission-desc">
+        <span data-lang="ko">학술지 「피지컬 AI 연구」 발행 및 엄격한 동료 심사를 통해 피지컬 AI 분야의 연구 수준을 높입니다.</span>
+        <span data-lang="en">Advancing research quality in Physical AI through the publication of <em>Physical AI Research</em> (JKPAI) and rigorous peer review.</span>
+      </p>
+    </div>
+    <div class="mission-card">
+      <span class="mission-icon">🎤</span>
+      <div class="mission-title">
+        <span data-lang="ko">학술 교류</span>
+        <span data-lang="en">Academic Exchange</span>
+      </div>
+      <p class="mission-desc">
+        <span data-lang="ko">연차 학술대회, 워크숍, 세미나를 통해 국내외 연구자들이 최신 연구를 발표하고 교류하는 장을 마련합니다.</span>
+        <span data-lang="en">Providing platforms for domestic and international researchers to present and discuss cutting-edge work through annual conferences, workshops, and seminars.</span>
+      </p>
+    </div>
+    <div class="mission-card">
+      <span class="mission-icon">🤝</span>
+      <div class="mission-title">
+        <span data-lang="ko">산학연 협력</span>
+        <span data-lang="en">Industry Collaboration</span>
+      </div>
+      <p class="mission-desc">
+        <span data-lang="ko">대학, 연구소, 기업을 연결하는 산학연 공동 연구 프로젝트와 기술 이전을 촉진합니다.</span>
+        <span data-lang="en">Facilitating joint research projects and technology transfer that connect universities, research institutes, and industry.</span>
+      </p>
+    </div>
+    <div class="mission-card">
+      <span class="mission-icon">🌏</span>
+      <div class="mission-title">
+        <span data-lang="ko">국제 협력</span>
+        <span data-lang="en">International Ties</span>
+      </div>
+      <p class="mission-desc">
+        <span data-lang="ko">해외 학술단체 및 연구기관과의 협력을 통해 한국 피지컬 AI 연구의 국제적 위상을 높입니다.</span>
+        <span data-lang="en">Raising the international profile of Korean Physical AI research through partnerships with overseas academic societies and research institutions.</span>
+      </p>
+    </div>
+    <div class="mission-card">
+      <span class="mission-icon">🎓</span>
+      <div class="mission-title">
+        <span data-lang="ko">인재 양성</span>
+        <span data-lang="en">Talent Development</span>
+      </div>
+      <p class="mission-desc">
+        <span data-lang="ko">차세대 피지컬 AI 연구자와 엔지니어 양성을 위한 학술 지원 및 경력 개발 프로그램을 운영합니다.</span>
+        <span data-lang="en">Supporting the next generation of Physical AI researchers and engineers through academic support and career development programs.</span>
+      </p>
+    </div>
+    <div class="mission-card">
+      <span class="mission-icon">📢</span>
+      <div class="mission-title">
+        <span data-lang="ko">정책 기여</span>
+        <span data-lang="en">Policy Contribution</span>
+      </div>
+      <p class="mission-desc">
+        <span data-lang="ko">피지컬 AI 관련 국가 연구·교육 정책 수립에 전문가 집단으로서 적극적으로 기여합니다.</span>
+        <span data-lang="en">Contributing as an expert body to national research and education policy development related to Physical AI.</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════
+     ABOUT THE INSTITUTE
+     ════════════════════════════════ -->
+<div class="page-section" id="institute">
+  <h2 class="page-section-title">
+    <span data-lang="ko">교육연구소 소개</span>
+    <span data-lang="en">About the Institute</span>
+  </h2>
+  <p class="page-section-text">
+    <span data-lang="ko"><strong>한국피지컬AI교육연구소</strong>는 피지컬 AI 분야의 교육 역량을 체계적으로 구축하기 위해 설립된 자매 기관입니다. 학회가 연구 중심의 학술 활동에 집중하는 반면, 교육연구소는 피지컬 AI 교육 과정 개발, 교원 연수, 실습 콘텐츠 제작 및 교육 효과성 연구에 특화되어 있습니다.</span>
+    <span data-lang="en">The <strong>Korean Institute of Physical AI Education and Research</strong> is a sister organization established to systematically build educational capacity in Physical AI. While KSPAI focuses on research-centered academic activities, the Institute specializes in Physical AI curriculum development, teacher training, hands-on content creation, and educational effectiveness research.</span>
+  </p>
 
   <div class="about-full-card">
     <div class="about-full-header">
-      <div class="org-icon institute" style="margin-bottom:0;">🔬</div>
+      <div class="org-icon institute">🏫</div>
       <div>
-        <p class="org-name-en en" style="margin-bottom:4px;">Korean Institute of Physical AI Education &amp; Research</p>
-        <p class="mono" style="font-size:11px;color:var(--text-muted);">edu@kspai.org</p>
+        <strong class="about-org-name">
+          <span data-lang="ko">한국피지컬AI교육연구소</span>
+          <span data-lang="en">Korean Institute of Physical AI Education &amp; Research</span>
+        </strong>
+        <div class="about-org-sub">
+          <span data-lang="ko">Korean Institute of Physical AI Education &amp; Research</span>
+          <span data-lang="en">한국피지컬AI교육연구소</span>
+        </div>
       </div>
     </div>
-    <p class="page-section-text">
-      <span data-lang="ko">한국피지컬AI교육연구소는 피지컬 AI 분야의 교육 과정 개발, 전문 인력 양성, 실습 프로그램 운영을 전담합니다. K-12부터 대학원, 산업체 재직자 교육까지 전 단계에 걸친 피지컬 AI 교육 생태계를 구축하는 것을 목표로 합니다.</span>
-      <span data-lang="en">The Korean Institute of Physical AI Education &amp; Research specializes in curriculum development, professional training, and hands-on program delivery in the field of Physical AI. Its goal is to build a comprehensive Physical AI education ecosystem spanning K-12 through graduate school and industry continuing education.</span>
-    </p>
     <div class="about-features-grid">
       <div class="about-feature-item">
-        <span class="about-feature-icon">📚</span>
+        <span class="about-feature-icon">📐</span>
         <div>
-          <strong><span data-lang="ko">커리큘럼 개발</span><span data-lang="en">Curriculum Development</span></strong>
-          <p><span data-lang="ko">K-12, 대학, 대학원 수준의 피지컬 AI 교육 과정 설계</span><span data-lang="en">Designing Physical AI curricula at K-12, undergraduate, and graduate levels</span></p>
+          <strong><span data-lang="ko">교육 커리큘럼 개발</span><span data-lang="en">Curriculum Development</span></strong>
+          <p><span data-lang="ko">초·중·고·대학·대학원 각 수준에 맞는 피지컬 AI 교육 과정 설계 및 표준화</span><span data-lang="en">Design and standardization of Physical AI curricula for K–12, undergraduate, and graduate levels</span></p>
         </div>
       </div>
       <div class="about-feature-item">
         <span class="about-feature-icon">👩‍🏫</span>
         <div>
           <strong><span data-lang="ko">교원 연수</span><span data-lang="en">Teacher Training</span></strong>
-          <p><span data-lang="ko">피지컬 AI 교육 역량을 갖춘 교원 및 전문 인력 양성</span><span data-lang="en">Training teachers and professionals with Physical AI education competencies</span></p>
+          <p><span data-lang="ko">피지컬 AI 교육 역량 강화를 위한 현직 교원 및 예비 교원 대상 연수 프로그램 운영</span><span data-lang="en">In-service and pre-service teacher training programs to strengthen Physical AI teaching competencies</span></p>
         </div>
       </div>
       <div class="about-feature-item">
-        <span class="about-feature-icon">🤖</span>
+        <span class="about-feature-icon">🛠️</span>
         <div>
           <strong><span data-lang="ko">실습 콘텐츠</span><span data-lang="en">Hands-on Content</span></strong>
-          <p><span data-lang="ko">로봇, 센서, 시뮬레이션을 활용한 실습 교육 자료 개발</span><span data-lang="en">Developing hands-on educational materials using robots, sensors, and simulation</span></p>
+          <p><span data-lang="ko">로보틱스·자율시스템 등 피지컬 AI 주요 분야의 실험·실습 교재 및 키트 개발</span><span data-lang="en">Development of experimental and hands-on teaching materials and kits for robotics, autonomous systems, and related Physical AI areas</span></p>
+        </div>
+      </div>
+      <div class="about-feature-item">
+        <span class="about-feature-icon">📊</span>
+        <div>
+          <strong><span data-lang="ko">교육 효과성 연구</span><span data-lang="en">Effectiveness Research</span></strong>
+          <p><span data-lang="ko">피지컬 AI 교육 프로그램의 효과성을 측정·분석하고 근거 기반의 교육 개선 방안을 제시</span><span data-lang="en">Measuring and analyzing the effectiveness of Physical AI education programs and proposing evidence-based improvements</span></p>
         </div>
       </div>
       <div class="about-feature-item">
         <span class="about-feature-icon">🏭</span>
         <div>
-          <strong><span data-lang="ko">산업체 교육</span><span data-lang="en">Industry Training</span></strong>
-          <p><span data-lang="ko">기업 맞춤형 피지컬 AI 재직자 교육 프로그램 운영</span><span data-lang="en">Delivering company-tailored Physical AI training programs for working professionals</span></p>
+          <strong><span data-lang="ko">산업 맞춤 교육</span><span data-lang="en">Industry Training</span></strong>
+          <p><span data-lang="ko">피지컬 AI 관련 기업 및 기관의 임직원을 위한 맞춤형 직무 교육 프로그램 개발·운영</span><span data-lang="en">Development and delivery of tailored professional training programs for employees of Physical AI-related companies and organizations</span></p>
+        </div>
+      </div>
+      <div class="about-feature-item">
+        <span class="about-feature-icon">🌐</span>
+        <div>
+          <strong><span data-lang="ko">국제 교육 협력</span><span data-lang="en">International Education Cooperation</span></strong>
+          <p><span data-lang="ko">해외 교육기관과의 피지컬 AI 교육 과정 공동 개발 및 교환 프로그램 운영</span><span data-lang="en">Joint curriculum development and exchange programs with international educational institutions</span></p>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="page-section">
+<!-- ════════════════════════════════
+     RESEARCH SCOPE
+     ════════════════════════════════ -->
+<div class="page-section" id="scope">
   <h2 class="page-section-title">
-    <span data-lang="ko">조직 구성</span>
-    <span data-lang="en">Organization</span>
+    <span data-lang="ko">핵심 연구 분야</span>
+    <span data-lang="en">Core Research Scope</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko">학회 조직 구성 및 임원진 정보는 창립총회 이후 공개됩니다.</span>
-    <span data-lang="en">Details of the society's organizational structure and officer lineup will be disclosed following the inaugural general assembly.</span>
+    <span data-lang="ko">한국피지컬인공지능학회는 다음 6대 핵심 분야와 이와 융합된 모든 연구를 포괄합니다.</span>
+    <span data-lang="en">KSPAI encompasses the following six core research areas and all interdisciplinary research connected to them.</span>
   </p>
-  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;">
-    <a href="/officers/" class="btn btn-outline">
-      <span data-lang="ko">임원진 보기</span><span data-lang="en">View Officers</span>
-    </a>
-    <a href="/bylaws/" class="btn btn-outline">
-      <span data-lang="ko">정관 보기</span><span data-lang="en">View Bylaws</span>
+  <div class="scope-box">
+    <div class="scope-box-title">Research Areas</div>
+    <div class="scope-tags">
+      <span class="scope-tag"><span data-lang="ko">🤖 로보틱스</span><span data-lang="en">🤖 Robotics</span></span>
+      <span class="scope-tag"><span data-lang="ko">🧠 체화지능</span><span data-lang="en">🧠 Embodied Intelligence</span></span>
+      <span class="scope-tag"><span data-lang="ko">🚗 자율시스템</span><span data-lang="en">🚗 Autonomous Systems</span></span>
+      <span class="scope-tag"><span data-lang="ko">🪞 디지털 트윈</span><span data-lang="en">🪞 Digital Twin</span></span>
+      <span class="scope-tag"><span data-lang="ko">🤝 인간-로봇 상호작용</span><span data-lang="en">🤝 Human-Robot Interaction</span></span>
+      <span class="scope-tag"><span data-lang="ko">📚 피지컬 AI 교육</span><span data-lang="en">📚 Physical AI Education</span></span>
+    </div>
+  </div>
+  <div class="section-actions">
+    <a href="/research/" class="btn btn-outline">
+      <span data-lang="ko">연구 분야 상세 보기 →</span>
+      <span data-lang="en">Explore Research Areas →</span>
     </a>
   </div>
 </div>
+
+<!-- ════════════════════════════════
+     FOUNDING TIMELINE
+     ════════════════════════════════ -->
+<div class="page-section" id="history">
+  <h2 class="page-section-title">
+    <span data-lang="ko">연혁</span>
+    <span data-lang="en">History</span>
+  </h2>
+  <p class="page-section-text">
+    <span data-lang="ko">한국피지컬인공지능학회의 설립 과정을 연혁으로 정리합니다.</span>
+    <span data-lang="en">A timeline of key milestones in the founding of the Korean Society of Physical AI.</span>
+  </p>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <span class="timeline-dot"></span>
+      <div class="timeline-year">2025</div>
+      <div class="timeline-title">
+        <span data-lang="ko">설립 준비 착수</span>
+        <span data-lang="en">Founding preparation begins</span>
+      </div>
+      <p class="timeline-desc">
+        <span data-lang="ko">피지컬 AI 분야의 전문 학술단체 설립 필요성 논의 시작. 설립준비위원회 구성 및 정관 초안 작성.</span>
+        <span data-lang="en">Discussion begins on the need for a dedicated Physical AI academic society. Founding Preparatory Committee formed and draft bylaws prepared.</span>
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-dot"></span>
+      <div class="timeline-year">2025</div>
+      <div class="timeline-title">
+        <span data-lang="ko">한국피지컬인공지능학회·교육연구소 설립</span>
+        <span data-lang="en">KSPAI &amp; Institute established</span>
+      </div>
+      <p class="timeline-desc">
+        <span data-lang="ko">한국피지컬인공지능학회(KSPAI) 및 한국피지컬AI교육연구소 공식 설립. 비상대책위원회 체제 운영 개시.</span>
+        <span data-lang="en">Official establishment of the Korean Society of Physical AI (KSPAI) and the Korean Institute of Physical AI Education and Research. Operations begin under the Emergency Planning Committee structure.</span>
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-dot"></span>
+      <div class="timeline-year">2025</div>
+      <div class="timeline-title">
+        <span data-lang="ko">공식 홈페이지 개설 (kspai.org)</span>
+        <span data-lang="en">Official website launched (kspai.org)</span>
+      </div>
+      <p class="timeline-desc">
+        <span data-lang="ko">학회 공식 홈페이지(kspai.org) 개설 및 이중 언어(한국어·영어) 서비스 시작.</span>
+        <span data-lang="en">Official bilingual website launched at kspai.org.</span>
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-dot pending"></span>
+      <div class="timeline-year pending">
+        <span data-lang="ko">예정</span>
+        <span data-lang="en">Planned</span>
+      </div>
+      <div class="timeline-title timeline-title--pending">
+        <span data-lang="ko">창립총회 개최 및 초대 회장 선출</span>
+        <span data-lang="en">Inaugural General Assembly &amp; President elected</span>
+      </div>
+      <p class="timeline-desc">
+        <span data-lang="ko">창립총회 개최, 정관 확정, 초대 회장 및 임원진 선출. 학회 공식 출범.</span>
+        <span data-lang="en">Inaugural general assembly; bylaws finalized; first President and officers elected; Society officially launched.</span>
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-dot pending"></span>
+      <div class="timeline-year pending">
+        <span data-lang="ko">예정</span>
+        <span data-lang="en">Planned</span>
+      </div>
+      <div class="timeline-title timeline-title--pending">
+        <span data-lang="ko">창립 학술대회 개최</span>
+        <span data-lang="en">Inaugural academic conference</span>
+      </div>
+      <p class="timeline-desc">
+        <span data-lang="ko">한국피지컬인공지능학회 첫 번째 학술대회 개최. 구두 발표, 포스터 세션, 기조 강연 등 진행.</span>
+        <span data-lang="en">KSPAI's first academic conference, featuring oral presentations, poster sessions, and keynote lectures.</span>
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-dot pending"></span>
+      <div class="timeline-year pending">
+        <span data-lang="ko">예정</span>
+        <span data-lang="en">Planned</span>
+      </div>
+      <div class="timeline-title timeline-title--pending">
+        <span data-lang="ko">학술지 「피지컬 AI 연구」 창간호 발행</span>
+        <span data-lang="en">Inaugural issue of <em>Physical AI Research</em> (JKPAI)</span>
+      </div>
+      <p class="timeline-desc">
+        <span data-lang="ko">학회지 「피지컬 AI 연구(Physical AI Research, JKPAI)」 제1권 제1호 발행.</span>
+        <span data-lang="en">Publication of Volume 1, Issue 1 of <em>Physical AI Research</em> (JKPAI).</span>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- CTA row -->
+<div class="page-section">
+  <div class="section-actions">
+    <a href="/join/" class="btn btn-primary">
+      <span data-lang="ko">회원가입 안내 →</span>
+      <span data-lang="en">Join KSPAI →</span>
+    </a>
+    <a href="/officers/" class="btn btn-outline">
+      <span data-lang="ko">임원진 보기</span>
+      <span data-lang="en">Officers</span>
+    </a>
+    <a href="/bylaws/" class="btn btn-outline">
+      <span data-lang="ko">정관</span>
+      <span data-lang="en">Bylaws</span>
+    </a>
+  </div>
+</div>
+
+</div><!-- .container -->
+</div>
+<!-- .page-article -->
 
     </div>
 
@@ -628,7 +885,7 @@
 
   </main>
 
-  <footer>
+  <footer aria-label="사이트 푸터 / Site footer">
   <div class="container">
     <div class="footer-grid">
 
@@ -636,7 +893,7 @@
         <div class="footer-logo">
           <img src="/assets/images/logo-light.png"
               alt="KSPAI" class="footer-logo-img" />
-          <div class="footer-logo-name">한국피지컬AI학회
+          <div class="footer-logo-name">한국피지컬인공지능학회
             <span class="sub en">Korean Society of Physical AI</span>
           </div>
         </div>
@@ -679,11 +936,11 @@
     <div class="footer-bottom">
       <span class="footer-copy en">
         © 2026 Korean Society of Physical AI (KSPAI). All rights reserved.<br>
-        Built by <a href="https://aaron.kr" target="_blank" rel="noopener">Aaron.kr</a> &bull; Hero img by <a href="https://easy-peasy.ai/ai-image-generator/images/fusion-quantum-ai-technology-advanced-algorithms-quantum-computing" target="_blank" rel="noopener">Easy-Peasy.ai</a>
+        Built by <a href="https://aaron.kr" target="_blank" rel="noopener" aria-label="Aaron.kr (새 탭에서 열림 / opens in new tab)">Aaron.kr</a> &bull; Hero img by <a href="https://easy-peasy.ai/ai-image-generator/images/fusion-quantum-ai-technology-advanced-algorithms-quantum-computing" target="_blank" rel="noopener" aria-label="Easy-Peasy.ai hero image source (새 탭에서 열림 / opens in new tab)">Easy-Peasy.ai</a>
       </span>
-      <div class="footer-watermark">
+      <div class="footer-watermark" aria-hidden="true">
         <img src="/assets/images/logo-dark.png"
-            alt="KSPAI" class="footer-logo-img" />
+            alt="" class="footer-logo-img" />
       </div>
       <span class="footer-contact-info en">
         <a href="mailto:contact@kspai.org">contact@kspai.org</a>

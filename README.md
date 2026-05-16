@@ -1,4 +1,4 @@
-# 한국피지컬AI학회 홈페이지
+# 한국피지컬인공지능학회 홈페이지
 
 **Korean Society of Physical AI (KSPAI)** — Official website  
 🌐 [kspai.org](https://kspai.org) · Jekyll + GitHub Pages · Bilingual KO/EN

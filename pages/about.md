@@ -3,197 +3,11 @@ layout: page
 title: 학회소개
 title_ko: 학회소개
 title_en: About KSPAI
-subtitle_ko: 한국피지컬AI학회 및 한국피지컬AI교육연구소 소개
+subtitle_ko: 한국피지컬인공지능학회 및 한국피지컬AI교육연구소 소개
 subtitle_en: About the Korean Society of Physical AI and its sister institute
-description: 한국피지컬AI학회(KSPAI)의 설립 배경, 비전, 미션, 연혁 및 자매 기관 한국피지컬AI교육연구소 소개.
+description: 한국피지컬인공지능학회(KSPAI)의 설립 배경, 비전, 미션, 연혁 및 자매 기관 한국피지컬AI교육연구소 소개.
 permalink: /about/
 ---
-
-<style>
-/* ── Greeting section ── */
-.greeting-card {
-  display: flex;
-  gap: 48px;
-  align-items: flex-start;
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 48px;
-  margin-bottom: 32px;
-  position: relative;
-  overflow: hidden;
-}
-.greeting-card::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-}
-.greeting-quote-mark {
-  font-family: var(--font-title-en);
-  font-size: 120px;
-  line-height: 0.7;
-  color: var(--accent-primary);
-  opacity: 0.15;
-  flex-shrink: 0;
-  user-select: none;
-  padding-top: 16px;
-}
-.greeting-body { flex: 1; }
-.greeting-text {
-  font-size: 16px;
-  line-height: 2.0;
-  color: var(--text-body);
-  margin-bottom: 28px;
-}
-.greeting-text p { margin-bottom: 1.2em; }
-.greeting-text p:last-child { margin-bottom: 0; }
-.greeting-sig {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border-subtle);
-}
-.greeting-sig-avatar {
-  width: 52px; height: 52px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-blue-700), var(--color-blue-900));
-  display: flex; align-items: center; justify-content: center;
-  font-size: 22px; flex-shrink: 0;
-}
-.greeting-sig-name { font-size: 15px; font-weight: 700; }
-.greeting-sig-title { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
-
-/* ── Timeline ── */
-.timeline {
-  position: relative;
-  padding-left: 32px;
-}
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 7px; top: 8px; bottom: 8px;
-  width: 2px;
-  background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary), transparent);
-  border-radius: 2px;
-}
-.timeline-item {
-  position: relative;
-  padding: 0 0 32px 24px;
-}
-.timeline-item:last-child { padding-bottom: 0; }
-.timeline-dot {
-  position: absolute;
-  left: -25px;
-  top: 6px;
-  width: 12px; height: 12px;
-  border-radius: 50%;
-  background: var(--accent-primary);
-  border: 2px solid var(--bg-base);
-  box-shadow: 0 0 0 2px var(--accent-primary);
-  flex-shrink: 0;
-}
-.timeline-dot.pending {
-  background: var(--border-subtle);
-  box-shadow: 0 0 0 2px var(--border-subtle);
-}
-.timeline-year {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--accent-primary);
-  letter-spacing: 1px;
-  margin-bottom: 4px;
-  text-transform: uppercase;
-}
-.timeline-year.pending { color: var(--text-muted); }
-.timeline-title {
-  font-size: 15px;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-.timeline-desc {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.7;
-}
-
-/* ── Mission pillars ── */
-.mission-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 8px;
-}
-.mission-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 28px 24px;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.mission-card:hover {
-  border-color: var(--border-accent);
-  box-shadow: var(--shadow-md);
-}
-.mission-icon {
-  font-size: 28px;
-  margin-bottom: 14px;
-  display: block;
-}
-.mission-title {
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-.mission-desc {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.7;
-}
-
-/* ── Scope callout box ── */
-.scope-box {
-  background: linear-gradient(135deg, rgba(37,133,243,0.06), rgba(36,255,252,0.03));
-  border: 1px solid var(--border-accent);
-  border-radius: var(--radius-lg);
-  padding: 32px 36px;
-  margin-bottom: 0;
-}
-.scope-box-title {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--accent-primary);
-  margin-bottom: 14px;
-}
-.scope-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.scope-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 500;
-  background: rgba(37,133,243,0.07);
-  border: 1px solid var(--border-blue);
-  color: var(--text-primary);
-  white-space: nowrap;
-}
-
-@media (max-width: 768px) {
-  .greeting-card { flex-direction: column; gap: 0; padding: 32px 24px; }
-  .greeting-quote-mark { display: none; }
-  .mission-grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 480px) {
-  .mission-grid { grid-template-columns: 1fr; }
-}
-</style>
 
 <div class="page-article page-article--has-hero">
 <div class="container">
@@ -220,7 +34,7 @@ permalink: /about/
           <span data-lang="en">Korea possesses the capacity to play a leading role in Physical AI, grounded in its world-class manufacturing base and ICT infrastructure. Yet realizing that potential requires a solid academic foundation and a gathering point where researchers, educators, and industry professionals can come together.</span>
         </p>
         <p>
-          <span data-lang="ko">한국피지컬AI학회와 한국피지컬AI교육연구소는 바로 그 구심점이 되고자 설립되었습니다. 연구의 최전선에서 이루어지는 발견들이 교육 현장과 산업 현장으로 이어지고, 다시 새로운 연구의 씨앗이 되는 선순환의 생태계를 만들어 나가겠습니다. 피지컬 AI의 미래를 함께 만들어갈 여러분의 동참을 환영합니다.</span>
+          <span data-lang="ko">한국피지컬인공지능학회와 한국피지컬AI교육연구소는 바로 그 구심점이 되고자 설립되었습니다. 연구의 최전선에서 이루어지는 발견들이 교육 현장과 산업 현장으로 이어지고, 다시 새로운 연구의 씨앗이 되는 선순환의 생태계를 만들어 나가겠습니다. 피지컬 AI의 미래를 함께 만들어갈 여러분의 동참을 환영합니다.</span>
           <span data-lang="en">The Korean Society of Physical AI and the Korean Institute of Physical AI Education and Research were established to be exactly that gathering point. We will build a virtuous ecosystem in which discoveries at the research frontier flow into education and industry, and in turn give rise to new research. We warmly welcome you to join us in shaping the future of Physical AI.</span>
         </p>
       </div>
@@ -228,11 +42,11 @@ permalink: /about/
         <div class="greeting-sig-avatar">🤖</div>
         <div>
           <div class="greeting-sig-name">
-            <span data-lang="ko">한국피지컬AI학회 설립자·이사회 의장</span>
+            <span data-lang="ko">한국피지컬인공지능학회 설립자·이사회 의장</span>
             <span data-lang="en">Founder & Board Chair, KSPAI</span>
           </div>
           <div class="greeting-sig-title">
-            <span data-lang="ko">한국피지컬AI학회 / 한국피지컬AI교육연구소</span>
+            <span data-lang="ko">한국피지컬인공지능학회 / 한국피지컬AI교육연구소</span>
             <span data-lang="en">Korean Society of Physical AI / Korean Institute of Physical AI Education & Research</span>
           </div>
         </div>
@@ -250,7 +64,7 @@ permalink: /about/
     <span data-lang="en">About the Society</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko"><strong>한국피지컬AI학회(KSPAI)</strong>는 피지컬 AI 분야의 학술 연구와 기술 발전을 선도하기 위해 2025년 설립된 국내 최초의 피지컬 AI 전문 학술단체입니다. 로보틱스, 체화지능, 자율시스템, 디지털 트윈, 인간-로봇 상호작용 등을 핵심 연구 분야로 삼으며, 학술지 발행·학술대회 개최·산학연 협력을 통해 피지컬 AI 생태계를 구축해 나갑니다.</span>
+    <span data-lang="ko"><strong>한국피지컬인공지능학회(KSPAI)</strong>는 피지컬 AI 분야의 학술 연구와 기술 발전을 선도하기 위해 2025년 설립된 국내 최초의 피지컬 AI 전문 학술단체입니다. 로보틱스, 체화지능, 자율시스템, 디지털 트윈, 인간-로봇 상호작용 등을 핵심 연구 분야로 삼으며, 학술지 발행·학술대회 개최·산학연 협력을 통해 피지컬 AI 생태계를 구축해 나갑니다.</span>
     <span data-lang="en">The <strong>Korean Society of Physical AI (KSPAI)</strong> was founded in 2025 as Korea's first dedicated academic society for Physical AI. With robotics, embodied intelligence, autonomous systems, digital twins, and human-robot interaction as its core research areas, KSPAI advances the Physical AI ecosystem through journal publication, academic conferences, and industry–academia–research collaboration.</span>
   </p>
 
@@ -339,13 +153,13 @@ permalink: /about/
 
   <div class="about-full-card">
     <div class="about-full-header">
-      <div class="org-icon institute" style="margin-bottom: 0;">🏫</div>
+      <div class="org-icon institute">🏫</div>
       <div>
-        <strong style="font-size: 18px;">
+        <strong class="about-org-name">
           <span data-lang="ko">한국피지컬AI교육연구소</span>
           <span data-lang="en">Korean Institute of Physical AI Education & Research</span>
         </strong>
-        <div style="font-size: 13px; color: var(--text-muted); margin-top: 3px;">
+        <div class="about-org-sub">
           <span data-lang="ko">Korean Institute of Physical AI Education & Research</span>
           <span data-lang="en">한국피지컬AI교육연구소</span>
         </div>
@@ -407,7 +221,7 @@ permalink: /about/
     <span data-lang="en">Core Research Scope</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko">한국피지컬AI학회는 다음 6대 핵심 분야와 이와 융합된 모든 연구를 포괄합니다.</span>
+    <span data-lang="ko">한국피지컬인공지능학회는 다음 6대 핵심 분야와 이와 융합된 모든 연구를 포괄합니다.</span>
     <span data-lang="en">KSPAI encompasses the following six core research areas and all interdisciplinary research connected to them.</span>
   </p>
   <div class="scope-box">
@@ -421,7 +235,7 @@ permalink: /about/
       <span class="scope-tag"><span data-lang="ko">📚 피지컬 AI 교육</span><span data-lang="en">📚 Physical AI Education</span></span>
     </div>
   </div>
-  <div style="margin-top: 20px;">
+  <div class="section-actions">
     <a href="/research/" class="btn btn-outline">
       <span data-lang="ko">연구 분야 상세 보기 →</span>
       <span data-lang="en">Explore Research Areas →</span>
@@ -438,7 +252,7 @@ permalink: /about/
     <span data-lang="en">History</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko">한국피지컬AI학회의 설립 과정을 연혁으로 정리합니다.</span>
+    <span data-lang="ko">한국피지컬인공지능학회의 설립 과정을 연혁으로 정리합니다.</span>
     <span data-lang="en">A timeline of key milestones in the founding of the Korean Society of Physical AI.</span>
   </p>
 
@@ -461,12 +275,12 @@ permalink: /about/
       <span class="timeline-dot"></span>
       <div class="timeline-year">2025</div>
       <div class="timeline-title">
-        <span data-lang="ko">한국피지컬AI학회·교육연구소 설립</span>
+        <span data-lang="ko">한국피지컬인공지능학회·교육연구소 설립</span>
         <span data-lang="en">KSPAI &amp; Institute established</span>
       </div>
       <p class="timeline-desc">
-        <span data-lang="ko">한국피지컬AI학회(KSPAI) 및 한국피지컬AI교육연구소 공식 설립. 설립준비위원회 체제 운영 개시.</span>
-        <span data-lang="en">Official establishment of the Korean Society of Physical AI (KSPAI) and the Korean Institute of Physical AI Education and Research. Operations begin under the Founding Preparatory Committee structure.</span>
+        <span data-lang="ko">한국피지컬인공지능학회(KSPAI) 및 한국피지컬AI교육연구소 공식 설립. 비상대책위원회 체제 운영 개시.</span>
+        <span data-lang="en">Official establishment of the Korean Society of Physical AI (KSPAI) and the Korean Institute of Physical AI Education and Research. Operations begin under the Emergency Planning Committee structure.</span>
       </p>
     </div>
 
@@ -489,7 +303,7 @@ permalink: /about/
         <span data-lang="ko">예정</span>
         <span data-lang="en">Planned</span>
       </div>
-      <div class="timeline-title" style="color: var(--text-muted);">
+      <div class="timeline-title timeline-title--pending">
         <span data-lang="ko">창립총회 개최 및 초대 회장 선출</span>
         <span data-lang="en">Inaugural General Assembly &amp; President elected</span>
       </div>
@@ -505,12 +319,12 @@ permalink: /about/
         <span data-lang="ko">예정</span>
         <span data-lang="en">Planned</span>
       </div>
-      <div class="timeline-title" style="color: var(--text-muted);">
+      <div class="timeline-title timeline-title--pending">
         <span data-lang="ko">창립 학술대회 개최</span>
         <span data-lang="en">Inaugural academic conference</span>
       </div>
       <p class="timeline-desc">
-        <span data-lang="ko">한국피지컬AI학회 첫 번째 학술대회 개최. 구두 발표, 포스터 세션, 기조 강연 등 진행.</span>
+        <span data-lang="ko">한국피지컬인공지능학회 첫 번째 학술대회 개최. 구두 발표, 포스터 세션, 기조 강연 등 진행.</span>
         <span data-lang="en">KSPAI's first academic conference, featuring oral presentations, poster sessions, and keynote lectures.</span>
       </p>
     </div>
@@ -521,7 +335,7 @@ permalink: /about/
         <span data-lang="ko">예정</span>
         <span data-lang="en">Planned</span>
       </div>
-      <div class="timeline-title" style="color: var(--text-muted);">
+      <div class="timeline-title timeline-title--pending">
         <span data-lang="ko">학술지 「피지컬 AI 연구」 창간호 발행</span>
         <span data-lang="en">Inaugural issue of <em>Physical AI Research</em> (JKPAI)</span>
       </div>
@@ -535,8 +349,8 @@ permalink: /about/
 </div>
 
 <!-- CTA row -->
-<div class="page-section" style="padding-top: 0;">
-  <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+<div class="page-section">
+  <div class="section-actions">
     <a href="/join/" class="btn btn-primary">
       <span data-lang="ko">회원가입 안내 →</span>
       <span data-lang="en">Join KSPAI →</span>

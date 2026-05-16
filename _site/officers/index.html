@@ -3,12 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  
+  
+
   <title>임원진 | Korean Society of Physical AI</title>
-  <meta name="description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
-  <meta property="og:title" content="임원진">
-  <meta property="og:description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
-  <meta property="og:url" content="http://localhost:4000/officers/">
-  <meta property="og:type" content="website">
+  <meta name="description" content="한국피지컬인공지능학회(KSPAI) 임원진 소개 — 회장, 부회장단, 감사 등 조직 구성.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="http://localhost:4000/officers/">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="임원진">
+  <meta property="og:description" content="한국피지컬인공지능학회(KSPAI) 임원진 소개 — 회장, 부회장단, 감사 등 조직 구성.">
+  <meta property="og:url"         content="http://localhost:4000/officers/">
+  <meta property="og:type"        content="website">
+  <meta property="og:image"       content="http://localhost:4000/assets/images/og-default.png">
+  <meta property="og:locale"      content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name"   content="Korean Society of Physical AI">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="임원진">
+  <meta name="twitter:description" content="한국피지컬인공지능학회(KSPAI) 임원진 소개 — 회장, 부회장단, 감사 등 조직 구성.">
+  <meta name="twitter:image"       content="http://localhost:4000/assets/images/og-default.png">
+  <meta name="twitter:site"        content="@kspai_org">
+
+  <!-- hreflang: bilingual site serves KO and EN from same URL -->
+  <link rel="alternate" hreflang="ko" href="http://localhost:4000/officers/">
+  <link rel="alternate" hreflang="en" href="http://localhost:4000/officers/">
+  <link rel="alternate" hreflang="x-default" href="http://localhost:4000/officers/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +52,9 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg">
 
 
+  <!-- Structured Data — Organization (home page only) -->
+  
+
   <!-- Theme: apply saved preference immediately to prevent flash -->
   <script>
     (function() {
@@ -40,12 +68,15 @@
 
 <body>
 
-  <!-- Background Effects -->
-  <div class="bg-grid"></div>
-  <div class="bg-glow bg-glow-1"></div>
-  <div class="bg-glow bg-glow-2"></div>
+  <!-- Skip to main content (accessibility) -->
+  <a class="skip-link" href="#main-content">본문으로 건너뛰기 / Skip to main content</a>
 
-  <nav>
+  <!-- Background Effects -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <nav aria-label="주 내비게이션 / Main navigation">
   <div class="container">
 
     <!-- Logo -->
@@ -55,13 +86,13 @@
       <img src="/assets/images/logo-light.png"
            alt="KSPAI" class="nav-logo-img nav-logo-img--light" />
       <div class="nav-logo-text">
-        한국피지컬AI학회
+        한국피지컬인공지능학회
         <span class="sub en">Korean Society of Physical AI</span>
       </div>
     </a>
 
     <!-- Desktop nav — built from _data/nav.yml -->
-    <ul class="nav-links">
+    <ul class="nav-links" role="list" aria-label="사이트 메뉴 / Site menu">
       
       
 
@@ -265,22 +296,23 @@
 
     <!-- Controls -->
     <div class="nav-controls">
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-        <span class="theme-icon">☀️</span>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="테마 전환 / Toggle theme">
+        <span class="theme-icon" aria-hidden="true">☀️</span>
       </button>
       <button class="lang-toggle en" onclick="toggleLang()" aria-label="Switch to English">EN</button>
     </div>
 
     <!-- Hamburger -->
     <button class="mobile-menu-btn"
-            aria-label="Toggle menu"
+            aria-label="메뉴 열기 / Open menu"
             aria-expanded="false"
-            onclick="toggleMobileMenu(this)">☰</button>
+            aria-controls="mobile-menu"
+            onclick="toggleMobileMenu(this)"><span aria-hidden="true">☰</span></button>
 
   </div>
 
   <!-- Mobile menu panel — also built from _data/nav.yml -->
-  <div class="mobile-menu" id="mobile-menu" hidden>
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="모바일 메뉴 / Mobile menu" hidden>
     <div class="mobile-menu-inner">
       
 
@@ -443,7 +475,7 @@
 </nav>
 
 
-  <main>
+  <main id="main-content">
     
   <div class="page-hero" >
   <!-- Reuse the same warm glow blobs from the main hero -->
@@ -466,7 +498,7 @@
 
       
       <p class="page-hero-subtitle">
-        <span data-lang="ko">한국피지컬AI학회 임원진 및 조직 구성</span>
+        <span data-lang="ko">한국피지컬인공지능학회 임원진 및 조직 구성</span>
         <span data-lang="en">Leadership and organizational structure of KSPAI</span>
       </p>
       
@@ -483,31 +515,29 @@
     
 
     <div class="page-body">
-      <!-- Status banner -->
-<div class="coming-soon-banner" style="margin-bottom: 48px;">
-  <span class="mono" style="font-size:12px; color:var(--accent-primary);">※</span>
+      <div class="coming-soon-banner">
+  <span class="mono">※</span>
   <div>
     <strong>
-      <span data-lang="ko">설립준비위원회 체제 운영 중</span>
-      <span data-lang="en">Operating under Founding Preparatory Committee</span>
+      <span data-lang="ko">비상대책위원회 체제 운영 중</span>
+      <span data-lang="en">Operating under Emergency Planning Committee</span>
     </strong><br />
-    <span data-lang="ko" style="font-size:13px;">창립총회 이후 정식 임원진이 선출될 예정입니다.</span>
-    <span data-lang="en" style="font-size:13px;">Formal officers will be elected following the inaugural general assembly.</span>
+    <span data-lang="ko">창립총회 이후 정식 임원진이 선출될 예정입니다.</span>
+    <span data-lang="en">Formal officers will be elected following the inaugural general assembly.</span>
   </div>
 </div>
 
-<!-- ── PRESIDENT (placeholder — hidden, preparatory committee shown) ── -->
+<!-- ── PRESIDENT ── -->
 <div class="page-section">
   <h2 class="page-section-title">
     <span data-lang="ko">회장</span>
     <span data-lang="en">President</span>
   </h2>
-  <div class="officer-card" style="max-width: 480px; opacity: 0.7;">
-    <div class="officer-avatar">—</div>
+  <div class="officer-card officer-card--placeholder">
     <div class="officer-info">
       <p class="officer-name">
-        <span data-lang="ko">설립준비위원회 체제 운영 중</span>
-        <span data-lang="en">Operating under Founding Preparatory Committee</span>
+        <span data-lang="ko">비상대책위원회 체제 운영 중</span>
+        <span data-lang="en">Operating under Emergency Planning Committee</span>
       </p>
       <p class="officer-affil">
         <span data-lang="ko">창립총회 후 선출 예정</span>
@@ -525,76 +555,13 @@
   </h2>
 
   <div class="officers-grid">
-
+    
     <div class="officer-role-group">
       <h3 class="officer-role-title">
-        <span data-lang="ko">수석 / 학술부회장</span>
-        <span data-lang="en">Sr. VP, Academic Affairs</span>
+        <span data-lang="ko">이사회 부의장 겸 학술부회장</span>
+        <span data-lang="en">Board Vice-Chair &amp; VP, Academic Affairs</span>
       </h3>
       <div class="officer-card">
-        <div class="officer-avatar">👤</div>
-        <div class="officer-info">
-          <p class="officer-name">
-            <span data-lang="ko">김주리</span>
-            <span data-lang="en">Julie Kim</span>
-          </p>
-          <p class="officer-affil">
-            <span data-lang="ko">원광대학교</span>
-            <span data-lang="en">Wonkwang University</span>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="officer-role-group">
-      <h3 class="officer-role-title">
-        <span data-lang="ko">총무부회장</span>
-        <span data-lang="en">VP, General Affairs</span>
-      </h3>
-      <div class="officer-card">
-        <div class="officer-avatar">👤</div>
-        <div class="officer-info">
-          <p class="officer-name">
-            <span data-lang="ko">김세민</span>
-            <span data-lang="en">Semin Kim</span>
-          </p>
-          <p class="officer-affil">
-            <span data-lang="ko">전주교육대학교</span>
-            <span data-lang="en">Jeonju National University of Education</span>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="officer-role-group">
-      <h3 class="officer-role-title">
-        <span data-lang="ko">국문지부회장</span>
-        <span data-lang="en">VP, Korean Journal Division</span>
-      </h3>
-      <div class="officer-card">
-        <div class="officer-avatar">👤</div>
-        <div class="officer-info">
-          <p class="officer-name">
-            <span data-lang="ko">장봉석</span>
-            <span data-lang="en">Bong-suk Jang</span>
-          </p>
-          <p class="officer-affil">
-            <span data-lang="ko">국립목포대학교</span>
-            <span data-lang="en">Mokpo National University</span>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="officer-role-group">
-      <h3 class="officer-role-title">
-        <span data-lang="ko">영문지부회장</span>
-        <span data-lang="en">VP, English Journal Division</span>
-      </h3>
-      <div class="officer-card">
-        <div class="officer-avatar">
-          <img src="/assets/images/aaron-profile.jpg" alt="Aaron" />
-        </div>
         <div class="officer-info">
           <p class="officer-name">
             <span data-lang="ko">에런스노버거</span>
@@ -604,17 +571,67 @@
             <span data-lang="ko">국립한밭대학교</span>
             <span data-lang="en">Hanbat National University</span>
           </p>
+          
         </div>
       </div>
     </div>
-
+    
+    <div class="officer-role-group">
+      <h3 class="officer-role-title">
+        <span data-lang="ko">이사회 의장 겸 총무부회장</span>
+        <span data-lang="en">Board Chair &amp; VP, General Affairs</span>
+      </h3>
+      <div class="officer-card">
+        <div class="officer-info">
+          <p class="officer-name">
+            <span data-lang="ko">김세민</span>
+            <span data-lang="en">Semin Kim</span>
+          </p>
+          <p class="officer-affil">
+            <span data-lang="ko">전주교육대학교</span>
+            <span data-lang="en">Jeonju National University of Education</span>
+          </p>
+          
+          <p class="officer-note">
+            <span data-lang="ko">공동편집위원장(2)</span>
+            <span data-lang="en">Co-Editor-in-Chief (2)</span>
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="officer-role-group">
+      <h3 class="officer-role-title">
+        <span data-lang="ko">논문지부회장</span>
+        <span data-lang="en">VP, Journal Division</span>
+      </h3>
+      <div class="officer-card">
+        <div class="officer-info">
+          <p class="officer-name">
+            <span data-lang="ko">장봉석</span>
+            <span data-lang="en">Bong-suk Jang</span>
+          </p>
+          <p class="officer-affil">
+            <span data-lang="ko">국립목포대학교</span>
+            <span data-lang="en">Mokpo National University</span>
+          </p>
+          
+          <p class="officer-note">
+            <span data-lang="ko">공동편집위원장(1)</span>
+            <span data-lang="en">Co-Editor-in-Chief (1)</span>
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    
     <div class="officer-role-group">
       <h3 class="officer-role-title">
         <span data-lang="ko">대외협력부회장</span>
         <span data-lang="en">VP, External Relations</span>
       </h3>
       <div class="officer-card">
-        <div class="officer-avatar">👤</div>
         <div class="officer-info">
           <p class="officer-name">
             <span data-lang="ko">강선경</span>
@@ -624,17 +641,17 @@
             <span data-lang="ko">원광대학교</span>
             <span data-lang="en">Wonkwang University</span>
           </p>
+          
         </div>
       </div>
     </div>
-
+    
     <div class="officer-role-group">
       <h3 class="officer-role-title">
         <span data-lang="ko">기획부회장</span>
         <span data-lang="en">VP, Planning</span>
       </h3>
       <div class="officer-card">
-        <div class="officer-avatar">👤</div>
         <div class="officer-info">
           <p class="officer-name">
             <span data-lang="ko">박지현</span>
@@ -644,30 +661,31 @@
             <span data-lang="ko">우석대학교</span>
             <span data-lang="en">Woosuk University</span>
           </p>
+          
         </div>
       </div>
     </div>
-
+    
     <div class="officer-role-group">
       <h3 class="officer-role-title">
-        <span data-lang="ko">산학부회장</span>
-        <span data-lang="en">VP, Industry–Academia</span>
+        <span data-lang="ko">특임부회장</span>
+        <span data-lang="en">VP, Special Affairs</span>
       </h3>
       <div class="officer-card">
-        <div class="officer-avatar">👤</div>
         <div class="officer-info">
           <p class="officer-name">
-            <span data-lang="ko">문채영</span>
-            <span data-lang="en">Cheyoung Mun</span>
+            <span data-lang="ko">문형진</span>
+            <span data-lang="en">Hyeongjin Moon</span>
           </p>
           <p class="officer-affil">
-            <span data-lang="ko">우송정보대학</span>
-            <span data-lang="en">Woosong University of Information</span>
+            <span data-lang="ko">성결대학교</span>
+            <span data-lang="en">Sungkyul University</span>
           </p>
+          
         </div>
       </div>
     </div>
-
+    
   </div>
 </div>
 
@@ -677,14 +695,14 @@
     <span data-lang="ko">감사</span>
     <span data-lang="en">Auditor</span>
   </h2>
-  <div class="officers-grid" style="grid-template-columns: repeat(2, 1fr);">
+  <div class="officers-grid officers-grid--2col">
+    
     <div class="officer-role-group">
       <h3 class="officer-role-title">
         <span data-lang="ko">감사</span>
         <span data-lang="en">Auditor</span>
       </h3>
       <div class="officer-card">
-        <div class="officer-avatar">👤</div>
         <div class="officer-info">
           <p class="officer-name">
             <span data-lang="ko">김영태</span>
@@ -697,14 +715,16 @@
         </div>
       </div>
     </div>
+    
   </div>
 </div>
 
-<!-- ── FOUNDER NOTE (hidden — will be revealed later) ── -->
+<!-- ── FOUNDER NOTE (hidden — reveal after inaugural general assembly) ── -->
 <!--
-설립자/이사회 의장: NAME (전주교육대학교 / Jeonju National University of Education)
-회장: NAME (원광대학교 / Wonkwang University)
-언제든지 아래 섹션을 추가하여 공개할 수 있습니다.
+설립자/이사회 의장: (이름) (전주교육대학교 / Jeonju National University of Education)
+회장: (이름) (원광대학교 / Wonkwang University)
+To reveal: uncomment the founder and president_actual blocks in _data/officers.yml
+and add rendering sections here.
 -->
 
     </div>
@@ -720,7 +740,7 @@
 
   </main>
 
-  <footer>
+  <footer aria-label="사이트 푸터 / Site footer">
   <div class="container">
     <div class="footer-grid">
 
@@ -728,7 +748,7 @@
         <div class="footer-logo">
           <img src="/assets/images/logo-light.png"
               alt="KSPAI" class="footer-logo-img" />
-          <div class="footer-logo-name">한국피지컬AI학회
+          <div class="footer-logo-name">한국피지컬인공지능학회
             <span class="sub en">Korean Society of Physical AI</span>
           </div>
         </div>
@@ -771,11 +791,11 @@
     <div class="footer-bottom">
       <span class="footer-copy en">
         © 2026 Korean Society of Physical AI (KSPAI). All rights reserved.<br>
-        Built by <a href="https://aaron.kr" target="_blank" rel="noopener">Aaron.kr</a> &bull; Hero img by <a href="https://easy-peasy.ai/ai-image-generator/images/fusion-quantum-ai-technology-advanced-algorithms-quantum-computing" target="_blank" rel="noopener">Easy-Peasy.ai</a>
+        Built by <a href="https://aaron.kr" target="_blank" rel="noopener" aria-label="Aaron.kr (새 탭에서 열림 / opens in new tab)">Aaron.kr</a> &bull; Hero img by <a href="https://easy-peasy.ai/ai-image-generator/images/fusion-quantum-ai-technology-advanced-algorithms-quantum-computing" target="_blank" rel="noopener" aria-label="Easy-Peasy.ai hero image source (새 탭에서 열림 / opens in new tab)">Easy-Peasy.ai</a>
       </span>
-      <div class="footer-watermark">
+      <div class="footer-watermark" aria-hidden="true">
         <img src="/assets/images/logo-dark.png"
-            alt="KSPAI" class="footer-logo-img" />
+            alt="" class="footer-logo-img" />
       </div>
       <span class="footer-contact-info en">
         <a href="mailto:contact@kspai.org">contact@kspai.org</a>

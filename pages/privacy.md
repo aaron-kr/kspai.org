@@ -3,9 +3,9 @@ layout: page
 title: 개인정보처리방침
 title_ko: 개인정보처리방침
 title_en: Privacy Policy
-subtitle_ko: 한국피지컬AI학회 개인정보 처리방침
+subtitle_ko: 한국피지컬인공지능학회 개인정보 처리방침
 subtitle_en: Korean Society of Physical AI — Privacy Policy
-description: 한국피지컬AI학회(KSPAI) 개인정보처리방침 — 수집 항목, 이용 목적, 보유 기간, 제3자 제공, 이용자 권리.
+description: 한국피지컬인공지능학회(KSPAI) 개인정보처리방침 — 수집 항목, 이용 목적, 보유 기간, 제3자 제공, 이용자 권리.
 permalink: /privacy/
 ---
 
@@ -20,7 +20,7 @@ permalink: /privacy/
     <span data-lang="en">Article 1 — Purpose</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko">한국피지컬AI학회(이하 "학회")는 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 개인정보보호법 등 관련 법령을 준수하며, 이용자의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보처리방침을 수립·공개합니다.</span>
+    <span data-lang="ko">한국피지컬인공지능학회(이하 "학회")는 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 개인정보보호법 등 관련 법령을 준수하며, 이용자의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보처리방침을 수립·공개합니다.</span>
     <span data-lang="en">The Korean Society of Physical AI ("the Society") complies with relevant laws including the Act on Promotion of Information and Communications Network Utilization and Information Protection and the Personal Information Protection Act, and establishes and discloses this Privacy Policy to protect users' personal information and handle related grievances promptly and smoothly.</span>
   </p>
 </div>
@@ -105,15 +105,15 @@ permalink: /privacy/
     <span data-lang="ko">제7조 (개인정보 관리책임자)</span>
     <span data-lang="en">Article 7 — Privacy Officer</span>
   </h2>
-  <div class="org-card" style="padding:28px 32px;max-width:480px;">
-    <div style="font-size:14px;line-height:2.2;color:var(--text-secondary);">
-      <strong style="color:var(--text-primary);display:block;margin-bottom:8px;">
+  <div class="org-card privacy-officer-card">
+    <div class="privacy-officer-body">
+      <strong class="privacy-officer-name">
         <span data-lang="ko">개인정보 관리책임자</span>
         <span data-lang="en">Privacy Officer</span>
       </strong>
       <span data-lang="ko">소속:</span><span data-lang="en">Organization:</span>
-      한국피지컬AI학회<br>
-      📧 <a href="mailto:contact@kspai.org" style="color:var(--accent-primary);">contact@kspai.org</a>
+      한국피지컬인공지능학회<br>
+      📧 <a href="mailto:contact@kspai.org">contact@kspai.org</a>
     </div>
   </div>
 </div>
@@ -127,7 +127,7 @@ permalink: /privacy/
     <span data-lang="ko">본 개인정보처리방침은 법령 및 방침의 변경에 따라 수정될 수 있으며, 변경 사항은 웹사이트를 통해 공지합니다.</span>
     <span data-lang="en">This Privacy Policy may be amended in accordance with changes in law or policy. Any amendments will be announced via the website.</span>
   </p>
-  <p class="mono" style="font-size:12px;color:var(--text-muted);margin-top:24px;">
+  <p class="mono privacy-effective-date">
     <span data-lang="ko">시행일: 2025년 (창립 후 확정 예정)</span>
     <span data-lang="en">Effective date: 2025 (to be confirmed upon founding)</span>
   </p>

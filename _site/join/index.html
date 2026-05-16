@@ -3,12 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  
+  
+
   <title>회원가입 | Korean Society of Physical AI</title>
-  <meta name="description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
-  <meta property="og:title" content="회원가입">
-  <meta property="og:description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
-  <meta property="og:url" content="http://localhost:4000/join/">
-  <meta property="og:type" content="website">
+  <meta name="description" content="한국피지컬인공지능학회(KSPAI) 회원 가입 안내. 정회원, 준회원, 기관회원 유형과 혜택, 가입 절차를 확인하세요.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="http://localhost:4000/join/">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="회원가입">
+  <meta property="og:description" content="한국피지컬인공지능학회(KSPAI) 회원 가입 안내. 정회원, 준회원, 기관회원 유형과 혜택, 가입 절차를 확인하세요.">
+  <meta property="og:url"         content="http://localhost:4000/join/">
+  <meta property="og:type"        content="website">
+  <meta property="og:image"       content="http://localhost:4000/assets/images/og-default.png">
+  <meta property="og:locale"      content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name"   content="Korean Society of Physical AI">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="회원가입">
+  <meta name="twitter:description" content="한국피지컬인공지능학회(KSPAI) 회원 가입 안내. 정회원, 준회원, 기관회원 유형과 혜택, 가입 절차를 확인하세요.">
+  <meta name="twitter:image"       content="http://localhost:4000/assets/images/og-default.png">
+  <meta name="twitter:site"        content="@kspai_org">
+
+  <!-- hreflang: bilingual site serves KO and EN from same URL -->
+  <link rel="alternate" hreflang="ko" href="http://localhost:4000/join/">
+  <link rel="alternate" hreflang="en" href="http://localhost:4000/join/">
+  <link rel="alternate" hreflang="x-default" href="http://localhost:4000/join/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +52,9 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg">
 
 
+  <!-- Structured Data — Organization (home page only) -->
+  
+
   <!-- Theme: apply saved preference immediately to prevent flash -->
   <script>
     (function() {
@@ -40,12 +68,15 @@
 
 <body>
 
-  <!-- Background Effects -->
-  <div class="bg-grid"></div>
-  <div class="bg-glow bg-glow-1"></div>
-  <div class="bg-glow bg-glow-2"></div>
+  <!-- Skip to main content (accessibility) -->
+  <a class="skip-link" href="#main-content">본문으로 건너뛰기 / Skip to main content</a>
 
-  <nav>
+  <!-- Background Effects -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <nav aria-label="주 내비게이션 / Main navigation">
   <div class="container">
 
     <!-- Logo -->
@@ -55,13 +86,13 @@
       <img src="/assets/images/logo-light.png"
            alt="KSPAI" class="nav-logo-img nav-logo-img--light" />
       <div class="nav-logo-text">
-        한국피지컬AI학회
+        한국피지컬인공지능학회
         <span class="sub en">Korean Society of Physical AI</span>
       </div>
     </a>
 
     <!-- Desktop nav — built from _data/nav.yml -->
-    <ul class="nav-links">
+    <ul class="nav-links" role="list" aria-label="사이트 메뉴 / Site menu">
       
       
 
@@ -265,22 +296,23 @@
 
     <!-- Controls -->
     <div class="nav-controls">
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-        <span class="theme-icon">☀️</span>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="테마 전환 / Toggle theme">
+        <span class="theme-icon" aria-hidden="true">☀️</span>
       </button>
       <button class="lang-toggle en" onclick="toggleLang()" aria-label="Switch to English">EN</button>
     </div>
 
     <!-- Hamburger -->
     <button class="mobile-menu-btn"
-            aria-label="Toggle menu"
+            aria-label="메뉴 열기 / Open menu"
             aria-expanded="false"
-            onclick="toggleMobileMenu(this)">☰</button>
+            aria-controls="mobile-menu"
+            onclick="toggleMobileMenu(this)"><span aria-hidden="true">☰</span></button>
 
   </div>
 
   <!-- Mobile menu panel — also built from _data/nav.yml -->
-  <div class="mobile-menu" id="mobile-menu" hidden>
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="모바일 메뉴 / Mobile menu" hidden>
     <div class="mobile-menu-inner">
       
 
@@ -443,7 +475,7 @@
 </nav>
 
 
-  <main>
+  <main id="main-content">
     
   <div class="page-hero" >
   <!-- Reuse the same warm glow blobs from the main hero -->
@@ -462,7 +494,7 @@
 
       
       <p class="page-hero-subtitle">
-        <span data-lang="ko">한국피지컬AI학회 회원 가입 안내</span>
+        <span data-lang="ko">한국피지컬인공지능학회 회원 가입 안내</span>
         <span data-lang="en">Join the Korean Society of Physical AI</span>
       </p>
       
@@ -485,7 +517,7 @@
     <span data-lang="en">Member Benefits</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko">한국피지컬AI학회 회원이 되시면 다음과 같은 혜택을 누리실 수 있습니다.</span>
+    <span data-lang="ko">한국피지컬인공지능학회 회원이 되시면 다음과 같은 혜택을 누리실 수 있습니다.</span>
     <span data-lang="en">As a member of KSPAI, you will enjoy the following benefits.</span>
   </p>
 
@@ -627,9 +659,9 @@
   </div>
 </div>
 
-<div class="cta-box" style="margin-top:0;">
-  <div class="section-label mono" style="text-align:center;">Contact</div>
-  <h2 class="cta-title" style="font-size:26px;">
+<div class="cta-box cta-box--flush">
+  <div class="section-label mono text-center">Contact</div>
+  <h2 class="cta-title cta-title--sm">
     <span data-lang="ko">가입 문의</span>
     <span data-lang="en">Membership Inquiry</span>
   </h2>
@@ -637,7 +669,7 @@
     <span data-lang="ko">가입 관련 문의는 학회 이메일로 연락해 주시면 빠르게 안내해 드리겠습니다.</span>
     <span data-lang="en">For membership inquiries, please contact us by email and we will respond promptly.</span>
   </p>
-  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;">
+  <div class="cta-actions">
     <a href="mailto:contact@kspai.org" class="btn btn-primary en">
       contact@kspai.org →
     </a>
@@ -657,7 +689,7 @@
 
   </main>
 
-  <footer>
+  <footer aria-label="사이트 푸터 / Site footer">
   <div class="container">
     <div class="footer-grid">
 
@@ -665,7 +697,7 @@
         <div class="footer-logo">
           <img src="/assets/images/logo-light.png"
               alt="KSPAI" class="footer-logo-img" />
-          <div class="footer-logo-name">한국피지컬AI학회
+          <div class="footer-logo-name">한국피지컬인공지능학회
             <span class="sub en">Korean Society of Physical AI</span>
           </div>
         </div>
@@ -708,11 +740,11 @@
     <div class="footer-bottom">
       <span class="footer-copy en">
         © 2026 Korean Society of Physical AI (KSPAI). All rights reserved.<br>
-        Built by <a href="https://aaron.kr" target="_blank" rel="noopener">Aaron.kr</a> &bull; Hero img by <a href="https://easy-peasy.ai/ai-image-generator/images/fusion-quantum-ai-technology-advanced-algorithms-quantum-computing" target="_blank" rel="noopener">Easy-Peasy.ai</a>
+        Built by <a href="https://aaron.kr" target="_blank" rel="noopener" aria-label="Aaron.kr (새 탭에서 열림 / opens in new tab)">Aaron.kr</a> &bull; Hero img by <a href="https://easy-peasy.ai/ai-image-generator/images/fusion-quantum-ai-technology-advanced-algorithms-quantum-computing" target="_blank" rel="noopener" aria-label="Easy-Peasy.ai hero image source (새 탭에서 열림 / opens in new tab)">Easy-Peasy.ai</a>
       </span>
-      <div class="footer-watermark">
+      <div class="footer-watermark" aria-hidden="true">
         <img src="/assets/images/logo-dark.png"
-            alt="KSPAI" class="footer-logo-img" />
+            alt="" class="footer-logo-img" />
       </div>
       <span class="footer-contact-info en">
         <a href="mailto:contact@kspai.org">contact@kspai.org</a>

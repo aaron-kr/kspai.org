@@ -19,7 +19,7 @@
 layout: page
 title_ko: 학회소개
 title_en: About KSPAI
-subtitle_ko: 한국피지컬AI학회 및 한국피지컬AI교육연구소 소개
+subtitle_ko: 한국피지컬인공지능학회 및 한국피지컬AI교육연구소 소개
 subtitle_en: About the Korean Society of Physical AI and its sister institute
 permalink: /about/
 ---
@@ -38,7 +38,7 @@ show_hero: false          # ← add this line to suppress the hero
 layout: page
 title_ko: 학술대회
 title_en: Conferences
-subtitle_ko: 한국피지컬AI학회 학술행사 안내
+subtitle_ko: 한국피지컬인공지능학회 학술행사 안내
 subtitle_en: KSPAI Academic Conferences and Events
 permalink: /conferences/
 hero_image: /assets/images/conference-bg.jpg   # ← optional image

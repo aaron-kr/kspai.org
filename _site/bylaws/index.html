@@ -3,12 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  
+  
+
   <title>정관 | Korean Society of Physical AI</title>
-  <meta name="description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
-  <meta property="og:title" content="정관">
-  <meta property="og:description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
-  <meta property="og:url" content="http://localhost:4000/bylaws/">
-  <meta property="og:type" content="website">
+  <meta name="description" content="한국피지컬인공지능학회(KSPAI) 정관 — 학회 명칭, 목적, 회원, 임원, 총회, 이사회, 재정, 보칙으로 구성된 규약.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="http://localhost:4000/bylaws/">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="정관">
+  <meta property="og:description" content="한국피지컬인공지능학회(KSPAI) 정관 — 학회 명칭, 목적, 회원, 임원, 총회, 이사회, 재정, 보칙으로 구성된 규약.">
+  <meta property="og:url"         content="http://localhost:4000/bylaws/">
+  <meta property="og:type"        content="website">
+  <meta property="og:image"       content="http://localhost:4000/assets/images/og-default.png">
+  <meta property="og:locale"      content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name"   content="Korean Society of Physical AI">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="정관">
+  <meta name="twitter:description" content="한국피지컬인공지능학회(KSPAI) 정관 — 학회 명칭, 목적, 회원, 임원, 총회, 이사회, 재정, 보칙으로 구성된 규약.">
+  <meta name="twitter:image"       content="http://localhost:4000/assets/images/og-default.png">
+  <meta name="twitter:site"        content="@kspai_org">
+
+  <!-- hreflang: bilingual site serves KO and EN from same URL -->
+  <link rel="alternate" hreflang="ko" href="http://localhost:4000/bylaws/">
+  <link rel="alternate" hreflang="en" href="http://localhost:4000/bylaws/">
+  <link rel="alternate" hreflang="x-default" href="http://localhost:4000/bylaws/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +52,9 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg">
 
 
+  <!-- Structured Data — Organization (home page only) -->
+  
+
   <!-- Theme: apply saved preference immediately to prevent flash -->
   <script>
     (function() {
@@ -40,12 +68,15 @@
 
 <body>
 
-  <!-- Background Effects -->
-  <div class="bg-grid"></div>
-  <div class="bg-glow bg-glow-1"></div>
-  <div class="bg-glow bg-glow-2"></div>
+  <!-- Skip to main content (accessibility) -->
+  <a class="skip-link" href="#main-content">본문으로 건너뛰기 / Skip to main content</a>
 
-  <nav>
+  <!-- Background Effects -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <nav aria-label="주 내비게이션 / Main navigation">
   <div class="container">
 
     <!-- Logo -->
@@ -55,13 +86,13 @@
       <img src="/assets/images/logo-light.png"
            alt="KSPAI" class="nav-logo-img nav-logo-img--light" />
       <div class="nav-logo-text">
-        한국피지컬AI학회
+        한국피지컬인공지능학회
         <span class="sub en">Korean Society of Physical AI</span>
       </div>
     </a>
 
     <!-- Desktop nav — built from _data/nav.yml -->
-    <ul class="nav-links">
+    <ul class="nav-links" role="list" aria-label="사이트 메뉴 / Site menu">
       
       
 
@@ -265,22 +296,23 @@
 
     <!-- Controls -->
     <div class="nav-controls">
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-        <span class="theme-icon">☀️</span>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="테마 전환 / Toggle theme">
+        <span class="theme-icon" aria-hidden="true">☀️</span>
       </button>
       <button class="lang-toggle en" onclick="toggleLang()" aria-label="Switch to English">EN</button>
     </div>
 
     <!-- Hamburger -->
     <button class="mobile-menu-btn"
-            aria-label="Toggle menu"
+            aria-label="메뉴 열기 / Open menu"
             aria-expanded="false"
-            onclick="toggleMobileMenu(this)">☰</button>
+            aria-controls="mobile-menu"
+            onclick="toggleMobileMenu(this)"><span aria-hidden="true">☰</span></button>
 
   </div>
 
   <!-- Mobile menu panel — also built from _data/nav.yml -->
-  <div class="mobile-menu" id="mobile-menu" hidden>
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="모바일 메뉴 / Mobile menu" hidden>
     <div class="mobile-menu-inner">
       
 
@@ -443,7 +475,7 @@
 </nav>
 
 
-  <main>
+  <main id="main-content">
     
   <div class="page-hero" >
   <!-- Reuse the same warm glow blobs from the main hero -->
@@ -466,7 +498,7 @@
 
       
       <p class="page-hero-subtitle">
-        <span data-lang="ko">한국피지컬AI학회 정관</span>
+        <span data-lang="ko">한국피지컬인공지능학회 정관</span>
         <span data-lang="en">Articles of Association — Korean Society of Physical AI</span>
       </p>
       
@@ -483,8 +515,8 @@
     
 
     <div class="page-body">
-      <div class="coming-soon-banner" style="margin-bottom:48px;">
-  <span class="mono" style="font-size:12px;color:var(--accent-primary);">※</span>
+      <div class="coming-soon-banner">
+  <span class="mono">※</span>
   <span data-lang="ko">정관 전문은 창립총회 이후 게시됩니다.</span>
   <span data-lang="en">The full bylaws will be published following the inaugural general assembly.</span>
 </div>
@@ -500,62 +532,112 @@
   </p>
 
   <div class="bylaws-toc">
+    
     <div class="bylaws-chapter">
       <span class="bylaws-num mono">제 1 장</span>
       <div>
-        <strong><span data-lang="ko">총칙</span><span data-lang="en">General Provisions</span></strong>
-        <p><span data-lang="ko">학회의 명칭, 목적, 소재지</span><span data-lang="en">Name, purpose, and location of the Society</span></p>
+        <strong>
+          <span data-lang="ko">총칙</span>
+          <span data-lang="en">General Provisions</span>
+        </strong>
+        <p>
+          <span data-lang="ko">학회의 명칭, 목적, 소재지</span>
+          <span data-lang="en">Name, purpose, and location of the Society</span>
+        </p>
       </div>
     </div>
+    
     <div class="bylaws-chapter">
       <span class="bylaws-num mono">제 2 장</span>
       <div>
-        <strong><span data-lang="ko">회원</span><span data-lang="en">Membership</span></strong>
-        <p><span data-lang="ko">회원의 자격, 권리, 의무</span><span data-lang="en">Membership qualifications, rights, and obligations</span></p>
+        <strong>
+          <span data-lang="ko">회원</span>
+          <span data-lang="en">Membership</span>
+        </strong>
+        <p>
+          <span data-lang="ko">회원의 자격, 권리, 의무</span>
+          <span data-lang="en">Membership qualifications, rights, and obligations</span>
+        </p>
       </div>
     </div>
+    
     <div class="bylaws-chapter">
       <span class="bylaws-num mono">제 3 장</span>
       <div>
-        <strong><span data-lang="ko">임원</span><span data-lang="en">Officers</span></strong>
-        <p><span data-lang="ko">임원의 종류, 선출, 임기</span><span data-lang="en">Types, election, and term of officers</span></p>
+        <strong>
+          <span data-lang="ko">임원</span>
+          <span data-lang="en">Officers</span>
+        </strong>
+        <p>
+          <span data-lang="ko">임원의 종류, 선출, 임기</span>
+          <span data-lang="en">Types, election, and term of officers</span>
+        </p>
       </div>
     </div>
+    
     <div class="bylaws-chapter">
       <span class="bylaws-num mono">제 4 장</span>
       <div>
-        <strong><span data-lang="ko">총회</span><span data-lang="en">General Assembly</span></strong>
-        <p><span data-lang="ko">총회의 구성, 소집, 의결</span><span data-lang="en">Composition, convening, and resolutions of the general assembly</span></p>
+        <strong>
+          <span data-lang="ko">총회</span>
+          <span data-lang="en">General Assembly</span>
+        </strong>
+        <p>
+          <span data-lang="ko">총회의 구성, 소집, 의결</span>
+          <span data-lang="en">Composition, convening, and resolutions of the general assembly</span>
+        </p>
       </div>
     </div>
+    
     <div class="bylaws-chapter">
       <span class="bylaws-num mono">제 5 장</span>
       <div>
-        <strong><span data-lang="ko">이사회</span><span data-lang="en">Board of Directors</span></strong>
-        <p><span data-lang="ko">이사회의 구성 및 운영</span><span data-lang="en">Composition and operation of the Board</span></p>
+        <strong>
+          <span data-lang="ko">이사회</span>
+          <span data-lang="en">Board of Directors</span>
+        </strong>
+        <p>
+          <span data-lang="ko">이사회의 구성 및 운영</span>
+          <span data-lang="en">Composition and operation of the Board</span>
+        </p>
       </div>
     </div>
+    
     <div class="bylaws-chapter">
       <span class="bylaws-num mono">제 6 장</span>
       <div>
-        <strong><span data-lang="ko">재정</span><span data-lang="en">Finance</span></strong>
-        <p><span data-lang="ko">회비, 예산, 결산</span><span data-lang="en">Dues, budget, and financial statements</span></p>
+        <strong>
+          <span data-lang="ko">재정</span>
+          <span data-lang="en">Finance</span>
+        </strong>
+        <p>
+          <span data-lang="ko">회비, 예산, 결산</span>
+          <span data-lang="en">Dues, budget, and financial statements</span>
+        </p>
       </div>
     </div>
+    
     <div class="bylaws-chapter">
       <span class="bylaws-num mono">제 7 장</span>
       <div>
-        <strong><span data-lang="ko">보칙</span><span data-lang="en">Supplementary Provisions</span></strong>
-        <p><span data-lang="ko">정관의 개정, 해산</span><span data-lang="en">Amendment of bylaws and dissolution</span></p>
+        <strong>
+          <span data-lang="ko">보칙</span>
+          <span data-lang="en">Supplementary Provisions</span>
+        </strong>
+        <p>
+          <span data-lang="ko">정관의 개정, 해산</span>
+          <span data-lang="en">Amendment of bylaws and dissolution</span>
+        </p>
       </div>
     </div>
+    
   </div>
 </div>
 
 <div class="page-section">
-  <p class="page-section-text" style="font-size:13px;color:var(--text-muted);">
-    <span data-lang="ko">문의사항: <a href="mailto:contact@kspai.org" style="color:var(--accent-primary);">contact@kspai.org</a></span>
-    <span data-lang="en">Inquiries: <a href="mailto:contact@kspai.org" style="color:var(--accent-primary);">contact@kspai.org</a></span>
+  <p class="bylaws-contact">
+    <span data-lang="ko">문의사항: <a href="mailto:contact@kspai.org">contact@kspai.org</a></span>
+    <span data-lang="en">Inquiries: <a href="mailto:contact@kspai.org">contact@kspai.org</a></span>
   </p>
 </div>
 
@@ -572,7 +654,7 @@
 
   </main>
 
-  <footer>
+  <footer aria-label="사이트 푸터 / Site footer">
   <div class="container">
     <div class="footer-grid">
 
@@ -580,7 +662,7 @@
         <div class="footer-logo">
           <img src="/assets/images/logo-light.png"
               alt="KSPAI" class="footer-logo-img" />
-          <div class="footer-logo-name">한국피지컬AI학회
+          <div class="footer-logo-name">한국피지컬인공지능학회
             <span class="sub en">Korean Society of Physical AI</span>
           </div>
         </div>
@@ -623,11 +705,11 @@
     <div class="footer-bottom">
       <span class="footer-copy en">
         © 2026 Korean Society of Physical AI (KSPAI). All rights reserved.<br>
-        Built by <a href="https://aaron.kr" target="_blank" rel="noopener">Aaron.kr</a> &bull; Hero img by <a href="https://easy-peasy.ai/ai-image-generator/images/fusion-quantum-ai-technology-advanced-algorithms-quantum-computing" target="_blank" rel="noopener">Easy-Peasy.ai</a>
+        Built by <a href="https://aaron.kr" target="_blank" rel="noopener" aria-label="Aaron.kr (새 탭에서 열림 / opens in new tab)">Aaron.kr</a> &bull; Hero img by <a href="https://easy-peasy.ai/ai-image-generator/images/fusion-quantum-ai-technology-advanced-algorithms-quantum-computing" target="_blank" rel="noopener" aria-label="Easy-Peasy.ai hero image source (새 탭에서 열림 / opens in new tab)">Easy-Peasy.ai</a>
       </span>
-      <div class="footer-watermark">
+      <div class="footer-watermark" aria-hidden="true">
         <img src="/assets/images/logo-dark.png"
-            alt="KSPAI" class="footer-logo-img" />
+            alt="" class="footer-logo-img" />
       </div>
       <span class="footer-contact-info en">
         <a href="mailto:contact@kspai.org">contact@kspai.org</a>

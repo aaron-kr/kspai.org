@@ -3,12 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  
+  
+
   <title>개인정보처리방침 | Korean Society of Physical AI</title>
-  <meta name="description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
-  <meta property="og:title" content="개인정보처리방침">
-  <meta property="og:description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
-  <meta property="og:url" content="http://localhost:4000/privacy/">
-  <meta property="og:type" content="website">
+  <meta name="description" content="한국피지컬인공지능학회(KSPAI) 개인정보처리방침 — 수집 항목, 이용 목적, 보유 기간, 제3자 제공, 이용자 권리.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="http://localhost:4000/privacy/">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="개인정보처리방침">
+  <meta property="og:description" content="한국피지컬인공지능학회(KSPAI) 개인정보처리방침 — 수집 항목, 이용 목적, 보유 기간, 제3자 제공, 이용자 권리.">
+  <meta property="og:url"         content="http://localhost:4000/privacy/">
+  <meta property="og:type"        content="website">
+  <meta property="og:image"       content="http://localhost:4000/assets/images/og-default.png">
+  <meta property="og:locale"      content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name"   content="Korean Society of Physical AI">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="개인정보처리방침">
+  <meta name="twitter:description" content="한국피지컬인공지능학회(KSPAI) 개인정보처리방침 — 수집 항목, 이용 목적, 보유 기간, 제3자 제공, 이용자 권리.">
+  <meta name="twitter:image"       content="http://localhost:4000/assets/images/og-default.png">
+  <meta name="twitter:site"        content="@kspai_org">
+
+  <!-- hreflang: bilingual site serves KO and EN from same URL -->
+  <link rel="alternate" hreflang="ko" href="http://localhost:4000/privacy/">
+  <link rel="alternate" hreflang="en" href="http://localhost:4000/privacy/">
+  <link rel="alternate" hreflang="x-default" href="http://localhost:4000/privacy/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +52,9 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg">
 
 
+  <!-- Structured Data — Organization (home page only) -->
+  
+
   <!-- Theme: apply saved preference immediately to prevent flash -->
   <script>
     (function() {
@@ -40,12 +68,15 @@
 
 <body>
 
-  <!-- Background Effects -->
-  <div class="bg-grid"></div>
-  <div class="bg-glow bg-glow-1"></div>
-  <div class="bg-glow bg-glow-2"></div>
+  <!-- Skip to main content (accessibility) -->
+  <a class="skip-link" href="#main-content">본문으로 건너뛰기 / Skip to main content</a>
 
-  <nav>
+  <!-- Background Effects -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <nav aria-label="주 내비게이션 / Main navigation">
   <div class="container">
 
     <!-- Logo -->
@@ -55,13 +86,13 @@
       <img src="/assets/images/logo-light.png"
            alt="KSPAI" class="nav-logo-img nav-logo-img--light" />
       <div class="nav-logo-text">
-        한국피지컬AI학회
+        한국피지컬인공지능학회
         <span class="sub en">Korean Society of Physical AI</span>
       </div>
     </a>
 
     <!-- Desktop nav — built from _data/nav.yml -->
-    <ul class="nav-links">
+    <ul class="nav-links" role="list" aria-label="사이트 메뉴 / Site menu">
       
       
 
@@ -265,22 +296,23 @@
 
     <!-- Controls -->
     <div class="nav-controls">
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-        <span class="theme-icon">☀️</span>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="테마 전환 / Toggle theme">
+        <span class="theme-icon" aria-hidden="true">☀️</span>
       </button>
       <button class="lang-toggle en" onclick="toggleLang()" aria-label="Switch to English">EN</button>
     </div>
 
     <!-- Hamburger -->
     <button class="mobile-menu-btn"
-            aria-label="Toggle menu"
+            aria-label="메뉴 열기 / Open menu"
             aria-expanded="false"
-            onclick="toggleMobileMenu(this)">☰</button>
+            aria-controls="mobile-menu"
+            onclick="toggleMobileMenu(this)"><span aria-hidden="true">☰</span></button>
 
   </div>
 
   <!-- Mobile menu panel — also built from _data/nav.yml -->
-  <div class="mobile-menu" id="mobile-menu" hidden>
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="모바일 메뉴 / Mobile menu" hidden>
     <div class="mobile-menu-inner">
       
 
@@ -443,7 +475,7 @@
 </nav>
 
 
-  <main>
+  <main id="main-content">
     
   <div class="page-hero" >
   <!-- Reuse the same warm glow blobs from the main hero -->
@@ -462,7 +494,7 @@
 
       
       <p class="page-hero-subtitle">
-        <span data-lang="ko">한국피지컬AI학회 개인정보 처리방침</span>
+        <span data-lang="ko">한국피지컬인공지능학회 개인정보 처리방침</span>
         <span data-lang="en">Korean Society of Physical AI — Privacy Policy</span>
       </p>
       
@@ -490,7 +522,7 @@
     <span data-lang="en">Article 1 — Purpose</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko">한국피지컬AI학회(이하 "학회")는 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 개인정보보호법 등 관련 법령을 준수하며, 이용자의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보처리방침을 수립·공개합니다.</span>
+    <span data-lang="ko">한국피지컬인공지능학회(이하 "학회")는 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 개인정보보호법 등 관련 법령을 준수하며, 이용자의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보처리방침을 수립·공개합니다.</span>
     <span data-lang="en">The Korean Society of Physical AI ("the Society") complies with relevant laws including the Act on Promotion of Information and Communications Network Utilization and Information Protection and the Personal Information Protection Act, and establishes and discloses this Privacy Policy to protect users' personal information and handle related grievances promptly and smoothly.</span>
   </p>
 </div>
@@ -575,15 +607,15 @@
     <span data-lang="ko">제7조 (개인정보 관리책임자)</span>
     <span data-lang="en">Article 7 — Privacy Officer</span>
   </h2>
-  <div class="org-card" style="padding:28px 32px;max-width:480px;">
-    <div style="font-size:14px;line-height:2.2;color:var(--text-secondary);">
-      <strong style="color:var(--text-primary);display:block;margin-bottom:8px;">
+  <div class="org-card privacy-officer-card">
+    <div class="privacy-officer-body">
+      <strong class="privacy-officer-name">
         <span data-lang="ko">개인정보 관리책임자</span>
         <span data-lang="en">Privacy Officer</span>
       </strong>
       <span data-lang="ko">소속:</span><span data-lang="en">Organization:</span>
-      한국피지컬AI학회<br />
-      📧 <a href="mailto:contact@kspai.org" style="color:var(--accent-primary);">contact@kspai.org</a>
+      한국피지컬인공지능학회<br />
+      📧 <a href="mailto:contact@kspai.org">contact@kspai.org</a>
     </div>
   </div>
 </div>
@@ -597,7 +629,7 @@
     <span data-lang="ko">본 개인정보처리방침은 법령 및 방침의 변경에 따라 수정될 수 있으며, 변경 사항은 웹사이트를 통해 공지합니다.</span>
     <span data-lang="en">This Privacy Policy may be amended in accordance with changes in law or policy. Any amendments will be announced via the website.</span>
   </p>
-  <p class="mono" style="font-size:12px;color:var(--text-muted);margin-top:24px;">
+  <p class="mono privacy-effective-date">
     <span data-lang="ko">시행일: 2025년 (창립 후 확정 예정)</span>
     <span data-lang="en">Effective date: 2025 (to be confirmed upon founding)</span>
   </p>
@@ -616,7 +648,7 @@
 
   </main>
 
-  <footer>
+  <footer aria-label="사이트 푸터 / Site footer">
   <div class="container">
     <div class="footer-grid">
 
@@ -624,7 +656,7 @@
         <div class="footer-logo">
           <img src="/assets/images/logo-light.png"
               alt="KSPAI" class="footer-logo-img" />
-          <div class="footer-logo-name">한국피지컬AI학회
+          <div class="footer-logo-name">한국피지컬인공지능학회
             <span class="sub en">Korean Society of Physical AI</span>
           </div>
         </div>
@@ -667,11 +699,11 @@
     <div class="footer-bottom">
       <span class="footer-copy en">
         © 2026 Korean Society of Physical AI (KSPAI). All rights reserved.<br>
-        Built by <a href="https://aaron.kr" target="_blank" rel="noopener">Aaron.kr</a> &bull; Hero img by <a href="https://easy-peasy.ai/ai-image-generator/images/fusion-quantum-ai-technology-advanced-algorithms-quantum-computing" target="_blank" rel="noopener">Easy-Peasy.ai</a>
+        Built by <a href="https://aaron.kr" target="_blank" rel="noopener" aria-label="Aaron.kr (새 탭에서 열림 / opens in new tab)">Aaron.kr</a> &bull; Hero img by <a href="https://easy-peasy.ai/ai-image-generator/images/fusion-quantum-ai-technology-advanced-algorithms-quantum-computing" target="_blank" rel="noopener" aria-label="Easy-Peasy.ai hero image source (새 탭에서 열림 / opens in new tab)">Easy-Peasy.ai</a>
       </span>
-      <div class="footer-watermark">
+      <div class="footer-watermark" aria-hidden="true">
         <img src="/assets/images/logo-dark.png"
-            alt="KSPAI" class="footer-logo-img" />
+            alt="" class="footer-logo-img" />
       </div>
       <span class="footer-contact-info en">
         <a href="mailto:contact@kspai.org">contact@kspai.org</a>

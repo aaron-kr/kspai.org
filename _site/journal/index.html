@@ -3,12 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>한국피지컬AI학회 | Korean Society of Physical AI</title>
-  <meta name="description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
-  <meta property="og:title" content="한국피지컬AI학회">
-  <meta property="og:description" content="물리적 세계와 인공지능의 융합을 선도하는 학술 공동체">
-  <meta property="og:url" content="http://localhost:4000/journal/">
-  <meta property="og:type" content="website">
+
+  
+  
+  
+
+  <title>학술지 | Korean Society of Physical AI</title>
+  <meta name="description" content="한국피지컬인공지능학회 학술지 「피지컬 AI 연구」(JKPAI) 소개, 투고규정, 발행규정, 심사규정, 연구윤리규정 안내.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="http://localhost:4000/journal/">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="학술지">
+  <meta property="og:description" content="한국피지컬인공지능학회 학술지 「피지컬 AI 연구」(JKPAI) 소개, 투고규정, 발행규정, 심사규정, 연구윤리규정 안내.">
+  <meta property="og:url"         content="http://localhost:4000/journal/">
+  <meta property="og:type"        content="website">
+  <meta property="og:image"       content="http://localhost:4000/assets/images/og-default.png">
+  <meta property="og:locale"      content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name"   content="Korean Society of Physical AI">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="학술지">
+  <meta name="twitter:description" content="한국피지컬인공지능학회 학술지 「피지컬 AI 연구」(JKPAI) 소개, 투고규정, 발행규정, 심사규정, 연구윤리규정 안내.">
+  <meta name="twitter:image"       content="http://localhost:4000/assets/images/og-default.png">
+  <meta name="twitter:site"        content="@kspai_org">
+
+  <!-- hreflang: bilingual site serves KO and EN from same URL -->
+  <link rel="alternate" hreflang="ko" href="http://localhost:4000/journal/">
+  <link rel="alternate" hreflang="en" href="http://localhost:4000/journal/">
+  <link rel="alternate" hreflang="x-default" href="http://localhost:4000/journal/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +52,9 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg">
 
 
+  <!-- Structured Data — Organization (home page only) -->
+  
+
   <!-- Theme: apply saved preference immediately to prevent flash -->
   <script>
     (function() {
@@ -40,12 +68,15 @@
 
 <body>
 
-  <!-- Background Effects -->
-  <div class="bg-grid"></div>
-  <div class="bg-glow bg-glow-1"></div>
-  <div class="bg-glow bg-glow-2"></div>
+  <!-- Skip to main content (accessibility) -->
+  <a class="skip-link" href="#main-content">본문으로 건너뛰기 / Skip to main content</a>
 
-  <nav>
+  <!-- Background Effects -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <nav aria-label="주 내비게이션 / Main navigation">
   <div class="container">
 
     <!-- Logo -->
@@ -55,13 +86,13 @@
       <img src="/assets/images/logo-light.png"
            alt="KSPAI" class="nav-logo-img nav-logo-img--light" />
       <div class="nav-logo-text">
-        한국피지컬AI학회
+        한국피지컬인공지능학회
         <span class="sub en">Korean Society of Physical AI</span>
       </div>
     </a>
 
     <!-- Desktop nav — built from _data/nav.yml -->
-    <ul class="nav-links">
+    <ul class="nav-links" role="list" aria-label="사이트 메뉴 / Site menu">
       
       
 
@@ -265,22 +296,23 @@
 
     <!-- Controls -->
     <div class="nav-controls">
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-        <span class="theme-icon">☀️</span>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="테마 전환 / Toggle theme">
+        <span class="theme-icon" aria-hidden="true">☀️</span>
       </button>
       <button class="lang-toggle en" onclick="toggleLang()" aria-label="Switch to English">EN</button>
     </div>
 
     <!-- Hamburger -->
     <button class="mobile-menu-btn"
-            aria-label="Toggle menu"
+            aria-label="메뉴 열기 / Open menu"
             aria-expanded="false"
-            onclick="toggleMobileMenu(this)">☰</button>
+            aria-controls="mobile-menu"
+            onclick="toggleMobileMenu(this)"><span aria-hidden="true">☰</span></button>
 
   </div>
 
   <!-- Mobile menu panel — also built from _data/nav.yml -->
-  <div class="mobile-menu" id="mobile-menu" hidden>
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="모바일 메뉴 / Mobile menu" hidden>
     <div class="mobile-menu-inner">
       
 
@@ -443,7 +475,7 @@
 </nav>
 
 
-  <main>
+  <main id="main-content">
     
   <div class="page-hero" >
   <!-- Reuse the same warm glow blobs from the main hero -->
@@ -479,127 +511,7 @@
     
 
     <div class="page-body">
-      <style>
-/* ── In-page jump nav ── */
-.page-jumpnav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 48px;
-  padding: 14px 18px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-}
-.page-jumpnav a {
-  font-size: 12px;
-  font-family: var(--font-mono);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--text-secondary);
-  text-decoration: none;
-  padding: 5px 12px;
-  border-radius: 20px;
-  border: 1px solid var(--border-subtle);
-  transition: all 0.2s;
-  white-space: nowrap;
-}
-.page-jumpnav a:hover {
-  color: var(--accent-primary);
-  border-color: var(--accent-primary);
-  background: rgba(0,200,197,0.05);
-}
-
-/* ── Regulation block ── */
-.regulation-block { margin-bottom: 48px; }
-.regulation-block-title {
-  font-family: var(--font-title-en);
-  font-size: 19px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--border-accent);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.regulation-block-title::before {
-  content: '';
-  display: inline-block;
-  width: 4px;
-  height: 18px;
-  background: var(--accent-primary);
-  border-radius: 2px;
-  flex-shrink: 0;
-}
-.regulation-article {
-  display: flex;
-  gap: 20px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border-subtle);
-  font-size: 14px;
-  color: var(--text-body);
-  line-height: 1.9;
-}
-.regulation-article:last-child { border-bottom: none; }
-.regulation-num {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--accent-primary);
-  min-width: 60px;
-  padding-top: 3px;
-  flex-shrink: 0;
-  letter-spacing: 0.5px;
-}
-.regulation-body { flex: 1; }
-.regulation-body ol,
-.regulation-body ul {
-  margin: 10px 0 4px 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.regulation-body table {
-  margin-top: 12px;
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 12px;
-}
-.regulation-body th {
-  background: rgba(37,133,243,0.06);
-  border: 1px solid var(--border-subtle);
-  padding: 8px 12px;
-  text-align: center;
-  font-weight: 600;
-}
-.regulation-body td {
-  border: 1px solid var(--border-subtle);
-  padding: 8px 12px;
-  text-align: center;
-  color: var(--text-secondary);
-}
-
-/* ── Addendum block ── */
-.addendum-block {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 16px 20px;
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.8;
-  margin-top: 12px;
-}
-.addendum-block strong { color: var(--text-primary); }
-
-@media (max-width: 640px) {
-  .regulation-article { flex-direction: column; gap: 4px; }
-  .regulation-num { min-width: unset; }
-}
-</style>
-
-<div class="page-article page-article--has-hero">
+      <div class="page-article page-article--has-hero">
 <div class="container">
 
 <!-- ── Jump nav ── -->
@@ -621,38 +533,38 @@
     <span data-lang="en">Journal Overview</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko"><strong>「피지컬 AI 연구」(Physical AI Research, JKPAI)</strong>는 한국피지컬AI학회가 발행하는 정기 학술지로서, 피지컬 AI의 이론적·응용적 연구 성과를 국내외에 소개하는 것을 목적으로 합니다. 로보틱스, 체화지능, 자율시스템, 디지털 트윈, 인간-로봇 상호작용, 피지컬 AI 교육 등 관련 모든 분야의 독창적인 연구 논문 및 종설 논문을 게재합니다.</span>
+    <span data-lang="ko"><strong>「피지컬 AI 연구」(Physical AI Research, JKPAI)</strong>는 한국피지컬인공지능학회가 발행하는 정기 학술지로서, 피지컬 AI의 이론적·응용적 연구 성과를 국내외에 소개하는 것을 목적으로 합니다. 로보틱스, 체화지능, 자율시스템, 디지털 트윈, 인간-로봇 상호작용, 피지컬 AI 교육 등 관련 모든 분야의 독창적인 연구 논문 및 종설 논문을 게재합니다.</span>
     <span data-lang="en"><strong><em>Physical AI Research</em> (JKPAI)</strong> is the peer-reviewed journal of the Korean Society of Physical AI (KSPAI). The journal publishes original research and review articles advancing theory and applications in Physical AI, including robotics, embodied intelligence, autonomous systems, digital twins, human-robot interaction, and Physical AI education.</span>
   </p>
 
   <div class="journal-meta-grid">
     <div class="journal-meta-item">
-      <span style="font-size: 11px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary);">JOURNAL NAME</span>
+      <span class="meta-label">JOURNAL NAME</span>
       <strong>피지컬 AI 연구 (Physical AI Research)</strong>
     </div>
     <div class="journal-meta-item">
-      <span style="font-size: 11px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary);">ABBREVIATION</span>
+      <span class="meta-label">ABBREVIATION</span>
       <strong>JKPAI</strong>
     </div>
     <div class="journal-meta-item">
-      <span style="font-size: 11px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary);">PUBLISHER</span>
-      <strong><span data-lang="ko">한국피지컬AI학회 (KSPAI)</span><span data-lang="en">Korean Society of Physical AI (KSPAI)</span></strong>
+      <span class="meta-label">PUBLISHER</span>
+      <strong><span data-lang="ko">한국피지컬인공지능학회 (KSPAI)</span><span data-lang="en">Korean Society of Physical AI (KSPAI)</span></strong>
     </div>
     <div class="journal-meta-item">
-      <span style="font-size: 11px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary);">ISSN</span>
+      <span class="meta-label">ISSN</span>
       <strong><span data-lang="ko">창간 후 부여 예정</span><span data-lang="en">To be assigned upon inaugural issue</span></strong>
     </div>
     <div class="journal-meta-item">
-      <span style="font-size: 11px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary);">FREQUENCY</span>
+      <span class="meta-label">FREQUENCY</span>
       <strong><span data-lang="ko">연 2회 (6월, 12월 예정)</span><span data-lang="en">Twice yearly (June &amp; December, planned)</span></strong>
     </div>
     <div class="journal-meta-item">
-      <span style="font-size: 11px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary);">REVIEW</span>
+      <span class="meta-label">REVIEW</span>
       <strong><span data-lang="ko">이중 익명 심사 (전문가 3인)</span><span data-lang="en">Double-blind (3 expert reviewers)</span></strong>
     </div>
   </div>
 
-  <div style="margin-top: 24px;">
+  <div class="section-actions">
     <a href="/submit/" class="btn btn-primary">
       <span data-lang="ko">논문투고 안내 →</span>
       <span data-lang="en">Submission Guide →</span>
@@ -682,7 +594,7 @@
     <div class="regulation-article">
       <span class="regulation-num">제 2 조</span>
       <div class="regulation-body">
-        <span data-lang="ko">논문의 저자 전원은 한국피지컬AI학회 회원을 원칙으로 한다.</span>
+        <span data-lang="ko">논문의 저자 전원은 한국피지컬인공지능학회 회원을 원칙으로 한다.</span>
         <span data-lang="en">All authors of a submitted paper must, in principle, be members of the Korean Society of Physical AI (KSPAI).</span>
       </div>
     </div>
@@ -878,7 +790,7 @@
     <div class="regulation-article">
       <span class="regulation-num">제 17 조</span>
       <div class="regulation-body">
-        <span data-lang="ko">본 학회 논문지에 게재된 논문에 대한 저작권은 한국피지컬AI학회에 있으며, 심사 결과가 게재인 경우 저자들은 저작권 양도 서류에 서명하여 학회로 제출하여야 한다.</span>
+        <span data-lang="ko">본 학회 논문지에 게재된 논문에 대한 저작권은 한국피지컬인공지능학회에 있으며, 심사 결과가 게재인 경우 저자들은 저작권 양도 서류에 서명하여 학회로 제출하여야 한다.</span>
         <span data-lang="en">Copyright of all published papers belongs to the Korean Society of Physical AI (KSPAI). Upon acceptance, all authors must sign and submit a copyright transfer agreement to the Society.</span>
       </div>
     </div>
@@ -906,7 +818,7 @@
     <div class="regulation-article">
       <span class="regulation-num">제 1 조</span>
       <div class="regulation-body">
-        <span data-lang="ko">「피지컬 AI 연구」는 한국피지컬AI학회가 발행하는 정기 학술지로, 연 2회(6월 30일, 12월 31일) 발행함을 원칙으로 한다. 필요한 경우 임시호 또는 특별호를 발간할 수 있다.</span>
+        <span data-lang="ko">「피지컬 AI 연구」는 한국피지컬인공지능학회가 발행하는 정기 학술지로, 연 2회(6월 30일, 12월 31일) 발행함을 원칙으로 한다. 필요한 경우 임시호 또는 특별호를 발간할 수 있다.</span>
         <span data-lang="en"><em>Physical AI Research</em> is published twice annually (June 30 and December 31) by the Korean Society of Physical AI. Special or supplementary issues may be published as needed.</span>
       </div>
     </div>
@@ -1024,7 +936,7 @@
     <div class="regulation-article">
       <span class="regulation-num">제 1 조 (목적)</span>
       <div class="regulation-body">
-        <span data-lang="ko">본 규정은 한국피지컬AI학회가 발행하는 「피지컬 AI 연구」에 투고하는 저자와 심사에 참여하는 위원들이 지켜야 할 연구윤리 기준을 제시함으로써 학술 연구의 진실성을 확보함을 목적으로 한다.</span>
+        <span data-lang="ko">본 규정은 한국피지컬인공지능학회가 발행하는 「피지컬 AI 연구」에 투고하는 저자와 심사에 참여하는 위원들이 지켜야 할 연구윤리 기준을 제시함으로써 학술 연구의 진실성을 확보함을 목적으로 한다.</span>
         <span data-lang="en">These regulations establish research ethics standards for authors submitting to and reviewers participating in <em>Physical AI Research</em>, published by KSPAI, with the aim of ensuring the integrity of scholarly research.</span>
       </div>
     </div>
@@ -1163,7 +1075,7 @@
 
   </main>
 
-  <footer>
+  <footer aria-label="사이트 푸터 / Site footer">
   <div class="container">
     <div class="footer-grid">
 
@@ -1171,7 +1083,7 @@
         <div class="footer-logo">
           <img src="/assets/images/logo-light.png"
               alt="KSPAI" class="footer-logo-img" />
-          <div class="footer-logo-name">한국피지컬AI학회
+          <div class="footer-logo-name">한국피지컬인공지능학회
             <span class="sub en">Korean Society of Physical AI</span>
           </div>
         </div>
@@ -1214,11 +1126,11 @@
     <div class="footer-bottom">
       <span class="footer-copy en">
         © 2026 Korean Society of Physical AI (KSPAI). All rights reserved.<br>
-        Built by <a href="https://aaron.kr" target="_blank" rel="noopener">Aaron.kr</a> &bull; Hero img by <a href="https://easy-peasy.ai/ai-image-generator/images/fusion-quantum-ai-technology-advanced-algorithms-quantum-computing" target="_blank" rel="noopener">Easy-Peasy.ai</a>
+        Built by <a href="https://aaron.kr" target="_blank" rel="noopener" aria-label="Aaron.kr (새 탭에서 열림 / opens in new tab)">Aaron.kr</a> &bull; Hero img by <a href="https://easy-peasy.ai/ai-image-generator/images/fusion-quantum-ai-technology-advanced-algorithms-quantum-computing" target="_blank" rel="noopener" aria-label="Easy-Peasy.ai hero image source (새 탭에서 열림 / opens in new tab)">Easy-Peasy.ai</a>
       </span>
-      <div class="footer-watermark">
+      <div class="footer-watermark" aria-hidden="true">
         <img src="/assets/images/logo-dark.png"
-            alt="KSPAI" class="footer-logo-img" />
+            alt="" class="footer-logo-img" />
       </div>
       <span class="footer-contact-info en">
         <a href="mailto:contact@kspai.org">contact@kspai.org</a>
