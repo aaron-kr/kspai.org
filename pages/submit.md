@@ -46,7 +46,7 @@ permalink: /submit/
   </h2>
   <p class="page-section-text">
     <span data-lang="ko">한국피지컬인공지능학회는 학술지 <strong>「피지컬 AI 연구」(Physical AI Research, JKPAI)</strong>를 통해 피지컬 AI 분야의 이론적·응용적 연구 논문을 상시 접수합니다. 로보틱스, 체화지능, 자율시스템, 디지털 트윈, 인간-로봇 상호작용, 피지컬 AI 교육 및 이와 융합된 제반 분야의 독창적인 연구 성과를 발표할 수 있는 공개적 학술 플랫폼입니다. 학계, 산업체, 대학원생 모든 연구자의 적극적인 참여를 환영합니다.</span>
-    <span data-lang="en">The Korean Society of Physical AI (KSPAI) invites submissions to its peer-reviewed journal, <strong><em>Physical AI Research</em> (JKPAI)</strong>. The journal publishes original theoretical and applied research in robotics, embodied intelligence, autonomous systems, digital twins, human-robot interaction, Physical AI education, and related interdisciplinary fields. We welcome contributions from researchers in academia, industry, and graduate programs.</span>
+    <span data-lang="en">The Korean Society for Physical AI (KSPAI) invites submissions to its peer-reviewed journal, <strong><em>Physical AI Research</em> (JKPAI)</strong>. The journal publishes original theoretical and applied research in robotics, embodied intelligence, autonomous systems, digital twins, human-robot interaction, Physical AI education, and related interdisciplinary fields. We welcome contributions from researchers in academia, industry, and graduate programs.</span>
   </p>
 
   <div class="journal-meta-grid">
@@ -61,7 +61,7 @@ permalink: /submit/
       <span class="meta-label">PUBLISHER</span>
       <strong>
         <span data-lang="ko">한국피지컬인공지능학회 (KSPAI)</span>
-        <span data-lang="en">Korean Society of Physical AI (KSPAI)</span>
+        <span data-lang="en">Korean Society for Physical AI (KSPAI)</span>
       </strong>
     </div>
     <div class="journal-meta-item">

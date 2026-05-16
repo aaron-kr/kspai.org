@@ -20,7 +20,7 @@ layout: page
 title_ko: 학회소개
 title_en: About KSPAI
 subtitle_ko: 한국피지컬인공지능학회 및 한국피지컬AI교육연구소 소개
-subtitle_en: About the Korean Society of Physical AI and its sister institute
+subtitle_en: About the Korean Society for Physical AI and its sister institute
 permalink: /about/
 ---
 

@@ -1,6 +1,6 @@
 # 한국피지컬인공지능학회 홈페이지
 
-**Korean Society of Physical AI (KSPAI)** — Official website  
+**Korean Society for Physical AI (KSPAI)** — Official website  
 🌐 [kspai.org](https://kspai.org) · Jekyll + GitHub Pages · Bilingual KO/EN
 
 ---
@@ -315,5 +315,5 @@ Settings → Pages → Source: **Deploy from a branch** → `main` / `/ (root)`
 
 ## License
 
-MIT © 2025 Korean Society of Physical AI (KSPAI)  
+MIT © 2025 Korean Society for Physical AI (KSPAI)  
 contact@physicalai.or.kr · [kspai.org](https://kspai.org)

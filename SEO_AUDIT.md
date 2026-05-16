@@ -1,7 +1,7 @@
 # SEO Completeness Audit — physical-ai-home (kspai.org)
 
 **Audited:** 2026-05-01  
-**Site:** Korean Society of Physical AI (한국피지컬인공지능학회) — https://kspai.org  
+**Site:** Korean Society for Physical AI (한국피지컬인공지능학회) — https://kspai.org  
 **Stack:** Jekyll + jekyll-sitemap + jekyll-feed, GitHub Pages  
 
 ---
@@ -37,11 +37,11 @@
 
 ### 1. `<title>` — Unique per Page, ≤60 Chars
 
-**Before:** The template in `_includes/head.html` produced `{{ page.title | default: site.title }} | Korean Society of Physical AI`. Four pages (`conferences`, `journal`, `seminars`, `submit`) had no `title` field in their front matter, so they fell back to the Korean site title, creating duplicate/incorrect titles. The format appended a hard-coded string rather than using `site.title_en`.
+**Before:** The template in `_includes/head.html` produced `{{ page.title | default: site.title }} | Korean Society for Physical AI`. Four pages (`conferences`, `journal`, `seminars`, `submit`) had no `title` field in their front matter, so they fell back to the Korean site title, creating duplicate/incorrect titles. The format appended a hard-coded string rather than using `site.title_en`.
 
 **After:** Title logic now uses Liquid conditionals:
-- Inner pages: `{page.title} | Korean Society of Physical AI` (e.g., "학회소개 | Korean Society of Physical AI" — 39 chars)
-- Home page: `Korean Society of Physical AI — 한국피지컬인공지능학회` (52 chars)
+- Inner pages: `{page.title} | Korean Society for Physical AI` (e.g., "학회소개 | Korean Society for Physical AI" — 39 chars)
+- Home page: `Korean Society for Physical AI — 한국피지컬인공지능학회` (52 chars)
 
 `title` field added to: `pages/conferences.md`, `pages/journal.md`, `pages/seminars.md`, `pages/submit.md`, `pages/about.md` (pages folder version).
 
@@ -73,7 +73,7 @@
 <meta property="og:image"       content="https://kspai.org/assets/images/og-default.png">
 <meta property="og:locale"      content="ko_KR">
 <meta property="og:locale:alternate" content="en_US">
-<meta property="og:site_name"   content="Korean Society of Physical AI">
+<meta property="og:site_name"   content="Korean Society for Physical AI">
 ```
 `og:image` falls back to `site.og_image` (`/assets/images/og-default.png`) unless overridden per-page via `page.og_image`. **Action needed:** Create `/assets/images/og-default.png` (1200×630 px recommended).
 
@@ -146,7 +146,7 @@ Jekyll copies root-level files to `_site/`, so this will be served at `https://k
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "한국피지컬인공지능학회",
-  "alternateName": "Korean Society of Physical AI",
+  "alternateName": "Korean Society for Physical AI",
   "abbreviation": "KSPAI",
   "url": "https://kspai.org",
   "logo": "https://kspai.org/assets/images/logo-light.png",

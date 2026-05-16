@@ -16,7 +16,7 @@ permalink: /contact/
       <div class="org-icon society">🏛</div>
       <h2 class="contact-card-title">
         <span data-lang="ko">한국피지컬인공지능학회</span>
-        <span data-lang="en">Korean Society of Physical AI</span>
+        <span data-lang="en">Korean Society for Physical AI</span>
       </h2>
       <p class="org-name-en en">KSPAI</p>
       <div class="contact-details">

@@ -1,7 +1,7 @@
 # Accessibility Audit — kspai.org (physical-ai-home)
 
 **Audited:** 2026-04-30  
-**Site:** Korean Society of Physical AI — Jekyll/GitHub Pages  
+**Site:** Korean Society for Physical AI — Jekyll/GitHub Pages  
 **Auditor:** Claude Code (automated structural analysis)  
 **Standard:** WCAG 2.1 AA
 

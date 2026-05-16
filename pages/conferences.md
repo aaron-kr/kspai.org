@@ -93,7 +93,7 @@ permalink: /conferences/
     </h3>
     <p class="conf-desc">
       <span data-lang="ko">한국피지컬인공지능학회의 첫 번째 학술대회로, 피지컬 AI 분야의 최신 연구 성과를 발표하고 산학연 전문가들과 교류하는 자리입니다. 기조강연, 구두 발표, 포스터 세션, 특별 워크숍 등으로 구성될 예정입니다.</span>
-      <span data-lang="en">The inaugural conference of the Korean Society of Physical AI, bringing together researchers from academia, industry, and research institutes to present and discuss the latest advances in Physical AI. The program will include keynote talks, oral presentations, poster sessions, and special workshops.</span>
+      <span data-lang="en">The inaugural conference of the Korean Society for Physical AI, bringing together researchers from academia, industry, and research institutes to present and discuss the latest advances in Physical AI. The program will include keynote talks, oral presentations, poster sessions, and special workshops.</span>
     </p>
     <div class="conf-meta-row">
       <div class="conf-meta-item">

@@ -4,7 +4,7 @@ title: 학회소개
 title_ko: 학회소개
 title_en: About KSPAI
 subtitle_ko: 한국피지컬인공지능학회 및 한국피지컬AI교육연구소 소개
-subtitle_en: About the Korean Society of Physical AI and its sister institute
+subtitle_en: About the Korean Society for Physical AI and its sister institute
 description: 한국피지컬인공지능학회(KSPAI)의 설립 배경, 비전, 미션, 연혁 및 자매 기관 한국피지컬AI교육연구소 소개.
 permalink: /about/
 ---
@@ -35,7 +35,7 @@ permalink: /about/
         </p>
         <p>
           <span data-lang="ko">한국피지컬인공지능학회와 한국피지컬AI교육연구소는 바로 그 구심점이 되고자 설립되었습니다. 연구의 최전선에서 이루어지는 발견들이 교육 현장과 산업 현장으로 이어지고, 다시 새로운 연구의 씨앗이 되는 선순환의 생태계를 만들어 나가겠습니다. 피지컬 AI의 미래를 함께 만들어갈 여러분의 동참을 환영합니다.</span>
-          <span data-lang="en">The Korean Society of Physical AI and the Korean Institute of Physical AI Education and Research were established to be exactly that gathering point. We will build a virtuous ecosystem in which discoveries at the research frontier flow into education and industry, and in turn give rise to new research. We warmly welcome you to join us in shaping the future of Physical AI.</span>
+          <span data-lang="en">The Korean Society for Physical AI and the Korean Institute of Physical AI Education and Research were established to be exactly that gathering point. We will build a virtuous ecosystem in which discoveries at the research frontier flow into education and industry, and in turn give rise to new research. We warmly welcome you to join us in shaping the future of Physical AI.</span>
         </p>
       </div>
       <div class="greeting-sig">
@@ -47,7 +47,7 @@ permalink: /about/
           </div>
           <div class="greeting-sig-title">
             <span data-lang="ko">한국피지컬인공지능학회 / 한국피지컬AI교육연구소</span>
-            <span data-lang="en">Korean Society of Physical AI / Korean Institute of Physical AI Education & Research</span>
+            <span data-lang="en">Korean Society for Physical AI / Korean Institute of Physical AI Education & Research</span>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@ permalink: /about/
   </h2>
   <p class="page-section-text">
     <span data-lang="ko"><strong>한국피지컬인공지능학회(KSPAI)</strong>는 피지컬 AI 분야의 학술 연구와 기술 발전을 선도하기 위해 2025년 설립된 국내 최초의 피지컬 AI 전문 학술단체입니다. 로보틱스, 체화지능, 자율시스템, 디지털 트윈, 인간-로봇 상호작용 등을 핵심 연구 분야로 삼으며, 학술지 발행·학술대회 개최·산학연 협력을 통해 피지컬 AI 생태계를 구축해 나갑니다.</span>
-    <span data-lang="en">The <strong>Korean Society of Physical AI (KSPAI)</strong> was founded in 2025 as Korea's first dedicated academic society for Physical AI. With robotics, embodied intelligence, autonomous systems, digital twins, and human-robot interaction as its core research areas, KSPAI advances the Physical AI ecosystem through journal publication, academic conferences, and industry–academia–research collaboration.</span>
+    <span data-lang="en">The <strong>Korean Society for Physical AI (KSPAI)</strong> was founded in 2025 as Korea's first dedicated academic society for Physical AI. With robotics, embodied intelligence, autonomous systems, digital twins, and human-robot interaction as its core research areas, KSPAI advances the Physical AI ecosystem through journal publication, academic conferences, and industry–academia–research collaboration.</span>
   </p>
 
   <div class="mission-grid">
@@ -253,7 +253,7 @@ permalink: /about/
   </h2>
   <p class="page-section-text">
     <span data-lang="ko">한국피지컬인공지능학회의 설립 과정을 연혁으로 정리합니다.</span>
-    <span data-lang="en">A timeline of key milestones in the founding of the Korean Society of Physical AI.</span>
+    <span data-lang="en">A timeline of key milestones in the founding of the Korean Society for Physical AI.</span>
   </p>
 
   <div class="timeline">
@@ -280,7 +280,7 @@ permalink: /about/
       </div>
       <p class="timeline-desc">
         <span data-lang="ko">한국피지컬인공지능학회(KSPAI) 및 한국피지컬AI교육연구소 공식 설립. 비상대책위원회 체제 운영 개시.</span>
-        <span data-lang="en">Official establishment of the Korean Society of Physical AI (KSPAI) and the Korean Institute of Physical AI Education and Research. Operations begin under the Emergency Planning Committee structure.</span>
+        <span data-lang="en">Official establishment of the Korean Society for Physical AI (KSPAI) and the Korean Institute of Physical AI Education and Research. Operations begin under the Emergency Planning Committee structure.</span>
       </p>
     </div>
 

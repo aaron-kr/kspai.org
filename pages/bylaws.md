@@ -4,7 +4,7 @@ title: 정관
 title_ko: 정관
 title_en: Bylaws
 subtitle_ko: 한국피지컬인공지능학회 정관
-subtitle_en: Articles of Association — Korean Society of Physical AI
+subtitle_en: Articles of Association — Korean Society for Physical AI
 label_en: GOVERNANCE
 tag_class: call
 description: 한국피지컬인공지능학회(KSPAI) 정관 — 학회 명칭, 목적, 회원, 임원, 총회, 이사회, 재정, 보칙으로 구성된 규약.

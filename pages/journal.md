@@ -32,7 +32,7 @@ permalink: /journal/
   </h2>
   <p class="page-section-text">
     <span data-lang="ko"><strong>「피지컬 AI 연구」(Physical AI Research, JKPAI)</strong>는 한국피지컬인공지능학회가 발행하는 정기 학술지로서, 피지컬 AI의 이론적·응용적 연구 성과를 국내외에 소개하는 것을 목적으로 합니다. 로보틱스, 체화지능, 자율시스템, 디지털 트윈, 인간-로봇 상호작용, 피지컬 AI 교육 등 관련 모든 분야의 독창적인 연구 논문 및 종설 논문을 게재합니다.</span>
-    <span data-lang="en"><strong><em>Physical AI Research</em> (JKPAI)</strong> is the peer-reviewed journal of the Korean Society of Physical AI (KSPAI). The journal publishes original research and review articles advancing theory and applications in Physical AI, including robotics, embodied intelligence, autonomous systems, digital twins, human-robot interaction, and Physical AI education.</span>
+    <span data-lang="en"><strong><em>Physical AI Research</em> (JKPAI)</strong> is the peer-reviewed journal of the Korean Society for Physical AI (KSPAI). The journal publishes original research and review articles advancing theory and applications in Physical AI, including robotics, embodied intelligence, autonomous systems, digital twins, human-robot interaction, and Physical AI education.</span>
   </p>
 
   <div class="journal-meta-grid">
@@ -46,7 +46,7 @@ permalink: /journal/
     </div>
     <div class="journal-meta-item">
       <span class="meta-label">PUBLISHER</span>
-      <strong><span data-lang="ko">한국피지컬인공지능학회 (KSPAI)</span><span data-lang="en">Korean Society of Physical AI (KSPAI)</span></strong>
+      <strong><span data-lang="ko">한국피지컬인공지능학회 (KSPAI)</span><span data-lang="en">Korean Society for Physical AI (KSPAI)</span></strong>
     </div>
     <div class="journal-meta-item">
       <span class="meta-label">ISSN</span>
@@ -93,7 +93,7 @@ permalink: /journal/
       <span class="regulation-num">제 2 조</span>
       <div class="regulation-body">
         <span data-lang="ko">논문의 저자 전원은 한국피지컬인공지능학회 회원을 원칙으로 한다.</span>
-        <span data-lang="en">All authors of a submitted paper must, in principle, be members of the Korean Society of Physical AI (KSPAI).</span>
+        <span data-lang="en">All authors of a submitted paper must, in principle, be members of the Korean Society for Physical AI (KSPAI).</span>
       </div>
     </div>
 
@@ -289,7 +289,7 @@ permalink: /journal/
       <span class="regulation-num">제 17 조</span>
       <div class="regulation-body">
         <span data-lang="ko">본 학회 논문지에 게재된 논문에 대한 저작권은 한국피지컬인공지능학회에 있으며, 심사 결과가 게재인 경우 저자들은 저작권 양도 서류에 서명하여 학회로 제출하여야 한다.</span>
-        <span data-lang="en">Copyright of all published papers belongs to the Korean Society of Physical AI (KSPAI). Upon acceptance, all authors must sign and submit a copyright transfer agreement to the Society.</span>
+        <span data-lang="en">Copyright of all published papers belongs to the Korean Society for Physical AI (KSPAI). Upon acceptance, all authors must sign and submit a copyright transfer agreement to the Society.</span>
       </div>
     </div>
 
@@ -317,7 +317,7 @@ permalink: /journal/
       <span class="regulation-num">제 1 조</span>
       <div class="regulation-body">
         <span data-lang="ko">「피지컬 AI 연구」는 한국피지컬인공지능학회가 발행하는 정기 학술지로, 연 2회(6월 30일, 12월 31일) 발행함을 원칙으로 한다. 필요한 경우 임시호 또는 특별호를 발간할 수 있다.</span>
-        <span data-lang="en"><em>Physical AI Research</em> is published twice annually (June 30 and December 31) by the Korean Society of Physical AI. Special or supplementary issues may be published as needed.</span>
+        <span data-lang="en"><em>Physical AI Research</em> is published twice annually (June 30 and December 31) by the Korean Society for Physical AI. Special or supplementary issues may be published as needed.</span>
       </div>
     </div>
 
