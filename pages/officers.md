@@ -110,6 +110,43 @@ permalink: /officers/
   </div>
 </div>
 
+<!-- ── EDITORIAL BOARD ── -->
+<div class="page-section">
+  <h2 class="page-section-title">
+    <span data-lang="ko">편집위원회</span>
+    <span data-lang="en">Editorial Board</span>
+  </h2>
+
+  <div class="officers-grid">
+    {% for member in site.data.officers.editorial_board %}
+    <div class="officer-role-group">
+      <h3 class="officer-role-title">
+        <span data-lang="ko">{{ member.division_ko }}</span>
+        <span data-lang="en">{{ member.division_en }}</span>
+      </h3>
+      <div class="officer-card{% if member.pending %} officer-card--placeholder{% endif %}">
+        <div class="officer-info">
+          {% if member.role_ko %}
+          <p class="officer-note">
+            <span data-lang="ko">{{ member.role_ko }}</span>
+            <span data-lang="en">{{ member.role_en }}</span>
+          </p>
+          {% endif %}
+          <p class="officer-name">
+            <span data-lang="ko">{{ member.name_ko }}</span>
+            <span data-lang="en">{{ member.name_en }}</span>
+          </p>
+          <p class="officer-affil">
+            <span data-lang="ko">{{ member.affil_ko }}</span>
+            <span data-lang="en">{{ member.affil_en }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
 <!-- ── FOUNDER NOTE (hidden — reveal after inaugural general assembly) ── -->
 <!--
 설립자/이사회 의장: (이름) (전주교육대학교 / Jeonju National University of Education)

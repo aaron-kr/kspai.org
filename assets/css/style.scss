@@ -498,7 +498,7 @@ nav .container {
 /* Nav image */
 .nav-logo-img {
   // width: 36px;
-  height: 24px;
+  height: 30px;
   object-fit: contain;
   // border-radius: 8px;
   display: block;
@@ -726,7 +726,7 @@ nav:not(.nav-scrolled) .mobile-menu-btn:hover { background: rgba(255,255,255,0.1
 
 /* ── NAV logo sizing ── */
 .nav-logo-img {
-  height: 24px;
+  // height: 24px;
   width: auto;
   object-fit: contain;
   display: block;
