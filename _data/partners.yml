@@ -1,0 +1,62 @@
+# ═══════════════════════════════════════════════════════════════
+#  _data/partners.yml — Partner / co-organizing institutions
+#
+#  Fields:
+#    id          → unique slug
+#    name_ko/en  → display name
+#    logo        → path to logo image (leave blank until file exists)
+#    url         → organization website
+#    type        → academic | industry | government | media
+#    role_ko/en  → e.g. "공동주최기관" / "Co-organizer"
+#    active      → set false to hide without deleting
+# ═══════════════════════════════════════════════════════════════
+
+- id: hanbat
+  name_ko: "국립한밭대학교"
+  name_en: "Hanbat National University"
+  logo: ""
+  url: "https://www.hanbat.ac.kr"
+  type: "academic"
+  role_ko: "공동주최기관"
+  role_en: "Co-organizer"
+  active: true
+
+- id: jeonju
+  name_ko: "전주대학교"
+  name_en: "Jeonju University"
+  logo: ""
+  url: "https://www.jeonju.ac.kr"
+  type: "academic"
+  role_ko: "협력기관"
+  role_en: "Partner Institution"
+  active: true
+
+- id: hoseo
+  name_ko: "호서대학교"
+  name_en: "Hoseo University"
+  logo: ""
+  url: "https://www.hoseo.ac.kr"
+  type: "academic"
+  role_ko: "협력기관"
+  role_en: "Partner Institution"
+  active: true
+
+- id: jungwon
+  name_ko: "중원대학교"
+  name_en: "Jungwon University"
+  logo: ""
+  url: "https://www.jwu.ac.kr"
+  type: "academic"
+  role_ko: "협력기관"
+  role_en: "Partner Institution"
+  active: true
+
+- id: mokpo
+  name_ko: "국립목포대학교"
+  name_en: "Mokpo National University"
+  logo: ""
+  url: "https://www.mokpo.ac.kr"
+  type: "academic"
+  role_ko: "협력기관"
+  role_en: "Partner Institution"
+  active: true

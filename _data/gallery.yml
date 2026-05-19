@@ -1,0 +1,30 @@
+# ═══════════════════════════════════════════════════════════════
+#  _data/gallery.yml — Photo gallery albums
+#
+#  Fields per album:
+#    id          → unique slug used in URL hash
+#    title_ko/en → album display name
+#    date        → YYYY or YYYY-MM for display
+#    type        → conference | seminar | workshop | founding | other
+#    cover       → path to cover image (blank until available)
+#    album_url   → external link (Google Photos, Flickr, etc.) — blank until ready
+#    photo_count → approximate number of photos (for display before album_url exists)
+#    active      → false to hide without deleting
+# ═══════════════════════════════════════════════════════════════
+
+# Example album structure (uncomment and fill in when photos are available):
+# - id: 2026-summer-conf
+#   title_ko: "2026 피지컬AI 하계 학술대회"
+#   title_en: "2026 KSPAI Summer Academic Conference"
+#   date: "2026-06"
+#   type: conference
+#   cover: "/assets/images/gallery/2026-summer-conf-cover.jpg"
+#   album_url: ""
+#   photo_count: 0
+#   active: true
+
+albums: []
+
+# Service configuration
+service: google-photos  # google-photos | flickr | none
+service_main_url: ""    # Set to your Google Photos or Flickr profile URL when ready

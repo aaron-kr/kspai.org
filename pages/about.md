@@ -17,8 +17,8 @@ permalink: /about/
      ════════════════════════════════ -->
 <div class="page-section" id="greeting">
   <h2 class="page-section-title">
-    <span data-lang="ko">설립자 인사말</span>
-    <span data-lang="en">Founder's Greeting</span>
+    <span data-lang="ko">인사말</span>
+    <span data-lang="en">Greeting</span>
   </h2>
 
   <div class="greeting-card">
@@ -38,7 +38,7 @@ permalink: /about/
           <span data-lang="en">The Korean Society for Physical AI and the Korean Institute of Physical AI Education and Research were established to be exactly that gathering point. We will build a virtuous ecosystem in which discoveries at the research frontier flow into education and industry, and in turn give rise to new research. We warmly welcome you to join us in shaping the future of Physical AI.</span>
         </p>
       </div>
-      <div class="greeting-sig">
+      <div class="greeting-sig" style="display: none;">
         <div class="greeting-sig-avatar">🤖</div>
         <div>
           <div class="greeting-sig-name">
@@ -151,6 +151,15 @@ permalink: /about/
     <span data-lang="en">The <strong>Korean Institute of Physical AI Education and Research</strong> is a sister organization established to systematically build educational capacity in Physical AI. While KSPAI focuses on research-centered academic activities, the Institute specializes in Physical AI curriculum development, teacher training, hands-on content creation, and educational effectiveness research.</span>
   </p>
 
+  <div class="coming-soon-banner" style="margin-bottom: 24px;">
+    <span>🏗️</span>
+    <span>
+      <strong><span data-lang="ko">준비 중</span><span data-lang="en">In Preparation</span></strong> —
+      <span data-lang="ko">한국피지컬인공지능교육연구소는 현재 설립 준비 중입니다.</span>
+      <span data-lang="en">The Korean Institute of Physical AI Education and Research is currently being established.</span>
+    </span>
+  </div>
+
   <div class="about-full-card">
     <div class="about-full-header">
       <div class="org-icon institute">🏫</div>
@@ -160,8 +169,8 @@ permalink: /about/
           <span data-lang="en">Korean Institute of Physical AI Education & Research</span>
         </strong>
         <div class="about-org-sub">
-          <span data-lang="ko">Korean Institute of Physical AI Education & Research</span>
-          <span data-lang="en">한국피지컬인공지능교육연구소</span>
+          <span data-lang="ko">Korean Institute of Physical AI Education & Research · 설립 준비 중</span>
+          <span data-lang="en">한국피지컬인공지능교육연구소 · In Preparation</span>
         </div>
       </div>
     </div>
@@ -221,19 +230,12 @@ permalink: /about/
     <span data-lang="en">Core Research Scope</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko">한국피지컬인공지능학회는 다음 6대 핵심 분야와 이와 융합된 모든 연구를 포괄합니다.</span>
-    <span data-lang="en">KSPAI encompasses the following six core research areas and all interdisciplinary research connected to them.</span>
+    <span data-lang="ko">한국피지컬인공지능학회는 다음 {{ site.data.research.size }}개 핵심 분야와 이와 융합된 모든 연구를 포괄합니다.</span>
+    <span data-lang="en">KSPAI encompasses the following {{ site.data.research.size }} core research areas and all interdisciplinary research connected to them.</span>
   </p>
   <div class="scope-box">
     <div class="scope-box-title">Research Areas</div>
-    <div class="scope-tags">
-      <span class="scope-tag"><span data-lang="ko">🤖 로보틱스</span><span data-lang="en">🤖 Robotics</span></span>
-      <span class="scope-tag"><span data-lang="ko">🧠 체화지능</span><span data-lang="en">🧠 Embodied Intelligence</span></span>
-      <span class="scope-tag"><span data-lang="ko">🚗 자율시스템</span><span data-lang="en">🚗 Autonomous Systems</span></span>
-      <span class="scope-tag"><span data-lang="ko">🪞 디지털 트윈</span><span data-lang="en">🪞 Digital Twin</span></span>
-      <span class="scope-tag"><span data-lang="ko">🤝 인간-로봇 상호작용</span><span data-lang="en">🤝 Human-Robot Interaction</span></span>
-      <span class="scope-tag"><span data-lang="ko">📚 피지컬 AI 교육</span><span data-lang="en">📚 Physical AI Education</span></span>
-    </div>
+    {% include research-scope-tags.html show_emoji=true %}
   </div>
   <div class="section-actions">
     <a href="/research/" class="btn btn-outline">

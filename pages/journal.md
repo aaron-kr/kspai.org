@@ -110,21 +110,15 @@ permalink: /journal/
       <div class="regulation-body">
         <span data-lang="ko">투고자는 논문의 투고 분야를 명시하여 투고하여야 하며, 편집위원회에서 투고 분야의 적합성 여부에 따라 최종 분야를 결정하고 투고자에게 통보한다.
         <ol>
-          <li>로보틱스 분과 (로보틱스 및 자율이동)</li>
-          <li>체화지능 분과 (체화지능 및 감각운동 통합)</li>
-          <li>자율시스템 분과 (자율시스템 설계 및 제어)</li>
-          <li>디지털 트윈 분과 (디지털 트윈 모델링 및 응용)</li>
-          <li>인간-로봇 상호작용 분과</li>
-          <li>피지컬 AI 교육 분과</li>
+          {% for area in site.data.research %}
+          <li>{{ area.track_ko }}{% if area.track_sub_ko %} ({{ area.track_sub_ko }}){% endif %}</li>
+          {% endfor %}
         </ol></span>
         <span data-lang="en">Authors must indicate the relevant research track at submission. The editorial board makes the final determination of track assignment and notifies the author.
         <ol>
-          <li>Robotics Track (Robotics &amp; Autonomous Mobility)</li>
-          <li>Embodied Intelligence Track (Embodied AI &amp; Sensorimotor Integration)</li>
-          <li>Autonomous Systems Track (Autonomous System Design &amp; Control)</li>
-          <li>Digital Twin Track (Digital Twin Modeling &amp; Applications)</li>
-          <li>Human-Robot Interaction (HRI) Track</li>
-          <li>Physical AI Education Track</li>
+          {% for area in site.data.research %}
+          <li>{{ area.track_en }}{% if area.track_sub_en %} ({{ area.track_sub_en }}){% endif %}</li>
+          {% endfor %}
         </ol></span>
       </div>
     </div>

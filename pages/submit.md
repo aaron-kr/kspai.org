@@ -104,70 +104,22 @@ permalink: /submit/
     <span data-lang="en">Research Scope</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko">아래 6개 분과 및 이와 융합된 분야의 논문을 접수합니다. 투고 분야는 투고 시 명시하여야 하며, 편집위원회에서 최종 결정합니다.</span>
-    <span data-lang="en">Papers in the following six tracks and related interdisciplinary areas are welcome. Authors must indicate the relevant track at submission; the editorial board makes the final determination.</span>
+    <span data-lang="ko">아래 {{ site.data.research.size }}개 분과 및 이와 융합된 분야의 논문을 접수합니다. 투고 분야는 투고 시 명시하여야 하며, 편집위원회에서 최종 결정합니다.</span>
+    <span data-lang="en">Papers in the following {{ site.data.research.size }} tracks and related interdisciplinary areas are welcome. Authors must indicate the relevant track at submission; the editorial board makes the final determination.</span>
   </p>
   <div class="submit-scope-grid">
+    {% for area in site.data.research %}
     <div class="submit-scope-item">
-      <span class="research-num">01</span>
+      <span class="research-num">{{ area.num }}</span>
       <div>
-        <strong><span data-lang="ko">로보틱스 분과</span><span data-lang="en">Robotics Track</span></strong>
+        <strong><span data-lang="ko">{{ area.track_ko }}</span><span data-lang="en">{{ area.track_en }}</span></strong>
         <div class="submit-scope-sub">
-          <span data-lang="ko">로보틱스 및 자율이동</span>
-          <span data-lang="en">Robotics & Autonomous Mobility</span>
+          <span data-lang="ko">{{ area.track_sub_ko }}</span>
+          <span data-lang="en">{{ area.track_sub_en }}</span>
         </div>
       </div>
     </div>
-    <div class="submit-scope-item">
-      <span class="research-num">02</span>
-      <div>
-        <strong><span data-lang="ko">체화지능 분과</span><span data-lang="en">Embodied Intelligence Track</span></strong>
-        <div class="submit-scope-sub">
-          <span data-lang="ko">체화지능 및 감각운동 통합</span>
-          <span data-lang="en">Embodied AI & Sensorimotor Integration</span>
-        </div>
-      </div>
-    </div>
-    <div class="submit-scope-item">
-      <span class="research-num">03</span>
-      <div>
-        <strong><span data-lang="ko">자율시스템 분과</span><span data-lang="en">Autonomous Systems Track</span></strong>
-        <div class="submit-scope-sub">
-          <span data-lang="ko">자율시스템 설계 및 제어</span>
-          <span data-lang="en">Autonomous System Design & Control</span>
-        </div>
-      </div>
-    </div>
-    <div class="submit-scope-item">
-      <span class="research-num">04</span>
-      <div>
-        <strong><span data-lang="ko">디지털 트윈 분과</span><span data-lang="en">Digital Twin Track</span></strong>
-        <div class="submit-scope-sub">
-          <span data-lang="ko">디지털 트윈 모델링 및 응용</span>
-          <span data-lang="en">Digital Twin Modeling & Applications</span>
-        </div>
-      </div>
-    </div>
-    <div class="submit-scope-item">
-      <span class="research-num">05</span>
-      <div>
-        <strong><span data-lang="ko">인간-로봇 상호작용 분과</span><span data-lang="en">HRI Track</span></strong>
-        <div class="submit-scope-sub">
-          <span data-lang="ko">인간-로봇 상호작용 및 인터페이스</span>
-          <span data-lang="en">Human-Robot Interaction & Interface</span>
-        </div>
-      </div>
-    </div>
-    <div class="submit-scope-item">
-      <span class="research-num">06</span>
-      <div>
-        <strong><span data-lang="ko">피지컬 AI 교육 분과</span><span data-lang="en">Education Track</span></strong>
-        <div class="submit-scope-sub">
-          <span data-lang="ko">피지컬 AI 교육·커리큘럼 연구</span>
-          <span data-lang="en">Physical AI Education & Curriculum</span>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </div>
 

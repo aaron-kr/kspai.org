@@ -245,6 +245,46 @@
           <button class="nav-link nav-dropdown-toggle"
                   aria-expanded="false"
                   aria-haspopup="true"
+                  data-i18n="nav.resources">
+            <span data-lang="ko">자료</span>
+            <span data-lang="en">Resources</span>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <div class="nav-dropdown-inner">
+              
+                
+                <a href="/resources/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">자료실</span>
+                  <span data-lang="en">Downloads</span>
+                </a>
+                
+              
+                
+                <a href="/gallery/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">갤러리</span>
+                  <span data-lang="en">Gallery</span>
+                </a>
+                
+              
+            </div>
+          </div>
+        </li>
+
+      
+      
+      
+
+        <!-- Dropdown item -->
+        <li class="nav-item nav-item--dropdown">
+          <button class="nav-link nav-dropdown-toggle"
+                  aria-expanded="false"
+                  aria-haspopup="true"
                   data-i18n="nav.participate">
             <span data-lang="ko">참여</span>
             <span data-lang="en">Participate</span>
@@ -434,6 +474,36 @@
         <!-- Mobile dropdown group -->
         <div class="mobile-menu-group">
           <div class="mobile-menu-group-title">
+            <span data-lang="ko">자료</span>
+            <span data-lang="en">Resources</span>
+          </div>
+          
+            
+            <a href="/resources/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">자료실</span>
+              <span data-lang="en">Downloads</span>
+            </a>
+            
+          
+            
+            <a href="/gallery/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">갤러리</span>
+              <span data-lang="en">Gallery</span>
+            </a>
+            
+          
+        </div>
+
+        
+
+      
+
+        
+        <!-- Mobile dropdown group -->
+        <div class="mobile-menu-group">
+          <div class="mobile-menu-group-title">
             <span data-lang="ko">참여</span>
             <span data-lang="en">Participate</span>
           </div>
@@ -560,7 +630,7 @@
 </div>
 
 <!-- ════════════════════════════════
-     SERIES CARDS
+     SERIES CARDS — data-driven from _data/seminars.yml
      ════════════════════════════════ -->
 <div class="page-section" id="series">
   <h2 class="page-section-title">
@@ -568,7 +638,7 @@
     <span data-lang="en">Regular Seminar Series</span>
   </h2>
 
-  <!-- KSPAI Colloquium -->
+  
   <div class="seminar-series-card">
     <div class="seminar-series-header">
       <div class="seminar-series-icon">🎙️</div>
@@ -585,26 +655,54 @@
       <span data-lang="en">An academic colloquium series featuring invited talks by distinguished researchers in Physical AI. Sessions explore the latest research trends and future directions, with open Q&amp;A following each presentation. Planned as a monthly hybrid (in-person + online) event.</span>
     </p>
     <div class="seminar-meta-row">
+      
       <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">빈도</span><span data-lang="en">Frequency</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">월 1회 (예정)</span><span data-lang="en">Monthly (planned)</span></span>
+        <span class="seminar-meta-label">
+          <span data-lang="ko">빈도</span>
+          <span data-lang="en">Frequency</span>
+        </span>
+        <span class="seminar-meta-value">
+          <span data-lang="ko">월 1회 (예정)</span>
+          <span data-lang="en">Monthly (planned)</span>
+        </span>
       </div>
+      
       <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">형식</span><span data-lang="en">Format</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">초청 강연 + 질의응답</span><span data-lang="en">Invited talk + Q&amp;A</span></span>
+        <span class="seminar-meta-label">
+          <span data-lang="ko">형식</span>
+          <span data-lang="en">Format</span>
+        </span>
+        <span class="seminar-meta-value">
+          <span data-lang="ko">초청 강연 + 질의응답</span>
+          <span data-lang="en">Invited talk + Q&amp;A</span>
+        </span>
       </div>
+      
       <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">방식</span><span data-lang="en">Mode</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">온/오프라인 병행</span><span data-lang="en">Hybrid</span></span>
+        <span class="seminar-meta-label">
+          <span data-lang="ko">방식</span>
+          <span data-lang="en">Mode</span>
+        </span>
+        <span class="seminar-meta-value">
+          <span data-lang="ko">온/오프라인 병행</span>
+          <span data-lang="en">Hybrid</span>
+        </span>
       </div>
+      
       <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">참가비</span><span data-lang="en">Fee</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">무료 (비회원 포함)</span><span data-lang="en">Free (members &amp; non-members)</span></span>
+        <span class="seminar-meta-label">
+          <span data-lang="ko">참가비</span>
+          <span data-lang="en">Fee</span>
+        </span>
+        <span class="seminar-meta-value">
+          <span data-lang="ko">무료 (비회원 포함)</span>
+          <span data-lang="en">Free (members &amp; non-members)</span>
+        </span>
       </div>
+      
     </div>
   </div>
-
-  <!-- Research Ethics Seminar -->
+  
   <div class="seminar-series-card">
     <div class="seminar-series-header">
       <div class="seminar-series-icon">📋</div>
@@ -621,26 +719,54 @@
       <span data-lang="en">A regular educational seminar to foster sound research ethics awareness among researchers. Topics include plagiarism, fabrication and falsification, authorship, and conflict of interest — the essential research ethics knowledge every researcher needs. Strongly recommended for researchers submitting to KSPAI journals.</span>
     </p>
     <div class="seminar-meta-row">
+      
       <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">빈도</span><span data-lang="en">Frequency</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">연 2회 (예정)</span><span data-lang="en">Twice yearly (planned)</span></span>
+        <span class="seminar-meta-label">
+          <span data-lang="ko">빈도</span>
+          <span data-lang="en">Frequency</span>
+        </span>
+        <span class="seminar-meta-value">
+          <span data-lang="ko">연 2회 (예정)</span>
+          <span data-lang="en">Twice yearly (planned)</span>
+        </span>
       </div>
+      
       <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">형식</span><span data-lang="en">Format</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">강의 + 사례 토론</span><span data-lang="en">Lecture + case discussion</span></span>
+        <span class="seminar-meta-label">
+          <span data-lang="ko">형식</span>
+          <span data-lang="en">Format</span>
+        </span>
+        <span class="seminar-meta-value">
+          <span data-lang="ko">강의 + 사례 토론</span>
+          <span data-lang="en">Lecture + case discussion</span>
+        </span>
       </div>
+      
       <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">방식</span><span data-lang="en">Mode</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">온라인</span><span data-lang="en">Online</span></span>
+        <span class="seminar-meta-label">
+          <span data-lang="ko">방식</span>
+          <span data-lang="en">Mode</span>
+        </span>
+        <span class="seminar-meta-value">
+          <span data-lang="ko">온라인</span>
+          <span data-lang="en">Online</span>
+        </span>
       </div>
+      
       <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">참가비</span><span data-lang="en">Fee</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">무료</span><span data-lang="en">Free</span></span>
+        <span class="seminar-meta-label">
+          <span data-lang="ko">참가비</span>
+          <span data-lang="en">Fee</span>
+        </span>
+        <span class="seminar-meta-value">
+          <span data-lang="ko">무료</span>
+          <span data-lang="en">Free</span>
+        </span>
       </div>
+      
     </div>
   </div>
-
-  <!-- Industry-Academia Workshop -->
+  
   <div class="seminar-series-card">
     <div class="seminar-series-header">
       <div class="seminar-series-icon">🏭</div>
@@ -657,22 +783,43 @@
       <span data-lang="en">A practice-oriented workshop bringing together professionals from Physical AI companies, research institutes, and universities. The workshop connects real-world technical challenges with academic research outcomes and explores opportunities for joint research and technology transfer.</span>
     </p>
     <div class="seminar-meta-row">
+      
       <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">빈도</span><span data-lang="en">Frequency</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">연 1–2회 (예정)</span><span data-lang="en">1–2 times yearly (planned)</span></span>
+        <span class="seminar-meta-label">
+          <span data-lang="ko">빈도</span>
+          <span data-lang="en">Frequency</span>
+        </span>
+        <span class="seminar-meta-value">
+          <span data-lang="ko">연 1–2회 (예정)</span>
+          <span data-lang="en">1–2 times yearly (planned)</span>
+        </span>
       </div>
+      
       <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">형식</span><span data-lang="en">Format</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">발표 + 네트워킹</span><span data-lang="en">Presentations + networking</span></span>
+        <span class="seminar-meta-label">
+          <span data-lang="ko">형식</span>
+          <span data-lang="en">Format</span>
+        </span>
+        <span class="seminar-meta-value">
+          <span data-lang="ko">발표 + 네트워킹</span>
+          <span data-lang="en">Presentations + networking</span>
+        </span>
       </div>
+      
       <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">방식</span><span data-lang="en">Mode</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">오프라인 (서울/대전 권역)</span><span data-lang="en">In-person (Seoul/Daejeon area)</span></span>
+        <span class="seminar-meta-label">
+          <span data-lang="ko">방식</span>
+          <span data-lang="en">Mode</span>
+        </span>
+        <span class="seminar-meta-value">
+          <span data-lang="ko">오프라인 (서울/대전 권역)</span>
+          <span data-lang="en">In-person (Seoul/Daejeon area)</span>
+        </span>
       </div>
+      
     </div>
   </div>
-
-  <!-- Special Lecture -->
+  
   <div class="seminar-series-card">
     <div class="seminar-series-header">
       <div class="seminar-series-icon">🌍</div>
@@ -689,20 +836,43 @@
       <span data-lang="en">A special lecture series featuring invited talks by internationally distinguished researchers. This series provides Korean researchers with direct access to global Physical AI research trends. Lectures are conducted in English; Korean interpretation may be provided.</span>
     </p>
     <div class="seminar-meta-row">
+      
       <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">빈도</span><span data-lang="en">Frequency</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">비정기</span><span data-lang="en">Irregular</span></span>
+        <span class="seminar-meta-label">
+          <span data-lang="ko">빈도</span>
+          <span data-lang="en">Frequency</span>
+        </span>
+        <span class="seminar-meta-value">
+          <span data-lang="ko">비정기</span>
+          <span data-lang="en">Irregular</span>
+        </span>
       </div>
+      
       <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">언어</span><span data-lang="en">Language</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">영어 (통역 제공 가능)</span><span data-lang="en">English (with possible interpretation)</span></span>
+        <span class="seminar-meta-label">
+          <span data-lang="ko">언어</span>
+          <span data-lang="en">Language</span>
+        </span>
+        <span class="seminar-meta-value">
+          <span data-lang="ko">영어 (통역 제공 가능)</span>
+          <span data-lang="en">English (with possible interpretation)</span>
+        </span>
       </div>
+      
       <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">방식</span><span data-lang="en">Mode</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">온/오프라인 병행</span><span data-lang="en">Hybrid</span></span>
+        <span class="seminar-meta-label">
+          <span data-lang="ko">방식</span>
+          <span data-lang="en">Mode</span>
+        </span>
+        <span class="seminar-meta-value">
+          <span data-lang="ko">온/오프라인 병행</span>
+          <span data-lang="en">Hybrid</span>
+        </span>
       </div>
+      
     </div>
   </div>
+  
 
 </div>
 
@@ -715,6 +885,7 @@
     <span data-lang="en">Upcoming Seminars</span>
   </h2>
 
+  
   <div class="coming-soon-banner">
     <span>📅</span>
     <div>
@@ -722,6 +893,7 @@
       <span data-lang="en"><strong>Seminar schedules will be announced after the inaugural general assembly.</strong> Updates will be posted on the News page and distributed by email.</span>
     </div>
   </div>
+  
 
   <div class="section-actions">
     <a href="/news/" class="btn btn-primary btn-sm">
@@ -744,6 +916,7 @@
     <span data-lang="en">Past Seminars</span>
   </h2>
 
+  
   <div class="coming-soon-banner">
     <span>📂</span>
     <div>
@@ -751,6 +924,7 @@
       <span data-lang="en">Records of past seminars will appear here starting from the first event after the Society's official establishment.</span>
     </div>
   </div>
+  
 </div>
 
 <!-- ════════════════════════════════

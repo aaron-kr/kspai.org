@@ -1,18 +1,49 @@
 <section id="join" class="cta-section">
+  <div class="cta-bg-layer" aria-hidden="true">
+    <div class="cta-bg-orb cta-bg-orb--1"></div>
+    <div class="cta-bg-orb cta-bg-orb--2"></div>
+    <div class="cta-grid-overlay"></div>
+  </div>
   <div class="container">
-    <div class="cta-box">
-      <div class="section-label mono" style="text-align:center;" data-i18n="cta.label">Membership</div>
-      <h2 class="cta-title" data-i18n="cta.title" data-i18n-html>
-        함께 만들어가는<br>피지컬 AI의 미래
-      </h2>
-      <p class="cta-desc" data-i18n="cta.desc">
-        연구자, 교육자, 대학원생, 산업체 관계자 등 피지컬 AI에 관심 있는 모든 분의 참여를 환영합니다.
-      </p>
-      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;">
-        <a href="{{ '/join/' | relative_url }}" class="btn btn-primary en" data-i18n="cta.btn.join">
-          회원가입 안내 →
-        </a>
-        <a href="{{ '/contact/' | relative_url }}" class="btn btn-outline" data-i18n="cta.btn.contact">연락처 보기</a>
+    <div class="cta-inner">
+      <div class="cta-content">
+        <div class="section-label mono" data-i18n="cta.label">Membership</div>
+        <h2 class="cta-title" data-i18n="cta.title" data-i18n-html>
+          함께 만들어가는<br>피지컬 AI의 미래
+        </h2>
+        <p class="cta-desc" data-i18n="cta.desc">
+          연구자, 교육자, 대학원생, 산업체 관계자 등 피지컬 AI에 관심 있는 모든 분의 참여를 환영합니다.
+        </p>
+        <div class="cta-actions">
+          <a href="{{ '/join/' | relative_url }}" class="btn btn-cta-primary" data-i18n="cta.btn.join">
+            회원가입 안내 →
+          </a>
+          <a href="{{ '/contact/' | relative_url }}" class="btn btn-cta-outline" data-i18n="cta.btn.contact">연락처 보기</a>
+        </div>
+      </div>
+      <div class="cta-visual" aria-hidden="true">
+        <div class="cta-stat-grid">
+          <div class="cta-stat">
+            <span class="cta-stat-num">11</span>
+            <span class="cta-stat-label" data-lang="ko">연구 분야</span>
+            <span class="cta-stat-label" data-lang="en">Research Areas</span>
+          </div>
+          <div class="cta-stat">
+            <span class="cta-stat-num">2</span>
+            <span class="cta-stat-label" data-lang="ko">연간 학술지 발행</span>
+            <span class="cta-stat-label" data-lang="en">Journal Issues / Year</span>
+          </div>
+          <div class="cta-stat">
+            <span class="cta-stat-num">∞</span>
+            <span class="cta-stat-label" data-lang="ko">성장 가능성</span>
+            <span class="cta-stat-label" data-lang="en">Growth Potential</span>
+          </div>
+          <div class="cta-stat">
+            <span class="cta-stat-num">1</span>
+            <span class="cta-stat-label" data-lang="ko">학술대회 · 2026</span>
+            <span class="cta-stat-label" data-lang="en">Conference · 2026</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>

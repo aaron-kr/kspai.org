@@ -1,0 +1,10 @@
+<!-- Scope tag cloud pulled from _data/research.yml.
+     Pass show_emoji=true to include emoji prefixes (About page only). -->
+<div class="scope-tags">
+  {% for area in site.data.research %}
+  <span class="scope-tag">
+    <span data-lang="ko">{% if include.show_emoji %}{{ area.emoji }} {% endif %}{{ area.scope_tag_ko }}</span>
+    <span data-lang="en">{% if include.show_emoji %}{{ area.emoji }} {% endif %}{{ area.scope_tag_en }}</span>
+  </span>
+  {% endfor %}
+</div>

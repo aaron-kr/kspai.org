@@ -21,15 +21,8 @@ president:
   note_en: To be elected at the inaugural general assembly
 
 vice_presidents:
-  - role_ko: 이사회 부의장 겸 학술부회장
-    role_en: Board Vice-Chair & VP, Academic Affairs
-    name_ko: 에런스노버거
-    name_en: Aaron Snowberger
-    affil_ko: 국립한밭대학교
-    affil_en: Hanbat National University
-
-  - role_ko: 이사회 의장 겸 총무부회장
-    role_en: Board Chair & VP, General Affairs
+  - role_ko: 총무부회장
+    role_en: VP, General Affairs
     name_ko: 김세민
     name_en: Semin Kim
     affil_ko: 전주교육대학교
@@ -45,6 +38,13 @@ vice_presidents:
     affil_en: Mokpo National University
     note_ko: 편집위원장
     note_en: Editor-in-Chief
+
+  - role_ko: 학술부회장
+    role_en: VP, Academic Affairs
+    name_ko: 에런스노버거
+    name_en: Aaron Snowberger
+    affil_ko: 국립한밭대학교
+    affil_en: Hanbat National University
 
   - role_ko: 대외협력부회장
     role_en: VP, External Relations

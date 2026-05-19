@@ -245,6 +245,46 @@
           <button class="nav-link nav-dropdown-toggle"
                   aria-expanded="false"
                   aria-haspopup="true"
+                  data-i18n="nav.resources">
+            <span data-lang="ko">자료</span>
+            <span data-lang="en">Resources</span>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <div class="nav-dropdown-inner">
+              
+                
+                <a href="/resources/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">자료실</span>
+                  <span data-lang="en">Downloads</span>
+                </a>
+                
+              
+                
+                <a href="/gallery/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">갤러리</span>
+                  <span data-lang="en">Gallery</span>
+                </a>
+                
+              
+            </div>
+          </div>
+        </li>
+
+      
+      
+      
+
+        <!-- Dropdown item -->
+        <li class="nav-item nav-item--dropdown">
+          <button class="nav-link nav-dropdown-toggle"
+                  aria-expanded="false"
+                  aria-haspopup="true"
                   data-i18n="nav.participate">
             <span data-lang="ko">참여</span>
             <span data-lang="en">Participate</span>
@@ -426,6 +466,36 @@
             <span data-lang="en">News</span>
           </a>
         </div>
+        
+
+      
+
+        
+        <!-- Mobile dropdown group -->
+        <div class="mobile-menu-group">
+          <div class="mobile-menu-group-title">
+            <span data-lang="ko">자료</span>
+            <span data-lang="en">Resources</span>
+          </div>
+          
+            
+            <a href="/resources/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">자료실</span>
+              <span data-lang="en">Downloads</span>
+            </a>
+            
+          
+            
+            <a href="/gallery/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">갤러리</span>
+              <span data-lang="en">Gallery</span>
+            </a>
+            
+          
+        </div>
+
         
 
       
@@ -637,22 +707,13 @@
     <span data-lang="en">Research Scope</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko">아래 6개 분과 및 이와 융합된 분야의 논문을 접수합니다. 투고 분야는 투고 시 명시하여야 하며, 편집위원회에서 최종 결정합니다.</span>
-    <span data-lang="en">Papers in the following six tracks and related interdisciplinary areas are welcome. Authors must indicate the relevant track at submission; the editorial board makes the final determination.</span>
+    <span data-lang="ko">아래 11개 분과 및 이와 융합된 분야의 논문을 접수합니다. 투고 분야는 투고 시 명시하여야 하며, 편집위원회에서 최종 결정합니다.</span>
+    <span data-lang="en">Papers in the following 11 tracks and related interdisciplinary areas are welcome. Authors must indicate the relevant track at submission; the editorial board makes the final determination.</span>
   </p>
   <div class="submit-scope-grid">
+    
     <div class="submit-scope-item">
       <span class="research-num">01</span>
-      <div>
-        <strong><span data-lang="ko">로보틱스 분과</span><span data-lang="en">Robotics Track</span></strong>
-        <div class="submit-scope-sub">
-          <span data-lang="ko">로보틱스 및 자율이동</span>
-          <span data-lang="en">Robotics &amp; Autonomous Mobility</span>
-        </div>
-      </div>
-    </div>
-    <div class="submit-scope-item">
-      <span class="research-num">02</span>
       <div>
         <strong><span data-lang="ko">체화지능 분과</span><span data-lang="en">Embodied Intelligence Track</span></strong>
         <div class="submit-scope-sub">
@@ -661,18 +722,20 @@
         </div>
       </div>
     </div>
+    
     <div class="submit-scope-item">
-      <span class="research-num">03</span>
+      <span class="research-num">02</span>
       <div>
-        <strong><span data-lang="ko">자율시스템 분과</span><span data-lang="en">Autonomous Systems Track</span></strong>
+        <strong><span data-lang="ko">자율 로보틱스 분과</span><span data-lang="en">Autonomous Robotics Track</span></strong>
         <div class="submit-scope-sub">
-          <span data-lang="ko">자율시스템 설계 및 제어</span>
-          <span data-lang="en">Autonomous System Design &amp; Control</span>
+          <span data-lang="ko">로보틱스, 휴머노이드 및 자율이동</span>
+          <span data-lang="en">Robotics, Humanoids &amp; Autonomous Mobility</span>
         </div>
       </div>
     </div>
+    
     <div class="submit-scope-item">
-      <span class="research-num">04</span>
+      <span class="research-num">03</span>
       <div>
         <strong><span data-lang="ko">디지털 트윈 분과</span><span data-lang="en">Digital Twin Track</span></strong>
         <div class="submit-scope-sub">
@@ -681,26 +744,95 @@
         </div>
       </div>
     </div>
+    
+    <div class="submit-scope-item">
+      <span class="research-num">04</span>
+      <div>
+        <strong><span data-lang="ko">센서 융합·인지 분과</span><span data-lang="en">Sensor Fusion &amp; Perception Track</span></strong>
+        <div class="submit-scope-sub">
+          <span data-lang="ko">다중 감각 데이터 통합 및 물리 세계 인지</span>
+          <span data-lang="en">Multimodal Sensing &amp; Physical World Understanding</span>
+        </div>
+      </div>
+    </div>
+    
     <div class="submit-scope-item">
       <span class="research-num">05</span>
       <div>
-        <strong><span data-lang="ko">인간-로봇 상호작용 분과</span><span data-lang="en">HRI Track</span></strong>
+        <strong><span data-lang="ko">산업 응용 분과</span><span data-lang="en">Industrial Applications Track</span></strong>
         <div class="submit-scope-sub">
-          <span data-lang="ko">인간-로봇 상호작용 및 인터페이스</span>
-          <span data-lang="en">Human-Robot Interaction &amp; Interface</span>
+          <span data-lang="ko">스마트 제조, 물류 자동화, 스마트 공간</span>
+          <span data-lang="en">Smart Manufacturing, Logistics Automation, Intelligent Spaces</span>
         </div>
       </div>
     </div>
+    
     <div class="submit-scope-item">
       <span class="research-num">06</span>
       <div>
-        <strong><span data-lang="ko">피지컬 AI 교육 분과</span><span data-lang="en">Education Track</span></strong>
+        <strong><span data-lang="ko">AI 안전·윤리·인문학 분과</span><span data-lang="en">AI Safety, Ethics &amp; Humanities Track</span></strong>
         <div class="submit-scope-sub">
-          <span data-lang="ko">피지컬 AI 교육·커리큘럼 연구</span>
-          <span data-lang="en">Physical AI Education &amp; Curriculum</span>
+          <span data-lang="ko">피지컬AI 안전, 윤리, 인문학적 접근</span>
+          <span data-lang="en">Physical AI Safety, Ethics &amp; Humanistic Approaches</span>
         </div>
       </div>
     </div>
+    
+    <div class="submit-scope-item">
+      <span class="research-num">07</span>
+      <div>
+        <strong><span data-lang="ko">영상처리 분과</span><span data-lang="en">Image Processing Track</span></strong>
+        <div class="submit-scope-sub">
+          <span data-lang="ko">영상처리, 컴퓨터 비전 및 물리 공간 인지</span>
+          <span data-lang="en">Image Processing, Computer Vision &amp; Physical Scene Understanding</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="submit-scope-item">
+      <span class="research-num">08</span>
+      <div>
+        <strong><span data-lang="ko">피지컬AI 교육 분과</span><span data-lang="en">Physical AI Education Track</span></strong>
+        <div class="submit-scope-sub">
+          <span data-lang="ko">피지컬AI 교육과정 및 교육 방법론</span>
+          <span data-lang="en">Physical AI Curriculum Design &amp; Pedagogy</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="submit-scope-item">
+      <span class="research-num">09</span>
+      <div>
+        <strong><span data-lang="ko">피지컬AI 융합·창업 분과</span><span data-lang="en">Physical AI Convergence &amp; Entrepreneurship Track</span></strong>
+        <div class="submit-scope-sub">
+          <span data-lang="ko">산학 융합, 기술 이전, 스타트업 생태계</span>
+          <span data-lang="en">Industry-Academia Convergence, Tech Transfer &amp; Startups</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="submit-scope-item">
+      <span class="research-num">10</span>
+      <div>
+        <strong><span data-lang="ko">국방 피지컬AI 분과</span><span data-lang="en">Defense Physical AI Track</span></strong>
+        <div class="submit-scope-sub">
+          <span data-lang="ko">국방 자율시스템, 군사 로봇, 전장 인식</span>
+          <span data-lang="en">Defense Autonomous Systems, Military Robotics &amp; Battlefield Awareness</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="submit-scope-item">
+      <span class="research-num">11</span>
+      <div>
+        <strong><span data-lang="ko">보건의료 피지컬AI 분과</span><span data-lang="en">Healthcare Physical AI Track</span></strong>
+        <div class="submit-scope-sub">
+          <span data-lang="ko">수술 로봇, 재활 보조, 의료 영상 분석</span>
+          <span data-lang="en">Surgical Robotics, Rehabilitation Assistive Devices &amp; Medical Imaging</span>
+        </div>
+      </div>
+    </div>
+    
   </div>
 </div>
 

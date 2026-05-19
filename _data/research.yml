@@ -1,6 +1,19 @@
-# Research areas data
-# Add a new area by copying a block below.
-# The site will automatically render it in the Research section.
+# ═══════════════════════════════════════════════════════════════
+#  _data/research.yml — Single source of truth for research areas
+#
+#  Fields used across the site:
+#    num          → research cards (homepage, research page)
+#    title_ko/en  → research cards, research page full listing
+#    subtitle_ko/en → cross-language subtitle on cards
+#    desc_ko/en   → research card body text
+#    emoji        → About page scope tags only
+#    scope_tag_ko/en → About page scope tag labels (short)
+#    track_ko/en  → Journal page 제4조 track list, Submit page scope grid
+#    track_sub_ko/en → Submit page track subtitle / journal sub-field
+#    editorial_division_ko/en → links this area to the editorial board
+#
+#  To add a new area: copy a block, increment num, fill all fields.
+# ═══════════════════════════════════════════════════════════════
 
 - num: "01"
   title_ko: "체화 지능"
@@ -9,6 +22,13 @@
   subtitle_en: "체화 지능"
   desc_ko: "물리적 신체를 통해 환경과 상호작용하며 학습하는 AI 시스템 연구. 감각-운동 통합과 인지 발달 모델링."
   desc_en: "AI systems that learn through physical interaction with their environment. Research on sensorimotor integration and cognitive development modeling."
+  emoji: "🧠"
+  scope_tag_ko: "체화지능"
+  scope_tag_en: "Embodied Intelligence"
+  track_ko: "체화지능 분과"
+  track_en: "Embodied Intelligence Track"
+  track_sub_ko: "체화지능 및 감각운동 통합"
+  track_sub_en: "Embodied AI & Sensorimotor Integration"
 
 - num: "02"
   title_ko: "자율 로보틱스"
@@ -17,6 +37,13 @@
   subtitle_en: "자율 로보틱스"
   desc_ko: "범용 로봇, 휴머노이드, 자율주행 시스템 등 물리적 환경에서 자율적으로 동작하는 지능형 시스템."
   desc_en: "Intelligent systems operating autonomously in physical environments, including general-purpose robots, humanoids, and autonomous vehicles."
+  emoji: "🤖"
+  scope_tag_ko: "자율 로보틱스"
+  scope_tag_en: "Autonomous Robotics"
+  track_ko: "자율 로보틱스 분과"
+  track_en: "Autonomous Robotics Track"
+  track_sub_ko: "로보틱스, 휴머노이드 및 자율이동"
+  track_sub_en: "Robotics, Humanoids & Autonomous Mobility"
 
 - num: "03"
   title_ko: "디지털 트윈 & 시뮬레이션"
@@ -25,6 +52,13 @@
   subtitle_en: "디지털 트윈 & 시뮬레이션"
   desc_ko: "물리 기반 시뮬레이션, 합성 데이터 생성, 가상 환경에서의 AI 훈련 및 검증 기술."
   desc_en: "Physics-based simulation, synthetic data generation, and AI training and validation in virtual environments."
+  emoji: "🪞"
+  scope_tag_ko: "디지털 트윈"
+  scope_tag_en: "Digital Twin"
+  track_ko: "디지털 트윈 분과"
+  track_en: "Digital Twin Track"
+  track_sub_ko: "디지털 트윈 모델링 및 응용"
+  track_sub_en: "Digital Twin Modeling & Applications"
 
 - num: "04"
   title_ko: "센서 융합 & 인지"
@@ -33,6 +67,13 @@
   subtitle_en: "센서 융합 & 인지"
   desc_ko: "시각, 촉각, 청각 등 다중 감각 데이터의 통합 처리와 물리 세계의 이해 기술."
   desc_en: "Integrated processing of multimodal sensory data — vision, touch, and audio — for understanding the physical world."
+  emoji: "📡"
+  scope_tag_ko: "센서 융합·인지"
+  scope_tag_en: "Sensor Fusion & Perception"
+  track_ko: "센서 융합·인지 분과"
+  track_en: "Sensor Fusion & Perception Track"
+  track_sub_ko: "다중 감각 데이터 통합 및 물리 세계 인지"
+  track_sub_en: "Multimodal Sensing & Physical World Understanding"
 
 - num: "05"
   title_ko: "산업 응용"
@@ -41,14 +82,28 @@
   subtitle_en: "산업 응용"
   desc_ko: "스마트 제조, 의료 로봇, 물류 자동화, 스마트 공간 등 산업 현장에서의 피지컬 AI 적용."
   desc_en: "Applying Physical AI in industry: smart manufacturing, medical robotics, logistics automation, and intelligent spaces."
+  emoji: "🏭"
+  scope_tag_ko: "산업 응용"
+  scope_tag_en: "Industrial Applications"
+  track_ko: "산업 응용 분과"
+  track_en: "Industrial Applications Track"
+  track_sub_ko: "스마트 제조, 물류 자동화, 스마트 공간"
+  track_sub_en: "Smart Manufacturing, Logistics Automation, Intelligent Spaces"
 
 - num: "06"
   title_ko: "AI 안전 & 윤리"
-  title_en: "Safety & Ethics"
+  title_en: "AI Safety & Ethics"
   subtitle_ko: "Safety & Ethics"
   subtitle_en: "AI 안전 & 윤리"
   desc_ko: "물리적 AI 시스템의 안전성, 인간-로봇 상호작용의 윤리적 프레임워크, 규제 및 표준화."
   desc_en: "Safety of physical AI systems, ethical frameworks for human-robot interaction, regulation, and standardization."
+  emoji: "⚖️"
+  scope_tag_ko: "AI 안전·윤리·인문"
+  scope_tag_en: "AI Safety, Ethics & Humanities"
+  track_ko: "AI 안전·윤리·인문학 분과"
+  track_en: "AI Safety, Ethics & Humanities Track"
+  track_sub_ko: "피지컬AI 안전, 윤리, 인문학적 접근"
+  track_sub_en: "Physical AI Safety, Ethics & Humanistic Approaches"
   editorial_division_ko: "피지컬AI윤리및인문학"
   editorial_division_en: "Physical AI Ethics & Humanities"
 
@@ -59,6 +114,13 @@
   subtitle_en: "영상처리 & 컴퓨터 비전"
   desc_ko: "카메라, 라이다, 깊이 센서 등을 활용한 영상 취득·처리·분석 기술과 물리 공간 인식을 위한 컴퓨터 비전 응용 연구."
   desc_en: "Acquisition, processing, and analysis of visual data using cameras, LiDAR, and depth sensors — and computer vision applications for physical-world perception."
+  emoji: "🎥"
+  scope_tag_ko: "영상처리·컴퓨터 비전"
+  scope_tag_en: "Image Processing & Vision"
+  track_ko: "영상처리 분과"
+  track_en: "Image Processing Track"
+  track_sub_ko: "영상처리, 컴퓨터 비전 및 물리 공간 인지"
+  track_sub_en: "Image Processing, Computer Vision & Physical Scene Understanding"
   editorial_division_ko: "피지컬AI영상처리"
   editorial_division_en: "Physical AI Image Processing"
 
@@ -69,6 +131,13 @@
   subtitle_en: "피지컬AI 교육"
   desc_ko: "피지컬 AI 개념의 교육과정 개발, 교사 역량 강화, 초·중·고 및 대학 교육에서의 로봇·AI 융합 교육 방법론 연구."
   desc_en: "Curriculum development for Physical AI concepts, teacher capacity building, and research on integrating robotics and AI into K-12 and university education."
+  emoji: "📚"
+  scope_tag_ko: "피지컬AI 교육"
+  scope_tag_en: "Physical AI Education"
+  track_ko: "피지컬AI 교육 분과"
+  track_en: "Physical AI Education Track"
+  track_sub_ko: "피지컬AI 교육과정 및 교육 방법론"
+  track_sub_en: "Physical AI Curriculum Design & Pedagogy"
   editorial_division_ko: "피지컬AI교육"
   editorial_division_en: "Physical AI Education"
 
@@ -79,6 +148,13 @@
   subtitle_en: "피지컬AI 융합 & 창업"
   desc_ko: "피지컬 AI 기술의 산학 융합, 스타트업 생태계, 기술 이전·사업화, 그리고 물리-디지털 융합 혁신 사례 연구."
   desc_en: "Industry-academia convergence, startup ecosystems, technology transfer and commercialization, and case studies of physical-digital innovation."
+  emoji: "🚀"
+  scope_tag_ko: "피지컬AI 융합·창업"
+  scope_tag_en: "Convergence & Entrepreneurship"
+  track_ko: "피지컬AI 융합·창업 분과"
+  track_en: "Physical AI Convergence & Entrepreneurship Track"
+  track_sub_ko: "산학 융합, 기술 이전, 스타트업 생태계"
+  track_sub_en: "Industry-Academia Convergence, Tech Transfer & Startups"
   editorial_division_ko: "피지컬AI융합및창업"
   editorial_division_en: "Physical AI Convergence & Entrepreneurship"
 
@@ -89,6 +165,13 @@
   subtitle_en: "국방 피지컬AI"
   desc_ko: "자율 무기 체계, 군사용 로봇·드론, 국방 물류 자동화, 전장 상황인식 등 국방 분야의 피지컬 AI 응용 연구."
   desc_en: "Physical AI applications in defense: autonomous weapons systems, military robots and drones, defense logistics automation, and battlefield situational awareness."
+  emoji: "🛡️"
+  scope_tag_ko: "국방 피지컬AI"
+  scope_tag_en: "Defense Physical AI"
+  track_ko: "국방 피지컬AI 분과"
+  track_en: "Defense Physical AI Track"
+  track_sub_ko: "국방 자율시스템, 군사 로봇, 전장 인식"
+  track_sub_en: "Defense Autonomous Systems, Military Robotics & Battlefield Awareness"
   editorial_division_ko: "국방피지컬AI"
   editorial_division_en: "Defense Physical AI"
 
@@ -99,5 +182,12 @@
   subtitle_en: "보건의료 피지컬AI"
   desc_ko: "수술 로봇, 재활 보조 기기, 의료 영상 분석, 원격 진료 시스템 등 보건·의료 분야 피지컬 AI 적용 연구."
   desc_en: "Physical AI in healthcare: surgical robots, rehabilitation assistive devices, medical image analysis, and telemedicine systems."
+  emoji: "🏥"
+  scope_tag_ko: "보건의료 피지컬AI"
+  scope_tag_en: "Healthcare Physical AI"
+  track_ko: "보건의료 피지컬AI 분과"
+  track_en: "Healthcare Physical AI Track"
+  track_sub_ko: "수술 로봇, 재활 보조, 의료 영상 분석"
+  track_sub_en: "Surgical Robotics, Rehabilitation Assistive Devices & Medical Imaging"
   editorial_division_ko: "보건의료피지컬AI"
   editorial_division_en: "Healthcare Physical AI"

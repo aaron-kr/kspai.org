@@ -1,0 +1,110 @@
+# ═══════════════════════════════════════════════════════════════
+#  _data/seminars.yml — Seminar series definitions & event lists
+#
+#  series[]   → recurring seminar formats (shown as cards)
+#  upcoming[] → scheduled events (shown in 예정 세미나 section)
+#  past[]     → completed events (shown in 지난 세미나 section)
+# ═══════════════════════════════════════════════════════════════
+
+series:
+  - id: colloquium
+    icon: "🎙️"
+    name_ko: "KSPAI 콜로퀴엄"
+    name_en: "KSPAI Colloquium"
+    subtitle_en: "KSPAI Colloquium Series"
+    desc_ko: "피지컬 AI 분야의 저명 연구자를 초청하여 진행하는 학술 콜로퀴엄입니다. 최신 연구 동향과 미래 방향성을 심층적으로 논의하며, 발표 후 자유로운 질의응답 시간을 갖습니다. 매월 1회 온/오프라인 병행 방식으로 진행될 예정입니다."
+    desc_en: "An academic colloquium series featuring invited talks by distinguished researchers in Physical AI. Sessions explore the latest research trends and future directions, with open Q&A following each presentation. Planned as a monthly hybrid (in-person + online) event."
+    meta:
+      - label_ko: "빈도"
+        label_en: "Frequency"
+        value_ko: "월 1회 (예정)"
+        value_en: "Monthly (planned)"
+      - label_ko: "형식"
+        label_en: "Format"
+        value_ko: "초청 강연 + 질의응답"
+        value_en: "Invited talk + Q&A"
+      - label_ko: "방식"
+        label_en: "Mode"
+        value_ko: "온/오프라인 병행"
+        value_en: "Hybrid"
+      - label_ko: "참가비"
+        label_en: "Fee"
+        value_ko: "무료 (비회원 포함)"
+        value_en: "Free (members & non-members)"
+
+  - id: ethics
+    icon: "📋"
+    name_ko: "연구윤리 세미나"
+    name_en: "Research Ethics Seminar"
+    subtitle_en: "Research Ethics Education Series"
+    desc_ko: "연구자들의 올바른 연구 윤리 의식 함양을 위한 정기 교육 세미나입니다. 표절, 위조·변조, 저자 표시, 이해충돌 등 연구자가 반드시 알아야 할 연구윤리 사항을 다룹니다. 한국피지컬인공지능학회에 논문을 투고하는 연구자에게 적극 권장합니다."
+    desc_en: "A regular educational seminar to foster sound research ethics awareness among researchers. Topics include plagiarism, fabrication and falsification, authorship, and conflict of interest — the essential research ethics knowledge every researcher needs. Strongly recommended for researchers submitting to KSPAI journals."
+    meta:
+      - label_ko: "빈도"
+        label_en: "Frequency"
+        value_ko: "연 2회 (예정)"
+        value_en: "Twice yearly (planned)"
+      - label_ko: "형식"
+        label_en: "Format"
+        value_ko: "강의 + 사례 토론"
+        value_en: "Lecture + case discussion"
+      - label_ko: "방식"
+        label_en: "Mode"
+        value_ko: "온라인"
+        value_en: "Online"
+      - label_ko: "참가비"
+        label_en: "Fee"
+        value_ko: "무료"
+        value_en: "Free"
+
+  - id: industry-workshop
+    icon: "🏭"
+    name_ko: "산학연 워크숍"
+    name_en: "Industry–Academia Workshop"
+    subtitle_en: "Physical AI Industry-Academia-Research Workshop"
+    desc_ko: "피지컬 AI 관련 기업, 연구소, 대학의 전문가가 함께 참여하는 실무 중심 워크숍입니다. 산업 현장의 기술 문제와 학계의 연구 성과를 연결하고, 공동 연구 및 기술 이전의 기회를 모색합니다."
+    desc_en: "A practice-oriented workshop bringing together professionals from Physical AI companies, research institutes, and universities. The workshop connects real-world technical challenges with academic research outcomes and explores opportunities for joint research and technology transfer."
+    meta:
+      - label_ko: "빈도"
+        label_en: "Frequency"
+        value_ko: "연 1–2회 (예정)"
+        value_en: "1–2 times yearly (planned)"
+      - label_ko: "형식"
+        label_en: "Format"
+        value_ko: "발표 + 네트워킹"
+        value_en: "Presentations + networking"
+      - label_ko: "방식"
+        label_en: "Mode"
+        value_ko: "오프라인 (서울/대전 권역)"
+        value_en: "In-person (Seoul/Daejeon area)"
+
+  - id: international-lecture
+    icon: "🌍"
+    name_ko: "국제 특별 강연"
+    name_en: "International Special Lecture"
+    subtitle_en: "KSPAI International Distinguished Lecture"
+    desc_ko: "해외 저명 연구자를 초청하여 진행하는 특별 강연 시리즈입니다. 글로벌 피지컬 AI 연구 동향을 국내 연구자들과 직접 교류할 수 있는 기회를 제공합니다. 강연은 영어로 진행되며 한국어 통역이 제공될 수 있습니다."
+    desc_en: "A special lecture series featuring invited talks by internationally distinguished researchers. This series provides Korean researchers with direct access to global Physical AI research trends. Lectures are conducted in English; Korean interpretation may be provided."
+    meta:
+      - label_ko: "빈도"
+        label_en: "Frequency"
+        value_ko: "비정기"
+        value_en: "Irregular"
+      - label_ko: "언어"
+        label_en: "Language"
+        value_ko: "영어 (통역 제공 가능)"
+        value_en: "English (with possible interpretation)"
+      - label_ko: "방식"
+        label_en: "Mode"
+        value_ko: "온/오프라인 병행"
+        value_en: "Hybrid"
+
+# Upcoming scheduled events — add entries here as events are announced
+# Fields: title_ko, title_en, series_id, speaker, date, date_display_ko, date_display_en,
+#         location_ko, location_en, registration_url, registration_open
+upcoming: []
+
+# Past events — add entries here after events occur
+# Fields: title_ko, title_en, series_id, speaker, date, date_display_ko, date_display_en,
+#         recording_url (optional), slides_url (optional)
+past: []

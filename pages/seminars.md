@@ -27,7 +27,7 @@ permalink: /seminars/
 </div>
 
 <!-- ════════════════════════════════
-     SERIES CARDS
+     SERIES CARDS — data-driven from _data/seminars.yml
      ════════════════════════════════ -->
 <div class="page-section" id="series">
   <h2 class="page-section-title">
@@ -35,141 +35,38 @@ permalink: /seminars/
     <span data-lang="en">Regular Seminar Series</span>
   </h2>
 
-  <!-- KSPAI Colloquium -->
+  {% for series in site.data.seminars.series %}
   <div class="seminar-series-card">
     <div class="seminar-series-header">
-      <div class="seminar-series-icon">🎙️</div>
+      <div class="seminar-series-icon">{{ series.icon }}</div>
       <div>
         <div class="seminar-series-name">
-          <span data-lang="ko">KSPAI 콜로퀴엄</span>
-          <span data-lang="en">KSPAI Colloquium</span>
+          <span data-lang="ko">{{ series.name_ko }}</span>
+          <span data-lang="en">{{ series.name_en }}</span>
         </div>
-        <div class="seminar-series-en">KSPAI Colloquium Series</div>
+        <div class="seminar-series-en">{{ series.subtitle_en }}</div>
       </div>
     </div>
     <p class="seminar-series-desc">
-      <span data-lang="ko">피지컬 AI 분야의 저명 연구자를 초청하여 진행하는 학술 콜로퀴엄입니다. 최신 연구 동향과 미래 방향성을 심층적으로 논의하며, 발표 후 자유로운 질의응답 시간을 갖습니다. 매월 1회 온/오프라인 병행 방식으로 진행될 예정입니다.</span>
-      <span data-lang="en">An academic colloquium series featuring invited talks by distinguished researchers in Physical AI. Sessions explore the latest research trends and future directions, with open Q&amp;A following each presentation. Planned as a monthly hybrid (in-person + online) event.</span>
+      <span data-lang="ko">{{ series.desc_ko }}</span>
+      <span data-lang="en">{{ series.desc_en }}</span>
     </p>
     <div class="seminar-meta-row">
+      {% for meta in series.meta %}
       <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">빈도</span><span data-lang="en">Frequency</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">월 1회 (예정)</span><span data-lang="en">Monthly (planned)</span></span>
+        <span class="seminar-meta-label">
+          <span data-lang="ko">{{ meta.label_ko }}</span>
+          <span data-lang="en">{{ meta.label_en }}</span>
+        </span>
+        <span class="seminar-meta-value">
+          <span data-lang="ko">{{ meta.value_ko }}</span>
+          <span data-lang="en">{{ meta.value_en }}</span>
+        </span>
       </div>
-      <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">형식</span><span data-lang="en">Format</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">초청 강연 + 질의응답</span><span data-lang="en">Invited talk + Q&amp;A</span></span>
-      </div>
-      <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">방식</span><span data-lang="en">Mode</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">온/오프라인 병행</span><span data-lang="en">Hybrid</span></span>
-      </div>
-      <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">참가비</span><span data-lang="en">Fee</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">무료 (비회원 포함)</span><span data-lang="en">Free (members & non-members)</span></span>
-      </div>
+      {% endfor %}
     </div>
   </div>
-
-  <!-- Research Ethics Seminar -->
-  <div class="seminar-series-card">
-    <div class="seminar-series-header">
-      <div class="seminar-series-icon">📋</div>
-      <div>
-        <div class="seminar-series-name">
-          <span data-lang="ko">연구윤리 세미나</span>
-          <span data-lang="en">Research Ethics Seminar</span>
-        </div>
-        <div class="seminar-series-en">Research Ethics Education Series</div>
-      </div>
-    </div>
-    <p class="seminar-series-desc">
-      <span data-lang="ko">연구자들의 올바른 연구 윤리 의식 함양을 위한 정기 교육 세미나입니다. 표절, 위조·변조, 저자 표시, 이해충돌 등 연구자가 반드시 알아야 할 연구윤리 사항을 다룹니다. 한국피지컬인공지능학회에 논문을 투고하는 연구자에게 적극 권장합니다.</span>
-      <span data-lang="en">A regular educational seminar to foster sound research ethics awareness among researchers. Topics include plagiarism, fabrication and falsification, authorship, and conflict of interest — the essential research ethics knowledge every researcher needs. Strongly recommended for researchers submitting to KSPAI journals.</span>
-    </p>
-    <div class="seminar-meta-row">
-      <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">빈도</span><span data-lang="en">Frequency</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">연 2회 (예정)</span><span data-lang="en">Twice yearly (planned)</span></span>
-      </div>
-      <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">형식</span><span data-lang="en">Format</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">강의 + 사례 토론</span><span data-lang="en">Lecture + case discussion</span></span>
-      </div>
-      <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">방식</span><span data-lang="en">Mode</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">온라인</span><span data-lang="en">Online</span></span>
-      </div>
-      <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">참가비</span><span data-lang="en">Fee</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">무료</span><span data-lang="en">Free</span></span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Industry-Academia Workshop -->
-  <div class="seminar-series-card">
-    <div class="seminar-series-header">
-      <div class="seminar-series-icon">🏭</div>
-      <div>
-        <div class="seminar-series-name">
-          <span data-lang="ko">산학연 워크숍</span>
-          <span data-lang="en">Industry–Academia Workshop</span>
-        </div>
-        <div class="seminar-series-en">Physical AI Industry-Academia-Research Workshop</div>
-      </div>
-    </div>
-    <p class="seminar-series-desc">
-      <span data-lang="ko">피지컬 AI 관련 기업, 연구소, 대학의 전문가가 함께 참여하는 실무 중심 워크숍입니다. 산업 현장의 기술 문제와 학계의 연구 성과를 연결하고, 공동 연구 및 기술 이전의 기회를 모색합니다.</span>
-      <span data-lang="en">A practice-oriented workshop bringing together professionals from Physical AI companies, research institutes, and universities. The workshop connects real-world technical challenges with academic research outcomes and explores opportunities for joint research and technology transfer.</span>
-    </p>
-    <div class="seminar-meta-row">
-      <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">빈도</span><span data-lang="en">Frequency</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">연 1–2회 (예정)</span><span data-lang="en">1–2 times yearly (planned)</span></span>
-      </div>
-      <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">형식</span><span data-lang="en">Format</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">발표 + 네트워킹</span><span data-lang="en">Presentations + networking</span></span>
-      </div>
-      <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">방식</span><span data-lang="en">Mode</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">오프라인 (서울/대전 권역)</span><span data-lang="en">In-person (Seoul/Daejeon area)</span></span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Special Lecture -->
-  <div class="seminar-series-card">
-    <div class="seminar-series-header">
-      <div class="seminar-series-icon">🌍</div>
-      <div>
-        <div class="seminar-series-name">
-          <span data-lang="ko">국제 특별 강연</span>
-          <span data-lang="en">International Special Lecture</span>
-        </div>
-        <div class="seminar-series-en">KSPAI International Distinguished Lecture</div>
-      </div>
-    </div>
-    <p class="seminar-series-desc">
-      <span data-lang="ko">해외 저명 연구자를 초청하여 진행하는 특별 강연 시리즈입니다. 글로벌 피지컬 AI 연구 동향을 국내 연구자들과 직접 교류할 수 있는 기회를 제공합니다. 강연은 영어로 진행되며 한국어 통역이 제공될 수 있습니다.</span>
-      <span data-lang="en">A special lecture series featuring invited talks by internationally distinguished researchers. This series provides Korean researchers with direct access to global Physical AI research trends. Lectures are conducted in English; Korean interpretation may be provided.</span>
-    </p>
-    <div class="seminar-meta-row">
-      <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">빈도</span><span data-lang="en">Frequency</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">비정기</span><span data-lang="en">Irregular</span></span>
-      </div>
-      <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">언어</span><span data-lang="en">Language</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">영어 (통역 제공 가능)</span><span data-lang="en">English (with possible interpretation)</span></span>
-      </div>
-      <div class="seminar-meta-item">
-        <span class="seminar-meta-label"><span data-lang="ko">방식</span><span data-lang="en">Mode</span></span>
-        <span class="seminar-meta-value"><span data-lang="ko">온/오프라인 병행</span><span data-lang="en">Hybrid</span></span>
-      </div>
-    </div>
-  </div>
+  {% endfor %}
 
 </div>
 
@@ -182,6 +79,39 @@ permalink: /seminars/
     <span data-lang="en">Upcoming Seminars</span>
   </h2>
 
+  {% if site.data.seminars.upcoming.size > 0 %}
+  <div class="seminar-list">
+    {% for event in site.data.seminars.upcoming %}
+    <div class="seminar-list-item">
+      <span class="seminar-list-date">
+        <span data-lang="ko">{{ event.date_display_ko }}</span>
+        <span data-lang="en">{{ event.date_display_en }}</span>
+      </span>
+      <div class="seminar-list-body">
+        <div class="seminar-list-title">
+          <span data-lang="ko">{{ event.title_ko }}</span>
+          <span data-lang="en">{{ event.title_en }}</span>
+        </div>
+        {% if event.speaker %}
+        <div class="seminar-list-speaker">{{ event.speaker }}</div>
+        {% endif %}
+        {% if event.location_ko %}
+        <div class="seminar-list-speaker">
+          <span data-lang="ko">{{ event.location_ko }}</span>
+          <span data-lang="en">{{ event.location_en }}</span>
+        </div>
+        {% endif %}
+      </div>
+      {% if event.registration_open and event.registration_url %}
+      <a href="{{ event.registration_url }}" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+        <span data-lang="ko">신청하기</span>
+        <span data-lang="en">Register</span>
+      </a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
   <div class="coming-soon-banner">
     <span>📅</span>
     <div>
@@ -189,6 +119,7 @@ permalink: /seminars/
       <span data-lang="en"><strong>Seminar schedules will be announced after the inaugural general assembly.</strong> Updates will be posted on the News page and distributed by email.</span>
     </div>
   </div>
+  {% endif %}
 
   <div class="section-actions">
     <a href="/news/" class="btn btn-primary btn-sm">
@@ -211,6 +142,38 @@ permalink: /seminars/
     <span data-lang="en">Past Seminars</span>
   </h2>
 
+  {% if site.data.seminars.past.size > 0 %}
+  <div class="seminar-list">
+    {% for event in site.data.seminars.past %}
+    <div class="seminar-list-item">
+      <span class="seminar-list-date">
+        <span data-lang="ko">{{ event.date_display_ko }}</span>
+        <span data-lang="en">{{ event.date_display_en }}</span>
+      </span>
+      <div class="seminar-list-body">
+        <div class="seminar-list-title">
+          <span data-lang="ko">{{ event.title_ko }}</span>
+          <span data-lang="en">{{ event.title_en }}</span>
+        </div>
+        {% if event.speaker %}
+        <div class="seminar-list-speaker">{{ event.speaker }}</div>
+        {% endif %}
+      </div>
+      {% if event.recording_url %}
+      <a href="{{ event.recording_url }}" class="btn btn-outline btn-sm" target="_blank" rel="noopener">
+        <span data-lang="ko">녹화 보기</span>
+        <span data-lang="en">Watch Recording</span>
+      </a>
+      {% elsif event.slides_url %}
+      <a href="{{ event.slides_url }}" class="btn btn-outline btn-sm" target="_blank" rel="noopener">
+        <span data-lang="ko">자료 보기</span>
+        <span data-lang="en">View Slides</span>
+      </a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
   <div class="coming-soon-banner">
     <span>📂</span>
     <div>
@@ -218,6 +181,7 @@ permalink: /seminars/
       <span data-lang="en">Records of past seminars will appear here starting from the first event after the Society's official establishment.</span>
     </div>
   </div>
+  {% endif %}
 </div>
 
 <!-- ════════════════════════════════

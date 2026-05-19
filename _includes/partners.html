@@ -1,0 +1,27 @@
+{% assign active_partners = site.data.partners | where: "active", true %}
+{% if active_partners.size > 0 %}
+<section class="partners-section">
+  <div class="container">
+    <div class="partners-inner">
+      <div class="partners-label mono">
+        <span data-lang="ko">협력기관</span>
+        <span data-lang="en">Partners</span>
+      </div>
+      <div class="partners-list">
+        {% for partner in active_partners %}
+        <a href="{{ partner.url }}" class="partner-item" target="_blank" rel="noopener" title="{{ partner.name_ko }} / {{ partner.name_en }}">
+          {% if partner.logo != "" %}
+          <img src="{{ partner.logo }}" alt="{{ partner.name_en }}" class="partner-logo">
+          {% else %}
+          <span class="partner-name">
+            <span data-lang="ko">{{ partner.name_ko }}</span>
+            <span data-lang="en">{{ partner.name_en }}</span>
+          </span>
+          {% endif %}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

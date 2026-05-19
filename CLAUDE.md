@@ -245,13 +245,15 @@ exclude:
 | `/contact/` | `contact.md` | ✅ Live | Contact routing by topic |
 | `/officers/` | `officers.md` | ✅ Live | Founder/president hidden in HTML comment |
 | `/bylaws/` | `bylaws.md` | ✅ Live | Chapter outline, full text TBD |
-| `/conferences/` | `conferences.md` | ✅ Rebuilt | CFP guide + template download |
-| `/submit/` | `submit.md` | ✅ Rebuilt | Full submission guide + HWP template download |
-| `/journal/` | `journal.md` | ✅ Rebuilt | Full regulations (5 sections) |
-| `/seminars/` | `seminars.md` | ✅ Rebuilt | Seminar series + schedule |
+| `/conferences/` | `conferences.md` | ✅ Rebuilt | CFP guide; poster layout driven by `_data/conferences.yml` |
+| `/submit/` | `submit.md` | ✅ Rebuilt | Scope grid loops from `_data/research.yml` |
+| `/journal/` | `journal.md` | ✅ Rebuilt | 제4조 track list loops from `_data/research.yml` |
+| `/seminars/` | `seminars.md` | ✅ Data-driven | Series cards loop from `_data/seminars.yml` |
 | `/privacy/` | `privacy.md` | ✅ Live | Korean + English bilingual policy |
+| `/resources/` | `pages/resources.md` | ✅ New | Journal + conference template downloads |
+| `/gallery/` | `pages/gallery.md` | ✅ New | Photo gallery; albums driven by `_data/gallery.yml` |
 
-**Template file required:** `assets/files/kspai-journal-template.hwp` — the HWP template download button on `/submit/` and `/conferences/` points here. Create the `assets/files/` directory and place the file there before deploying.
+**Template file required:** `assets/files/kspai-journal-template.hwp` — the HWP template download button on `/submit/` and `/resources/` points here. Create the `assets/files/` directory and place the file there before deploying.
 
 ---
 

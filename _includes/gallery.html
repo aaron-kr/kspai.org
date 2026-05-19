@@ -1,0 +1,52 @@
+{% assign active_albums = site.data.gallery.albums | where: "active", true %}
+<section class="gallery-section" id="gallery">
+  <div class="container">
+    <div class="section-title-row">
+      <div>
+        <div class="section-label mono" data-i18n="gallery.label">Gallery</div>
+        <h2 class="section-title" data-i18n="gallery.title">학술 활동 갤러리</h2>
+      </div>
+      <a href="{{ '/gallery/' | relative_url }}" class="section-link">
+        <span data-lang="ko">전체 보기 →</span>
+        <span data-lang="en">View all →</span>
+      </a>
+    </div>
+
+    {% if active_albums.size > 0 %}
+    <div class="gallery-grid">
+      {% for album in active_albums limit: 6 %}
+      <a href="{{ album.album_url | default: '/gallery/' }}" class="gallery-item" {% if album.album_url != "" %}target="_blank" rel="noopener"{% endif %}>
+        {% if album.cover != "" %}
+        <img src="{{ album.cover }}" alt="{{ album.title_en }}" class="gallery-item-img" loading="lazy">
+        {% else %}
+        <div class="gallery-item-placeholder">
+          <span class="gallery-ph-icon">{% if album.type == "conference" %}🎓{% elsif album.type == "seminar" %}🎙️{% elsif album.type == "workshop" %}🏭{% else %}📷{% endif %}</span>
+        </div>
+        {% endif %}
+        <div class="gallery-item-caption">
+          <span class="gallery-item-title">
+            <span data-lang="ko">{{ album.title_ko }}</span>
+            <span data-lang="en">{{ album.title_en }}</span>
+          </span>
+          <span class="gallery-item-date">{{ album.date }}</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="gallery-coming-soon">
+      <div class="gallery-ph-grid">
+        {% for i in (1..6) %}
+        <div class="gallery-item-placeholder gallery-item-placeholder--animated">
+          <span class="gallery-ph-icon">📷</span>
+        </div>
+        {% endfor %}
+      </div>
+      <p class="gallery-coming-soon-text">
+        <span data-lang="ko">첫 번째 학술대회 이후 사진을 공유할 예정입니다.</span>
+        <span data-lang="en">Photos will be shared following our first academic conference.</span>
+      </p>
+    </div>
+    {% endif %}
+  </div>
+</section>

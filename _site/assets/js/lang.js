@@ -11,11 +11,14 @@
 const translations = {
 
   // ── NAV ──
-  "nav.about":    { ko: "소개",    en: "About" },
-  "nav.research": { ko: "연구분야", en: "Research" },
-  "nav.news":     { ko: "소식",    en: "News" },
-  "nav.join":     { ko: "회원가입", en: "Join" },
-  "nav.contact":  { ko: "문의",    en: "Contact" },
+  "nav.about":       { ko: "소개",    en: "About" },
+  "nav.research":    { ko: "연구분야", en: "Research" },
+  "nav.academic":    { ko: "학술활동", en: "Academic" },
+  "nav.news":        { ko: "소식",    en: "News" },
+  "nav.resources":   { ko: "자료",    en: "Resources" },
+  "nav.participate": { ko: "참여",    en: "Participate" },
+  "nav.join":        { ko: "회원가입", en: "Join" },
+  "nav.contact":     { ko: "문의",    en: "Contact" },
 
   // ── HERO ──
   "hero.badge":     { ko: "창립 2025", en: "Founding 2025" },
@@ -72,6 +75,10 @@ const translations = {
   "news.subtitle": { ko: "학회와 연구소의 최신 소식을 전합니다.",
                      en: "The latest news from the Society and Research Institute." },
   "news.viewall":  { ko: "모든 소식 보기", en: "View All News" },
+
+  // ── GALLERY ──
+  "gallery.label": { ko: "Gallery",     en: "Gallery" },
+  "gallery.title": { ko: "갤러리", en: "Gallery" },
 
   // ── CTA ──
   "cta.label":       { ko: "Membership", en: "Membership" },

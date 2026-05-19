@@ -54,6 +54,17 @@
   i18n: "nav.news"
   url: /news/
 
+- title_ko: "자료"
+  title_en: "Resources"
+  i18n: "nav.resources"
+  items:
+    - title_ko: "자료실"
+      title_en: "Downloads"
+      url: /resources/
+    - title_ko: "갤러리"
+      title_en: "Gallery"
+      url: /gallery/
+
 - title_ko: "참여"
   title_en: "Participate"
   i18n: "nav.participate"

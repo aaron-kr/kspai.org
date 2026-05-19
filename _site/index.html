@@ -267,6 +267,46 @@
           <button class="nav-link nav-dropdown-toggle"
                   aria-expanded="false"
                   aria-haspopup="true"
+                  data-i18n="nav.resources">
+            <span data-lang="ko">자료</span>
+            <span data-lang="en">Resources</span>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <div class="nav-dropdown-inner">
+              
+                
+                <a href="/resources/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">자료실</span>
+                  <span data-lang="en">Downloads</span>
+                </a>
+                
+              
+                
+                <a href="/gallery/"
+                   class="nav-dropdown-item"
+                   role="menuitem"
+                   >
+                  <span data-lang="ko">갤러리</span>
+                  <span data-lang="en">Gallery</span>
+                </a>
+                
+              
+            </div>
+          </div>
+        </li>
+
+      
+      
+      
+
+        <!-- Dropdown item -->
+        <li class="nav-item nav-item--dropdown">
+          <button class="nav-link nav-dropdown-toggle"
+                  aria-expanded="false"
+                  aria-haspopup="true"
                   data-i18n="nav.participate">
             <span data-lang="ko">참여</span>
             <span data-lang="en">Participate</span>
@@ -448,6 +488,36 @@
             <span data-lang="en">News</span>
           </a>
         </div>
+        
+
+      
+
+        
+        <!-- Mobile dropdown group -->
+        <div class="mobile-menu-group">
+          <div class="mobile-menu-group-title">
+            <span data-lang="ko">자료</span>
+            <span data-lang="en">Resources</span>
+          </div>
+          
+            
+            <a href="/resources/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">자료실</span>
+              <span data-lang="en">Downloads</span>
+            </a>
+            
+          
+            
+            <a href="/gallery/" class="mobile-menu-item"
+               >
+              <span data-lang="ko">갤러리</span>
+              <span data-lang="en">Gallery</span>
+            </a>
+            
+          
+        </div>
+
         
 
       
@@ -947,7 +1017,7 @@
         <div class="research-num mono">06</div>
         <h3 class="research-title">
           <span data-lang="ko">AI 안전 & 윤리</span>
-          <span data-lang="en">Safety & Ethics</span>
+          <span data-lang="en">AI Safety & Ethics</span>
           <br>
           <span class="research-subtitle-lang">
             <span data-lang="ko">Safety & Ethics</span>
@@ -1140,25 +1210,170 @@
   </div>
 </section>
 
-<section id="join" class="cta-section">
+<!-- 
+<section class="gallery-section" id="gallery">
   <div class="container">
-    <div class="cta-box">
-      <div class="section-label mono" style="text-align:center;" data-i18n="cta.label">Membership</div>
-      <h2 class="cta-title" data-i18n="cta.title" data-i18n-html>
-        함께 만들어가는<br>피지컬 AI의 미래
-      </h2>
-      <p class="cta-desc" data-i18n="cta.desc">
-        연구자, 교육자, 대학원생, 산업체 관계자 등 피지컬 AI에 관심 있는 모든 분의 참여를 환영합니다.
+    <div class="section-title-row">
+      <div>
+        <div class="section-label mono" data-i18n="gallery.label">Gallery</div>
+        <h2 class="section-title" data-i18n="gallery.title">학술 활동 갤러리</h2>
+      </div>
+      <a href="/gallery/" class="section-link">
+        <span data-lang="ko">전체 보기 →</span>
+        <span data-lang="en">View all →</span>
+      </a>
+    </div>
+
+    
+    <div class="gallery-coming-soon">
+      <div class="gallery-ph-grid">
+        
+        <div class="gallery-item-placeholder gallery-item-placeholder--animated">
+          <span class="gallery-ph-icon">📷</span>
+        </div>
+        
+        <div class="gallery-item-placeholder gallery-item-placeholder--animated">
+          <span class="gallery-ph-icon">📷</span>
+        </div>
+        
+        <div class="gallery-item-placeholder gallery-item-placeholder--animated">
+          <span class="gallery-ph-icon">📷</span>
+        </div>
+        
+        <div class="gallery-item-placeholder gallery-item-placeholder--animated">
+          <span class="gallery-ph-icon">📷</span>
+        </div>
+        
+        <div class="gallery-item-placeholder gallery-item-placeholder--animated">
+          <span class="gallery-ph-icon">📷</span>
+        </div>
+        
+        <div class="gallery-item-placeholder gallery-item-placeholder--animated">
+          <span class="gallery-ph-icon">📷</span>
+        </div>
+        
+      </div>
+      <p class="gallery-coming-soon-text">
+        <span data-lang="ko">첫 번째 학술대회 이후 사진을 공유할 예정입니다.</span>
+        <span data-lang="en">Photos will be shared following our first academic conference.</span>
       </p>
-      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;">
-        <a href="/join/" class="btn btn-primary en" data-i18n="cta.btn.join">
-          회원가입 안내 →
-        </a>
-        <a href="/contact/" class="btn btn-outline" data-i18n="cta.btn.contact">연락처 보기</a>
+    </div>
+    
+  </div>
+</section>
+ -->
+<section id="join" class="cta-section">
+  <div class="cta-bg-layer" aria-hidden="true">
+    <div class="cta-bg-orb cta-bg-orb--1"></div>
+    <div class="cta-bg-orb cta-bg-orb--2"></div>
+    <div class="cta-grid-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-content">
+        <div class="section-label mono" data-i18n="cta.label">Membership</div>
+        <h2 class="cta-title" data-i18n="cta.title" data-i18n-html>
+          함께 만들어가는<br>피지컬 AI의 미래
+        </h2>
+        <p class="cta-desc" data-i18n="cta.desc">
+          연구자, 교육자, 대학원생, 산업체 관계자 등 피지컬 AI에 관심 있는 모든 분의 참여를 환영합니다.
+        </p>
+        <div class="cta-actions">
+          <a href="/join/" class="btn btn-cta-primary" data-i18n="cta.btn.join">
+            회원가입 안내 →
+          </a>
+          <a href="/contact/" class="btn btn-cta-outline" data-i18n="cta.btn.contact">연락처 보기</a>
+        </div>
+      </div>
+      <div class="cta-visual" aria-hidden="true">
+        <div class="cta-stat-grid">
+          <div class="cta-stat">
+            <span class="cta-stat-num">11</span>
+            <span class="cta-stat-label" data-lang="ko">연구 분야</span>
+            <span class="cta-stat-label" data-lang="en">Research Areas</span>
+          </div>
+          <div class="cta-stat">
+            <span class="cta-stat-num">2</span>
+            <span class="cta-stat-label" data-lang="ko">연간 학술지 발행</span>
+            <span class="cta-stat-label" data-lang="en">Journal Issues / Year</span>
+          </div>
+          <div class="cta-stat">
+            <span class="cta-stat-num">∞</span>
+            <span class="cta-stat-label" data-lang="ko">성장 가능성</span>
+            <span class="cta-stat-label" data-lang="en">Growth Potential</span>
+          </div>
+          <div class="cta-stat">
+            <span class="cta-stat-num">1</span>
+            <span class="cta-stat-label" data-lang="ko">학술대회 · 2026</span>
+            <span class="cta-stat-label" data-lang="en">Conference · 2026</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+
+
+<section class="partners-section">
+  <div class="container">
+    <div class="partners-inner">
+      <div class="partners-label mono">
+        <span data-lang="ko">협력기관</span>
+        <span data-lang="en">Partners</span>
+      </div>
+      <div class="partners-list">
+        
+        <a href="https://www.hanbat.ac.kr" class="partner-item" target="_blank" rel="noopener" title="국립한밭대학교 / Hanbat National University">
+          
+          <span class="partner-name">
+            <span data-lang="ko">국립한밭대학교</span>
+            <span data-lang="en">Hanbat National University</span>
+          </span>
+          
+        </a>
+        
+        <a href="https://www.jeonju.ac.kr" class="partner-item" target="_blank" rel="noopener" title="전주대학교 / Jeonju University">
+          
+          <span class="partner-name">
+            <span data-lang="ko">전주대학교</span>
+            <span data-lang="en">Jeonju University</span>
+          </span>
+          
+        </a>
+        
+        <a href="https://www.hoseo.ac.kr" class="partner-item" target="_blank" rel="noopener" title="호서대학교 / Hoseo University">
+          
+          <span class="partner-name">
+            <span data-lang="ko">호서대학교</span>
+            <span data-lang="en">Hoseo University</span>
+          </span>
+          
+        </a>
+        
+        <a href="https://www.jwu.ac.kr" class="partner-item" target="_blank" rel="noopener" title="중원대학교 / Jungwon University">
+          
+          <span class="partner-name">
+            <span data-lang="ko">중원대학교</span>
+            <span data-lang="en">Jungwon University</span>
+          </span>
+          
+        </a>
+        
+        <a href="https://www.mokpo.ac.kr" class="partner-item" target="_blank" rel="noopener" title="국립목포대학교 / Mokpo National University">
+          
+          <span class="partner-name">
+            <span data-lang="ko">국립목포대학교</span>
+            <span data-lang="en">Mokpo National University</span>
+          </span>
+          
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section id="contact">
   <div class="container">
