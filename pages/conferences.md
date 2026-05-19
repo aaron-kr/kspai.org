@@ -71,7 +71,7 @@ permalink: /conferences/
 </div>
 
 <!-- ════════════════════════════════
-     UPCOMING CONFERENCE
+     UPCOMING CONFERENCES (from _data/conferences.yml)
      ════════════════════════════════ -->
 <div class="page-section" id="upcoming">
   <h2 class="page-section-title">
@@ -79,51 +79,124 @@ permalink: /conferences/
     <span data-lang="en">Upcoming Events</span>
   </h2>
 
-  <div class="conf-featured-card">
-    <div class="conf-card-header">
-      <span class="conf-status-dot"></span>
-      <span class="conf-status-label">
-        <span data-lang="ko">준비 중 · 창립학술대회</span>
-        <span data-lang="en">Upcoming · Inaugural Conference</span>
-      </span>
-    </div>
-    <h3 class="conf-title">
-      <span data-lang="ko">한국피지컬인공지능학회 창립 학술대회</span>
-      <span data-lang="en">KSPAI Inaugural Annual Conference</span>
-    </h3>
-    <p class="conf-desc">
-      <span data-lang="ko">한국피지컬인공지능학회의 첫 번째 학술대회로, 피지컬 AI 분야의 최신 연구 성과를 발표하고 산학연 전문가들과 교류하는 자리입니다. 기조강연, 구두 발표, 포스터 세션, 특별 워크숍 등으로 구성될 예정입니다.</span>
-      <span data-lang="en">The inaugural conference of the Korean Society for Physical AI, bringing together researchers from academia, industry, and research institutes to present and discuss the latest advances in Physical AI. The program will include keynote talks, oral presentations, poster sessions, and special workshops.</span>
-    </p>
-    <div class="conf-meta-row">
-      <div class="conf-meta-item">
-        <span class="conf-meta-label"><span data-lang="ko">일시</span><span data-lang="en">Date</span></span>
-        <span class="conf-meta-value"><span data-lang="ko">추후 공지</span><span data-lang="en">To be announced</span></span>
+  {% for conf in site.data.conferences.upcoming %}
+  <div class="conf-featured-card" style="margin-bottom: 40px;">
+    <div class="conf-with-poster">
+
+      <!-- ── INFO SIDE ── -->
+      <div class="conf-card-main">
+        <div class="conf-card-header">
+          <span class="conf-status-dot"></span>
+          <span class="conf-status-label">
+            <span data-lang="ko">{{ conf.date_ko }} · {{ conf.title_ko }}</span>
+            <span data-lang="en">{{ conf.date_en }} · {{ conf.title_en }}</span>
+          </span>
+        </div>
+        <h3 class="conf-title">
+          <span data-lang="ko">{{ conf.title_ko }} ({{ conf.venue_ko | split: "," | last | strip }})</span>
+          <span data-lang="en">{{ conf.title_en }}</span>
+        </h3>
+        <p class="conf-desc">
+          <span data-lang="ko">{{ conf.description_ko }}</span>
+          <span data-lang="en">{{ conf.description_en }}</span>
+        </p>
+
+        <div class="conf-meta-row">
+          <div class="conf-meta-item">
+            <span class="conf-meta-label"><span data-lang="ko">일시</span><span data-lang="en">Date</span></span>
+            <span class="conf-meta-value">
+              <span data-lang="ko">{{ conf.date_ko }}</span>
+              <span data-lang="en">{{ conf.date_en }}</span>
+            </span>
+          </div>
+          <div class="conf-meta-item">
+            <span class="conf-meta-label"><span data-lang="ko">장소</span><span data-lang="en">Venue</span></span>
+            <span class="conf-meta-value">
+              <span data-lang="ko">{{ conf.venue_ko }}</span>
+              <span data-lang="en">{{ conf.venue_en }}</span>
+            </span>
+          </div>
+          <div class="conf-meta-item">
+            <span class="conf-meta-label"><span data-lang="ko">발표 형식</span><span data-lang="en">Formats</span></span>
+            <span class="conf-meta-value">
+              <span data-lang="ko">{{ conf.formats_ko }}</span>
+              <span data-lang="en">{{ conf.formats_en }}</span>
+            </span>
+          </div>
+          <div class="conf-meta-item">
+            <span class="conf-meta-label">CFP</span>
+            <span class="conf-meta-value">
+              <span data-lang="ko">{{ conf.key_dates[0].date_ko }}</span>
+              <span data-lang="en">{{ conf.key_dates[0].date_en }}</span>
+            </span>
+          </div>
+        </div>
+
+        {% if conf.key_dates.size > 0 %}
+        <div class="conf-key-dates" style="margin-top: 20px;">
+          <p class="meta-label" style="margin-bottom: 10px;">
+            <span data-lang="ko">주요 일정</span>
+            <span data-lang="en">Key Dates</span>
+          </p>
+          {% for kd in conf.key_dates %}
+          <div class="conf-key-date-row">
+            <span class="conf-key-date-label">
+              <span data-lang="ko">{{ kd.label_ko }}</span>
+              <span data-lang="en">{{ kd.label_en }}</span>
+            </span>
+            <span class="conf-key-date-value mono {% if kd.status == 'confirmed' %}conf-key-date--confirmed{% endif %}">
+              <span data-lang="ko">{{ kd.date_ko }}</span>
+              <span data-lang="en">{{ kd.date_en }}</span>
+            </span>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="section-actions" style="margin-top: 24px;">
+          <a href="{{ '/news/' | relative_url }}" class="btn btn-primary btn-sm">
+            <span data-lang="ko">소식 구독 →</span>
+            <span data-lang="en">Follow News →</span>
+          </a>
+          <a href="{{ '/contact/' | relative_url }}" class="btn btn-outline btn-sm">
+            <span data-lang="ko">문의하기</span>
+            <span data-lang="en">Contact Us</span>
+          </a>
+        </div>
       </div>
-      <div class="conf-meta-item">
-        <span class="conf-meta-label"><span data-lang="ko">장소</span><span data-lang="en">Venue</span></span>
-        <span class="conf-meta-value"><span data-lang="ko">추후 공지</span><span data-lang="en">To be announced</span></span>
+
+      <!-- ── POSTER SIDE ── -->
+      <div class="conf-poster-side">
+        {% if conf.has_poster %}
+        <img src="{{ conf.poster | relative_url }}"
+             alt="{% if page.lang == 'en' %}{{ conf.poster_alt_en }}{% else %}{{ conf.poster_alt_ko }}{% endif %}"
+             class="conf-poster-img"
+             loading="lazy" />
+        {% else %}
+        <div class="conf-poster-placeholder" aria-hidden="true">
+          <span class="conf-poster-ph-label" style="font-family: var(--font-mono); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(36,255,252,0.6); position: relative;">
+            <span data-lang="ko">포스터 준비 중</span>
+            <span data-lang="en">POSTER COMING SOON</span>
+          </span>
+          <p class="conf-poster-ph-title" style="font-family: var(--font-title-en); font-size: 15px; font-weight: 800; color: #fff; line-height: 1.3; position: relative; text-align: center;">
+            <span data-lang="ko">{{ conf.title_ko }}</span>
+            <span data-lang="en">{{ conf.title_en }}</span>
+          </p>
+          <p class="conf-poster-ph-date" style="font-family: var(--font-mono); font-size: 12px; color: rgba(192,220,248,0.75); position: relative;">
+            <span data-lang="ko">{{ conf.date_ko }}</span>
+            <span data-lang="en">{{ conf.date_en }}</span>
+          </p>
+          <p class="conf-poster-ph-venue" style="font-size: 11px; color: rgba(192,220,248,0.55); position: relative; text-align: center;">
+            <span data-lang="ko">{{ conf.venue_ko }}</span>
+            <span data-lang="en">{{ conf.venue_en }}</span>
+          </p>
+        </div>
+        {% endif %}
       </div>
-      <div class="conf-meta-item">
-        <span class="conf-meta-label"><span data-lang="ko">발표 형식</span><span data-lang="en">Formats</span></span>
-        <span class="conf-meta-value"><span data-lang="ko">구두 / 포스터</span><span data-lang="en">Oral / Poster</span></span>
-      </div>
-      <div class="conf-meta-item">
-        <span class="conf-meta-label">CFP</span>
-        <span class="conf-meta-value"><span data-lang="ko">창립총회 이후 공지</span><span data-lang="en">After inaugural assembly</span></span>
-      </div>
-    </div>
-    <div class="section-actions">
-      <a href="/news/" class="btn btn-primary btn-sm">
-        <span data-lang="ko">소식 구독 →</span>
-        <span data-lang="en">Follow News →</span>
-      </a>
-      <a href="/contact/" class="btn btn-outline btn-sm">
-        <span data-lang="ko">문의하기</span>
-        <span data-lang="en">Contact Us</span>
-      </a>
-    </div>
-  </div>
+
+    </div><!-- .conf-with-poster -->
+  </div><!-- .conf-featured-card -->
+  {% endfor %}
 
 </div>
 
@@ -160,8 +233,8 @@ permalink: /conferences/
       <div>
         <strong><span data-lang="ko">발표 분야</span><span data-lang="en">Topics</span></strong>
         <p>
-          <span data-lang="ko">로보틱스, 체화지능, 자율시스템, 디지털 트윈, 인간-로봇 상호작용, 피지컬 AI 교육 및 이와 융합된 제반 분야.</span>
-          <span data-lang="en">Robotics, Embodied Intelligence, Autonomous Systems, Digital Twin, Human-Robot Interaction, Physical AI Education, and related interdisciplinary fields.</span>
+          <span data-lang="ko">로보틱스, 체화지능, 자율시스템, 디지털 트윈, 영상처리 및 컴퓨터 비전, 피지컬AI 교육, 국방 피지컬AI, 보건의료 피지컬AI, 인간-로봇 상호작용, 피지컬AI 융합 및 창업 및 이와 융합된 제반 분야.</span>
+          <span data-lang="en">Robotics, Embodied Intelligence, Autonomous Systems, Digital Twin, Image Processing &amp; Computer Vision, Physical AI Education, Defense Physical AI, Healthcare Physical AI, Human-Robot Interaction, Physical AI Convergence &amp; Entrepreneurship, and related interdisciplinary fields.</span>
         </p>
       </div>
     </div>
@@ -211,6 +284,32 @@ permalink: /conferences/
     <span data-lang="en">Past Events</span>
   </h2>
 
+  {% if site.data.conferences.past.size > 0 %}
+  {% for conf in site.data.conferences.past %}
+  <div class="conf-past-item">
+    <div class="conf-past-date mono">
+      <span data-lang="ko">{{ conf.date_ko }}</span>
+      <span data-lang="en">{{ conf.date_en }}</span>
+    </div>
+    <div class="conf-past-body">
+      <strong class="conf-past-title">
+        <span data-lang="ko">{{ conf.title_ko }}</span>
+        <span data-lang="en">{{ conf.title_en }}</span>
+      </strong>
+      <p class="conf-past-venue">
+        <span data-lang="ko">{{ conf.venue_ko }}</span>
+        <span data-lang="en">{{ conf.venue_en }}</span>
+      </p>
+    </div>
+    {% if conf.proceedings_link %}
+    <a href="{{ conf.proceedings_link }}" class="btn btn-outline btn-sm">
+      <span data-lang="ko">논문집 →</span>
+      <span data-lang="en">Proceedings →</span>
+    </a>
+    {% endif %}
+  </div>
+  {% endfor %}
+  {% else %}
   <div class="coming-soon-banner">
     <span>🗓</span>
     <span>
@@ -218,6 +317,7 @@ permalink: /conferences/
       <span data-lang="en">This list will be populated starting from the first conference held after the Society's official establishment.</span>
     </span>
   </div>
+  {% endif %}
 </div>
 
 <!-- ════════════════════════════════

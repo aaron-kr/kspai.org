@@ -1,0 +1,42 @@
+<div class="announcements-bar" aria-label="공지사항 / Announcements">
+  <div class="container">
+    <div class="announcements-bar-inner">
+
+      <div class="announcements-header">
+        <span class="announcements-label mono" aria-hidden="true">
+          <span data-lang="ko">공지사항</span>
+          <span data-lang="en">NOTICE</span>
+        </span>
+        <a href="{{ '/news/' | relative_url }}" class="announcements-more-link">
+          <span data-lang="ko">더 보기 →</span>
+          <span data-lang="en">All news →</span>
+        </a>
+      </div>
+
+      <div class="announcements-divider" aria-hidden="true"></div>
+
+      <ul class="announcements-list" role="list">
+        {% assign posts = site.posts | limit: 5 %}
+        {% for post in posts %}
+        <li class="announcement-item">
+          <span class="announcement-tag {{ post.tag_class }}">
+            <span data-lang="ko">{{ post.tag_ko }}</span>
+            <span data-lang="en">{{ post.tag_en }}</span>
+          </span>
+          <span class="announcement-title">
+            <a href="{{ post.url | relative_url }}">
+              <span data-lang="ko">{{ post.title_ko }}</span>
+              <span data-lang="en">{{ post.title_en }}</span>
+            </a>
+          </span>
+          <span class="announcement-date mono">
+            <span data-lang="ko">{{ post.date_display_ko }}</span>
+            <span data-lang="en">{{ post.date_display_en }}</span>
+          </span>
+        </li>
+        {% endfor %}
+      </ul>
+
+    </div>
+  </div>
+</div>

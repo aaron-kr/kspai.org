@@ -1,0 +1,19 @@
+# ═══════════════════════════════════════════════════════════════
+#  _data/banner.yml — Site-wide announcement banner
+#
+#  The banner appears just below the nav bar on all pages.
+#  Users can dismiss it for today or permanently via localStorage.
+#
+#  To disable: set active: false
+#  To change message: edit message_ko / message_en
+# ═══════════════════════════════════════════════════════════════
+
+active: true
+type: "conference"        # conference | announcement | warning | info
+
+message_ko: "📢 2026년 하계학술대회 — 2026년 6월 25~26일 · 국립한밭대학교 (대전)"
+message_en: "📢 2026 Summer Conference — June 25–26, 2026 · Hanbat National University, Daejeon"
+
+link_url: "/conferences/"
+link_label_ko: "자세히 보기 →"
+link_label_en: "Learn more →"

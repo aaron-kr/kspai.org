@@ -101,6 +101,13 @@ editorial_board:
     affil_ko: 호서대학교
     affil_en: Hoseo University
 
+  - division_ko: 피지컬AI영상처리
+    division_en: Physical AI Image Processing
+    name_ko: 에런스노버거
+    name_en: Aaron Snowberger
+    affil_ko: 국립한밭대학교
+    affil_en: Hanbat National University
+
   - division_ko: 국방피지컬AI
     division_en: Defense Physical AI
     name_ko: 박상혁
@@ -112,8 +119,8 @@ editorial_board:
     division_en: Healthcare Physical AI
     name_ko: 결정 중
     name_en: To be determined
-    affil_ko: 호원대학교 이기란 교수 유력
-    affil_en: Lee Ki-ran, Howon University (likely)
+    affil_ko:
+    affil_en:
     pending: true
 
 # ── Hidden — reveal after inaugural general assembly ──

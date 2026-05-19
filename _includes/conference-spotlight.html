@@ -1,0 +1,107 @@
+{% assign conf = site.data.conferences.upcoming | first %}
+{% if conf %}
+<section class="conf-spotlight" aria-label="예정 학술대회 / Upcoming Conference">
+  <div class="container">
+    <div class="conf-spotlight-inner">
+
+      <!-- ── INFO SIDE ── -->
+      <div class="conf-spotlight-info">
+        <p class="conf-spotlight-label mono">
+          <span data-lang="ko">예정 학술대회</span>
+          <span data-lang="en">Upcoming Conference</span>
+        </p>
+
+        <h2 class="conf-spotlight-title">
+          <span data-lang="ko">{{ conf.title_ko }}</span>
+          <span data-lang="en">{{ conf.title_en }}</span>
+        </h2>
+
+        <p class="conf-spotlight-subtitle">
+          <span data-lang="ko">{{ conf.subtitle_ko }}</span>
+          <span data-lang="en">{{ conf.subtitle_en }}</span>
+        </p>
+
+        <p class="conf-spotlight-desc">
+          <span data-lang="ko">{{ conf.description_ko }}</span>
+          <span data-lang="en">{{ conf.description_en }}</span>
+        </p>
+
+        <div class="conf-spotlight-meta">
+          <div class="conf-spotlight-meta-item">
+            <span class="conf-spotlight-meta-label">
+              <span data-lang="ko">일시</span><span data-lang="en">Date</span>
+            </span>
+            <span class="conf-spotlight-meta-value">
+              <span data-lang="ko">{{ conf.date_ko }}</span>
+              <span data-lang="en">{{ conf.date_en }}</span>
+            </span>
+          </div>
+          <div class="conf-spotlight-meta-item">
+            <span class="conf-spotlight-meta-label">
+              <span data-lang="ko">장소</span><span data-lang="en">Venue</span>
+            </span>
+            <span class="conf-spotlight-meta-value">
+              <span data-lang="ko">{{ conf.venue_ko }}</span>
+              <span data-lang="en">{{ conf.venue_en }}</span>
+            </span>
+          </div>
+          <div class="conf-spotlight-meta-item">
+            <span class="conf-spotlight-meta-label">
+              <span data-lang="ko">발표 형식</span><span data-lang="en">Formats</span>
+            </span>
+            <span class="conf-spotlight-meta-value">
+              <span data-lang="ko">{{ conf.formats_ko }}</span>
+              <span data-lang="en">{{ conf.formats_en }}</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="conf-spotlight-actions">
+          <a href="{{ '/conferences/' | relative_url }}" class="btn btn-primary">
+            <span data-lang="ko">학술대회 안내 →</span>
+            <span data-lang="en">Conference Details →</span>
+          </a>
+          <a href="{{ '/submit/' | relative_url }}" class="btn btn-outline">
+            <span data-lang="ko">논문 투고</span>
+            <span data-lang="en">Submit a Paper</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ── POSTER SIDE ── -->
+      <div class="conf-spotlight-poster-wrap">
+        {% if conf.has_poster %}
+        <img src="{{ conf.poster | relative_url }}"
+             alt="{% if page.lang == 'en' %}{{ conf.poster_alt_en }}{% else %}{{ conf.poster_alt_ko }}{% endif %}"
+             class="conf-spotlight-poster-img"
+             loading="lazy" />
+        {% else %}
+        <div class="conf-spotlight-poster-placeholder" aria-hidden="true">
+          <span class="conf-poster-ph-label">
+            <span data-lang="ko">포스터 준비 중</span>
+            <span data-lang="en">POSTER COMING SOON</span>
+          </span>
+          <div class="conf-poster-ph-badge">
+            <span data-lang="ko">{{ conf.subtitle_ko }}</span>
+            <span data-lang="en">{{ conf.subtitle_en }}</span>
+          </div>
+          <p class="conf-poster-ph-title">
+            <span data-lang="ko">{{ conf.title_ko }}</span>
+            <span data-lang="en">{{ conf.title_en }}</span>
+          </p>
+          <p class="conf-poster-ph-date">
+            <span data-lang="ko">{{ conf.date_ko }}</span>
+            <span data-lang="en">{{ conf.date_en }}</span>
+          </p>
+          <p class="conf-poster-ph-venue">
+            <span data-lang="ko">{{ conf.venue_ko }}</span>
+            <span data-lang="en">{{ conf.venue_en }}</span>
+          </p>
+        </div>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endif %}

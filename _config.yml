@@ -24,12 +24,15 @@ sass:
   sass_dir: assets/css
   style: compressed
 
-# ── Collections (future use) ──
+# ── Collections ──
 collections:
   members:
     output: false
   activities:
     output: false
+  conferences:
+    output: true
+    permalink: /conferences/:name/
 
 # ── Defaults ──
 defaults:
@@ -42,6 +45,11 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "conferences"
+    values:
+      layout: "conference"
 
 # ── Exclude from processing ──
 exclude:

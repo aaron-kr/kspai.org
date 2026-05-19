@@ -1,0 +1,30 @@
+{% if site.data.banner.active %}
+<div class="site-banner site-banner--{{ site.data.banner.type }}" id="site-banner" role="alert" aria-live="polite">
+  <div class="container">
+    <div class="site-banner-inner">
+
+      <span class="site-banner-message">
+        <span data-lang="ko">{{ site.data.banner.message_ko }}</span>
+        <span data-lang="en">{{ site.data.banner.message_en }}</span>
+        {% if site.data.banner.link_url %}
+        <a href="{{ site.data.banner.link_url | relative_url }}" class="site-banner-link">
+          <span data-lang="ko">{{ site.data.banner.link_label_ko }}</span>
+          <span data-lang="en">{{ site.data.banner.link_label_en }}</span>
+        </a>
+        {% endif %}
+      </span>
+
+      <div class="site-banner-controls">
+        <button class="site-banner-dismiss" onclick="dismissBanner('today')" title="오늘 하루 보지 않기 / Hide for today">
+          <span data-lang="ko">오늘 하루 보지 않기</span>
+          <span data-lang="en">Hide today</span>
+        </button>
+        <button class="site-banner-dismiss site-banner-dismiss--forever" onclick="dismissBanner('forever')" aria-label="배너 닫기 / Close banner">
+          ✕
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endif %}

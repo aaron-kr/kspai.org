@@ -56,7 +56,7 @@ permalink: /contact/
     <div class="contact-card">
       <div class="org-icon institute">🔬</div>
       <h2 class="contact-card-title">
-        <span data-lang="ko">한국피지컬AI교육연구소</span>
+        <span data-lang="ko">한국피지컬인공지능교육연구소</span>
         <span data-lang="en">Korean Institute of Physical AI Education & Research</span>
       </h2>
       <p class="org-name-en en">KIPAIER</p>

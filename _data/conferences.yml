@@ -1,0 +1,147 @@
+# ═══════════════════════════════════════════════════════════════
+#  _data/conferences.yml — All conference data for KSPAI
+#
+#  Each conference entry is the single source of truth.
+#  The _layouts/conference.html template renders it into a full page.
+#  The _includes/conference-spotlight.html uses upcoming[0] on the homepage.
+#  The conferences.md page loops over all entries.
+#
+#  ADDING A CONFERENCE:
+#   1. Add an entry below under `upcoming:` or `past:`
+#   2. Create pages/conferences/YYYY-name.md with layout: conference
+#      and conference_id matching this entry's `id`
+#   3. Place poster image in /assets/images/conferences/
+# ═══════════════════════════════════════════════════════════════
+
+upcoming:
+  - id: "2026-summer"
+    title_ko: "2026년 하계학술대회"
+    title_en: "2026 Summer Conference"
+    subtitle_ko: "제1회 한국피지컬인공지능학회 하계학술대회"
+    subtitle_en: "1st KSPAI Summer Conference"
+    status: "upcoming"            # upcoming | cfp-open | registration-open | closed
+
+    # ── Dates ──
+    date_ko: "2026-06-25 ~ 26"
+    date_en: "June 25–26, 2026"
+    date_from: "2026-06-25"
+    date_to: "2026-06-26"
+
+    # ── Location ──
+    venue_ko: "국립한밭대학교 국제교류관"
+    venue_en: "International Exchange Building, Hanbat National University"
+    city_ko: "대전"
+    city_en: "Daejeon, Korea"
+    map_url: ""
+
+    # ── Formats ──
+    formats_ko: "구두 발표 / 포스터 발표"
+    formats_en: "Oral / Poster Presentation"
+    oral_time_ko: "구두 발표: 15분 발표 + 5분 질의응답"
+    oral_time_en: "Oral: 15 min presentation + 5 min Q&A"
+
+    # ── Key Dates ──
+    key_dates:
+      - label_ko: "논문 접수"
+        label_en: "Submission Open"
+        date_ko: "창립총회 이후 공지"
+        date_en: "After inaugural assembly"
+        status: "tba"
+      - label_ko: "제출 마감"
+        label_en: "Submission Deadline"
+        date_ko: "추후 공지"
+        date_en: "To be announced"
+        status: "tba"
+      - label_ko: "결과 통보"
+        label_en: "Notification"
+        date_ko: "추후 공지"
+        date_en: "To be announced"
+        status: "tba"
+      - label_ko: "학술대회"
+        label_en: "Conference"
+        date_ko: "2026-06-25 ~ 26"
+        date_en: "June 25–26, 2026"
+        status: "confirmed"
+
+    # ── Description ──
+    description_ko: >
+      한국피지컬인공지능학회의 첫 번째 학술대회로, 피지컬 AI 분야의 최신 연구 성과를
+      발표하고 산학연 전문가들과 교류하는 자리입니다. 기조강연, 구두 발표, 포스터 세션,
+      특별 워크숍 등으로 구성될 예정이며, 한국삶의질정보학회와 공동 개최합니다.
+    description_en: >
+      The inaugural conference of the Korean Society for Physical AI, bringing together
+      researchers from academia, industry, and research institutes to present and discuss
+      the latest advances in Physical AI. The program will include keynote talks, oral
+      presentations, poster sessions, and special workshops. Co-hosted with the Korea
+      Quality of Life Information Society.
+
+    # ── Topics ──
+    topics:
+      - ko: "체화지능"
+        en: "Embodied Intelligence"
+      - ko: "자율 로보틱스"
+        en: "Autonomous Robotics"
+      - ko: "디지털 트윈 & 시뮬레이션"
+        en: "Digital Twin & Simulation"
+      - ko: "영상처리 & 컴퓨터 비전"
+        en: "Image Processing & Computer Vision"
+      - ko: "피지컬AI 교육"
+        en: "Physical AI Education"
+      - ko: "국방 피지컬AI"
+        en: "Defense Physical AI"
+      - ko: "보건의료 피지컬AI"
+        en: "Healthcare Physical AI"
+      - ko: "피지컬AI 융합 및 창업"
+        en: "Physical AI Convergence & Entrepreneurship"
+      - ko: "AI 안전 & 윤리"
+        en: "AI Safety & Ethics"
+
+    # ── Awards ──
+    awards:
+      - ko: "최우수 논문상"
+        en: "Best Paper Award"
+      - ko: "우수 논문상"
+        en: "Excellence Award"
+      - ko: "대학(원)생 경진대회"
+        en: "Student Competition Award"
+
+    # ── Registration / Fees ──
+    registration_open: false
+    registration_link: ""
+    fee_note_ko: "등록비는 추후 공지됩니다."
+    fee_note_en: "Registration fees will be announced separately."
+
+    # ── Links ──
+    submit_link: "/submit/"
+    cfp_link: ""
+    template_link: ""
+
+    # ── Media ──
+    # Place poster at /assets/images/conferences/2026-summer-poster.jpg
+    # Until the real poster is ready, the template shows a gradient placeholder
+    poster: "/assets/images/conferences/2026-summer-poster.jpg"
+    poster_alt_ko: "2026년 하계학술대회 포스터"
+    poster_alt_en: "2026 Summer Conference Poster"
+    has_poster: false    # set to true once the image file exists
+
+    # ── Co-organizers ──
+    coorganizers:
+      - name_ko: "한국삶의질정보학회"
+        name_en: "Korea Quality of Life Information Society"
+        url: "http://klife.re.kr"
+
+past: []
+# ── PAST CONFERENCE TEMPLATE (copy & fill when needed) ──
+# - id: "YYYY-season"
+#   title_ko: "..."
+#   title_en: "..."
+#   date_ko: "..."
+#   date_en: "..."
+#   venue_ko: "..."
+#   venue_en: "..."
+#   description_ko: "..."
+#   description_en: "..."
+#   poster: "/assets/images/conferences/YYYY-season-poster.jpg"
+#   has_poster: true
+#   proceedings_link: ""
+#   photos_link: ""

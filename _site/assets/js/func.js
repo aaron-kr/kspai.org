@@ -1,3 +1,34 @@
+// ── Site Banner ──
+(function() {
+  var banner = document.getElementById('site-banner');
+  if (!banner) return;
+
+  var FOREVER_KEY = 'kspai-banner-dismissed';
+  var TODAY_KEY   = 'kspai-banner-hidden-date';
+
+  var dismissedForever = localStorage.getItem(FOREVER_KEY) === 'true';
+  var hiddenDate = localStorage.getItem(TODAY_KEY);
+  var today = new Date().toISOString().slice(0, 10);
+  var hiddenToday = hiddenDate === today;
+
+  if (dismissedForever || hiddenToday) {
+    banner.style.display = 'none';
+  }
+})();
+
+function dismissBanner(mode) {
+  var banner = document.getElementById('site-banner');
+  if (!banner) return;
+  if (mode === 'forever') {
+    localStorage.setItem('kspai-banner-dismissed', 'true');
+  } else {
+    var today = new Date().toISOString().slice(0, 10);
+    localStorage.setItem('kspai-banner-hidden-date', today);
+  }
+  banner.classList.add('site-banner--hiding');
+  setTimeout(function() { banner.style.display = 'none'; }, 300);
+}
+
 // ── Theme Toggle ──
 function toggleTheme() {
   const html = document.documentElement;

@@ -50,8 +50,8 @@ const translations = {
   "society.f4": { ko: "산학연 공동 연구 프로젝트",                 en: "Joint industry–academia–research projects" },
   "society.f5": { ko: "학회지 및 뉴스레터 발행",                  en: "Society journal and newsletter publication" },
 
-  "institute.name":    { ko: "한국피지컬AI교육연구소", en: "Korean Institute of Physical AI Education & Research" },
-  "institute.name.en": { ko: "Korean Institute of Physical AI Education & Research", en: "한국피지컬AI교육연구소" },
+  "institute.name":    { ko: "한국피지컬인공지능교육연구소", en: "Korean Institute of Physical AI Education & Research" },
+  "institute.name.en": { ko: "Korean Institute of Physical AI Education & Research", en: "한국피지컬인공지능교육연구소" },
   "institute.desc":    { ko: "피지컬 AI 분야의 교육 과정 개발, 인력 양성, 실습 프로그램 운영 및 교육 연구를 전문적으로 수행하는 연구소입니다.",
                          en: "A research institute specializing in curriculum development, workforce training, hands-on program delivery, and educational research in the field of Physical AI." },
   "institute.f1": { ko: "피지컬 AI 교육 커리큘럼 개발",    en: "Physical AI curriculum development" },
@@ -88,7 +88,7 @@ const translations = {
   "contact.subtitle":  { ko: "학회 및 연구소에 대한 문의사항이 있으시면 연락해 주세요.",
                          en: "For inquiries about the Society or Research Institute, please reach out." },
   "contact.society":   { ko: "한국피지컬인공지능학회",         en: "Korean Society for Physical AI" },
-  "contact.institute": { ko: "한국피지컬AI교육연구소",   en: "Korean Institute of Physical AI Education & Research" },
+  "contact.institute": { ko: "한국피지컬인공지능교육연구소",   en: "Korean Institute of Physical AI Education & Research" },
   "contact.address":   { ko: "소재지 확정 후 공지 예정", en: "Address to be announced" },
   "contact.phone":     { ko: "연락처 확정 후 공지 예정", en: "Phone number to be announced" },
 
