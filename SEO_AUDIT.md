@@ -149,7 +149,7 @@ Jekyll copies root-level files to `_site/`, so this will be served at `https://k
   "alternateName": "Korean Society for Physical AI",
   "abbreviation": "KSPAI",
   "url": "https://kspai.org",
-  "logo": "https://kspai.org/assets/images/logo-light.png",
+  "logo": "https://kspai.org/assets/images/logos/logo-light.png",
   "description": "…",
   "foundingDate": "2025",
   "email": "contact@kspai.org",
@@ -187,7 +187,7 @@ All internal links use `{{ url | relative_url }}` filter or absolute URLs for ex
 | Create OG image | `/assets/images/og-default.png` — 1200×630 px. Referenced in `_config.yml` as `og_image`; used as `og:image` and `twitter:image` fallback. Until this file exists, social share previews will show no image. |
 | Twitter / X account | `twitter_username: "@kspai_org"` in `_config.yml` — create or confirm the account and update if the handle differs. |
 | `sameAs` in Organization schema | Add URLs for official social profiles (LinkedIn, X, etc.) to the `sameAs` array in the JSON-LD block in `head.html` once accounts are established. |
-| `logo` in Organization schema | Confirm `/assets/images/logo-light.png` is suitable for schema (PNG, square or rectangular, accessible via HTTPS). Schema.org recommends a dedicated `logo` image of at least 112×112 px. |
+| `logo` in Organization schema | Confirm `/assets/images/logos/logo-light.png` is suitable for schema (PNG, square or rectangular, accessible via HTTPS). Schema.org recommends a dedicated `logo` image of at least 112×112 px. |
 | Per-post og:image | High-priority posts (e.g., conference announcements) may benefit from custom `og_image` in their front matter pointing to an event-specific image. |
 | Language URL separation | If the site grows to separate `/ko/` and `/en/` URL paths, update hreflang links to point to distinct URLs instead of self-referencing. |
 | Page speed | Multiple Google Fonts `<link>` tags; consider consolidating into a single request or using `font-display: swap`. Not an audit item but related to Core Web Vitals. |

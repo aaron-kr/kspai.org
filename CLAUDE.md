@@ -126,8 +126,8 @@ Inner pages use a short version of the same hero gradient as a header band. Cont
 
 ### Logo system (two files)
 ```
-assets/images/logo-light.png  ← white/light, for dark backgrounds
-assets/images/logo-dark.png   ← dark, for light backgrounds
+assets/images/logos/logo-light.png  ← white/light, for dark backgrounds
+assets/images/logos/logo-dark.png   ← dark, for light backgrounds
 ```
 CSS `display` switching handles all four scenarios automatically — no JS, no `filter: invert()`:
 - Over hero (transparent nav) → light logo

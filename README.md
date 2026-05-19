@@ -123,8 +123,8 @@ Replace either or both files — CSS switching is automatic:
 
 | File | When shown |
 |---|---|
-| `assets/images/logo-light.png` | Dark backgrounds: hero, footer, nav over hero, dark theme |
-| `assets/images/logo-dark.png` | Light backgrounds: nav when scrolled in light theme |
+| `assets/images/logos/logo-light.png` | Dark backgrounds: hero, footer, nav over hero, dark theme |
+| `assets/images/logos/logo-dark.png` | Light backgrounds: nav when scrolled in light theme |
 
 Both files must have transparent backgrounds. SVG works too — just change the extension in `_includes/nav.html` and `_includes/footer.html`.
 

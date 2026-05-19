@@ -122,7 +122,7 @@ upcoming:
     poster: "/assets/images/conferences/2026-summer-poster.jpg"
     poster_alt_ko: "2026년 하계학술대회 포스터"
     poster_alt_en: "2026 Summer Conference Poster"
-    has_poster: false    # set to true once the image file exists
+    has_poster: true    # set to true once the image file exists
 
     # ── Co-organizers ──
     coorganizers:

@@ -38,10 +38,10 @@ permalink: /conferences/
       </p>
     </div>
     <div class="download-card-actions">
-      <span class="btn-disabled">
-        <span data-lang="ko">준비 중</span>
-        <span data-lang="en">Coming Soon</span>
-      </span>
+      <a href="/assets/files/2026-summer-conference-template.hwp" class="btn btn-primary" download>
+        <span data-lang="ko">↓ 학술대회 양식</span>
+        <span data-lang="en">↓ Conference Template</span>
+      </a>
       <a href="/conferences/" class="btn btn-outline">
         <span data-lang="ko">학술대회 안내</span>
         <span data-lang="en">Conference Info</span>
