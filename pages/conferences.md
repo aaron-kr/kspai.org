@@ -38,7 +38,7 @@ permalink: /conferences/
       </p>
     </div>
     <div class="download-card-actions">
-      <a href="/assets/files/2026-summer-conference-template.hwp" class="btn btn-primary" download>
+      <a href="/assets/files/2026 공동하계학술대회 논문양식.hwp" class="btn btn-primary" download>
         <span data-lang="ko">↓ 학술대회 양식</span>
         <span data-lang="en">↓ Conference Template</span>
       </a>
