@@ -15,12 +15,10 @@
 #   note_en: Formal officers will be elected following the inaugural general assembly.
 
 president:
-  - role_ko: 회장
-    role_en: President
-    name_ko: 이충호
-    name_en: Choong Ho Lee
-    affil_ko: 국립한밭대학교
-    affil_en: Hanbat National University
+  name_ko: 이충호
+  name_en: Choong Ho Lee
+  affil_ko: 국립한밭대학교
+  affil_en: Hanbat National University
 
 vice_presidents:
   - role_ko: 총무부회장
