@@ -11,7 +11,7 @@ description: 한국피지컬인공지능학회(KSPAI) 임원진 소개 — 회�
 permalink: /officers/
 ---
 
-<div class="coming-soon-banner">
+<!-- <div class="coming-soon-banner">
   <span class="mono">※</span>
   <div>
     <strong>
@@ -21,7 +21,7 @@ permalink: /officers/
     <span data-lang="ko">{{ site.data.officers.status.note_ko }}</span>
     <span data-lang="en">{{ site.data.officers.status.note_en }}</span>
   </div>
-</div>
+</div> -->
 
 <!-- ── PRESIDENT ── -->
 <div class="page-section">
@@ -32,12 +32,12 @@ permalink: /officers/
   <div class="officer-card officer-card--placeholder">
     <div class="officer-info">
       <p class="officer-name">
-        <span data-lang="ko">{{ site.data.officers.president.placeholder_ko }}</span>
-        <span data-lang="en">{{ site.data.officers.president.placeholder_en }}</span>
+        <span data-lang="ko">{{ site.data.officers.president.name_ko }}</span>
+        <span data-lang="en">{{ site.data.officers.president.name_en }}</span>
       </p>
       <p class="officer-affil">
-        <span data-lang="ko">{{ site.data.officers.president.note_ko }}</span>
-        <span data-lang="en">{{ site.data.officers.president.note_en }}</span>
+        <span data-lang="ko">{{ site.data.officers.president.affil_ko }}</span>
+        <span data-lang="en">{{ site.data.officers.president.affil_en }}</span>
       </p>
     </div>
   </div>
