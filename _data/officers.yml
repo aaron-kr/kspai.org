@@ -8,17 +8,19 @@
 #  founder_note: hidden comment for future reveal (not rendered)
 # ═══════════════════════════════════════════════════════════════
 
-status:
-  banner_ko: 비상대책위원회 체제 운영 중
-  banner_en: Operating under Emergency Planning Committee
-  note_ko: 창립총회 이후 정식 임원진이 선출될 예정입니다.
-  note_en: Formal officers will be elected following the inaugural general assembly.
+# status:
+#   banner_ko: 비상대책위원회 체제 운영 중
+#   banner_en: Operating under Emergency Planning Committee
+#   note_ko: 창립총회 이후 정식 임원진이 선출될 예정입니다.
+#   note_en: Formal officers will be elected following the inaugural general assembly.
 
 president:
-  placeholder_ko: 비상대책위원회 체제 운영 중
-  placeholder_en: Operating under Emergency Planning Committee
-  note_ko: 창립총회 후 선출 예정
-  note_en: To be elected at the inaugural general assembly
+  - role_ko: 회장
+    role_en: President
+    name_ko: 이충호
+    name_en: Choong Ho Lee
+    affil_ko: 국립한밭대학교
+    affil_en: Hanbat National University
 
 vice_presidents:
   - role_ko: 총무부회장
