@@ -14,7 +14,7 @@
 #   note_ko: 창립총회 이후 정식 임원진이 선출될 예정입니다.
 #   note_en: Formal officers will be elected following the inaugural general assembly.
 
-president_actual:
+president:
   - role_ko: 회장
     role_en: President
     name_ko: 이충호
