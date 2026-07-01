@@ -12,6 +12,7 @@ tag_class: "announcement"
 date_display_ko: "일정 확정 후 공지 예정"
 date_display_en: "Date to be announced"
 date: 2025-01-03
+expires: 2025-12-31
 ---
 
 한국피지컬인공지능학회 창립총회 관련 상세 정보는 추후 공지될 예정입니다.

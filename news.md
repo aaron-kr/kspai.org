@@ -19,56 +19,39 @@ permalink: /news/
   </div>
   {% else %}
 
-  <!-- Featured / most recent post -->
-  {% assign featured = posts.first %}
-  <div class="news-main news-main--spaced">
-    <span class="news-tag {{ featured.tag_class }} en">
-      <span data-lang="ko">{{ featured.tag_ko }}</span>
-      <span data-lang="en">{{ featured.tag_en }}</span>
-    </span>
-    <h2 class="news-title">
-      <span data-lang="ko">{{ featured.title_ko }}</span>
-      <span data-lang="en">{{ featured.title_en }}</span>
-    </h2>
-    <p class="news-excerpt">
-      <span data-lang="ko">{{ featured.excerpt_ko }}</span>
-      <span data-lang="en">{{ featured.excerpt_en }}</span>
-    </p>
-    <p class="news-date mono">
-      <span data-lang="ko">{{ featured.date_display_ko }}</span>
-      <span data-lang="en">{{ featured.date_display_en }}</span>
-    </p>
-  </div>
-
-  <!-- All remaining posts -->
-  {% if posts.size > 1 %}
-  <div class="news-list">
-    {% for post in posts offset:1 %}
-    <div class="news-list-item">
-      <div class="news-list-tag-date">
-        <span class="news-tag {{ post.tag_class }} en">
-          <span data-lang="ko">{{ post.tag_ko }}</span>
-          <span data-lang="en">{{ post.tag_en }}</span>
-        </span>
-        <span class="news-date mono">
-          <span data-lang="ko">{{ post.date_display_ko }}</span>
-          <span data-lang="en">{{ post.date_display_en }}</span>
-        </span>
-      </div>
-      <div class="news-list-body">
-        <h3 class="news-list-title">
-          <span data-lang="ko">{{ post.title_ko }}</span>
-          <span data-lang="en">{{ post.title_en }}</span>
-        </h3>
-        <p class="news-excerpt">
-          <span data-lang="ko">{{ post.excerpt_ko }}</span>
-          <span data-lang="en">{{ post.excerpt_en }}</span>
-        </p>
-      </div>
+  <div class="news-board">
+    <div class="news-board-header">
+      <span>
+        <span data-lang="ko">분류</span>
+        <span data-lang="en">Category</span>
+      </span>
+      <span>
+        <span data-lang="ko">제목</span>
+        <span data-lang="en">Title</span>
+      </span>
+      <span>
+        <span data-lang="ko">날짜</span>
+        <span data-lang="en">Date</span>
+      </span>
     </div>
+
+    {% for post in posts %}
+    <a href="{{ post.url | relative_url }}" class="news-board-row">
+      <span class="news-tag {{ post.tag_class }}">
+        <span data-lang="ko">{{ post.tag_ko }}</span>
+        <span data-lang="en">{{ post.tag_en }}</span>
+      </span>
+      <span class="news-board-title">
+        <span data-lang="ko">{{ post.title_ko | default: post.title }}</span>
+        <span data-lang="en">{{ post.title_en | default: post.title }}</span>
+      </span>
+      <span class="news-board-date mono">
+        <span data-lang="ko">{{ post.date_display_ko }}</span>
+        <span data-lang="en">{{ post.date_display_en }}</span>
+      </span>
+    </a>
     {% endfor %}
   </div>
-  {% endif %}
 
   {% endif %}
 </div>

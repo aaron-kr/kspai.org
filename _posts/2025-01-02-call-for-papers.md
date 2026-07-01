@@ -12,6 +12,7 @@ tag_class: "call"
 date_display_ko: "Coming Soon"
 date_display_en: "Coming Soon"
 date: 2025-01-02
+expires: 2025-12-31
 ---
 
 학회지 창간호 논문 모집에 관한 상세 내용은 추후 공지될 예정입니다.

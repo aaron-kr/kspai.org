@@ -3,17 +3,82 @@ layout: default
 ---
 <article class="post-article">
   <div class="container">
+
     <div class="post-header">
-      <span class="news-tag {{ page.tag_class }} en">{{ page.tag_en }}</span>
+      <span class="news-tag {{ page.tag_class }}">
+        <span data-lang="ko">{{ page.tag_ko }}</span>
+        <span data-lang="en">{{ page.tag_en }}</span>
+      </span>
       <h1 class="post-title">
         <span data-lang="ko">{{ page.title_ko | default: page.title }}</span>
         <span data-lang="en">{{ page.title_en | default: page.title }}</span>
       </h1>
       <p class="post-date mono">{{ page.date | date: "%Y.%m.%d" }}</p>
     </div>
+
     <div class="post-body">
       {{ content }}
     </div>
-    <a href="{{ '/' | relative_url }}#news" class="btn btn-outline" style="margin-top:40px;">&larr; 소식으로 돌아가기</a>
+
+    <nav class="post-nav" aria-label="게시물 탐색 / Post navigation">
+      <div class="post-nav-item">
+        {% if page.next %}
+        <a href="{{ page.next.url | relative_url }}" class="post-nav-link">
+          <span class="post-nav-label mono">
+            <span data-lang="ko">▲ 다음글</span>
+            <span data-lang="en">▲ Newer</span>
+          </span>
+          <span class="post-nav-title">
+            <span data-lang="ko">{{ page.next.title_ko | default: page.next.title }}</span>
+            <span data-lang="en">{{ page.next.title_en | default: page.next.title }}</span>
+          </span>
+        </a>
+        {% else %}
+        <span class="post-nav-link post-nav-link--disabled">
+          <span class="post-nav-label mono">
+            <span data-lang="ko">▲ 다음글</span>
+            <span data-lang="en">▲ Newer</span>
+          </span>
+          <span class="post-nav-title">
+            <span data-lang="ko">최신 게시물입니다.</span>
+            <span data-lang="en">This is the latest post.</span>
+          </span>
+        </span>
+        {% endif %}
+      </div>
+      <div class="post-nav-item">
+        {% if page.previous %}
+        <a href="{{ page.previous.url | relative_url }}" class="post-nav-link">
+          <span class="post-nav-label mono">
+            <span data-lang="ko">▼ 이전글</span>
+            <span data-lang="en">▼ Older</span>
+          </span>
+          <span class="post-nav-title">
+            <span data-lang="ko">{{ page.previous.title_ko | default: page.previous.title }}</span>
+            <span data-lang="en">{{ page.previous.title_en | default: page.previous.title }}</span>
+          </span>
+        </a>
+        {% else %}
+        <span class="post-nav-link post-nav-link--disabled">
+          <span class="post-nav-label mono">
+            <span data-lang="ko">▼ 이전글</span>
+            <span data-lang="en">▼ Older</span>
+          </span>
+          <span class="post-nav-title">
+            <span data-lang="ko">첫 번째 게시물입니다.</span>
+            <span data-lang="en">This is the oldest post.</span>
+          </span>
+        </span>
+        {% endif %}
+      </div>
+    </nav>
+
+    <div class="post-nav-actions">
+      <a href="{{ '/news/' | relative_url }}" class="btn btn-outline">
+        <span data-lang="ko">목록</span>
+        <span data-lang="en">All Posts</span>
+      </a>
+    </div>
+
   </div>
 </article>

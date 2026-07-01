@@ -1,3 +1,17 @@
+{% assign today_str = site.time | date: "%Y-%m-%d" %}
+{% assign visible_posts = "" | split: "" %}
+{% for post in site.posts %}
+  {% if post.expires %}
+    {% assign exp_str = post.expires | date: "%Y-%m-%d" %}
+    {% unless exp_str < today_str %}
+      {% assign visible_posts = visible_posts | push: post %}
+    {% endunless %}
+  {% else %}
+    {% assign visible_posts = visible_posts | push: post %}
+  {% endif %}
+{% endfor %}
+
+{% if visible_posts.size > 0 %}
 <div class="announcements-bar" aria-label="공지사항 / Announcements">
   <div class="container">
     <div class="announcements-bar-inner">
@@ -16,8 +30,7 @@
       <div class="announcements-divider" aria-hidden="true"></div>
 
       <ul class="announcements-list" role="list">
-        {% assign posts = site.posts | limit: 5 %}
-        {% for post in posts %}
+        {% for post in visible_posts limit: 5 %}
         <li class="announcement-item">
           <span class="announcement-tag {{ post.tag_class }}">
             <span data-lang="ko">{{ post.tag_ko }}</span>
@@ -40,3 +53,4 @@
     </div>
   </div>
 </div>
+{% endif %}
