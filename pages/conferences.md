@@ -21,8 +21,8 @@ permalink: /conferences/
     <span data-lang="en">Conference Paper Template</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko">KSPAI 학술대회 발표 논문 제출용 공식 HWP 양식입니다. 초대 학술대회(2026년 6월) 개최 후 제공될 예정입니다.</span>
-    <span data-lang="en">The official HWP template for conference paper submissions to KSPAI events. Will be available following the inaugural conference (June 2026).</span>
+    <span data-lang="ko">KSPAI 학술대회 발표 논문 제출용 공식 HWP 양식입니다. 제1회 하계학술대회(2026년 6월, 한밭대학교) 배포 버전을 아래에서 다운로드하실 수 있습니다.</span>
+    <span data-lang="en">The official HWP template for conference paper submissions to KSPAI events. The version distributed at the 1st Summer Conference (June 2026, Hanbat National University) is available for download below.</span>
   </p>
   <div class="download-card download-card--warm">
     <div class="download-card-icon">📋</div>
@@ -33,8 +33,8 @@ permalink: /conferences/
         <span data-lang="en">KSPAI Conference Paper Template — HWP</span>
       </div>
       <p class="download-card-desc">
-        <span data-lang="ko">초대 학술대회(2026년 6월 25–26일, 한밭대학교) 이후 공개될 예정입니다. 학술대회 상세 안내는 학술대회 페이지를 확인하시기 바랍니다.</span>
-        <span data-lang="en">Will be released following the inaugural conference (June 25–26, 2026, Hanbat National University). See the conferences page for full details.</span>
+        <span data-lang="ko">제1회 하계학술대회(2026년 6월 25–26일, 한밭대학교)에서 배포된 발표 논문 양식입니다.</span>
+        <span data-lang="en">Paper template distributed at the 1st Summer Conference (June 25–26, 2026, Hanbat National University).</span>
       </p>
     </div>
     <div class="download-card-actions">
@@ -224,8 +224,8 @@ permalink: /conferences/
       <div>
         <strong><span data-lang="ko">논문 양식</span><span data-lang="en">Paper Template</span></strong>
         <p>
-          <span data-lang="ko">학술대회 발표 논문은 학술지 양식과 별도의 학술대회 발표 논문 양식을 사용합니다. 창립학술대회 공고 시 양식이 함께 배포될 예정입니다.</span>
-          <span data-lang="en">Conference papers use a separate template from the journal. The conference template will be distributed with the inaugural conference announcement.</span>
+          <span data-lang="ko">학술대회 발표 논문은 학술지 양식과 별도의 학술대회 발표 논문 양식을 사용합니다. 제1회 하계학술대회 양식은 위 다운로드 섹션에서 받으실 수 있습니다.</span>
+          <span data-lang="en">Conference papers use a separate template from the journal. The 1st Summer Conference template is available in the download section above.</span>
         </p>
       </div>
     </div>

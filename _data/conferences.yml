@@ -13,13 +13,18 @@
 #   3. Place poster image in /assets/images/conferences/
 # ═══════════════════════════════════════════════════════════════
 
-upcoming:
+upcoming: []
+
+# ── PAST CONFERENCES ──
+# 2026-summer moved here after the event concluded on 2026-06-26
+
+past:
   - id: "2026-summer"
     title_ko: "2026년 하계학술대회"
     title_en: "2026 Summer Conference"
     subtitle_ko: "제1회 한국피지컬인공지능학회 하계학술대회"
     subtitle_en: "1st KSPAI Summer Conference"
-    status: "upcoming"            # upcoming | cfp-open | registration-open | closed
+    status: "closed"            # upcoming | cfp-open | registration-open | closed
 
     # ── Dates ──
     date_ko: "2026-06-25 ~ 26"
@@ -130,7 +135,9 @@ upcoming:
         name_en: "Korea Quality of Life Information Society"
         url: "http://klife.re.kr"
 
-past: []
+    proceedings_link: ""
+    photos_link: ""
+
 # ── PAST CONFERENCE TEMPLATE (copy & fill when needed) ──
 # - id: "YYYY-season"
 #   title_ko: "..."

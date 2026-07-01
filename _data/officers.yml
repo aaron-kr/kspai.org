@@ -122,15 +122,3 @@ editorial_board:
     affil_ko:
     affil_en:
     pending: true
-
-# ── Hidden — reveal after inaugural general assembly ──
-# founder:
-#   role_ko: 설립자 / 이사회 의장
-#   role_en: Founder / Board Chair
-#   name_ko: (이름)
-#   affil_ko: 전주교육대학교
-#   affil_en: Jeonju National University of Education
-# president_actual:
-#   name_ko: (이름)
-#   affil_ko: 원광대학교
-#   affil_en: Wonkwang University

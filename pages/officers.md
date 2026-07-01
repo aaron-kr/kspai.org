@@ -146,11 +146,3 @@ permalink: /officers/
     {% endfor %}
   </div>
 </div>
-
-<!-- ── FOUNDER NOTE (hidden — reveal after inaugural general assembly) ── -->
-<!--
-설립자/이사회 의장: (이름) (전주교육대학교 / Jeonju National University of Education)
-회장: (이름) (원광대학교 / Wonkwang University)
-To reveal: uncomment the founder and president_actual blocks in _data/officers.yml
-and add rendering sections here.
--->
