@@ -20,7 +20,7 @@ layout: default
       {{ content }}
     </div>
 
-    <nav class="post-nav" aria-label="게시물 탐색 / Post navigation">
+    <div class="post-nav" role="navigation" aria-label="게시물 탐색 / Post navigation">
       <div class="post-nav-item">
         {% if page.next %}
         <a href="{{ page.next.url | relative_url }}" class="post-nav-link">
@@ -71,7 +71,7 @@ layout: default
         </span>
         {% endif %}
       </div>
-    </nav>
+    </div>
 
     <div class="post-nav-actions">
       <a href="{{ '/news/' | relative_url }}" class="btn btn-outline">
