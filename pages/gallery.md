@@ -79,8 +79,8 @@ permalink: /gallery/
         <span data-lang="en">Photo Gallery Coming Soon</span>
       </strong>
       <p style="margin-top: 8px; font-size: 14px; color: var(--text-secondary);">
-        <span data-lang="ko">제1회 하계학술대회(2026년 6월, 한밭대학교) 사진을 포함한 학술 활동 사진을 곧 공유할 예정입니다.</span>
-        <span data-lang="en">Photos from the 1st Summer Conference (June 2026, Hanbat National University) and other academic activities will be shared here soon.</span>
+        <span data-lang="ko">학술대회 및 학회 활동 사진을 곧 공유할 예정입니다.</span>
+        <span data-lang="en">Photos from KSPAI conferences and other academic activities will be shared here soon.</span>
       </p>
     </div>
   </div>

@@ -46,12 +46,12 @@ permalink: /resources/
           <span data-lang="en">KSPAI Conference Paper Template — HWP</span>
         </div>
         <p class="download-card-desc">
-          <span data-lang="ko">학술대회 발표 논문(구두 발표, 포스터 발표)에 사용합니다. 창립학술대회 이후 등록 예정입니다.</span>
-          <span data-lang="en">For oral and poster presentations at KSPAI academic conferences. Template will be made available after the inaugural conference.</span>
+          <span data-lang="ko">학술대회 발표 논문(구두 발표, 포스터 발표)에 사용합니다.</span>
+          <span data-lang="en">For oral and poster presentations at KSPAI academic conferences.</span>
         </p>
       </div>
       <div class="download-card-actions">
-        <a href="/assets/files/2026-summer-conference-template.hwp" class="btn btn-primary" download>
+        <a href="/assets/files/2026 공동하계학술대회 논문양식.hwp" class="btn btn-primary" download>
           <span data-lang="ko">↓ 학술대회 양식</span>
           <span data-lang="en">↓ Conference Template</span>
         </a>

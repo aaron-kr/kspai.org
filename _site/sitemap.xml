@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:4000/conferences/2026-summer/</loc>
+<lastmod>2026-09-01T12:09:29+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/conferences/2027-winter/</loc>
+<lastmod>2026-09-01T12:09:29+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/2025/01/02/call-for-papers.html</loc>
 <lastmod>2025-01-02T00:00:00+09:00</lastmod>
 </url>
@@ -11,6 +19,18 @@
 <url>
 <loc>http://localhost:4000/2026/05/18/first-conference.html</loc>
 <lastmod>2026-05-18T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2026/07/01/project-call-lifelong-ed.html</loc>
+<lastmod>2026-07-01T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2026/07/01/project-call-suob-model.html</loc>
+<lastmod>2026-07-01T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2026/08/18/winter-conference-announced.html</loc>
+<lastmod>2026-08-18T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>
@@ -65,5 +85,13 @@
 </url>
 <url>
 <loc>http://localhost:4000/SEO_AUDIT.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/assets/files/2026/%EC%84%B1%EC%9D%B8%ED%95%99%EC%8A%B5%EC%9E%90-%EC%88%98%EC%97%85%EB%AA%A8%ED%98%95%EA%B0%9C%EB%B0%9C-%EA%B3%84%EC%95%BD.pdf</loc>
+<lastmod>2026-07-01T14:07:06+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/files/2026/%ED%8F%89%EC%83%9D%EA%B5%90%EC%9C%A1-%EA%B2%BD%EC%98%81%EC%84%B1%EA%B3%BC%EB%B6%84%EC%84%9D-%EA%B3%84%EC%95%BD.pdf</loc>
+<lastmod>2026-07-01T14:07:02+09:00</lastmod>
 </url>
 </urlset>

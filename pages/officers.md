@@ -110,6 +110,39 @@ permalink: /officers/
   </div>
 </div>
 
+<!-- ── COMMITTEE CHAIRS ── -->
+<div class="page-section">
+  <h2 class="page-section-title">
+    <span data-lang="ko">위원회</span>
+    <span data-lang="en">Committees</span>
+  </h2>
+
+  <div class="officers-grid officers-grid--2col">
+    {% for member in site.data.officers.committee_chairs %}
+    <div class="officer-role-group">
+      <h3 class="officer-role-title">
+        <span data-lang="ko">{{ member.role_ko }}</span>
+        <span data-lang="en">{{ member.role_en }}</span>
+      </h3>
+      <div class="officer-card">
+        <div class="officer-info">
+          <p class="officer-name">
+            <span data-lang="ko">{{ member.name_ko }}</span>
+            <span data-lang="en">{{ member.name_en }}</span>
+          </p>
+          {% if member.affil_ko %}
+          <p class="officer-affil">
+            <span data-lang="ko">{{ member.affil_ko }}</span>
+            <span data-lang="en">{{ member.affil_en }}</span>
+          </p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
 <!-- ── EDITORIAL BOARD ── -->
 <div class="page-section">
   <h2 class="page-section-title">

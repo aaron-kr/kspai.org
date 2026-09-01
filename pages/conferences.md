@@ -21,8 +21,8 @@ permalink: /conferences/
     <span data-lang="en">Conference Paper Template</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko">KSPAI 학술대회 발표 논문 제출용 공식 HWP 양식입니다. 제1회 하계학술대회(2026년 6월, 한밭대학교) 배포 버전을 아래에서 다운로드하실 수 있습니다.</span>
-    <span data-lang="en">The official HWP template for conference paper submissions to KSPAI events. The version distributed at the 1st Summer Conference (June 2026, Hanbat National University) is available for download below.</span>
+    <span data-lang="ko">KSPAI 학술대회 발표 논문 제출용 공식 HWP 양식입니다. 아래에서 다운로드하실 수 있습니다.</span>
+    <span data-lang="en">The official HWP template for conference paper submissions to KSPAI events. Available for download below.</span>
   </p>
   <div class="download-card download-card--warm">
     <div class="download-card-icon">📋</div>
@@ -33,8 +33,8 @@ permalink: /conferences/
         <span data-lang="en">KSPAI Conference Paper Template — HWP</span>
       </div>
       <p class="download-card-desc">
-        <span data-lang="ko">제1회 하계학술대회(2026년 6월 25–26일, 한밭대학교)에서 배포된 발표 논문 양식입니다.</span>
-        <span data-lang="en">Paper template distributed at the 1st Summer Conference (June 25–26, 2026, Hanbat National University).</span>
+        <span data-lang="ko">한국피지컬인공지능학회 학술대회 발표 논문 작성에 사용하는 공식 양식입니다.</span>
+        <span data-lang="en">The official template for papers presented at KSPAI academic conferences.</span>
       </p>
     </div>
     <div class="download-card-actions">
@@ -224,8 +224,8 @@ permalink: /conferences/
       <div>
         <strong><span data-lang="ko">논문 양식</span><span data-lang="en">Paper Template</span></strong>
         <p>
-          <span data-lang="ko">학술대회 발표 논문은 학술지 양식과 별도의 학술대회 발표 논문 양식을 사용합니다. 제1회 하계학술대회 양식은 위 다운로드 섹션에서 받으실 수 있습니다.</span>
-          <span data-lang="en">Conference papers use a separate template from the journal. The 1st Summer Conference template is available in the download section above.</span>
+          <span data-lang="ko">학술대회 발표 논문은 학술지 양식과 별도의 학술대회 발표 논문 양식을 사용합니다. 위 다운로드 섹션에서 받으실 수 있습니다.</span>
+          <span data-lang="en">Conference papers use a separate template from the journal. It is available in the download section above.</span>
         </p>
       </div>
     </div>
@@ -273,14 +273,20 @@ permalink: /conferences/
     </div>
     <div class="conf-past-body">
       <strong class="conf-past-title">
-        <span data-lang="ko">{{ conf.title_ko }}</span>
-        <span data-lang="en">{{ conf.title_en }}</span>
+        <a href="{{ '/conferences/' | append: conf.id | append: '/' | relative_url }}" style="color: inherit; text-decoration: none;">
+          <span data-lang="ko">{{ conf.title_ko }}</span>
+          <span data-lang="en">{{ conf.title_en }}</span>
+        </a>
       </strong>
       <p class="conf-past-venue">
         <span data-lang="ko">{{ conf.venue_ko }}</span>
         <span data-lang="en">{{ conf.venue_en }}</span>
       </p>
     </div>
+    <a href="{{ '/conferences/' | append: conf.id | append: '/' | relative_url }}" class="btn btn-outline btn-sm">
+      <span data-lang="ko">자세히 →</span>
+      <span data-lang="en">Details →</span>
+    </a>
     {% if conf.proceedings_link %}
     <a href="{{ conf.proceedings_link }}" class="btn btn-outline btn-sm">
       <span data-lang="ko">논문집 →</span>

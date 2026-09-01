@@ -12,17 +12,17 @@ layout: default
 <div class="page-hero" aria-label="학술대회 헤더 / Conference header">
   <div class="container">
     <div class="page-hero-inner">
-      <p class="page-label mono">
+      <p class="mono" style="color: var(--hero-text-sub); font-size: 13px; margin-bottom: 12px;">
         <a href="{{ '/conferences/' | relative_url }}" style="color: inherit; text-decoration: none;">
           <span data-lang="ko">← 학술대회</span>
           <span data-lang="en">← Conferences</span>
         </a>
       </p>
-      <h1 class="page-title">
+      <h1 class="page-hero-title">
         <span data-lang="ko">{{ conf.title_ko }}</span>
         <span data-lang="en">{{ conf.title_en }}</span>
       </h1>
-      <p class="page-subtitle">
+      <p class="page-hero-subtitle">
         <span data-lang="ko">{{ conf.subtitle_ko }}</span>
         <span data-lang="en">{{ conf.subtitle_en }}</span>
       </p>
@@ -203,6 +203,24 @@ layout: default
     </div>
     {% endif %}
   </div>
+
+  <!-- Sponsors -->
+  {% if conf.sponsors.size > 0 %}
+  <div class="page-section page-section--compact">
+    <p class="meta-label" style="margin-bottom: 12px;">
+      <span data-lang="ko">후원 기업</span>
+      <span data-lang="en">Sponsors</span>
+    </p>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+      {% for sponsor in conf.sponsors %}
+      <span class="topic-chip">
+        <span data-lang="ko">{{ sponsor.name_ko }}</span>
+        <span data-lang="en">{{ sponsor.name_en }}</span>
+      </span>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
 
   <!-- Co-organizers -->
   {% if conf.coorganizers.size > 0 %}

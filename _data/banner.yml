@@ -11,9 +11,9 @@
 active: true
 type: "conference"        # conference | announcement | warning | info
 
-message_ko: "📢 2026년 하계학술대회 — 2026년 6월 25~26일 · 국립한밭대학교 (대전)"
-message_en: "📢 2026 Summer Conference — June 25–26, 2026 · Hanbat National University, Daejeon"
+message_ko: "📢 2027년 동계학술대회 — 2027년 1월 28~29일 · 전주교육대학교"
+message_en: "📢 2027 Winter Conference — January 28–29, 2027 · Jeonju National University of Education"
 
-link_url: "/conferences/"
+link_url: "/conferences/2027-winter/"
 link_label_ko: "자세히 보기 →"
 link_label_en: "Learn more →"

@@ -150,10 +150,21 @@ permalink: /join/
       <div class="join-step-num mono">04</div>
       <div>
         <strong><span data-lang="ko">회비 납부</span><span data-lang="en">Pay membership dues</span></strong>
-        <p><span data-lang="ko">연회비 납부 후 회원 자격이 발효됩니다. (회비 금액은 창립총회 후 공지 예정)</span>
-           <span data-lang="en">Membership becomes effective upon payment of annual dues. (Dues amount to be announced after the inaugural assembly)</span></p>
+        <p><span data-lang="ko">연회비 납부 후 회원 자격이 발효됩니다. (정회원 연회비: 50,000원)</span>
+           <span data-lang="en">Membership becomes effective upon payment of annual dues. (Regular member annual dues: 50,000 KRW)</span></p>
+        <p style="margin-top: 8px;">
+          <span data-lang="ko">계좌: KB국민은행 506501-04-727246 (예금주: 한국피지컬인공지능학회)</span>
+          <span data-lang="en">Account: KB Kookmin Bank 506501-04-727246 (Account holder: Korean Society for Physical AI)</span>
+        </p>
       </div>
     </div>
+  </div>
+
+  <div class="section-actions" style="margin-top: 24px;">
+    <a href="https://forms.gle/H3FCyRfZkm6Sj9PfA" class="btn btn-primary" target="_blank" rel="noopener">
+      <span data-lang="ko">정회원 가입 신청서 →</span>
+      <span data-lang="en">Regular Member Application Form →</span>
+    </a>
   </div>
 </div>
 

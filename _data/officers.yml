@@ -67,6 +67,28 @@ vice_presidents:
     affil_ko: 성결대학교
     affil_en: Sungkyul University
 
+committee_chairs:
+  - role_ko: 부편집위원장
+    role_en: Vice Editor-in-Chief
+    name_ko: 이선경
+    name_en: Sunkyung Lee
+    affil_ko:
+    affil_en:
+
+  - role_ko: 분과위원장
+    role_en: Division Chair
+    name_ko: 천양하
+    name_en: Yangha Cheon
+    affil_ko:
+    affil_en:
+
+  - role_ko: 분과위원장
+    role_en: Division Chair
+    name_ko: 박미현
+    name_en: Mihyun Park
+    affil_ko:
+    affil_en:
+
 auditors:
   - role_ko: 감사
     role_en: Auditor

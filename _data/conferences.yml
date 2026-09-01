@@ -13,7 +13,115 @@
 #   3. Place poster image in /assets/images/conferences/
 # ═══════════════════════════════════════════════════════════════
 
-upcoming: []
+upcoming:
+  - id: "2027-winter"
+    title_ko: "2027년 동계학술대회"
+    title_en: "2027 Winter Conference"
+    subtitle_ko: "한국피지컬인공지능학회·삶의질정보학회 공동학술대회"
+    subtitle_en: "Joint Conference of KSPAI and the Korea Quality of Life Information Society"
+    status: "upcoming"            # upcoming | cfp-open | registration-open | closed
+
+    # ── Dates ──
+    date_ko: "2027-01-28 ~ 29"
+    date_en: "January 28–29, 2027"
+    date_from: "2027-01-28"
+    date_to: "2027-01-29"
+
+    # ── Location ──
+    venue_ko: "전주교육대학교 교사교육센터"
+    venue_en: "Teacher Education Center, Jeonju National University of Education"
+    city_ko: "전주"
+    city_en: "Jeonju, Korea"
+    map_url: ""
+
+    # ── Formats ──
+    formats_ko: "온라인/현장 구두 발표 · 온라인/현장 포스터 발표"
+    formats_en: "Online/On-site Oral & Poster Presentations"
+    oral_time_ko: "구두 발표: 15분 발표 + 5분 질의응답"
+    oral_time_en: "Oral: 15 min presentation + 5 min Q&A"
+
+    # ── Key Dates ──
+    key_dates:
+      - label_ko: "논문 접수"
+        label_en: "Submission Open"
+        date_ko: "추후 공지"
+        date_en: "To be announced"
+        status: "tba"
+      - label_ko: "제출 마감"
+        label_en: "Submission Deadline"
+        date_ko: "추후 공지"
+        date_en: "To be announced"
+        status: "tba"
+      - label_ko: "결과 통보"
+        label_en: "Notification"
+        date_ko: "추후 공지"
+        date_en: "To be announced"
+        status: "tba"
+      - label_ko: "학술대회"
+        label_en: "Conference"
+        date_ko: "2027-01-28 ~ 29"
+        date_en: "January 28–29, 2027"
+        status: "confirmed"
+
+    # ── Description ──
+    description_ko: >
+      한국피지컬인공지능학회와 삶의질정보학회가 전주교육대학교와 함께 개최하는 공동학술대회입니다.
+      전주교육대학교 교사교육센터(1층 마음연구홀, 강의실 등)에서 이틀간 온라인·현장 구두 발표 및
+      포스터 발표로 진행됩니다.
+    description_en: >
+      A joint academic conference co-hosted by KSPAI and the Korea Quality of Life Information Society,
+      together with Jeonju National University of Education. Held over two days at the university's
+      Teacher Education Center, the program includes both online and on-site oral and poster
+      presentations.
+
+    # ── Topics ──
+    topics: []
+
+    # ── Awards ──
+    awards:
+      - ko: "학술대상"
+        en: "Academic Grand Prize"
+      - ko: "연구대상"
+        en: "Research Grand Prize"
+      - ko: "최우수상"
+        en: "Grand Award"
+      - ko: "학생 우수상"
+        en: "Student Excellence Award"
+
+    # ── Registration / Fees ──
+    registration_open: false
+    registration_link: ""
+    fee_note_ko: "발표자 등록비: 온라인 4만원 / 오프라인 8만원(참가비 포함). 단순 참가자·공동저자 참가비: 1인당 4만원(학부생 3만원). 상세 사항은 추후 공지됩니다."
+    fee_note_en: "Presenter registration: 40,000 KRW online / 80,000 KRW on-site (participation fee included). Attendee/co-author participation fee: 40,000 KRW per person (30,000 KRW for undergraduates). Full details to be announced."
+
+    # ── Links ──
+    submit_link: "/submit/"
+    cfp_link: ""
+    template_link: ""
+
+    # ── Media ──
+    # Place poster at /assets/images/conferences/2027-winter-poster.jpg once available
+    poster: "/assets/images/conferences/2027-winter-poster.jpg"
+    poster_alt_ko: "2027년 동계학술대회 포스터"
+    poster_alt_en: "2027 Winter Conference Poster"
+    has_poster: false
+
+    # ── Co-organizers ──
+    coorganizers:
+      - name_ko: "삶의질정보학회"
+        name_en: "Korea Quality of Life Information Society"
+        url: "http://klife.re.kr"
+      - name_ko: "전주교육대학교"
+        name_en: "Jeonju National University of Education"
+        url: ""
+
+    # Sponsors intentionally omitted — as of the 1st Steering Committee meeting (2026-08-18)
+    # the sponsor list was only a prospective target list ("후원기업 예상"), not confirmed
+    # commitments. Add a `sponsors:` list here (see conference.html for the render block)
+    # once sponsorships are actually signed.
+
+    proceedings_link: ""
+    photos_link: ""
 
 # ── PAST CONFERENCES ──
 # 2026-summer moved here after the event concluded on 2026-06-26
