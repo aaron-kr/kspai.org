@@ -1,5 +1,6 @@
 {% if site.data.banner.active %}
-<div class="site-banner site-banner--{{ site.data.banner.type }}" id="site-banner" role="alert" aria-live="polite">
+<div class="site-banner site-banner--{{ site.data.banner.type }}" id="site-banner" role="region" aria-label="공지 배너 / Announcement"
+     data-banner-id="{{ site.data.banner.link_url | default: site.data.banner.message_en }}">
   <div class="container">
     <div class="site-banner-inner">
 

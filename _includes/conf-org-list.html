@@ -1,0 +1,28 @@
+{% comment %}
+  Sidebar list of organizations (주최 / 주관 …) on a conference page.
+  Params: orgs — list of { name_ko, name_en, url? }
+          label_ko, label_en — heading
+{% endcomment %}
+{% if include.orgs.size > 0 %}
+<div class="conf-aside-block">
+  <p class="meta-label">
+    <span data-lang="ko">{{ include.label_ko }}</span>
+    <span data-lang="en">{{ include.label_en }}</span>
+  </p>
+  <ul class="conf-aside-list">
+    {% for org in include.orgs %}
+    <li>
+      {% if org.url and org.url != "" %}
+      <a href="{{ org.url }}" target="_blank" rel="noopener">
+        <span data-lang="ko">{{ org.name_ko }}</span>
+        <span data-lang="en">{{ org.name_en }}</span> ↗
+      </a>
+      {% else %}
+      <span data-lang="ko">{{ org.name_ko }}</span>
+      <span data-lang="en">{{ org.name_en }}</span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

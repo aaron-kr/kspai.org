@@ -1,32 +1,33 @@
 // ── Site Banner ──
+// Visibility (dismissed / hidden today / expired) is decided before first paint by the
+// inline script in head.html, which sets html[data-banner="hidden"]. Here we just drop
+// the hidden banner from the DOM so the page's normal nav spacing applies.
 (function() {
   var banner = document.getElementById('site-banner');
-  if (!banner) return;
-
-  var FOREVER_KEY = 'kspai-banner-dismissed';
-  var TODAY_KEY   = 'kspai-banner-hidden-date';
-
-  var dismissedForever = localStorage.getItem(FOREVER_KEY) === 'true';
-  var hiddenDate = localStorage.getItem(TODAY_KEY);
-  var today = new Date().toISOString().slice(0, 10);
-  var hiddenToday = hiddenDate === today;
-
-  if (dismissedForever || hiddenToday) {
-    banner.style.display = 'none';
+  if (banner && document.documentElement.getAttribute('data-banner') === 'hidden') {
+    banner.remove();
   }
 })();
 
 function dismissBanner(mode) {
   var banner = document.getElementById('site-banner');
   if (!banner) return;
-  if (mode === 'forever') {
-    localStorage.setItem('kspai-banner-dismissed', 'true');
-  } else {
-    var today = new Date().toISOString().slice(0, 10);
-    localStorage.setItem('kspai-banner-hidden-date', today);
-  }
+  // "Forever" dismissal is keyed to the banner's id, so a new banner shows again
+  try {
+    if (mode === 'forever') {
+      localStorage.setItem('kspai-banner-dismissed', banner.dataset.bannerId);
+    } else {
+      localStorage.setItem('kspai-banner-hidden-date', new Date().toLocaleDateString('sv'));
+    }
+  } catch (e) {}
+  // Collapse to the strip behind the fixed nav, then remove — at that moment the first
+  // section in <main> takes back its own nav clearance, so nothing jumps.
+  var navH = getComputedStyle(document.documentElement).getPropertyValue('--nav-h').trim() || '64px';
+  banner.style.maxHeight = banner.offsetHeight + 'px';
+  void banner.offsetHeight;
   banner.classList.add('site-banner--hiding');
-  setTimeout(function() { banner.style.display = 'none'; }, 300);
+  banner.style.maxHeight = navH;
+  setTimeout(function() { banner.remove(); }, 300);
 }
 
 // ── Theme Toggle ──

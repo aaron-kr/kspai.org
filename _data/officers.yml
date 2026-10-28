@@ -1,11 +1,15 @@
 # ═══════════════════════════════════════════════════════════════
 #  _data/officers.yml — Officer roster for /officers/ page
 #
-#  Status block: current operational mode of the society
-#  President block: placeholder until inaugural assembly
-#  vice_presidents: ordered list of VPs
-#  auditors: auditor(s)
-#  founder_note: hidden comment for future reveal (not rendered)
+#  president:           회장
+#  vice_presidents:     부회장단 (ordered)
+#  auditors:            감사
+#  editorial_committee: 편집위원회 — leadership[] + divisions[] (분과위원장)
+#  academic_committee:  학술위원회
+#
+#  Leave affil_ko/en blank if unknown — the template hides it.
+#  Set `vacant: true` on an entry to render it as a dimmed 공석 card.
+#  Last roster update: 2026-10-29
 # ═══════════════════════════════════════════════════════════════
 
 # status:
@@ -31,7 +35,7 @@ vice_presidents:
     note_en: Co-Editor-in-Chief
 
   - role_ko: 논문지부회장
-    role_en: VP, Journal Division
+    role_en: VP, Journal
     name_ko: 장봉석
     name_en: Bong Seok Jang
     affil_ko: 국립목포대학교
@@ -39,12 +43,19 @@ vice_presidents:
     note_ko: 편집위원장
     note_en: Editor-in-Chief
 
-  - role_ko: 학술부회장
-    role_en: VP, Academic Affairs
+  - role_ko: 국내학술부회장
+    role_en: VP, Domestic Academic Affairs
     name_ko: 에런스노버거
     name_en: Aaron Snowberger
-    affil_ko: 국립한밭대학교
-    affil_en: Hanbat National University
+    affil_ko: 전북대학교
+    affil_en: Jeonbuk National University
+
+  - role_ko: 국제학술부회장
+    role_en: VP, International Academic Affairs
+    name_ko: 문형진
+    name_en: Hyeongjin Moon
+    affil_ko: 성결대학교
+    affil_en: Sungkyul University
 
   - role_ko: 대외협력부회장
     role_en: VP, External Relations
@@ -53,41 +64,19 @@ vice_presidents:
     affil_ko: 원광대학교
     affil_en: Wonkwang University
 
+  - role_ko: 산학협력부회장
+    role_en: VP, Industry-Academia Cooperation
+    name_ko: 문채영
+    name_en: Chaeyoung Moon
+    affil_ko: 우송정보대학
+    affil_en: Woosong Information College
+
   - role_ko: 기획부회장
     role_en: VP, Planning
     name_ko: 박지현
     name_en: Jihyun Park
     affil_ko: 우석대학교
     affil_en: Woosuk University
-
-  - role_ko: 특임부회장
-    role_en: VP, Special Affairs
-    name_ko: 문형진
-    name_en: Hyeongjin Moon
-    affil_ko: 성결대학교
-    affil_en: Sungkyul University
-
-committee_chairs:
-  - role_ko: 부편집위원장
-    role_en: Vice Editor-in-Chief
-    name_ko: 이선경
-    name_en: Sunkyung Lee
-    affil_ko:
-    affil_en:
-
-  - role_ko: 분과위원장
-    role_en: Division Chair
-    name_ko: 천양하
-    name_en: Yangha Cheon
-    affil_ko:
-    affil_en:
-
-  - role_ko: 분과위원장
-    role_en: Division Chair
-    name_ko: 박미현
-    name_en: Mihyun Park
-    affil_ko:
-    affil_en:
 
 auditors:
   - role_ko: 감사
@@ -97,50 +86,108 @@ auditors:
     affil_ko: 호서대학교
     affil_en: Hoseo University
 
-editorial_board:
-  - division_ko: 피지컬AI윤리및인문학
-    division_en: Physical AI Ethics & Humanities
-    role_ko: 편집위원장
-    role_en: Editor-in-Chief
-    name_ko: 장봉석
-    name_en: Bong-suk Jang
-    affil_ko: 국립목포대학교
-    affil_en: Mokpo National University
+# ── 편집위원회 / Editorial Committee ──
+editorial_committee:
+  leadership:
+    - role_ko: 편집위원장
+      role_en: Editor-in-Chief
+      name_ko: 장봉석
+      name_en: Bong Seok Jang
+      affil_ko: 국립목포대학교
+      affil_en: Mokpo National University
 
-  - division_ko: 피지컬AI교육
-    division_en: Physical AI Education
-    role_ko: 공동편집위원장
-    role_en: Co-Editor-in-Chief
-    name_ko: 김세민
-    name_en: Semin Kim
-    affil_ko: 전주교육대학교
-    affil_en: Jeonju National University of Education
+    - role_ko: 공동편집위원장
+      role_en: Co-Editor-in-Chief
+      name_ko: 김세민
+      name_en: Semin Kim
+      affil_ko: 전주교육대학교
+      affil_en: Jeonju National University of Education
 
-  - division_ko: 피지컬AI융합및창업
-    division_en: Physical AI Convergence & Entrepreneurship
-    name_ko: 방진숙
-    name_en: Jinsuk Bang
-    affil_ko: 호서대학교
-    affil_en: Hoseo University
+    - role_ko: 부편집위원장
+      role_en: Associate Editor-in-Chief
+      name_ko: 이선경
+      name_en: Sunkyung Lee
+      affil_ko: 우석대학교
+      affil_en: Woosuk University
 
-  - division_ko: 피지컬AI영상처리
-    division_en: Physical AI Image Processing
+  # 분과위원장 / Division Chairs
+  divisions:
+    - division_ko: 피지컬AI 윤리및인문학
+      division_en: Physical AI Ethics & Humanities
+      name_ko: 장봉석
+      name_en: Bong Seok Jang
+      affil_ko: 국립목포대학교
+      affil_en: Mokpo National University
+
+    - division_ko: 피지컬AI 교육
+      division_en: Physical AI Education
+      name_ko: 김세민
+      name_en: Semin Kim
+      affil_ko: 전주교육대학교
+      affil_en: Jeonju National University of Education
+
+    - division_ko: 피지컬AI 융합및창업
+      division_en: Physical AI Convergence & Entrepreneurship
+      name_ko: 방진숙
+      name_en: Jinsuk Bang
+      affil_ko: 호서대학교
+      affil_en: Hoseo University
+
+    - division_ko: 피지컬AI 비전및인식
+      division_en: Physical AI Vision & Perception
+      name_ko: 천양하
+      name_en: Yangha Cheon
+      affil_ko: 용인대학교
+      affil_en: Yongin University
+
+    - division_ko: 피지컬AI 시스템
+      division_en: Physical AI Systems
+      name_ko: 에런스노버거
+      name_en: Aaron Snowberger
+      affil_ko: 전북대학교
+      affil_en: Jeonbuk National University
+
+    - division_ko: 피지컬AI 국방및무기시스템
+      division_en: Physical AI Defense & Weapon Systems
+      name_ko: 공석
+      name_en: Vacant
+      affil_ko:
+      affil_en:
+      vacant: true
+
+    - division_ko: 피지컬AI 보건의료
+      division_en: Physical AI Healthcare
+      name_ko: 박미현
+      name_en: Mihyun Park
+      affil_ko: 백석문화대학교
+      affil_en: Baekseok Culture University
+
+# ── 학술위원회 / Academic Committee ──
+academic_committee:
+  - role_ko: 국내학술위원장
+    role_en: Chair, Domestic Academic Committee
     name_ko: 에런스노버거
     name_en: Aaron Snowberger
-    affil_ko: 국립한밭대학교
-    affil_en: Hanbat National University
+    affil_ko: 전북대학교
+    affil_en: Jeonbuk National University
 
-  - division_ko: 국방피지컬AI
-    division_en: Defense Physical AI
-    name_ko: 박상혁
-    name_en: Sanghyeok Park
-    affil_ko: 중원대학교
-    affil_en: Jungwon University
+  - role_ko: 국제학술위원장
+    role_en: Chair, International Academic Committee
+    name_ko: 문형진
+    name_en: Hyeongjin Moon
+    affil_ko: 성결대학교
+    affil_en: Sungkyul University
 
-  - division_ko: 보건의료피지컬AI
-    division_en: Healthcare Physical AI
-    name_ko: 결정 중
-    name_en: To be determined
-    affil_ko:
-    affil_en:
-    pending: true
+  - role_ko: 부학술위원장
+    role_en: Vice Chair, Academic Committee
+    name_ko: 이선경
+    name_en: Sunkyung Lee
+    affil_ko: 우석대학교
+    affil_en: Woosuk University
+
+  - role_ko: 부학술위원장
+    role_en: Vice Chair, Academic Committee
+    name_ko: 박지현
+    name_en: Jihyun Park
+    affil_ko: 우석대학교
+    affil_en: Woosuk University

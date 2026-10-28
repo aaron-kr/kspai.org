@@ -14,6 +14,150 @@
 # ═══════════════════════════════════════════════════════════════
 
 upcoming:
+  # ── Partner conference (KSPAI is a co-host / 주최 기관, not the lead organizer) ──
+  # Move to past: after 2026-11-06 (see README "Retire a conference").
+  - id: "2026-amsti"
+    partner_event: true           # hides KSPAI paper-submission CTAs; shows "협력 학술대회" label
+    title_ko: "2026 첨단군사과학융합기술 학술대회"
+    title_en: "2026 Advanced Military Science & Convergence Technology Conference"
+    subtitle_ko: "강원대학교 첨단군사과학기술연구소(AMSTI) 초청 학술대회 · 한국피지컬인공지능학회 공동 주최"
+    subtitle_en: "Hosted by the KNU Advanced Military Science & Technology Research Institute (AMSTI) · Co-hosted by KSPAI"
+    status: "registration-open"
+
+    # ── Dates ──
+    date_ko: "2026-11-05 ~ 06"
+    date_en: "November 5–6, 2026"
+    date_from: "2026-11-05"
+    date_to: "2026-11-06"
+
+    # ── Location ──
+    venue_ko: "강원연구원 리버티홀"
+    venue_en: "Liberty Hall, Gangwon Research Institute"
+    city_ko: "춘천"
+    city_en: "Chuncheon, Korea"
+    address_ko: "강원특별자치도 춘천시 서면 박사로 880"
+    address_en: "880 Baksa-ro, Seo-myeon, Chuncheon, Gangwon State"
+    map_url: "https://map.naver.com/p/search/강원연구원"
+
+    # ── Formats ──
+    formats_ko: "개회식 · 기조강연 · 9개 분과 논문발표"
+    formats_en: "Opening Ceremony · Keynotes · Paper Sessions (9 tracks)"
+
+    # ── Key Dates ──
+    key_dates:
+      - label_ko: "사전등록"
+        label_en: "Pre-registration"
+        date_ko: "접수 중"
+        date_en: "Open now"
+        status: "confirmed"
+      - label_ko: "1일차 (개회식·기조강연·논문발표)"
+        label_en: "Day 1 (Opening, Keynotes, Papers)"
+        date_ko: "2026-11-05 (목)"
+        date_en: "Thu, November 5, 2026"
+        status: "confirmed"
+      - label_ko: "2일차 (논문발표)"
+        label_en: "Day 2 (Paper Sessions)"
+        date_ko: "2026-11-06 (금)"
+        date_en: "Fri, November 6, 2026"
+        status: "confirmed"
+
+    # ── Description ──
+    description_ko: >
+      우리 학회와 협력을 추진 중인 강원대학교 첨단군사과학기술연구소에서 초대하는 학술대회입니다.
+      강원대학교, 강원특별자치도, 강원연구원 등과 함께 한국피지컬인공지능학회가 공동 주최하며,
+      국방 AI 등 9개 분과에서 60여 편의 논문이 발표됩니다. 관심 있는 분들의 많은 참여 바랍니다.
+    description_en: >
+      An invited conference organized by the Kangwon National University Advanced Military Science
+      and Technology Research Institute, which is establishing a partnership with KSPAI. Co-hosted by
+      KSPAI together with Kangwon National University, Gangwon State, and the Gangwon Research Institute,
+      the program features about 60 papers across 9 tracks, including Defense AI. All interested members
+      are warmly invited to attend.
+
+    # ── Topics (paper session tracks) ──
+    topics:
+      - ko: "국방AI"
+        en: "Defense AI"
+      - ko: "국방반도체"
+        en: "Defense Semiconductors"
+      - ko: "국방정보보호"
+        en: "Defense Information Security"
+      - ko: "국방유무인복합체계"
+        en: "Manned-Unmanned Teaming Systems"
+      - ko: "강원방위산업육성"
+        en: "Gangwon Defense Industry Development"
+      - ko: "방산기술보호"
+        en: "Defense Technology Protection"
+      - ko: "국방캡스톤디자인"
+        en: "Defense Capstone Design"
+
+    awards: []
+
+    # ── Registration ──
+    registration_open: true
+    registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSdAO1ndSBWLcrCM9prH4Fn_m7esPUBEAZk4AEx2Q8fEQuUVtw/viewform"
+    fee_note_ko: "사전등록은 아래 신청서를 통해 접수합니다."
+    fee_note_en: "Pre-register using the form below."
+
+    # ── Contact (partner events only — KSPAI events use /contact/) ──
+    contact_name_ko: "김수연"
+    contact_name_en: "Suyeon Kim"
+    contact_org_ko: "강원대학교 첨단군사과학기술연구소"
+    contact_org_en: "KNU Advanced Military Science & Technology Research Institute (AMSTI)"
+    contact_phone: "033-250-8524"
+    contact_email: "amsti@kangwon.ac.kr"
+    contact_url: "https://amsti.kangwon.ac.kr/amsti/index.do"
+
+    # ── Links ──
+    submit_link: ""
+    cfp_link: ""
+    template_link: ""
+
+    # ── Media ──
+    poster: "/assets/images/conferences/2026-amsti/amsti-poster.jpg"
+    poster_alt_ko: "2026 첨단군사과학융합기술 학술대회 포스터 — 2026년 11월 5~6일, 강원연구원 리버티홀"
+    poster_alt_en: "2026 Advanced Military Science & Convergence Technology Conference poster — November 5–6, 2026, Liberty Hall, Gangwon Research Institute"
+    has_poster: true
+    # Wide banner shown at the top of the detail page (the other slides are placed in _conferences/2026-amsti.md)
+    banner_image: "/assets/images/conferences/2026-amsti/amsti-hero.jpg"
+    banner_alt_ko: "2026 첨단군사과학융합기술 학술대회 배너"
+    banner_alt_en: "2026 Advanced Military Science & Convergence Technology Conference banner"
+
+    # ── Organizers ──
+    host_label_ko: "주최"
+    host_label_en: "Hosts"
+    coorganizers:
+      - name_ko: "강원대학교"
+        name_en: "Kangwon National University"
+        url: "https://www.kangwon.ac.kr"
+      - name_ko: "강원특별자치도"
+        name_en: "Gangwon State"
+        url: ""
+      - name_ko: "강원연구원"
+        name_en: "Gangwon Research Institute"
+        url: ""
+      - name_ko: "강원대학교 앵커사업단"
+        name_en: "KNU Anchor Project Group"
+        url: ""
+      - name_ko: "강원대학교 SW중심대학사업단"
+        name_en: "KNU SW-Centered University Project Group"
+        url: ""
+      - name_ko: "한국피지컬인공지능학회"
+        name_en: "Korean Society for Physical AI (KSPAI)"
+        url: ""
+    organizers:
+      - name_ko: "강원대학교 첨단군사과학기술연구소 (AMSTI)"
+        name_en: "KNU Advanced Military Science & Technology Research Institute (AMSTI)"
+        url: "https://amsti.kangwon.ac.kr/amsti/index.do"
+      - name_ko: "글로컬랩 방산기술보호연구소"
+        name_en: "Glocal Lab Defense Technology Protection Institute"
+      - name_ko: "강원특별자치도"
+        name_en: "Gangwon State"
+      - name_ko: "강원연구원"
+        name_en: "Gangwon Research Institute"
+
+    proceedings_link: ""
+    photos_link: ""
+
   - id: "2027-winter"
     title_ko: "2027년 동계학술대회"
     title_en: "2027 Winter Conference"

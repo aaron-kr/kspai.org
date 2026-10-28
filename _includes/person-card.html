@@ -1,0 +1,42 @@
+{% comment %}
+  Officer / committee member card with a monogram avatar (no photos).
+  Params:
+    person   — entry from _data/officers.yml (name_ko/en, affil_ko/en, note_ko/en, vacant)
+    label_ko, label_en — role shown above the name (optional)
+    tone     — 0 | 1 | 2 — avatar color (pass forloop.index0 | modulo: 3 to cycle)
+  Monogram: surname syllable in Korean mode, first + last initials in English mode.
+{% endcomment %}
+{%- assign p = include.person -%}
+<div class="person-card person-card--tone{{ include.tone | default: 0 }}{% if p.vacant %} person-card--vacant{% endif %}">
+  <div class="person-avatar" aria-hidden="true">
+    {% if p.vacant %}
+    <span>?</span>
+    {% else %}
+    {% include monogram.html person=p %}
+    {% endif %}
+  </div>
+  <div class="person-info">
+    {% if include.label_ko %}
+    <p class="person-role">
+      <span data-lang="ko">{{ include.label_ko }}</span>
+      <span data-lang="en">{{ include.label_en }}</span>
+    </p>
+    {% endif %}
+    <p class="person-name">
+      <span data-lang="ko">{{ p.name_ko }}</span>
+      <span data-lang="en">{{ p.name_en }}</span>
+    </p>
+    {% if p.affil_ko %}
+    <p class="person-affil">
+      <span data-lang="ko">{{ p.affil_ko }}</span>
+      <span data-lang="en">{{ p.affil_en }}</span>
+    </p>
+    {% endif %}
+    {% if p.note_ko %}
+    <span class="person-note">
+      <span data-lang="ko">{{ p.note_ko }}</span>
+      <span data-lang="en">{{ p.note_en }}</span>
+    </span>
+    {% endif %}
+  </div>
+</div>

@@ -7,6 +7,8 @@
 
 ## Quick tasks
 
+> After any change, add a dated line to [`CHANGELOG.md`](CHANGELOG.md).
+
 ### Add a news item
 
 Create `_posts/YYYY-MM-DD-slug.md`:
@@ -37,6 +39,32 @@ date: 2026-03-01
 
 The most recent post is automatically the featured wide card. Older posts appear as smaller cards below.
 
+**Event notices — "at a glance" sidebar (optional).** Add any of these to the front matter and the post gets a sidebar with key facts, prominent buttons, and a poster thumbnail (on mobile it appears above the text). Without them the post is a single centered column.
+
+```yaml
+event:
+  date_ko: "2026년 11월 5일(목) ~ 6일(금)"
+  date_en: "Thu–Fri, November 5–6, 2026"
+  venue_ko: "..."
+  venue_en: "..."
+  contact_ko: "김수연 · 033-250-8524"
+  contact_en: "Suyeon Kim · 033-250-8524"
+links:
+  - label_ko: "사전등록 신청 →"
+    label_en: "Pre-register →"
+    url: "https://docs.google.com/forms/..."
+    style: primary          # primary | outline
+    external: true          # opens in a new tab
+  - label_ko: "학술대회 안내 페이지"
+    label_en: "Conference page"
+    url: "/conferences/2026-amsti/"
+    style: outline
+aside_image: /assets/images/conferences/2026-amsti/amsti-poster.jpg
+aside_image_alt: "포스터 / Poster"
+```
+
+For bilingual body text, wrap each language in `<div data-lang="ko" markdown="1">` … `</div>` (and `en`) so Markdown still works inside. `##` headings get an accent bar; lists get colored bullets. See `_posts/2026-10-29-amsti-2026-conference.md`.
+
 ---
 
 ### Add a conference
@@ -62,7 +90,27 @@ All conference data lives in **one file**: `_data/conferences.yml`. It has two l
    This file is intentionally almost empty — `_layouts/conference.html` does all the rendering by looking up `conference_id` in `_data/conferences.yml`.
 3. (Optional) Add a news post announcing it — see "Add a news item" above.
 4. (Optional) Update `_data/banner.yml` to point the site-wide alert bar at the new conference.
-5. Once a poster image exists, drop it at `/assets/images/conferences/YYYY-name-poster.jpg` and set `has_poster: true`.
+5. Once a poster image exists, drop it at `/assets/images/conferences/YYYY-name-poster.jpg` (or in a per-event folder, `/assets/images/conferences/YYYY-name/`) and set `has_poster: true`.
+
+**Page layout.** The detail page has a main column (key info, then body sections) and a sidebar (poster, hosts, organizers, contact). Upcoming **KSPAI-hosted** conferences automatically include the Call-for-Papers guidelines (`_includes/cfp-guide.html`); partner events and past conferences don't.
+
+**Extra page content (optional).** Anything you write *below* the front matter in `_conferences/YYYY-name.md` is rendered on the detail page under the info/poster block — e.g. an invitation letter, program table, directions. Use `page-section` blocks with paired `data-lang="ko"` / `data-lang="en"` spans; see `_conferences/2026-amsti.md` for a full example (slide images + bilingual text equivalents). Wrap whole paragraphs per language in `<div data-lang="..">` inside a `<div class="conf-prose">`.
+
+**Optional fields** (see the `2026-amsti` entry for examples):
+
+| Field | Effect |
+|---|---|
+| `banner_image`, `banner_alt_ko/en` | Wide image at the top of the detail page |
+| `address_ko/en`, `map_url` | Street address + map link under the venue |
+| `partner_event: true` | For conferences hosted by another organization that KSPAI co-hosts or promotes: shows a "협력 학술대회 / Partner Conference" label and replaces KSPAI paper-submission buttons with a pre-registration button |
+| `registration_open: true` + `registration_link` | Shows a "Register / 사전등록" button (e.g. a Google Form) |
+| `contact_name_ko/en`, `contact_org_ko/en`, `contact_phone`, `contact_email`, `contact_url` | External contact block in the sidebar (otherwise "Contact" goes to `/contact/`) |
+| `host_label_ko/en` | Renames the "공동 주최 / Co-Organizers" heading (e.g. "주최 / Hosts") |
+| `organizers` | Second list of organizations, shown as "주관 / Organizers" (each may have a `url`) |
+
+Leave unused link fields as `""` — templates treat empty strings as "not set".
+
+The homepage spotlight shows the first `upcoming:` entry whose `date_to` hasn't passed (as of the last build), so keep `upcoming:` sorted by date.
 
 **Only publish confirmed facts.** Internal planning documents (steering committee notes, meeting minutes) often contain projections and internal deliberation — expected attendee/paper counts, prospective sponsor lists not yet signed, reasoning behind a policy that hasn't been finalized. Don't copy those onto the public site; wait until they're confirmed, or omit them and leave a comment in the YAML noting what's pending (see the commented-out note where the sponsor list used to be, as an example).
 
@@ -89,10 +137,15 @@ The dismissible alert bar under the nav on every page is `_data/banner.yml`:
 
 ```yaml
 active: true              # false hides it everywhere
+expires: "2026-11-06"     # optional — banner hides itself (in the browser) after this date
 message_ko: "..."
 message_en: "..."
 link_url: "/conferences/2027-winter/"
 ```
+
+"Close forever" (✕) is remembered per banner (keyed by `link_url`), so when you point the banner at a new event it reappears for everyone.
+
+The banner sits **in the page flow** directly under the nav (not on top of the page): while it's showing it pushes the page header down, and closing it removes it from the page entirely.
 
 ---
 
@@ -162,17 +215,24 @@ permalink: /your-page/
 
 ### Add an officer or committee member
 
-Officer data lives in `_data/officers.yml`, not in `pages/officers.md` directly — the page just loops over this data. It has five lists/blocks:
+Officer data lives in `_data/officers.yml`, not in `pages/officers.md` directly — the page just loops over this data. Blocks:
 
 | Block | Renders as | Example |
 |---|---|---|
 | `president` | President card | 회장 |
-| `vice_presidents` | Vice Presidents grid | 총무부회장, 학술부회장, etc. |
-| `committee_chairs` | Committees section | 부편집위원장, 분과위원장 |
+| `vice_presidents` | Vice Presidents grid | 총무부회장, 국내학술부회장, 산학협력부회장, etc. |
 | `auditors` | Auditor grid | 감사 |
-| `editorial_board` | Editorial Board grid | division-based journal editors |
+| `editorial_committee.leadership` | 편집위원회 — top row | 편집위원장, 공동편집위원장, 부편집위원장 |
+| `editorial_committee.divisions` | 편집위원회 — 분과위원장 grid | one entry per journal division (`division_ko/en`) |
+| `academic_committee` | 학술위원회 grid | 국내/국제학술위원장, 부학술위원장 |
 
-To add someone, copy an existing block entry under the right list and fill in `name_ko/en` and `affil_ko/en` (leave affiliation blank if unknown — the template handles it gracefully). No HTML editing needed in `pages/officers.md` for a simple name/role addition.
+The page renders each person as a card with a **monogram** (surname in Korean mode, initials in English mode) — no photos — via `_includes/person-card.html`. The counts in the overview strip at the top update automatically.
+
+To add someone, copy an existing entry under the right list and fill in `role_ko/en` (or `division_ko/en`), `name_ko/en` and `affil_ko/en` (leave affiliation blank if unknown — the template hides it). For an unfilled post, set `name_ko: 공석`, `name_en: Vacant`, `vacant: true` — it renders as a dimmed card. No HTML editing needed in `pages/officers.md`.
+
+**English names:** use the person's own preferred romanization if known (check their university profile, papers, or ORCID); otherwise Revised Romanization, given name first (e.g. 김세민 → Semin Kim). Use the university's official English name (e.g. 전북대학교 → Jeonbuk National University). Keep a person's spelling identical everywhere they appear in the file.
+
+If the editorial divisions change, also update `editorial_division_ko/en` in `_data/research.yml` to match.
 
 The founder/chair reveal-after-assembly note that used to live in `officers.md` no longer applies as written — check `pages/officers.md` directly if you need to gate a reveal behind the inaugural general assembly.
 
@@ -217,7 +277,9 @@ Then confirm `_includes/page-hero.html` opens with:
 
 ```
 .
-├── _config.yml                  ← Site settings (title, URL, plugins, collections)
+├── _config.yml                  ← Site settings (title, URL, plugins, collections, build excludes)
+├── CHANGELOG.md                 ← ✏️  Dated log of every site change — add an entry with each update
+├── ARCHITECTURE-OPTIONS.md      ← Notes on future CMS options (not a decision)
 │
 ├── _data/
 │   ├── nav.yml                  ← ✏️  Navigation menus (desktop + mobile)
@@ -246,6 +308,12 @@ Then confirm `_includes/page-hero.html` opens with:
 │   ├── banner.html                ← Site-wide alert bar (reads _data/banner.yml)
 │   ├── hero.html                  ← Full-width homepage hero section
 │   ├── page-hero.html             ← Mini hero band for inner pages
+│   ├── person-card.html           ← Officer card with monogram avatar (/officers/)
+│   ├── cfp-guide.html             ← Call-for-Papers guidelines (KSPAI conference pages)
+│   ├── conf-poster.html           ← Poster or "coming soon" placeholder
+│   ├── conf-key-dates.html        ← Key dates list
+│   ├── conf-org-list.html         ← 주최 / 주관 lists in the conference sidebar
+│   ├── monogram.html              ← Officer avatar letters
 │   ├── stats.html                 ← Stats bar
 │   ├── about.html                 ← About / two org cards
 │   ├── research.html              ← Research grid (reads _data/research.yml)
@@ -269,6 +337,7 @@ Then confirm `_includes/page-hero.html` opens with:
 │   │   └── lang.js              ← KO/EN bilingual engine + translation strings
 │   ├── files/                   ← Downloadable HWP templates (journal + conference)
 │   └── images/
+│       ├── conferences/         ← Posters (YYYY-name-poster.jpg) or per-event folders (YYYY-name/)
 │       ├── logos/logo-light.png ← Light logo for dark backgrounds
 │       └── logos/logo-dark.png  ← Dark logo for light backgrounds
 │
@@ -403,6 +472,8 @@ Settings → Pages → Source: **Deploy from a branch** → `main` / `/ (root)`
 - [ ] Officer profile photos (`/officers/`)
 - [ ] Hero background image or video
 - [ ] ISSN assignment after journal launch
+- [ ] After 2026-11-06: move `2026-amsti` to `past:` and point `_data/banner.yml` back at the 2027 Winter Conference (the lines are commented out in that file, ready to restore). A scheduled Claude Code routine will open a PR with this change on 2026-11-07 09:00 KST.
+- [ ] Decide on a CMS / admin approach before handing the site to non-developer managers — see `ARCHITECTURE-OPTIONS.md`
 
 ---
 

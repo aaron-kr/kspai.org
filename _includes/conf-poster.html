@@ -1,0 +1,39 @@
+{% comment %}
+  Conference poster, or a "poster coming soon" placeholder when has_poster is false.
+  Params: conf — entry from _data/conferences.yml
+          link — true wraps the poster in a link to the full-size image
+{% endcomment %}
+{%- assign c = include.conf -%}
+{% if c.has_poster %}
+  {% if include.link %}<a href="{{ c.poster | relative_url }}" target="_blank" rel="noopener" class="conf-aside-poster">{% endif %}
+  <img src="{{ c.poster | relative_url }}"
+       alt="{{ c.poster_alt_ko }} / {{ c.poster_alt_en }}"
+       class="conf-poster-img"
+       loading="lazy" />
+  {% if include.link %}
+    <span class="conf-aside-poster-hint">
+      <span data-lang="ko">포스터 크게 보기 ↗</span>
+      <span data-lang="en">View full poster ↗</span>
+    </span>
+  </a>
+  {% endif %}
+{% else %}
+<div class="conf-poster-placeholder" aria-hidden="true">
+  <span class="conf-poster-ph-label">
+    <span data-lang="ko">포스터 준비 중</span>
+    <span data-lang="en">POSTER COMING SOON</span>
+  </span>
+  <p class="conf-poster-ph-title">
+    <span data-lang="ko">{{ c.title_ko }}</span>
+    <span data-lang="en">{{ c.title_en }}</span>
+  </p>
+  <p class="conf-poster-ph-date">
+    <span data-lang="ko">{{ c.date_ko }}</span>
+    <span data-lang="en">{{ c.date_en }}</span>
+  </p>
+  <p class="conf-poster-ph-venue">
+    <span data-lang="ko">{{ c.venue_ko }}</span>
+    <span data-lang="en">{{ c.venue_en }}</span>
+  </p>
+</div>
+{% endif %}

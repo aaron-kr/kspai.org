@@ -104,7 +104,7 @@
   track_en: "AI Safety, Ethics & Humanities Track"
   track_sub_ko: "피지컬AI 안전, 윤리, 인문학적 접근"
   track_sub_en: "Physical AI Safety, Ethics & Humanistic Approaches"
-  editorial_division_ko: "피지컬AI윤리및인문학"
+  editorial_division_ko: "피지컬AI 윤리및인문학"
   editorial_division_en: "Physical AI Ethics & Humanities"
 
 - num: "07"
@@ -121,8 +121,8 @@
   track_en: "Image Processing Track"
   track_sub_ko: "영상처리, 컴퓨터 비전 및 물리 공간 인지"
   track_sub_en: "Image Processing, Computer Vision & Physical Scene Understanding"
-  editorial_division_ko: "피지컬AI영상처리"
-  editorial_division_en: "Physical AI Image Processing"
+  editorial_division_ko: "피지컬AI 비전및인식"
+  editorial_division_en: "Physical AI Vision & Perception"
 
 - num: "08"
   title_ko: "피지컬AI 교육"
@@ -138,7 +138,7 @@
   track_en: "Physical AI Education Track"
   track_sub_ko: "피지컬AI 교육과정 및 교육 방법론"
   track_sub_en: "Physical AI Curriculum Design & Pedagogy"
-  editorial_division_ko: "피지컬AI교육"
+  editorial_division_ko: "피지컬AI 교육"
   editorial_division_en: "Physical AI Education"
 
 - num: "09"
@@ -155,7 +155,7 @@
   track_en: "Physical AI Convergence & Entrepreneurship Track"
   track_sub_ko: "산학 융합, 기술 이전, 스타트업 생태계"
   track_sub_en: "Industry-Academia Convergence, Tech Transfer & Startups"
-  editorial_division_ko: "피지컬AI융합및창업"
+  editorial_division_ko: "피지컬AI 융합및창업"
   editorial_division_en: "Physical AI Convergence & Entrepreneurship"
 
 - num: "10"
@@ -172,8 +172,8 @@
   track_en: "Defense Physical AI Track"
   track_sub_ko: "국방 자율시스템, 군사 로봇, 전장 인식"
   track_sub_en: "Defense Autonomous Systems, Military Robotics & Battlefield Awareness"
-  editorial_division_ko: "국방피지컬AI"
-  editorial_division_en: "Defense Physical AI"
+  editorial_division_ko: "피지컬AI 국방및무기시스템"
+  editorial_division_en: "Physical AI Defense & Weapon Systems"
 
 - num: "11"
   title_ko: "보건의료 피지컬AI"
@@ -189,5 +189,5 @@
   track_en: "Healthcare Physical AI Track"
   track_sub_ko: "수술 로봇, 재활 보조, 의료 영상 분석"
   track_sub_en: "Surgical Robotics, Rehabilitation Assistive Devices & Medical Imaging"
-  editorial_division_ko: "보건의료피지컬AI"
-  editorial_division_en: "Healthcare Physical AI"
+  editorial_division_ko: "피지컬AI 보건의료"
+  editorial_division_en: "Physical AI Healthcare"

@@ -1,0 +1,25 @@
+{% comment %}
+  "주요 일정 / Key Dates" list for a conference.
+  Params: conf — entry from _data/conferences.yml
+{% endcomment %}
+{%- assign c = include.conf -%}
+{% if c.key_dates.size > 0 %}
+<div class="conf-key-dates">
+  <p class="meta-label" style="margin-bottom: 10px;">
+    <span data-lang="ko">주요 일정</span>
+    <span data-lang="en">Key Dates</span>
+  </p>
+  {% for kd in c.key_dates %}
+  <div class="conf-key-date-row">
+    <span class="conf-key-date-label">
+      <span data-lang="ko">{{ kd.label_ko }}</span>
+      <span data-lang="en">{{ kd.label_en }}</span>
+    </span>
+    <span class="conf-key-date-value mono {% if kd.status == 'confirmed' %}conf-key-date--confirmed{% endif %}">
+      <span data-lang="ko">{{ kd.date_ko }}</span>
+      <span data-lang="en">{{ kd.date_en }}</span>
+    </span>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}

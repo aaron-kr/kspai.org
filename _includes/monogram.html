@@ -1,0 +1,7 @@
+{%- comment -%}
+  Monogram letters for an avatar: surname syllable (KO) / first + last initials (EN).
+  Params: person — entry with name_ko, name_en
+{%- endcomment -%}
+{%- assign en_parts = include.person.name_en | split: " " -%}
+<span data-lang="ko">{{ include.person.name_ko | slice: 0 }}</span>
+<span data-lang="en">{{ en_parts.first | slice: 0 }}{% if en_parts.size > 1 %}{{ en_parts.last | slice: 0 }}{% endif %}</span>

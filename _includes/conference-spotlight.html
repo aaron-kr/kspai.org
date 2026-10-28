@@ -1,4 +1,10 @@
-{% assign conf = site.data.conferences.upcoming | first %}
+{% comment %} First upcoming conference that hasn't ended as of build time — so a finished
+   event drops off the homepage on the next push even before it's moved to past:. {% endcomment %}
+{% assign today = site.time | date: "%Y-%m-%d" %}
+{% assign conf = nil %}
+{% for c in site.data.conferences.upcoming %}
+  {% if c.date_to >= today %}{% assign conf = c %}{% break %}{% endif %}
+{% endfor %}
 {% if conf %}
 <section class="conf-spotlight" aria-label="예정 학술대회 / Upcoming Conference">
   <div class="container">
@@ -7,8 +13,13 @@
       <!-- ── INFO SIDE ── -->
       <div class="conf-spotlight-info">
         <p class="conf-spotlight-label mono">
+          {% if conf.partner_event %}
+          <span data-lang="ko">협력 학술대회</span>
+          <span data-lang="en">Partner Conference</span>
+          {% else %}
           <span data-lang="ko">예정 학술대회</span>
           <span data-lang="en">Upcoming Conference</span>
+          {% endif %}
         </p>
 
         <h2 class="conf-spotlight-title">
@@ -57,14 +68,23 @@
         </div>
 
         <div class="conf-spotlight-actions">
-          <a href="{{ '/conferences/' | relative_url }}" class="btn btn-primary">
+          <a href="{{ '/conferences/' | append: conf.id | append: '/' | relative_url }}" class="btn btn-primary">
             <span data-lang="ko">학술대회 안내 →</span>
             <span data-lang="en">Conference Details →</span>
           </a>
+          {% if conf.partner_event %}
+          {% if conf.registration_open and conf.registration_link != "" %}
+          <a href="{{ conf.registration_link }}" class="btn btn-outline" target="_blank" rel="noopener">
+            <span data-lang="ko">사전등록</span>
+            <span data-lang="en">Pre-register</span>
+          </a>
+          {% endif %}
+          {% else %}
           <a href="{{ '/submit/' | relative_url }}" class="btn btn-outline">
             <span data-lang="ko">논문 투고</span>
             <span data-lang="en">Submit a Paper</span>
           </a>
+          {% endif %}
         </div>
       </div>
 

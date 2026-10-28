@@ -1,24 +1,93 @@
 ---
 layout: default
 ---
-<article class="post-article">
-  <div class="container">
+{% comment %}
+  Optional front matter for an "at a glance" sidebar (event notices, calls, etc.):
+    event:        { date_ko, date_en, venue_ko, venue_en, contact_ko, contact_en }
+    links:        - { label_ko, label_en, url, style: primary|outline, external: true }
+    aside_image:  /path/to/poster.jpg   (+ aside_image_alt)
+  Without any of these the post renders as a single centered column.
+{% endcomment %}
+{% if page.event or page.links or page.aside_image %}{% assign has_aside = true %}{% else %}{% assign has_aside = false %}{% endif %}
 
-    <div class="post-header">
-      <span class="news-tag {{ page.tag_class }}">
+<!-- ── Post header (same band as other pages) ── -->
+<div class="page-hero page-hero--post">
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="news-tag {{ page.tag_class }} page-hero-tag">
         <span data-lang="ko">{{ page.tag_ko }}</span>
         <span data-lang="en">{{ page.tag_en }}</span>
       </span>
-      <h1 class="post-title">
+      <h1 class="page-hero-title post-hero-title">
         <span data-lang="ko">{{ page.title_ko | default: page.title }}</span>
         <span data-lang="en">{{ page.title_en | default: page.title }}</span>
       </h1>
-      <p class="post-date mono">{{ page.date | date: "%Y.%m.%d" }}</p>
+      <p class="page-hero-subtitle post-hero-date">
+        <a href="{{ '/news/' | relative_url }}">
+          <span data-lang="ko">소식</span><span data-lang="en">News</span>
+        </a>
+        · <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%Y.%m.%d" }}</time>
+      </p>
     </div>
+  </div>
+</div>
 
-    <div class="post-body">
-      {{ content }}
-    </div>
+<article class="post-article post-article--has-hero">
+  <div class="container">
+
+    <div class="post-layout{% if has_aside %} post-layout--aside{% endif %}">
+
+      {% if has_aside %}
+      <aside class="post-aside" aria-label="요약 / At a glance">
+        <div class="post-aside-card">
+          {% if page.event %}
+          <dl class="post-facts">
+            {% if page.event.date_ko %}
+            <div>
+              <dt><span data-lang="ko">일시</span><span data-lang="en">When</span></dt>
+              <dd><span data-lang="ko">{{ page.event.date_ko }}</span><span data-lang="en">{{ page.event.date_en }}</span></dd>
+            </div>
+            {% endif %}
+            {% if page.event.venue_ko %}
+            <div>
+              <dt><span data-lang="ko">장소</span><span data-lang="en">Where</span></dt>
+              <dd><span data-lang="ko">{{ page.event.venue_ko }}</span><span data-lang="en">{{ page.event.venue_en }}</span></dd>
+            </div>
+            {% endif %}
+            {% if page.event.contact_ko %}
+            <div>
+              <dt><span data-lang="ko">문의</span><span data-lang="en">Contact</span></dt>
+              <dd><span data-lang="ko">{{ page.event.contact_ko }}</span><span data-lang="en">{{ page.event.contact_en }}</span></dd>
+            </div>
+            {% endif %}
+          </dl>
+          {% endif %}
+
+          {% if page.links %}
+          <div class="post-aside-actions">
+            {% for link in page.links %}
+            <a href="{{ link.url | relative_url }}" class="btn {% if link.style == 'outline' %}btn-outline{% else %}btn-primary{% endif %}"{% if link.external %} target="_blank" rel="noopener"{% endif %}>
+              <span data-lang="ko">{{ link.label_ko }}</span>
+              <span data-lang="en">{{ link.label_en }}</span>
+            </a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+
+        {% if page.aside_image %}
+        <a href="{{ page.aside_image | relative_url }}" class="post-aside-image" target="_blank" rel="noopener">
+          <img src="{{ page.aside_image | relative_url }}" alt="{{ page.aside_image_alt }}" loading="lazy">
+        </a>
+        {% endif %}
+      </aside>
+      {% endif %}
+
+      <div class="post-body">
+        {{ content }}
+      </div>
+
+    </div><!-- .post-layout -->
 
     <div class="post-nav" role="navigation" aria-label="게시물 탐색 / Post navigation">
       <div class="post-nav-item">

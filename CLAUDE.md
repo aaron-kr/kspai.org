@@ -19,10 +19,15 @@ This file gives a new Claude instance full context on the KSPAI website project 
    exclude:
      - CLAUDE.md
      - PAGE-HERO-GUIDE.md
+     - CHANGELOG.md
+     - ARCHITECTURE-OPTIONS.md
+     - KNOWN-ISSUES.md
+     - ACCESSIBILITY_AUDIT.md
+     - SEO_AUDIT.md
      - Gemfile
      - Gemfile.lock
    ```
-   *(README.md is excluded by Jekyll's built-in defaults.)*
+   *(README.md is excluded by Jekyll's built-in defaults. Any new root-level internal `.md` doc must be added here too, or it gets published as a page.)*
 
 2. **This file** — the problematic table cell now uses `{%- raw -%}` escaping. See the File Responsibilities section below.
 
@@ -36,7 +41,9 @@ Two sister Korean academic organizations share one website:
 - **한국피지컬인공지능학회** (Korean Society for Physical AI, KSPAI) — `kspai.org`
 - **한국피지컬인공지능교육연구소** (Korean Institute of Physical AI Education & Research)
 
-The site is fully bilingual (Korean/English), built with Jekyll, hosted on GitHub Pages at `https://github.com/aaron-kr/physical-ai-home`.
+The site is fully bilingual (Korean/English), built with Jekyll, hosted on GitHub Pages at `https://github.com/aaron-kr/kspai.org` (originally named `physical-ai-home`).
+
+**Change history lives in `CHANGELOG.md`** — add a dated entry for every change you make. Future CMS/architecture options are in `ARCHITECTURE-OPTIONS.md`.
 
 The owner works on a **superwide monitor (~3660px)** — this has informed hero height constraints and max-width decisions throughout.
 
@@ -118,11 +125,18 @@ The entire nav is generated from `_data/nav.yml`. Liquid in `nav.html` loops ove
 - Spinning orb visual (right column, CSS only)
 
 ### Page hero (mini hero band)
-Inner pages use a short version of the same hero gradient as a header band. Controlled per-page:
-- On by default for all `layout: page` pages
+Inner pages, conference pages and news posts use a short version of the same hero gradient as a header band. Content is **centered vertically and horizontally** (`word-break: keep-all` so Korean wraps between words). Controlled per-page:
+- On by default for all `layout: page` pages; `_layouts/conference.html` and `_layouts/post.html` render their own
 - `show_hero: false` in front matter suppresses it
 - `hero_image: /assets/images/bg.jpg` adds a background image
 - Height: `clamp(180px, 28vh, 300px)`
+
+### Fixed nav clearance + in-flow site banner
+The nav is `position: fixed` (64px). Two CSS variables on `:root` handle the space under it:
+- `--nav-h: 64px` — nav height
+- `--nav-clear` — top space the first block in `<main>` reserves (`.hero`, `.page-hero` padding-top; `.page-article`, `.post-article` padding `calc(var(--nav-clear) + 56px)`)
+
+The site banner (`_includes/banner.html`) is **in normal flow** between nav and `<main>`, with `padding-top: calc(var(--nav-h) + 10px)` so its top sits behind the nav. While it exists, `.site-banner + main` sets `--nav-clear: 0`. The inline script in `head.html` sets `html[data-banner="hidden"]` before first paint (dismissed / hidden today / expired), CSS hides it, and `func.js` removes it from the DOM. Closing it collapses the banner to `--nav-h`, then removes it — at that moment the page takes back its 64px clearance, so nothing jumps. **Any new top-level page wrapper must use `var(--nav-clear)`, not a hard-coded 64px/120px.**
 
 ### Logo system (two files)
 ```
@@ -216,6 +230,27 @@ exclude:
 
 **Rule:** Never write bare `{%` or `{{` in any root-level `.md` file. Use `(% include %)` in plain text descriptions, or `raw`/`endraw` blocks if Liquid examples are required.
 
+### 7. Modern `rgb(r g b / a)` syntax breaks the GitHub Pages build
+GitHub Pages compiles SCSS with legacy Ruby Sass 3.7, which throws `wrong number of arguments (1 for 3)` on space-separated color syntax. **Always write `rgba(37,133,243,0.06)`** (comma syntax), as the rest of `style.scss` does. `npm run lint:css` passes either way and won't catch this — run `bundle exec jekyll build` after SCSS changes.
+
+### 8. Empty strings are truthy in Liquid
+An `if conf.cfp_link` test is **true** for `cfp_link: ""`, which rendered buttons with empty `href`s. For optional string fields test `x and x != ""` instead. (Fixed 2026-10-29 in `conference.html`, `conferences.md` and the homepage spotlight.)
+
+### 9. `_site/` is partly tracked in git
+`_site/` is in `.gitignore` but ~28 generated files were committed before that. A local build modifies them. Don't commit them — run `git checkout -- _site` after building locally (or, with the owner's OK, `git rm -r --cached _site` once to untrack them).
+
+### 11. Global `nav` and `section` element selectors
+`style.scss` styles the bare `nav` element as the fixed top bar and gives every `section` large padding. Inside page content, use `<div role="navigation">` / `<div class="page-section">` instead — a `<nav>` in content gets pinned to the top of the viewport behind the real nav (invisible), and a `<section>` gets huge gaps.
+
+### 13. Accent color as text
+`--accent-primary` (cyan `#00c8c5`) is only ~2:1 on light backgrounds. For **text** use `--accent-text` (`#007a78` light / `#24fffc` dark, ≥4.5:1). Keep `--accent-primary` for borders, backgrounds, bullets, and text on always-dark surfaces (footer, nav over hero).
+
+### 12. Monospace labels and Korean
+`.mono` / `var(--font-mono)` with letter-spacing spreads Korean syllables apart ("총 무 부 회 장"). Use mono only for English/numeric labels; labels that contain Korean should use the body font.
+
+### 10. Unquoted colons in front matter
+A `description:` containing `: ` (e.g. `분야: 로보틱스`) is invalid YAML; Jekyll prints a warning and silently drops the page's front matter. Quote such values.
+
 ---
 
 ## File responsibilities
@@ -226,7 +261,13 @@ exclude:
 | `_data/research.yml` | Research area cards | No logic |
 | `lang.js` | All translation strings + language engine | No theme logic |
 | `func.js` | Theme toggle, scroll fade-in, nav transparency, desktop dropdowns, mobile menu | No translations |
-| `_includes/head.html` | Anti-flash inline script, font links | No content |
+| `_includes/head.html` | Anti-flash inline script (theme, language, banner visibility), font links | No content |
+| `_includes/person-card.html` | Officer card with monogram avatar | No data — pass `person`, `label_ko/en`, `tone` |
+| `_includes/cfp-guide.html` | CFP guidelines for upcoming KSPAI-hosted conferences | Not shown for `partner_event` or past conferences |
+| `_includes/conf-poster.html` | Conference poster or "coming soon" placeholder (`/conferences/` cards + detail sidebar) | — |
+| `_includes/conf-key-dates.html` | "주요 일정 / Key Dates" list | — |
+| `_includes/conf-org-list.html` | Sidebar organization list (주최 / 주관) | — |
+| `_includes/monogram.html` | Officer avatar letters (KO surname / EN initials) | Used by `person-card.html` and the president card |
 | `_layouts/default.html` | Wraps all pages with nav + footer | No content sections |
 | `_layouts/page.html` | Standalone page wrapper with conditional mini hero | No nav/footer |
 | `index.html` | Homepage: front matter + include calls only | No inline styles/scripts |
@@ -250,6 +291,7 @@ exclude:
 | `/journal/` | `journal.md` | ✅ Rebuilt | 제4조 track list loops from `_data/research.yml` |
 | `/seminars/` | `seminars.md` | ✅ Data-driven | Series cards loop from `_data/seminars.yml` |
 | `/privacy/` | `privacy.md` | ✅ Live | Korean + English bilingual policy |
+| `/conferences/<id>/` | `_conferences/<id>.md` | ✅ Data-driven | `_layouts/conference.html` looks up `conference_id` in `_data/conferences.yml`; body content (if any) renders below the info block. Current: `2026-summer` (past), `2026-amsti` (partner event), `2027-winter` |
 | `/resources/` | `pages/resources.md` | ✅ New | Journal + conference template downloads |
 | `/gallery/` | `pages/gallery.md` | ✅ New | Photo gallery; albums driven by `_data/gallery.yml` |
 
@@ -259,13 +301,16 @@ exclude:
 
 ## Officers status
 
-As of site launch, the society is operating under a **설립준비위원회 (Founding Preparatory Committee)** structure. The officers page shows:
-- **회장 (President):** Placeholder card — "설립준비위원회 체제 운영 중"
-- **7 부회장 (Vice Presidents):** Named with affiliations, displayed in 3-column grid
-- **감사 (Auditor):** Named with affiliation
-- **설립자/이사회 의장 (Founder/Chair) and 회장 actual person:** Both hidden in HTML comment at bottom of `officers.md` pending inaugural general assembly
+All roster data is in `_data/officers.yml`; `pages/officers.md` only loops over it. As of 2026-10-29:
+- **회장:** 이충호 (국립한밭대학교)
+- **부회장단 (7):** 총무, 논문지, 국내학술, 국제학술, 대외협력, 산학협력, 기획
+- **감사:** 김영태
+- **편집위원회:** `editorial_committee.leadership` (편집위원장 / 공동편집위원장 / 부편집위원장) + `editorial_committee.divisions` (7 분과위원장; 국방및무기시스템 is vacant → `vacant: true`)
+- **학술위원회:** `academic_committee` (국내/국제학술위원장, 부학술위원장 ×2)
 
-When the assembly happens: uncomment the HTML comment, change the President placeholder card to show the real person.
+The old "설립준비위원회" placeholder `status:` block is commented out at the top of the YAML. People hold several posts (e.g. 장봉석 = 논문지부회장 + 편집위원장 + 분과위원장): keep their `name_en` spelling identical in every entry. Division names are mirrored in `_data/research.yml` (`editorial_division_ko/en`).
+
+**Translating new officers:** look up each person's own English name (university profile, papers, ORCID) before falling back to Revised Romanization. Use the institution's official English name (e.g. 우송정보대학 → Woosong Information College, 백석문화대학교 → Baekseok Culture University).
 
 ---
 
@@ -300,7 +345,11 @@ Several rules are disabled due to false positives or format preferences: `no-des
 npm run lint:css      # Stylelint over assets/css/style.scss
 ```
 
-**History (April 2026):** Modernized rgba → `rgb()` notation throughout `style.scss` (auto-fixed). `.gitignore` updated to exclude `node_modules/` and `package-lock.json`.
+**History (April 2026):** Lint tooling added. `package-lock.json` is committed (CI needs it). `style.scss` uses comma-syntax `rgba()` throughout — keep it that way (see Known bug #7).
+
+**Verify a change:** `npm run lint:css` **and** `bundle exec jekyll build` (the build is what catches Sass and Liquid errors). Then `git checkout -- _site`.
+
+**Visual check:** serve `_site` (`python -m http.server 4011` inside `_site`) and screenshot with headless Chrome (`chrome --headless=new --window-size=1440,2400 --screenshot=out.png URL`). Headless Chrome won't render narrower than 500px, so a "390px" screenshot is really 500px cropped — measure mobile overflow inside a 390px `<iframe>` instead. To test English mode or a dismissed banner, set `localStorage` (`kspai-lang`, `kspai-banner-dismissed`) from a throwaway same-origin page that then redirects — and delete it afterwards.
 
 ---
 
@@ -312,7 +361,12 @@ When using Claude Code or any AI assistant on this codebase:
 - **Never write bare `{%` or `{{` in CLAUDE.md or any root-level `.md` file** — Jekyll runs Liquid on all root `.md` files and invalid Liquid syntax breaks the GitHub Pages build. Write "include tag" in plain text, not the actual tag syntax. See the Jekyll build notes at the top of this file.
 - **Run `npm run lint:css` after any SCSS change** — or let CI catch it on push.
 - **No custom Ruby plugins** — `safe: true` in `_config.yml`. GitHub Pages compatibility is a hard constraint. Do not suggest gems not on the whitelist.
-- **Content is data-driven** — news items as `_posts/*.md`, research areas via `_data/research.yml`, nav via `_data/nav.yml`. Rarely need to touch HTML templates for content updates.
+- **Content is data-driven** — news items as `_posts/*.md`, research areas via `_data/research.yml`, nav via `_data/nav.yml`, officers via `_data/officers.yml`, conferences via `_data/conferences.yml`. Rarely need to touch HTML templates for content updates.
+- **Every content item is bilingual** — paired `*_ko` / `*_en` fields in YAML, paired `data-lang` spans in HTML. When the owner pastes Korean-only info, write the English yourself (look up official names) — don't leave English blank.
+- **Partner events** (conferences run by another organization that KSPAI co-hosts or promotes) use `partner_event: true` in `_data/conferences.yml`. Don't show KSPAI paper-submission CTAs for them.
+- **Block-level bilingual text:** `[data-lang]` is `display: inline` globally. For whole paragraphs use a `div` with `data-lang` inside `.conf-prose` or `.post-body`, which have block overrides.
+- **Log every change in `CHANGELOG.md`.**
+- **Keep CSS lean:** before deleting a template block, check whether its classes become unused (`style.scss` had 0 unused classes as of 2026-10-29). Reuse the conference/officer includes instead of copying markup.
 - **No `.nojekyll` file** — its presence silently disables all Jekyll processing (Sass, Liquid, includes). If the site appears as raw HTML, check for this file first.
 
 ---
@@ -322,7 +376,8 @@ When using Claude Code or any AI assistant on this codebase:
 - Officer profile photos for `/officers/` once available
 - Hero section background image or video
 - ISSN and journal volume info after launch
-- Editorial board composition (after inaugural general assembly)
+- After 2026-11-06: retire `2026-amsti` to `past:` and restore the 2027 Winter banner (commented in `_data/banner.yml`)
+- CMS/admin layer for non-developer managers — options in `ARCHITECTURE-OPTIONS.md`
 - Conference paper HWP template
 - Online paper submission portal (professional rebuild phase)
 - A professional company may build a full site with forum + paper submission system — this Jekyll site is the interim/placeholder

@@ -2,8 +2,10 @@
 layout: default
 ---
 {% assign conf = site.data.conferences.upcoming | where: "id", page.conference_id | first %}
+{% assign is_upcoming = true %}
 {% unless conf %}
   {% assign conf = site.data.conferences.past | where: "id", page.conference_id | first %}
+  {% assign is_upcoming = false %}
 {% endunless %}
 
 {% if conf %}
@@ -18,6 +20,12 @@ layout: default
           <span data-lang="en">← Conferences</span>
         </a>
       </p>
+      {% if conf.partner_event %}
+      <p class="conf-partner-label mono">
+        <span data-lang="ko">협력 학술대회</span>
+        <span data-lang="en">Partner Conference</span>
+      </p>
+      {% endif %}
       <h1 class="page-hero-title">
         <span data-lang="ko">{{ conf.title_ko }}</span>
         <span data-lang="en">{{ conf.title_en }}</span>
@@ -30,220 +38,240 @@ layout: default
   </div>
 </div>
 
-<div class="page-article">
+<div class="page-article page-article--has-hero">
 <div class="container">
 
-  <!-- ── TOP LAYOUT: INFO + POSTER ── -->
-  <div class="page-section">
-    <div class="conf-with-poster">
+  <!-- ── BANNER IMAGE (optional, full container width) ── -->
+  {% if conf.banner_image %}
+  <figure class="conf-figure conf-figure--banner">
+    <img src="{{ conf.banner_image | relative_url }}"
+         alt="{{ conf.banner_alt_ko }} / {{ conf.banner_alt_en }}"
+         width="1072" height="737">
+  </figure>
+  {% endif %}
 
-      <!-- INFO -->
-      <div class="conf-card-main">
+  <!-- ── Two-column page: main column (info, then body) + sidebar (poster, hosts, contact).
+       On narrow screens the order is info → sidebar → body. ── -->
+  <div class="conf-page">
 
-        <div class="conf-meta-row" style="margin-bottom: 28px;">
-          <div class="conf-meta-item">
-            <span class="conf-meta-label"><span data-lang="ko">일시</span><span data-lang="en">Date</span></span>
-            <span class="conf-meta-value">
-              <span data-lang="ko">{{ conf.date_ko }}</span>
-              <span data-lang="en">{{ conf.date_en }}</span>
-            </span>
-          </div>
-          <div class="conf-meta-item">
-            <span class="conf-meta-label"><span data-lang="ko">장소</span><span data-lang="en">Venue</span></span>
-            <span class="conf-meta-value">
-              <span data-lang="ko">{{ conf.venue_ko }}, {{ conf.city_ko }}</span>
-              <span data-lang="en">{{ conf.venue_en }}, {{ conf.city_en }}</span>
-            </span>
-          </div>
-          <div class="conf-meta-item">
-            <span class="conf-meta-label"><span data-lang="ko">발표 형식</span><span data-lang="en">Formats</span></span>
-            <span class="conf-meta-value">
-              <span data-lang="ko">{{ conf.formats_ko }}</span>
-              <span data-lang="en">{{ conf.formats_en }}</span>
-            </span>
-          </div>
+    <!-- ── MAIN: key info ── -->
+    <div class="conf-page-info">
+
+      <div class="conf-meta-row" style="margin-bottom: 28px;">
+        <div class="conf-meta-item">
+          <span class="conf-meta-label"><span data-lang="ko">일시</span><span data-lang="en">Date</span></span>
+          <span class="conf-meta-value">
+            <span data-lang="ko">{{ conf.date_ko }}</span>
+            <span data-lang="en">{{ conf.date_en }}</span>
+          </span>
         </div>
+        <div class="conf-meta-item">
+          <span class="conf-meta-label"><span data-lang="ko">장소</span><span data-lang="en">Venue</span></span>
+          <span class="conf-meta-value">
+            <span data-lang="ko">{{ conf.venue_ko }}, {{ conf.city_ko }}</span>
+            <span data-lang="en">{{ conf.venue_en }}, {{ conf.city_en }}</span>
+            {% if conf.address_ko %}
+            <br><small>
+              <span data-lang="ko">{{ conf.address_ko }}</span>
+              <span data-lang="en">{{ conf.address_en }}</span>
+              {% if conf.map_url and conf.map_url != "" %}· <a href="{{ conf.map_url }}" target="_blank" rel="noopener"><span data-lang="ko">지도</span><span data-lang="en">Map</span></a>{% endif %}
+            </small>
+            {% endif %}
+          </span>
+        </div>
+        <div class="conf-meta-item">
+          <span class="conf-meta-label"><span data-lang="ko">발표 형식</span><span data-lang="en">Formats</span></span>
+          <span class="conf-meta-value">
+            <span data-lang="ko">{{ conf.formats_ko }}</span>
+            <span data-lang="en">{{ conf.formats_en }}</span>
+          </span>
+        </div>
+      </div>
 
-        <p class="conf-desc" style="font-size: 15px; line-height: 1.8; margin-bottom: 28px;">
-          <span data-lang="ko">{{ conf.description_ko }}</span>
-          <span data-lang="en">{{ conf.description_en }}</span>
+      <p class="conf-desc" style="font-size: 15px; line-height: 1.8; margin-bottom: 28px;">
+        <span data-lang="ko">{{ conf.description_ko }}</span>
+        <span data-lang="en">{{ conf.description_en }}</span>
+      </p>
+
+      <!-- Key Dates -->
+      <div style="margin-bottom: 28px;">{% include conf-key-dates.html conf=conf %}</div>
+
+      <!-- Topics -->
+      {% if conf.topics.size > 0 %}
+      <div style="margin-bottom: 28px;">
+        <p class="meta-label" style="margin-bottom: 10px;">
+          <span data-lang="ko">발표 분야</span>
+          <span data-lang="en">Topics</span>
         </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          {% for topic in conf.topics %}
+          <span class="topic-chip">
+            <span data-lang="ko">{{ topic.ko }}</span>
+            <span data-lang="en">{{ topic.en }}</span>
+          </span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
 
-        <!-- Key Dates -->
-        {% if conf.key_dates.size > 0 %}
-        <div class="conf-key-dates" style="margin-bottom: 28px;">
-          <p class="meta-label" style="margin-bottom: 10px;">
-            <span data-lang="ko">주요 일정</span>
-            <span data-lang="en">Key Dates</span>
-          </p>
-          {% for kd in conf.key_dates %}
-          <div class="conf-key-date-row">
-            <span class="conf-key-date-label">
-              <span data-lang="ko">{{ kd.label_ko }}</span>
-              <span data-lang="en">{{ kd.label_en }}</span>
-            </span>
-            <span class="conf-key-date-value mono {% if kd.status == 'confirmed' %}conf-key-date--confirmed{% endif %}">
-              <span data-lang="ko">{{ kd.date_ko }}</span>
-              <span data-lang="en">{{ kd.date_en }}</span>
-            </span>
+      <!-- Actions -->
+      <div class="section-actions">
+        {% if conf.partner_event %}
+        {% if conf.registration_open and conf.registration_link != "" %}
+        <a href="{{ conf.registration_link }}" class="btn btn-primary" target="_blank" rel="noopener">
+          <span data-lang="ko">사전등록 →</span>
+          <span data-lang="en">Pre-register →</span>
+        </a>
+        {% endif %}
+        {% elsif conf.cfp_link and conf.cfp_link != "" %}
+        <a href="{{ conf.cfp_link }}" class="btn btn-primary">
+          <span data-lang="ko">논문 접수 →</span>
+          <span data-lang="en">Submit Paper →</span>
+        </a>
+        {% else %}
+        <a href="{{ '/submit/' | relative_url }}" class="btn btn-primary">
+          <span data-lang="ko">논문 투고 안내</span>
+          <span data-lang="en">Submission Guide</span>
+        </a>
+        {% endif %}
+        {% if conf.contact_email %}
+        <a href="mailto:{{ conf.contact_email }}" class="btn btn-outline">
+          <span data-lang="ko">문의하기</span>
+          <span data-lang="en">Contact</span>
+        </a>
+        {% else %}
+        <a href="{{ '/contact/' | relative_url }}" class="btn btn-outline">
+          <span data-lang="ko">문의하기</span>
+          <span data-lang="en">Contact Us</span>
+        </a>
+        {% endif %}
+      </div>
+
+    </div><!-- .conf-page-info -->
+
+    <!-- ── SIDEBAR: poster, hosts, organizers, contact ── -->
+    <aside class="conf-page-aside" aria-label="학술대회 정보 / Conference information">
+
+      {% include conf-poster.html conf=conf link=true %}
+
+      <!-- Hosts / Co-organizers -->
+      {% assign host_ko = conf.host_label_ko | default: "공동 주최" %}
+      {% assign host_en = conf.host_label_en | default: "Co-Organizers" %}
+      {% include conf-org-list.html orgs=conf.coorganizers label_ko=host_ko label_en=host_en %}
+
+      <!-- Organizers (주관) -->
+      {% include conf-org-list.html orgs=conf.organizers label_ko="주관" label_en="Organizers" %}
+
+      <!-- Contact (external organizer) -->
+      {% if conf.contact_email %}
+      <div class="conf-aside-block">
+        <p class="meta-label">
+          <span data-lang="ko">문의</span>
+          <span data-lang="en">Inquiries</span>
+        </p>
+        <ul class="conf-aside-list">
+          <li>
+            <strong>
+              <span data-lang="ko">{{ conf.contact_name_ko }}</span>
+              <span data-lang="en">{{ conf.contact_name_en }}</span>
+            </strong><br>
+            <span data-lang="ko">{{ conf.contact_org_ko }}</span>
+            <span data-lang="en">{{ conf.contact_org_en }}</span>
+          </li>
+          {% if conf.contact_phone %}<li><a href="tel:{{ conf.contact_phone | remove: '-' }}">☎ {{ conf.contact_phone }}</a></li>{% endif %}
+          <li><a href="mailto:{{ conf.contact_email }}">✉ {{ conf.contact_email }}</a></li>
+          {% if conf.contact_url and conf.contact_url != "" %}
+          <li>
+            <a href="{{ conf.contact_url }}" target="_blank" rel="noopener">
+              <span data-lang="ko">연구소 홈페이지 ↗</span>
+              <span data-lang="en">Institute website ↗</span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+      {% endif %}
+
+    </aside>
+
+    <!-- ── MAIN: body sections ── -->
+    <div class="conf-page-body">
+
+      <!-- Per-conference body content from _conferences/<id>.md (optional) -->
+      {{ content }}
+
+      <!-- CFP guidelines — upcoming KSPAI-hosted conferences only -->
+      {% if is_upcoming and conf.partner_event != true %}
+        {% include cfp-guide.html %}
+      {% endif %}
+
+      <!-- Awards -->
+      {% if conf.awards.size > 0 %}
+      <div class="page-section">
+        <h2 class="page-section-title">
+          <span data-lang="ko">우수 논문 시상</span>
+          <span data-lang="en">Awards</span>
+        </h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+          {% for award in conf.awards %}
+          <div class="about-full-card" style="flex: 1; min-width: 180px; padding: 20px 24px;">
+            <p class="officer-name">
+              <span data-lang="ko">{{ award.ko }}</span>
+              <span data-lang="en">{{ award.en }}</span>
+            </p>
           </div>
           {% endfor %}
         </div>
-        {% endif %}
-
-        <!-- Topics -->
-        {% if conf.topics.size > 0 %}
-        <div style="margin-bottom: 28px;">
-          <p class="meta-label" style="margin-bottom: 10px;">
-            <span data-lang="ko">발표 분야</span>
-            <span data-lang="en">Topics</span>
-          </p>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-            {% for topic in conf.topics %}
-            <span class="topic-chip">
-              <span data-lang="ko">{{ topic.ko }}</span>
-              <span data-lang="en">{{ topic.en }}</span>
-            </span>
-            {% endfor %}
-          </div>
-        </div>
-        {% endif %}
-
-        <!-- Actions -->
-        <div class="section-actions">
-          {% if conf.cfp_link %}
-          <a href="{{ conf.cfp_link }}" class="btn btn-primary">
-            <span data-lang="ko">논문 접수 →</span>
-            <span data-lang="en">Submit Paper →</span>
-          </a>
-          {% else %}
-          <a href="{{ '/submit/' | relative_url }}" class="btn btn-primary">
-            <span data-lang="ko">논문 투고 안내</span>
-            <span data-lang="en">Submission Guide</span>
-          </a>
-          {% endif %}
-          <a href="{{ '/contact/' | relative_url }}" class="btn btn-outline">
-            <span data-lang="ko">문의하기</span>
-            <span data-lang="en">Contact Us</span>
-          </a>
-        </div>
-
-      </div><!-- conf-card-main -->
-
-      <!-- POSTER -->
-      <div class="conf-poster-side">
-        {% if conf.has_poster %}
-        <img src="{{ conf.poster | relative_url }}"
-             alt="{% if page.lang == 'en' %}{{ conf.poster_alt_en }}{% else %}{{ conf.poster_alt_ko }}{% endif %}"
-             class="conf-poster-img"
-             loading="lazy" />
-        {% else %}
-        <div class="conf-poster-placeholder" aria-hidden="true">
-          <span class="conf-poster-ph-label" style="font-family: var(--font-mono); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(36,255,252,0.6); position: relative;">
-            <span data-lang="ko">포스터 준비 중</span>
-            <span data-lang="en">POSTER COMING SOON</span>
-          </span>
-          <p class="conf-poster-ph-title" style="font-family: var(--font-title-en); font-size: 16px; font-weight: 800; color: #fff; line-height: 1.3; position: relative; text-align: center;">
-            <span data-lang="ko">{{ conf.title_ko }}</span>
-            <span data-lang="en">{{ conf.title_en }}</span>
-          </p>
-          <p class="conf-poster-ph-date" style="font-family: var(--font-mono); font-size: 12px; color: rgba(192,220,248,0.75); position: relative;">
-            <span data-lang="ko">{{ conf.date_ko }}</span>
-            <span data-lang="en">{{ conf.date_en }}</span>
-          </p>
-          <p class="conf-poster-ph-venue" style="font-size: 11px; color: rgba(192,220,248,0.55); position: relative; text-align: center;">
-            <span data-lang="ko">{{ conf.venue_ko }}</span>
-            <span data-lang="en">{{ conf.venue_en }}</span>
-          </p>
-        </div>
-        {% endif %}
       </div>
-
-    </div><!-- conf-with-poster -->
-  </div>
-
-  <!-- Awards -->
-  {% if conf.awards.size > 0 %}
-  <div class="page-section">
-    <h2 class="page-section-title">
-      <span data-lang="ko">우수 논문 시상</span>
-      <span data-lang="en">Awards</span>
-    </h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 16px;">
-      {% for award in conf.awards %}
-      <div class="about-full-card" style="flex: 1; min-width: 180px; padding: 20px 24px;">
-        <p class="officer-name">
-          <span data-lang="ko">{{ award.ko }}</span>
-          <span data-lang="en">{{ award.en }}</span>
-        </p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-  {% endif %}
-
-  <!-- Registration -->
-  <div class="page-section">
-    <h2 class="page-section-title">
-      <span data-lang="ko">참가 등록</span>
-      <span data-lang="en">Registration</span>
-    </h2>
-    {% if conf.registration_open %}
-    <a href="{{ conf.registration_link }}" class="btn btn-primary">
-      <span data-lang="ko">참가 등록 →</span>
-      <span data-lang="en">Register Now →</span>
-    </a>
-    {% else %}
-    <div class="coming-soon-banner">
-      <span>📋</span>
-      <span>
-        <span data-lang="ko">{{ conf.fee_note_ko }}</span>
-        <span data-lang="en">{{ conf.fee_note_en }}</span>
-      </span>
-    </div>
-    {% endif %}
-  </div>
-
-  <!-- Sponsors -->
-  {% if conf.sponsors.size > 0 %}
-  <div class="page-section page-section--compact">
-    <p class="meta-label" style="margin-bottom: 12px;">
-      <span data-lang="ko">후원 기업</span>
-      <span data-lang="en">Sponsors</span>
-    </p>
-    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-      {% for sponsor in conf.sponsors %}
-      <span class="topic-chip">
-        <span data-lang="ko">{{ sponsor.name_ko }}</span>
-        <span data-lang="en">{{ sponsor.name_en }}</span>
-      </span>
-      {% endfor %}
-    </div>
-  </div>
-  {% endif %}
-
-  <!-- Co-organizers -->
-  {% if conf.coorganizers.size > 0 %}
-  <div class="page-section page-section--compact">
-    <p class="meta-label" style="margin-bottom: 12px;">
-      <span data-lang="ko">공동 주최</span>
-      <span data-lang="en">Co-Organizers</span>
-    </p>
-    {% for org in conf.coorganizers %}
-    <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 4px;">
-      {% if org.url %}
-      <a href="{{ org.url }}" style="color: var(--accent-primary);" target="_blank" rel="noopener">
-        <span data-lang="ko">{{ org.name_ko }}</span>
-        <span data-lang="en">{{ org.name_en }}</span>
-      </a>
-      {% else %}
-      <span data-lang="ko">{{ org.name_ko }}</span>
-      <span data-lang="en">{{ org.name_en }}</span>
       {% endif %}
-    </p>
-    {% endfor %}
-  </div>
-  {% endif %}
+
+      <!-- Registration -->
+      <div class="page-section" id="registration">
+        <h2 class="page-section-title">
+          <span data-lang="ko">참가 등록</span>
+          <span data-lang="en">Registration</span>
+        </h2>
+        {% if conf.registration_open %}
+        <p class="page-section-text">
+          <span data-lang="ko">{{ conf.fee_note_ko }}</span>
+          <span data-lang="en">{{ conf.fee_note_en }}</span>
+        </p>
+        <a href="{{ conf.registration_link }}" class="btn btn-primary" target="_blank" rel="noopener">
+          <span data-lang="ko">참가 등록 →</span>
+          <span data-lang="en">Register Now →</span>
+        </a>
+        {% else %}
+        <div class="coming-soon-banner">
+          <span>📋</span>
+          <span>
+            <span data-lang="ko">{{ conf.fee_note_ko }}</span>
+            <span data-lang="en">{{ conf.fee_note_en }}</span>
+          </span>
+        </div>
+        {% endif %}
+      </div>
+
+      <!-- Sponsors -->
+      {% if conf.sponsors.size > 0 %}
+      <div class="page-section page-section--compact">
+        <p class="meta-label" style="margin-bottom: 12px;">
+          <span data-lang="ko">후원 기업</span>
+          <span data-lang="en">Sponsors</span>
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          {% for sponsor in conf.sponsors %}
+          <span class="topic-chip">
+            <span data-lang="ko">{{ sponsor.name_ko }}</span>
+            <span data-lang="en">{{ sponsor.name_en }}</span>
+          </span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+    </div><!-- .conf-page-body -->
+
+  </div><!-- .conf-page -->
 
 </div><!-- .container -->
 </div><!-- .page-article -->

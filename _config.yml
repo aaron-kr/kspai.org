@@ -55,6 +55,11 @@ defaults:
 exclude:
   - CLAUDE.md
   - PAGE-HERO-GUIDE.md
+  - CHANGELOG.md
+  - ARCHITECTURE-OPTIONS.md
+  - KNOWN-ISSUES.md
+  - ACCESSIBILITY_AUDIT.md
+  - SEO_AUDIT.md
   - Gemfile
   - Gemfile.lock
   - node_modules
