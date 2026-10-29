@@ -17,6 +17,7 @@ Dates are commit dates (KST). Entries before 2026-10-29 were reconstructed from 
 - Removed the unused Genos web font (an extra third-party request on every page).
 
 ### Tooling / Docs
+- Compressed the AMSTI images with sharp (mozjpeg q82, same settings as `scripts/compress-images.mjs`, applied to `assets/images/conferences/2026-amsti/` only so other images were not re-encoded): 2.7 MB → 0.67 MB total; poster 1.46 MB → 362 KB. The `compress-images` GitHub Action ran on push but did not commit results back to `main`.
 - Stopped tracking the generated `_site/` folder (`git rm -r --cached _site`); it was already in `.gitignore`.
 - **DRY:** new includes `conf-poster.html` (poster or "coming soon" placeholder, replacing two copies with inline styles), `conf-key-dates.html` (two copies), `conf-org-list.html` (주최/주관 sidebar lists), `monogram.html` (officer initials, two copies).
 - **Dead CSS removed:** 80 rules (~330 lines) whose classes no template, data file or script uses — old officer cards, old post header, events strip, journal teaser, news list, past-conference list, unused button variants. `style.scss` now has 0 unused classes.
