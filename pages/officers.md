@@ -7,7 +7,7 @@ subtitle_ko: 한국피지컬인공지능학회 임원진 및 조직 구성
 subtitle_en: Leadership and organizational structure of KSPAI
 label_en: ORGANIZATION
 tag_class: call
-description: 한국피지컬인공지능학회(KSPAI) 임원진 소개 — 회장, 부회장단, 감사, 편집위원회, 학술위원회 등 조직 구성.
+description: 한국피지컬인공지능학회(KSPAI) 임원진 소개 — 회장, 부회장단, 협력/특임부회장단, 감사, 편집위원회, 학술위원회 등 조직 구성.
 permalink: /officers/
 ---
 {% comment %}
@@ -37,6 +37,10 @@ permalink: /officers/
   <a href="#vice-presidents" class="org-overview-item">
     <span class="org-overview-num">{{ o.vice_presidents.size }}</span>
     <span class="org-overview-label"><span data-lang="ko">부회장</span><span data-lang="en">Vice Presidents</span></span>
+  </a>
+  <a href="#partner-vice-presidents" class="org-overview-item">
+    <span class="org-overview-num">{{ o.partner_vice_presidents.size }}</span>
+    <span class="org-overview-label"><span data-lang="ko">협력/특임부회장</span><span data-lang="en">Special &amp; Cooperative VPs</span></span>
   </a>
   <a href="#auditor" class="org-overview-item">
     <span class="org-overview-num">{{ o.auditors.size }}</span>
@@ -90,9 +94,24 @@ permalink: /officers/
   </div>
 </div>
 
+<!-- ── SPECIAL & COOPERATIVE VICE PRESIDENTS ── -->
+<div class="page-section" id="partner-vice-presidents">
+  <p class="org-eyebrow mono">02 · PARTNERSHIP</p>
+  <h2 class="page-section-title">
+    <span data-lang="ko">협력/특임부회장단</span>
+    <span data-lang="en">Special &amp; Cooperative Vice Presidents</span>
+  </h2>
+  <div class="person-grid">
+    {% for officer in o.partner_vice_presidents %}
+      {% assign tone = forloop.index0 | modulo: 3 %}
+      {% include person-card.html person=officer label_ko=officer.role_ko label_en=officer.role_en tone=tone %}
+    {% endfor %}
+  </div>
+</div>
+
 <!-- ── AUDITOR ── -->
 <div class="page-section" id="auditor">
-  <p class="org-eyebrow mono">02 · AUDIT</p>
+  <p class="org-eyebrow mono">03 · AUDIT</p>
   <h2 class="page-section-title">
     <span data-lang="ko">감사</span>
     <span data-lang="en">Auditor</span>
@@ -106,7 +125,7 @@ permalink: /officers/
 
 <!-- ── EDITORIAL COMMITTEE ── -->
 <div class="page-section" id="editorial">
-  <p class="org-eyebrow mono">03 · JOURNAL</p>
+  <p class="org-eyebrow mono">04 · JOURNAL</p>
   <h2 class="page-section-title">
     <span data-lang="ko">편집위원회</span>
     <span data-lang="en">Editorial Committee</span>
@@ -151,7 +170,7 @@ permalink: /officers/
 
 <!-- ── ACADEMIC COMMITTEE ── -->
 <div class="page-section" id="academic">
-  <p class="org-eyebrow mono">04 · CONFERENCES</p>
+  <p class="org-eyebrow mono">05 · CONFERENCES</p>
   <h2 class="page-section-title">
     <span data-lang="ko">학술위원회</span>
     <span data-lang="en">Academic Committee</span>

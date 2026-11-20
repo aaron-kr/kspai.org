@@ -291,7 +291,7 @@ A `description:` containing `: ` (e.g. `분야: 로보틱스`) is invalid YAML; 
 | `/journal/` | `journal.md` | ✅ Rebuilt | 제4조 track list loops from `_data/research.yml` |
 | `/seminars/` | `seminars.md` | ✅ Data-driven | Series cards loop from `_data/seminars.yml` |
 | `/privacy/` | `privacy.md` | ✅ Live | Korean + English bilingual policy |
-| `/conferences/<id>/` | `_conferences/<id>.md` | ✅ Data-driven | `_layouts/conference.html` looks up `conference_id` in `_data/conferences.yml`; body content (if any) renders below the info block. Current: `2026-summer` (past), `2026-amsti` (partner event), `2027-winter` |
+| `/conferences/<id>/` | `_conferences/<id>.md` | ✅ Data-driven | `_layouts/conference.html` looks up `conference_id` in `_data/conferences.yml`; body content (if any) renders below the info block. Current: `2027-winter` (upcoming, CFP open); past: `2026-amsti` (partner event), `2026-summer` |
 | `/resources/` | `pages/resources.md` | ✅ New | Journal + conference template downloads |
 | `/gallery/` | `pages/gallery.md` | ✅ New | Photo gallery; albums driven by `_data/gallery.yml` |
 
@@ -301,11 +301,12 @@ A `description:` containing `: ` (e.g. `분야: 로보틱스`) is invalid YAML; 
 
 ## Officers status
 
-All roster data is in `_data/officers.yml`; `pages/officers.md` only loops over it. As of 2026-10-29:
+All roster data is in `_data/officers.yml`; `pages/officers.md` only loops over it. As of 2026-11-20:
 - **회장:** 이충호 (국립한밭대학교)
 - **부회장단 (7):** 총무, 논문지, 국내학술, 국제학술, 대외협력, 산학협력, 기획
+- **협력/특임부회장단 (6):** `partner_vice_presidents` — its own section below 부회장단 (the society asked for it to be listed separately). 특임부회장 송병진; 협력부회장 유강수, 홍기천, 신좌철, 박시용, 박미경
 - **감사:** 김영태
-- **편집위원회:** `editorial_committee.leadership` (편집위원장 / 공동편집위원장 / 부편집위원장) + `editorial_committee.divisions` (7 분과위원장; 국방및무기시스템 is vacant → `vacant: true`)
+- **편집위원회:** `editorial_committee.leadership` (편집위원장 / 공동편집위원장 / 부편집위원장) + `editorial_committee.divisions` (7 분과위원장; 국방및무기시스템 filled by 지수환 on 2026-11-20 — `vacant: true` still works for future vacancies)
 - **학술위원회:** `academic_committee` (국내/국제학술위원장, 부학술위원장 ×2)
 
 The old "설립준비위원회" placeholder `status:` block is commented out at the top of the YAML. People hold several posts (e.g. 장봉석 = 논문지부회장 + 편집위원장 + 분과위원장): keep their `name_en` spelling identical in every entry. Division names are mirrored in `_data/research.yml` (`editorial_division_ko/en`).
@@ -376,7 +377,6 @@ When using Claude Code or any AI assistant on this codebase:
 - Officer profile photos for `/officers/` once available
 - Hero section background image or video
 - ISSN and journal volume info after launch
-- After 2026-11-06: retire `2026-amsti` to `past:` and restore the 2027 Winter banner (commented in `_data/banner.yml`)
 - CMS/admin layer for non-developer managers — options in `ARCHITECTURE-OPTIONS.md`
 - Conference paper HWP template
 - Online paper submission portal (professional rebuild phase)

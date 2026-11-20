@@ -472,7 +472,7 @@ Settings → Pages → Source: **Deploy from a branch** → `main` / `/ (root)`
 - [ ] Officer profile photos (`/officers/`)
 - [ ] Hero background image or video
 - [ ] ISSN assignment after journal launch
-- [ ] After 2026-11-06: move `2026-amsti` to `past:` and point `_data/banner.yml` back at the 2027 Winter Conference (the lines are commented out in that file, ready to restore). A scheduled Claude Code routine will open a PR with this change on 2026-11-07 09:00 KST.
+- [x] Retired `2026-amsti` to `past:` and pointed `_data/banner.yml` at the 2027 Winter Conference (done 2026-11-20; the scheduled routine's PR never arrived).
 - [ ] Decide on a CMS / admin approach before handing the site to non-developer managers — see `ARCHITECTURE-OPTIONS.md`
 
 ---

@@ -14,15 +14,138 @@
 # ═══════════════════════════════════════════════════════════════
 
 upcoming:
-  # ── Partner conference (KSPAI is a co-host / 주최 기관, not the lead organizer) ──
-  # Move to past: after 2026-11-06 (see README "Retire a conference").
+  - id: "2027-winter"
+    title_ko: "2027년 동계학술대회"
+    title_en: "2027 Winter Conference"
+    subtitle_ko: "한국피지컬인공지능학회·삶의질정보학회 공동학술대회"
+    subtitle_en: "Joint Conference of KSPAI and the Korea Quality of Life Information Society"
+    status: "cfp-open"            # upcoming | cfp-open | registration-open | closed
+
+    # ── Dates ──
+    date_ko: "2027-01-28 ~ 29"
+    date_en: "January 28–29, 2027"
+    date_from: "2027-01-28"
+    date_to: "2027-01-29"
+
+    # ── Location ──
+    venue_ko: "전주교육대학교 교사교육센터"
+    venue_en: "Teacher Education Center, Jeonju National University of Education"
+    city_ko: "전주"
+    city_en: "Jeonju, Korea"
+    map_url: ""
+
+    # ── Formats ──
+    formats_ko: "구두 발표 · 포스터 발표 · 패들렛 발표 (온라인/현장)"
+    formats_en: "Oral · Poster · Padlet Presentations (online/on-site)"
+    oral_time_ko: "구두 발표: 15분 발표 + 5분 질의응답"
+    oral_time_en: "Oral: 15 min presentation + 5 min Q&A"
+
+    # ── Key Dates (from the CFP poster v2.2, Nov 2026) ──
+    key_dates:
+      - label_ko: "발표문 접수"
+        label_en: "Paper Submission"
+        date_ko: "2026-12-01 (화) ~ 12-31 (목) 23:59"
+        date_en: "Dec 1 – Dec 31, 2026, 23:59 KST"
+        status: "confirmed"
+      - label_ko: "사전등록 마감"
+        label_en: "Early Registration Deadline"
+        date_ko: "2027-01-22"
+        date_en: "January 22, 2027"
+        status: "confirmed"
+      - label_ko: "학술대회"
+        label_en: "Conference"
+        date_ko: "2027-01-28 (목) ~ 29 (금)"
+        date_en: "Thu–Fri, January 28–29, 2027"
+        status: "confirmed"
+
+    # ── Description ──
+    description_ko: >
+      한국피지컬인공지능학회와 삶의질정보학회가 전주교육대학교와 함께 개최하는 제2회 공동학술대회입니다.
+      전주교육대학교 교사교육센터에서 이틀간 온라인·현장 구두 발표, 포스터 발표, 패들렛 발표로 진행됩니다.
+      발표문은 2026년 12월 1일부터 31일까지 접수합니다.
+    description_en: >
+      The 2nd KSPAI–KLife Joint Conference, co-hosted by KSPAI and the Korea Quality of Life Information
+      Society together with Jeonju National University of Education. Held over two days at the university's
+      Teacher Education Center, with online and on-site oral, poster, and Padlet presentations.
+      Papers are accepted from December 1 to 31, 2026.
+
+    # ── Topics (KSPAI tracks — KLife tracks are listed on the conference page) ──
+    topics:
+      - ko: "피지컬AI 윤리및인문학"
+        en: "Physical AI Ethics & Humanities"
+      - ko: "피지컬AI 교육"
+        en: "Physical AI Education"
+      - ko: "피지컬AI 융합및창업"
+        en: "Physical AI Convergence & Entrepreneurship"
+      - ko: "피지컬AI 비전및인식"
+        en: "Physical AI Vision & Perception"
+      - ko: "피지컬AI 시스템"
+        en: "Physical AI Systems"
+      - ko: "피지컬AI 국방및무기시스템"
+        en: "Physical AI Defense & Weapon Systems"
+      - ko: "피지컬AI 보건의료"
+        en: "Physical AI Healthcare"
+
+    # ── Awards ──
+    awards:
+      - ko: "학술대상"
+        en: "Academic Grand Prize"
+      - ko: "연구대상"
+        en: "Research Grand Prize"
+      - ko: "최우수상"
+        en: "Grand Award"
+      - ko: "학생 우수상"
+        en: "Student Excellence Award"
+
+    # ── Registration / Fees ──
+    registration_open: false
+    registration_link: ""
+    fee_note_ko: "사전등록 마감은 2027년 1월 22일입니다. 등록비와 계좌는 위 '등록비 안내'를 참고하십시오. 등록 신청 방법은 추후 공지됩니다."
+    fee_note_en: "Early registration closes January 22, 2027. See Registration Fees above for amounts and bank accounts. How to register will be announced."
+
+    # ── Links ──
+    submit_link: "/submit/"
+    cfp_link: ""
+    template_link: ""
+
+    # ── Media ──
+    # Call-for-papers poster (v2.2). Shown on the homepage spotlight, /conferences/ and the detail page.
+    poster: "/assets/images/conferences/2027-kspai/2027-winter-poster.jpg"
+    poster_alt_ko: "2027년 한국피지컬인공지능학회-삶의질정보학회 공동학술대회 논문모집 포스터 — 2027년 1월 28~29일, 전주교육대학교 교사교육센터"
+    poster_alt_en: "Call for papers poster, The 2nd KSPAI-KLife Joint Conference 2027 — January 28–29, 2027, Teacher Education Center, Jeonju National University of Education"
+    has_poster: true
+
+    # ── Co-organizers ──
+    coorganizers:
+      - name_ko: "삶의질정보학회"
+        name_en: "Korea Quality of Life Information Society"
+        url: "http://klife.re.kr"
+      - name_ko: "전주교육대학교"
+        name_en: "Jeonju National University of Education"
+        url: ""
+
+    # Sponsors intentionally omitted — as of the 1st Steering Committee meeting (2026-08-18)
+    # the sponsor list was only a prospective target list ("후원기업 예상"), not confirmed
+    # commitments. Add a `sponsors:` list here (see conference.html for the render block)
+    # once sponsorships are actually signed.
+
+    proceedings_link: ""
+    photos_link: ""
+
+# ── PAST CONFERENCES (newest first) ──
+# 2026-amsti moved here on 2026-11-20 (event ended 2026-11-06)
+# 2026-summer moved here after the event concluded on 2026-06-26
+
+past:
+  # ── Partner conference (KSPAI was a co-host / 주최 기관, not the lead organizer) ──
+  # Moved here from upcoming: on 2026-11-20 after the event concluded on 2026-11-06.
   - id: "2026-amsti"
     partner_event: true           # hides KSPAI paper-submission CTAs; shows "협력 학술대회" label
     title_ko: "2026 첨단군사과학융합기술 학술대회"
     title_en: "2026 Advanced Military Science & Convergence Technology Conference"
     subtitle_ko: "강원대학교 첨단군사과학기술연구소(AMSTI) 초청 학술대회 · 한국피지컬인공지능학회 공동 주최"
     subtitle_en: "Hosted by the KNU Advanced Military Science & Technology Research Institute (AMSTI) · Co-hosted by KSPAI"
-    status: "registration-open"
+    status: "closed"
 
     # ── Dates ──
     date_ko: "2026-11-05 ~ 06"
@@ -47,8 +170,8 @@ upcoming:
     key_dates:
       - label_ko: "사전등록"
         label_en: "Pre-registration"
-        date_ko: "접수 중"
-        date_en: "Open now"
+        date_ko: "마감"
+        date_en: "Closed"
         status: "confirmed"
       - label_ko: "1일차 (개회식·기조강연·논문발표)"
         label_en: "Day 1 (Opening, Keynotes, Papers)"
@@ -93,10 +216,10 @@ upcoming:
     awards: []
 
     # ── Registration ──
-    registration_open: true
+    registration_open: false
     registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSdAO1ndSBWLcrCM9prH4Fn_m7esPUBEAZk4AEx2Q8fEQuUVtw/viewform"
-    fee_note_ko: "사전등록은 아래 신청서를 통해 접수합니다."
-    fee_note_en: "Pre-register using the form below."
+    fee_note_ko: "학술대회가 종료되었습니다. 참여해 주신 모든 분께 감사드립니다."
+    fee_note_en: "This conference has concluded. Thank you to everyone who took part."
 
     # ── Contact (partner events only — KSPAI events use /contact/) ──
     contact_name_ko: "김수연"
@@ -158,119 +281,6 @@ upcoming:
     proceedings_link: ""
     photos_link: ""
 
-  - id: "2027-winter"
-    title_ko: "2027년 동계학술대회"
-    title_en: "2027 Winter Conference"
-    subtitle_ko: "한국피지컬인공지능학회·삶의질정보학회 공동학술대회"
-    subtitle_en: "Joint Conference of KSPAI and the Korea Quality of Life Information Society"
-    status: "upcoming"            # upcoming | cfp-open | registration-open | closed
-
-    # ── Dates ──
-    date_ko: "2027-01-28 ~ 29"
-    date_en: "January 28–29, 2027"
-    date_from: "2027-01-28"
-    date_to: "2027-01-29"
-
-    # ── Location ──
-    venue_ko: "전주교육대학교 교사교육센터"
-    venue_en: "Teacher Education Center, Jeonju National University of Education"
-    city_ko: "전주"
-    city_en: "Jeonju, Korea"
-    map_url: ""
-
-    # ── Formats ──
-    formats_ko: "온라인/현장 구두 발표 · 온라인/현장 포스터 발표"
-    formats_en: "Online/On-site Oral & Poster Presentations"
-    oral_time_ko: "구두 발표: 15분 발표 + 5분 질의응답"
-    oral_time_en: "Oral: 15 min presentation + 5 min Q&A"
-
-    # ── Key Dates ──
-    key_dates:
-      - label_ko: "논문 접수"
-        label_en: "Submission Open"
-        date_ko: "추후 공지"
-        date_en: "To be announced"
-        status: "tba"
-      - label_ko: "제출 마감"
-        label_en: "Submission Deadline"
-        date_ko: "추후 공지"
-        date_en: "To be announced"
-        status: "tba"
-      - label_ko: "결과 통보"
-        label_en: "Notification"
-        date_ko: "추후 공지"
-        date_en: "To be announced"
-        status: "tba"
-      - label_ko: "학술대회"
-        label_en: "Conference"
-        date_ko: "2027-01-28 ~ 29"
-        date_en: "January 28–29, 2027"
-        status: "confirmed"
-
-    # ── Description ──
-    description_ko: >
-      한국피지컬인공지능학회와 삶의질정보학회가 전주교육대학교와 함께 개최하는 공동학술대회입니다.
-      전주교육대학교 교사교육센터(1층 마음연구홀, 강의실 등)에서 이틀간 온라인·현장 구두 발표 및
-      포스터 발표로 진행됩니다.
-    description_en: >
-      A joint academic conference co-hosted by KSPAI and the Korea Quality of Life Information Society,
-      together with Jeonju National University of Education. Held over two days at the university's
-      Teacher Education Center, the program includes both online and on-site oral and poster
-      presentations.
-
-    # ── Topics ──
-    topics: []
-
-    # ── Awards ──
-    awards:
-      - ko: "학술대상"
-        en: "Academic Grand Prize"
-      - ko: "연구대상"
-        en: "Research Grand Prize"
-      - ko: "최우수상"
-        en: "Grand Award"
-      - ko: "학생 우수상"
-        en: "Student Excellence Award"
-
-    # ── Registration / Fees ──
-    registration_open: false
-    registration_link: ""
-    fee_note_ko: "발표자 등록비: 온라인 4만원 / 오프라인 8만원(참가비 포함). 단순 참가자·공동저자 참가비: 1인당 4만원(학부생 3만원). 상세 사항은 추후 공지됩니다."
-    fee_note_en: "Presenter registration: 40,000 KRW online / 80,000 KRW on-site (participation fee included). Attendee/co-author participation fee: 40,000 KRW per person (30,000 KRW for undergraduates). Full details to be announced."
-
-    # ── Links ──
-    submit_link: "/submit/"
-    cfp_link: ""
-    template_link: ""
-
-    # ── Media ──
-    # Place poster at /assets/images/conferences/2027-winter-poster.jpg once available
-    poster: "/assets/images/conferences/2027-winter-poster.jpg"
-    poster_alt_ko: "2027년 동계학술대회 포스터"
-    poster_alt_en: "2027 Winter Conference Poster"
-    has_poster: false
-
-    # ── Co-organizers ──
-    coorganizers:
-      - name_ko: "삶의질정보학회"
-        name_en: "Korea Quality of Life Information Society"
-        url: "http://klife.re.kr"
-      - name_ko: "전주교육대학교"
-        name_en: "Jeonju National University of Education"
-        url: ""
-
-    # Sponsors intentionally omitted — as of the 1st Steering Committee meeting (2026-08-18)
-    # the sponsor list was only a prospective target list ("후원기업 예상"), not confirmed
-    # commitments. Add a `sponsors:` list here (see conference.html for the render block)
-    # once sponsorships are actually signed.
-
-    proceedings_link: ""
-    photos_link: ""
-
-# ── PAST CONFERENCES ──
-# 2026-summer moved here after the event concluded on 2026-06-26
-
-past:
   - id: "2026-summer"
     title_ko: "2026년 하계학술대회"
     title_en: "2026 Summer Conference"

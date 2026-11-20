@@ -3,13 +3,14 @@
 #
 #  president:           회장
 #  vice_presidents:     부회장단 (ordered)
+#  partner_vice_presidents: 협력/특임부회장단 (separate section)
 #  auditors:            감사
 #  editorial_committee: 편집위원회 — leadership[] + divisions[] (분과위원장)
 #  academic_committee:  학술위원회
 #
 #  Leave affil_ko/en blank if unknown — the template hides it.
 #  Set `vacant: true` on an entry to render it as a dimmed 공석 card.
-#  Last roster update: 2026-10-29
+#  Last roster update: 2026-11-20
 # ═══════════════════════════════════════════════════════════════
 
 # status:
@@ -77,6 +78,53 @@ vice_presidents:
     name_en: Jihyun Park
     affil_ko: 우석대학교
     affil_en: Woosuk University
+
+# ── 협력/특임부회장단 / Special & Cooperative Vice Presidents ──
+# Shown as a separate section below the executive 부회장단 (added 2026-11-20).
+# English names: 홍기천 uses his published spelling; the others are Revised Romanization
+# (no published English spelling found) — correct them if the officer prefers another.
+partner_vice_presidents:
+  - role_ko: 특임부회장
+    role_en: VP, Special Affairs
+    name_ko: 송병진
+    name_en: Byungjin Song
+    affil_ko: 한국폴리텍대학 원주캠퍼스
+    affil_en: Korea Polytechnics, Wonju Campus
+
+  - role_ko: 협력부회장
+    role_en: VP, Cooperation
+    name_ko: 유강수
+    name_en: Kangsoo You
+    affil_ko: 전주대학교
+    affil_en: Jeonju University
+
+  - role_ko: 협력부회장
+    role_en: VP, Cooperation
+    name_ko: 홍기천
+    name_en: Ki-Cheon Hong
+    affil_ko: 전주교육대학교
+    affil_en: Jeonju National University of Education
+
+  - role_ko: 협력부회장
+    role_en: VP, Cooperation
+    name_ko: 신좌철
+    name_en: Jwacheol Shin
+    affil_ko: 호서대학교
+    affil_en: Hoseo University
+
+  - role_ko: 협력부회장
+    role_en: VP, Cooperation
+    name_ko: 박시용
+    name_en: Siyong Park
+    affil_ko: 대전대학교
+    affil_en: Daejeon University
+
+  - role_ko: 협력부회장
+    role_en: VP, Cooperation
+    name_ko: 박미경
+    name_en: Mikyung Park
+    affil_ko: 백석문화대학교
+    affil_en: Baekseok Culture University
 
 auditors:
   - role_ko: 감사
@@ -149,11 +197,10 @@ editorial_committee:
 
     - division_ko: 피지컬AI 국방및무기시스템
       division_en: Physical AI Defense & Weapon Systems
-      name_ko: 공석
-      name_en: Vacant
-      affil_ko:
-      affil_en:
-      vacant: true
+      name_ko: 지수환
+      name_en: Suhwan Ji
+      affil_ko: 강원대학교
+      affil_en: Kangwon National University
 
     - division_ko: 피지컬AI 보건의료
       division_en: Physical AI Healthcare

@@ -9,6 +9,21 @@ Dates are commit dates (KST). Entries before 2026-10-29 were reconstructed from 
 
 ---
 
+## 2026-11-20
+
+### Content
+- **Retired the AMSTI partner conference:** moved `2026-amsti` from `upcoming:` to `past:` in `_data/conferences.yml` (status `closed`, registration closed, note changed to "this conference has concluded"). Its page `/conferences/2026-amsti/` stays as is. `past:` is now newest first.
+- **Site banner** (`_data/banner.yml`) now announces the 2027 Winter Joint Conference call for papers and links to `/conferences/2027-winter/` (expires 2027-01-29).
+- **2027 Winter Conference:** added the call-for-papers poster (v2.2) as the conference poster, which also shows in the homepage spotlight and on `/conferences/`. Updated the data from the poster: status `cfp-open`, submission Dec 1–31 2026, early registration deadline Jan 22 2027, formats (oral, poster, Padlet), KSPAI tracks as topics. `_conferences/2027-winter.md` now has a body: call-for-papers rules, both societies' tracks, fee table, bank accounts, the program image plus a bilingual program table, and inquiries. The draft program's uncertain congratulatory speakers are shown as "to be confirmed" in the text table.
+- Images: `assets/images/conferences/2027-kspai/2027-winter-poster.jpg` (560 KB → 176 KB) and `2027-winter-schedule.jpg` (PNG 227 KB → JPEG 112 KB), sharp mozjpeg q82. Originals are in the git-ignored `scripts/image-originals/2027-kspai/`.
+- **Officers:** new section **협력/특임부회장단** (`partner_vice_presidents` in `_data/officers.yml`): 특임부회장 송병진 (Korea Polytechnics, Wonju Campus); 협력부회장 유강수 (Jeonju University), 홍기천 (Jeonju National University of Education), 신좌철 (Hoseo University), 박시용 (Daejeon University), 박미경 (Baekseok Culture University). Only 홍기천's English spelling (Ki-Cheon Hong) comes from his publications; the others are Revised Romanization.
+- **Officers:** the 피지컬AI 국방및무기시스템 division chair, previously vacant, is now 지수환 (Kangwon National University).
+
+### Features
+- `/officers/`: overview strip has a 6th item (협력/특임부회장) and the grid is 6 columns wide on desktop; section numbers shifted (02 PARTNERSHIP, 03 AUDIT, 04 JOURNAL, 05 CONFERENCES).
+
+---
+
 ## 2026-10-29 (review & cleanup)
 
 ### Fixes

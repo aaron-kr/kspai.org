@@ -10,17 +10,11 @@
 
 active: true
 type: "conference"        # conference | announcement | warning | info
-expires: "2026-11-06"     # YYYY-MM-DD — banner hides itself (client-side) after this date. Leave blank for no expiry.
+expires: "2027-01-29"     # YYYY-MM-DD — banner hides itself (client-side) after this date. Leave blank for no expiry.
 
-message_ko: "📢 2026 첨단군사과학융합기술 학술대회 — 2026년 11월 5~6일 · 강원연구원 (춘천)"
-message_en: "📢 2026 Advanced Military Science & Convergence Technology Conference — November 5–6, 2026 · Gangwon Research Institute, Chuncheon"
+message_ko: "📢 2027년 동계 공동학술대회 논문모집 — 발표문 접수 12월 1일~31일 · 2027년 1월 28~29일 · 전주교육대학교"
+message_en: "📢 2027 Winter Joint Conference — Call for papers Dec 1–31 · January 28–29, 2027 · Jeonju National University of Education"
 
-link_url: "/conferences/2026-amsti/"
-
-# After 2026-11-06 switch back to the 2027 Winter Conference:
-# message_ko: "📢 2027년 동계학술대회 — 2027년 1월 28~29일 · 전주교육대학교"
-# message_en: "📢 2027 Winter Conference — January 28–29, 2027 · Jeonju National University of Education"
-# link_url: "/conferences/2027-winter/"
-# expires: "2027-01-29"
+link_url: "/conferences/2027-winter/"
 link_label_ko: "자세히 보기 →"
 link_label_en: "Learn more →"

@@ -3521,7 +3521,7 @@ a.post-nav-link:hover { color: var(--accent-text); }
    OFFICERS — monogram cards, overview strip, committees
    ════════════════════════════════════ */
 .org-overview {
-  display: grid; grid-template-columns: repeat(5, 1fr);
+  display: grid; grid-template-columns: repeat(6, 1fr);
   border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
   background: var(--bg-card); overflow: hidden;
   margin-bottom: 32px;
