@@ -12,7 +12,7 @@ active: true
 type: "conference"        # conference | announcement | warning | info
 expires: "2027-01-29"     # YYYY-MM-DD — banner hides itself (client-side) after this date. Leave blank for no expiry.
 
-message_ko: "📢 논문 모집 — 2027 동계 공동학술대회 (1차 마감 12월 31일 · 2차 1월 7일) · 학술지 「피지컬AI 연구」 창간호"
+message_ko: "📢 논문 모집 — 2027 동계 공동학술대회 (1차 마감 12월 31일 · 2차 1월 7일) · 학술지 「피지컬 AI 연구」 창간호"
 message_en: "📢 Call for papers — 2027 Winter Joint Conference (deadlines Dec 31 / Jan 7) · Physical AI Research inaugural issue"
 
 link_url: "/news/call-for-papers/"

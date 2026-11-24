@@ -19,7 +19,7 @@ It stops working once other site managers join, especially Korean staff or offic
 
 - [ ] Someone other than the current maintainer needs to post news or update officers regularly
 - [ ] Members need accounts (회원가입, member-only resources, dues tracking)
-- [ ] Online paper submission and review is needed (the email workflow at `paper@physicalai.or.kr` doesn't scale)
+- [ ] Online paper submission and review is needed (the email workflow at `paper@kspai.org` doesn't scale)
 - [ ] A forum or Q&A board (자유게시판, 질의응답) is required
 - [ ] Posting frequency exceeds roughly 2–3 updates per week
 
@@ -88,4 +88,4 @@ Before choosing, ask the officers who will actually edit the site what they use 
 - All structured content is already in `_data/*.yml`, so it can be exported to any CMS with a short script.
 - Bilingual content uses paired `*_ko` / `*_en` fields. Keep that pairing in any CMS schema; don't split into two sites.
 - URLs to preserve (or redirect): `/conferences/<id>/`, `/news/` post URLs (`/YYYY/MM/DD/slug/`), `/officers/`, `/journal/`, `/submit/`, `/resources/`, and the file downloads under `/assets/files/`.
-- Domains are at Gabia (`physicalai.or.kr`, `physicalai.re.kr`); `kspai.org` is set in `CNAME`.
+- `kspai.org` DNS is at DreamHost (set in `CNAME` for GitHub Pages); mail is Google Workspace. The old `physicalai.or.kr` / `physicalai.re.kr` domains are at Gabia.

@@ -20,7 +20,7 @@ permalink: /submit/
   <div class="download-card-body">
     <div class="download-badge">논문 작성 양식 · Paper Template</div>
     <div class="download-card-title">
-      <span data-lang="ko">피지컬AI 연구 (JKPAI) 논문 양식 — HWP</span>
+      <span data-lang="ko">피지컬 AI 연구 (JKPAI) 논문 양식 — HWP</span>
       <span data-lang="en">Physical AI Research (JKPAI) Paper Template — HWP</span>
     </div>
     <p class="download-card-desc">
@@ -46,7 +46,7 @@ permalink: /submit/
   </h2>
   <p class="page-section-text">
     <span data-lang="ko">한국피지컬인공지능학회는 학술지 <strong>「피지컬 AI 연구」(Physical AI Research, JKPAI)</strong>를 통해 피지컬 AI 분야의 이론적·응용적 연구 논문을 상시 접수합니다. 로보틱스, 체화지능, 자율시스템, 디지털 트윈, 인간-로봇 상호작용, 피지컬 AI 교육 및 이와 융합된 제반 분야의 독창적인 연구 성과를 발표할 수 있는 공개적 학술 플랫폼입니다. 학계, 산업체, 대학원생 모든 연구자의 적극적인 참여를 환영합니다.</span>
-    <span data-lang="en">The Korean Society for Physical AI (KSPAI) invites submissions to its peer-reviewed journal, <strong><em>Physical AI Research</em> (JKPAI)</strong>. The journal publishes original theoretical and applied research in robotics, embodied intelligence, autonomous systems, digital twins, human-robot interaction, Physical AI education, and related interdisciplinary fields. We welcome contributions from researchers in academia, industry, and graduate programs.</span>
+    <span data-lang="en">The Korean Society for Physical Artificial Intelligence (KSPAI) invites submissions to its peer-reviewed journal, <strong><em>Physical AI Research</em> (JKPAI)</strong>. The journal publishes original theoretical and applied research in robotics, embodied intelligence, autonomous systems, digital twins, human-robot interaction, Physical AI education, and related interdisciplinary fields. We welcome contributions from researchers in academia, industry, and graduate programs.</span>
   </p>
 
   <div class="journal-meta-grid">
@@ -61,7 +61,7 @@ permalink: /submit/
       <span class="meta-label">PUBLISHER</span>
       <strong>
         <span data-lang="ko">한국피지컬인공지능학회 (KSPAI)</span>
-        <span data-lang="en">Korean Society for Physical AI (KSPAI)</span>
+        <span data-lang="en">Korean Society for Physical Artificial Intelligence (KSPAI)</span>
       </strong>
     </div>
     <div class="journal-meta-item">
@@ -225,7 +225,7 @@ permalink: /submit/
   <div class="submit-note">
     <span class="submit-note-icon">📬</span>
     <div>
-      <span data-lang="ko"><strong>지금 열려 있는 논문 모집 게시판:</strong> <a href="/submit/inaugural/">「피지컬AI 연구」 창간호 논문 모집</a> · <a href="/submit/conference/">2027 동계 공동학술대회 논문 투고</a>. 게시판에서 바로 파일을 올리실 수 있으며, 아래 이메일 투고도 계속 받습니다. 학술지 온라인 논문투고심사시스템은 창간호 이후 개설하여 별도로 공지합니다.</span>
+      <span data-lang="ko"><strong>지금 열려 있는 논문 모집 게시판:</strong> <a href="/submit/inaugural/">「피지컬 AI 연구」 창간호 논문 모집</a> · <a href="/submit/conference/">2027 동계 공동학술대회 논문 투고</a>. 게시판에서 바로 파일을 올리실 수 있으며, 아래 이메일 투고도 계속 받습니다. 학술지 온라인 논문투고심사시스템은 창간호 이후 개설하여 별도로 공지합니다.</span>
       <span data-lang="en"><strong>Open submission boards:</strong> <a href="/submit/inaugural/">Physical AI Research — inaugural issue</a> · <a href="/submit/conference/">2027 Winter Joint Conference</a>. You can upload files there directly; email submission below still works. A full online submission and review system will open after the inaugural issue.</span>
     </div>
   </div>
@@ -276,7 +276,7 @@ permalink: /submit/
         </div>
         <div class="email-block">
           <span class="email-block-label">To:</span>
-          <a href="mailto:paper@physicalai.or.kr">paper@physicalai.or.kr</a>
+          <a href="mailto:paper@kspai.org">paper@kspai.org</a>
         </div>
       </div>
     </div>
@@ -380,14 +380,14 @@ permalink: /submit/
           <span class="contact-detail-icon">✉️</span>
           <div>
             <span class="contact-detail-label">논문 투고 · SUBMISSION</span>
-            <a href="mailto:paper@physicalai.or.kr" class="contact-link">paper@physicalai.or.kr</a>
+            <a href="mailto:paper@kspai.org" class="contact-link">paper@kspai.org</a>
           </div>
         </div>
         <div class="contact-detail-row">
           <span class="contact-detail-icon">✉️</span>
           <div>
             <span class="contact-detail-label">일반 문의 · GENERAL</span>
-            <a href="mailto:contact@physicalai.or.kr" class="contact-link">contact@physicalai.or.kr</a>
+            <a href="mailto:contact@kspai.org" class="contact-link">contact@kspai.org</a>
           </div>
         </div>
         <div class="contact-detail-row">

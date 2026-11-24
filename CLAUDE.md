@@ -38,7 +38,7 @@ This file gives a new Claude instance full context on the KSPAI website project 
 ## What this project is
 
 Two sister Korean academic organizations share one website:
-- **한국피지컬인공지능학회** (Korean Society for Physical AI, KSPAI) — `kspai.org`
+- **한국피지컬인공지능학회** (Korean Society for Physical Artificial Intelligence, KSPAI) — `kspai.org`. These are the official names: never "Korean Society for Physical AI", "…of Physical…", or 한국피지컬AI학회.
 - **한국피지컬인공지능교육연구소** (Korean Institute of Physical AI Education & Research)
 
 The site is fully bilingual (Korean/English), built with Jekyll, hosted on GitHub Pages at `https://github.com/aaron-kr/kspai.org` (originally named `physical-ai-home`).
@@ -58,7 +58,8 @@ The owner works on a **superwide monitor (~3660px)** — this has informed hero 
 | JS | Vanilla ES6 (`func.js`, `lang.js`) | No bundler |
 | Fonts | Space Grotesk + Pretendard Variable + Noto Sans KR + JetBrains Mono | See Typography section |
 | Hosting | GitHub Pages | Push to `main` = deploy |
-| Domain registrar | Gabia | `physicalai.or.kr` (society), `physicalai.re.kr` (institute) |
+| Domain / DNS | DreamHost (kspai.org) | DNS at `ns1-3.dreamhost.com`; apex A records → GitHub Pages, `www` CNAME → `aaron-kr.github.io`. Old domains `physicalai.or.kr` / `physicalai.re.kr` at Gabia are no longer used for email |
+| Email | Google Workspace (kspai.org) | `admin@kspai.org` is the main account (runs the submission Apps Script); `contact@`, `edu@` are aliases of it; `paper@kspai.org` is the submission address (may become an alias too) |
 
 ---
 
@@ -320,8 +321,8 @@ The old "설립준비위원회" placeholder `status:` block is commented out at 
 
 ## Journal & submission system
 
-The journal `피지컬 AI 연구` (Physical AI Research, JKPAI; the Nov 2026 template writes it `피지컬AI 연구`):
-- **Submission email:** `paper@physicalai.or.kr` (still accepted)
+The journal `피지컬 AI 연구` (Physical AI Research, JKPAI). The Nov 2026 HWP template spells it `피지컬AI 연구`, but the site spelling (with a space) is the official one:
+- **Submission email:** `paper@kspai.org` (still accepted)
 - **Email subject format:** `[JKPAI 논문투고] 논문 제목`
 - **Template location:** `assets/files/kspai-journal-template.hwp` (replace the file in place to update; links use `download="KSPAI 논문양식.hwp"`)
 - **Submission boards (since 2026-11-24):** `/submit/inaugural/` (창간호, temporary, until 2027-01-31) and `/submit/conference/` (2027 winter). Config `_data/paper_boards.yml`, include `paper-board.html`, JS `paper-board.js`. Backend is Google Apps Script in `scripts/submission-backend/` (files go to the society's Drive, rows to a Sheet). **Deadlines are duplicated** in `paper_boards.yml` (display) and `Code.gs` `BOARDS` (enforced): change both. Blank `endpoint` = boards show an email fallback.

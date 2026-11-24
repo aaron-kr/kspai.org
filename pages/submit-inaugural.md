@@ -1,11 +1,11 @@
 ---
 layout: page
 title: 창간호 논문 모집
-title_ko: "「피지컬AI 연구」 창간호 논문 모집"
+title_ko: "「피지컬 AI 연구」 창간호 논문 모집"
 title_en: "Inaugural Issue — Call for Papers"
 subtitle_ko: 한국피지컬인공지능학회 학술지 창간호 원고 접수 페이지
 subtitle_en: Submission page for the first issue of Physical AI Research (JKPAI)
-description: "한국피지컬인공지능학회 학술지 「피지컬AI 연구」(JKPAI) 창간호 논문 모집 — 온라인 접수, 논문 양식 다운로드, 투고 안내."
+description: "한국피지컬인공지능학회 학술지 「피지컬 AI 연구」(JKPAI) 창간호 논문 모집 — 온라인 접수, 논문 양식 다운로드, 투고 안내."
 permalink: /submit/inaugural/
 ---
 
@@ -15,8 +15,8 @@ permalink: /submit/inaugural/
     <span data-lang="en">Call for the Inaugural Issue</span>
   </h2>
   <p class="page-section-text">
-    <span data-lang="ko">한국피지컬인공지능학회는 학술지 <strong>「피지컬AI 연구」(Physical AI Research, JKPAI)</strong> 창간호에 실을 논문을 모집합니다. 피지컬 AI 및 관련 융합 분야의 연구논문과 종설논문을 받으며, 아래 양식으로 작성하여 이 페이지에서 바로 제출하시면 됩니다.</span>
-    <span data-lang="en">The Korean Society for Physical AI invites papers for the first issue of its journal, <strong><em>Physical AI Research</em> (JKPAI)</strong>. Research and review articles in Physical AI and related fields are welcome. Prepare your paper with the template below and submit it on this page.</span>
+    <span data-lang="ko">한국피지컬인공지능학회는 학술지 <strong>「피지컬 AI 연구」(Physical AI Research, JKPAI)</strong> 창간호에 실을 논문을 모집합니다. 피지컬 AI 및 관련 융합 분야의 연구논문과 종설논문을 받으며, 아래 양식으로 작성하여 이 페이지에서 바로 제출하시면 됩니다.</span>
+    <span data-lang="en">The Korean Society for Physical Artificial Intelligence invites papers for the first issue of its journal, <strong><em>Physical AI Research</em> (JKPAI)</strong>. Research and review articles in Physical AI and related fields are welcome. Prepare your paper with the template below and submit it on this page.</span>
   </p>
 
   <div class="submit-note">

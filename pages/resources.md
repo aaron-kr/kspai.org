@@ -21,11 +21,11 @@ permalink: /resources/
       <div class="download-card-body">
         <div class="download-badge"><span data-lang="ko">학술지 논문 양식</span><span data-lang="en">Journal Template</span></div>
         <div class="download-card-title">
-          <span data-lang="ko">피지컬AI 연구 (JKPAI) 논문 양식 — HWP</span>
+          <span data-lang="ko">피지컬 AI 연구 (JKPAI) 논문 양식 — HWP</span>
           <span data-lang="en">Physical AI Research (JKPAI) Paper Template — HWP</span>
         </div>
         <p class="download-card-desc">
-          <span data-lang="ko">학술지 「피지컬AI 연구」에 투고하는 논문에 사용합니다. (2026년 11월 개정)</span>
+          <span data-lang="ko">학술지 「피지컬 AI 연구」에 투고하는 논문에 사용합니다. (2026년 11월 개정)</span>
           <span data-lang="en">For papers submitted to the journal <em>Physical AI Research</em> (JKPAI). (Revised November 2026)</span>
         </p>
       </div>
@@ -54,6 +54,27 @@ permalink: /resources/
         <a href="/assets/files/2026 공동하계학술대회 논문양식.hwp" class="btn btn-primary" download>
           <span data-lang="ko">↓ 학술대회 양식</span>
           <span data-lang="en">↓ Conference Template</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="download-card">
+      <div class="download-card-icon">✍️</div>
+      <div class="download-card-body">
+        <div class="download-badge"><span data-lang="ko">투고 서류</span><span data-lang="en">Author Forms</span></div>
+        <div class="download-card-title">
+          <span data-lang="ko">저작권이양동의서 · 연구윤리 서약서 — DOCX</span>
+          <span data-lang="en">Copyright Transfer Agreement &amp; Research Ethics Pledge — DOCX</span>
+        </div>
+        <p class="download-card-desc">
+          <span data-lang="ko">학술지 투고 논문의 저자가 확인·서명하는 서류입니다. 온라인 투고 시에는 체크박스 동의로 대신합니다.</span>
+          <span data-lang="en">Forms that journal authors read and sign. On the online boards, ticking the consent boxes stands in for them.</span>
+        </p>
+      </div>
+      <div class="download-card-actions">
+        <a href="/assets/files/kspai-copyright-ethics-forms.docx" class="btn btn-primary" download="KSPAI_저작권이양동의서_윤리서약서.docx">
+          <span data-lang="ko">↓ 서류 다운로드</span>
+          <span data-lang="en">↓ Download Forms</span>
         </a>
       </div>
     </div>

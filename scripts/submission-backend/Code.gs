@@ -21,7 +21,7 @@ var CONFIG = {
   ROOT_FOLDER_NAME: 'KSPAI 논문투고',
   SPREADSHEET_NAME: 'KSPAI 논문투고 접수대장',
   SITE_URL: 'https://kspai.org',
-  CONTACT_EMAIL: 'paper@physicalai.or.kr',   // Reply-To on all emails
+  CONTACT_EMAIL: 'paper@kspai.org',   // Reply-To on all emails
   SENDER_NAME: '한국피지컬인공지능학회 논문투고',
   MAX_FILE_MB: 15,          // per file (the site shows the same limit)
   MAX_TOTAL_MB: 25,         // per submission; Apps Script request bodies cap out near 50 MB of base64

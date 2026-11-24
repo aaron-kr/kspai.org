@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "논문 모집 안내 — 학술지 「피지컬AI 연구」 창간호 · 2027 동계 공동학술대회"
-title_ko: "논문 모집 안내 — 학술지 「피지컬AI 연구」 창간호 · 2027 동계 공동학술대회"
+title: "논문 모집 안내 — 학술지 「피지컬 AI 연구」 창간호 · 2027 동계 공동학술대회"
+title_ko: "논문 모집 안내 — 학술지 「피지컬 AI 연구」 창간호 · 2027 동계 공동학술대회"
 title_en: "Call for Papers — Physical AI Research Inaugural Issue & 2027 Winter Joint Conference"
 excerpt_ko: "학술지 창간호 논문과 2027 동계 공동학술대회 발표 논문을 학회 홈페이지 게시판에서 온라인으로 접수합니다. 학술대회 1차 마감 12월 31일, 2차 마감 1월 7일."
 excerpt_en: "Papers for the journal's inaugural issue and the 2027 Winter Joint Conference can now be submitted online. Conference deadlines: December 31 (first) and January 7 (final)."
-description: "한국피지컬인공지능학회 논문 모집 공지 — 학술지 「피지컬AI 연구」 창간호 논문 모집(2027년 1월까지) 및 2027 동계 공동학술대회 발표 논문 투고(1차 마감 2026년 12월 31일, 2차 마감 2027년 1월 7일)."
+description: "한국피지컬인공지능학회 논문 모집 공지 — 학술지 「피지컬 AI 연구」 창간호 논문 모집(2027년 1월까지) 및 2027 동계 공동학술대회 발표 논문 투고(1차 마감 2026년 12월 31일, 2차 마감 2027년 1월 7일)."
 permalink: /news/call-for-papers/
 tag_ko: "공지사항"
 tag_en: "NOTICE"
@@ -18,8 +18,8 @@ expires: 2027-02-01
 event:
   date_ko: "학술대회: 1차 12/31 · 2차 1/7 (23:59)<br>창간호: 2027년 1월 31일까지"
   date_en: "Conference: Dec 31 / Jan 7 (23:59 KST)<br>Inaugural issue: until January 31, 2027"
-  contact_ko: "paper@physicalai.or.kr"
-  contact_en: "paper@physicalai.or.kr"
+  contact_ko: "paper@kspai.org"
+  contact_en: "paper@kspai.org"
 links:
   - label_ko: "창간호 논문 모집 →"
     label_en: "Inaugural issue →"
@@ -39,7 +39,7 @@ links:
 
 한국피지컬인공지능학회에서 **두 가지 논문 모집 게시판**을 열었습니다. 각 게시판에서 양식을 내려받고, 작성한 논문 파일을 바로 올리실 수 있습니다. 접수가 완료되면 접수번호가 적힌 확인 메일이 발송됩니다.
 
-## 1. 학술지 「피지컬AI 연구」 창간호 논문 모집
+## 1. 학술지 「피지컬 AI 연구」 창간호 논문 모집
 
 - **접수 기간** : 2027년 1월 31일까지 (상시 접수)
 - **논문 종류** : 연구논문, 종설논문
@@ -62,7 +62,7 @@ links:
 
 ## 문의
 
-논문 투고 관련 문의는 [paper@physicalai.or.kr](mailto:paper@physicalai.or.kr)로 보내 주십시오.
+논문 투고 관련 문의는 [paper@kspai.org](mailto:paper@kspai.org)로 보내 주십시오.
 
 </div>
 
@@ -93,6 +93,6 @@ Papers for both KSPAI and KLife tracks are accepted on the same board. Presenter
 
 ## Contact
 
-Send submission questions to [paper@physicalai.or.kr](mailto:paper@physicalai.or.kr).
+Send submission questions to [paper@kspai.org](mailto:paper@kspai.org).
 
 </div>

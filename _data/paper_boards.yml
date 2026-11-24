@@ -19,7 +19,7 @@
 endpoint: "https://script.google.com/macros/s/AKfycbwjrDqa8E6TH-lYYbmD8tZHSoG4_1Z1HSxWDLzcOJkbUw01Ojkvtubia5riA68BL6WeTw/exec"
 max_file_mb: 15                 # per file; the server enforces the same limit
 max_total_mb: 25                # per submission (Apps Script request bodies cap near 50 MB of base64)
-contact_email: "paper@physicalai.or.kr"
+contact_email: "paper@kspai.org"
 
 boards:
 
@@ -30,7 +30,7 @@ boards:
     id: "inaugural"
     prefix: "J"                 # submission IDs: J-001, J-002 …
     kind: "journal"
-    title_ko: "「피지컬AI 연구」 창간호 논문 모집"
+    title_ko: "「피지컬 AI 연구」 창간호 논문 모집"
     title_en: "Call for Papers — Physical AI Research, Inaugural Issue"
     opens: "2026-11-24T00:00:00+09:00"
     rounds:
@@ -42,9 +42,9 @@ boards:
     template_url: "/assets/files/kspai-journal-template.hwp"
     template_name: "KSPAI 논문양식.hwp"
     types:
-      - { ko: "연구논문", en: "Research article" }
-      - { ko: "종설논문", en: "Review article" }
-      - { ko: "기타", en: "Other" }
+      # Official types (/journal/ intro); same list as KSPAI_투고분야및종류.docx
+      - { ko: "연구논문", en: "Research Article" }
+      - { ko: "종설논문", en: "Review Article" }
     files:
       - key: "manuscript"
         label_ko: "원고 (저자 정보 포함)"

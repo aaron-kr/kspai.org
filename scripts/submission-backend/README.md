@@ -1,6 +1,6 @@
 # 논문 모집 게시판 백엔드 (Paper submission backend)
 
-The two boards on kspai.org — `/submit/inaugural/` (창간호) and `/submit/conference/` (2027 동계학술대회) — send submissions to a small Google Apps Script web app. The script runs on the **society's Google account**, so everything lands in that account's Drive:
+The two boards on kspai.org — `/submit/inaugural/` (창간호) and `/submit/conference/` (2027 동계학술대회) — send submissions to a small Google Apps Script web app. The script runs on the **society's Google Workspace account, `admin@kspai.org`**, so everything lands in that account's Drive:
 
 ```
 My Drive / KSPAI 논문투고 /
@@ -13,17 +13,19 @@ My Drive / KSPAI 논문투고 /
 
 On each submission the script also emails a confirmation (with the 접수번호) to the submitter and a notice to the editors.
 
-**Cost:** $0. It uses only the account's normal Drive storage (15 GB on a free account) and Gmail sending quota (about 100 recipients a day on a free @gmail.com account, 1,500 on Google Workspace). Each submission uses 2 recipients, so a free account handles about 50 submissions a day.
+**Cost:** $0 on top of the existing Workspace seat. It uses the account's normal Drive storage and Gmail sending quota (1,500 recipients a day on Workspace; each submission uses 2). Emails go out from `admin@kspai.org` with Reply-To `paper@kspai.org`.
+
+**Deliverability:** kspai.org needs SPF, DKIM and DMARC DNS records (at DreamHost) or confirmation emails may land in spam. See the DNS section of `CHANGELOG.md` 2026-11-24.
 
 ## One-time setup (about 10 minutes)
 
-Do this **signed in to the society's Google account**, not a personal one. The Drive folder and Sheet will belong to whichever account runs `setup()`.
+Do this **signed in to `admin@kspai.org`**, not a personal account. The Drive folder and Sheet will belong to whichever account runs `setup()`.
 
 1. Go to <https://script.google.com> → **New project**. Rename it `KSPAI 논문투고`.
 2. Replace the contents of `Code.gs` with this folder's `Code.gs`.
 3. ⚙️ **Project Settings** → tick **Show "appsscript.json" manifest file in editor**. Open `appsscript.json` and replace it with this folder's copy (it sets the Asia/Seoul time zone and the permissions).
 4. ⚙️ **Project Settings → Script Properties → Add script property**
-   - `NOTIFY_EMAILS` = the editors' addresses, comma-separated (e.g. `paper@physicalai.or.kr, someone@univ.ac.kr`). These stay private: they are not in the public repo.
+   - `NOTIFY_EMAILS` = the editors' addresses, comma-separated (e.g. `paper@kspai.org, someone@univ.ac.kr`). These stay private: they are not in the public repo.
 5. In the editor choose the function **`setup`** → **Run**. Approve the permission prompt. Google shows an "unverified app" warning for your own scripts: click *Advanced → Go to KSPAI 논문투고 (unsafe)*. The log prints the folder and Sheet links.
 6. Run **`testEmail`** once to confirm mail sends.
 7. **Deploy → New deployment →** type **Web app**
@@ -35,7 +37,7 @@ Do this **signed in to the society's Google account**, not a personal one. The D
    ```yaml
    endpoint: "https://script.google.com/macros/s/AKfy…/exec"
    ```
-   Commit and push. The forms appear on both boards. While `endpoint` is blank, the boards show an "email your paper to paper@physicalai.or.kr" notice instead.
+   Commit and push. The forms appear on both boards. While `endpoint` is blank, the boards show an "email your paper to paper@kspai.org" notice instead.
 9. Share the **KSPAI 논문투고** Drive folder with the editors (Editor or Viewer access). The Sheet is inside it, so it is shared too.
 10. Submit one test paper on each board, check the Sheet row, Drive folder and both emails, then delete the test row and folder. Deleting a row does not reset the numbering; if you want the first real submission to be 001, delete the `SEQ_inaugural` / `SEQ_conference` Script Properties.
 

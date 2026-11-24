@@ -206,7 +206,7 @@ permalink: /seminars/
           <span data-lang="en">Researchers interested in speaking at the colloquium are welcome to send their proposed topic and abstract to the Society email; the editorial committee will follow up.</span>
         </p>
         <div class="participate-card-link">
-          <a href="mailto:contact@physicalai.or.kr">contact@physicalai.or.kr →</a>
+          <a href="mailto:contact@kspai.org">contact@kspai.org →</a>
         </div>
       </div>
     </div>
