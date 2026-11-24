@@ -20,9 +20,14 @@ permalink: /conferences/2027-winter/
   </h2>
   <div class="conf-prose">
     <p>
-      <strong><span data-lang="ko">발표문 제출 마감</span><span data-lang="en">Submission period</span></strong> —
-      <span data-lang="ko">2026년 12월 1일(화) ~ 12월 31일(목) 23:59까지</span>
-      <span data-lang="en">Tuesday, December 1 – Thursday, December 31, 2026, until 23:59 KST</span>
+      <strong><span data-lang="ko">발표문 제출 마감</span><span data-lang="en">Submission deadlines</span></strong> —
+      <span data-lang="ko">1차 2026년 12월 31일(목) 23:59 · 2차(최종) 2027년 1월 7일(목) 23:59</span>
+      <span data-lang="en">First: Thursday, December 31, 2026, 23:59 KST · Second (final): Thursday, January 7, 2027, 23:59 KST</span>
+    </p>
+    <p>
+      <a href="/submit/conference/" class="btn btn-primary">
+        <span data-lang="ko">논문 투고 게시판 →</span><span data-lang="en">Submit a paper →</span>
+      </a>
     </p>
     <div data-lang="ko">
       <ul>

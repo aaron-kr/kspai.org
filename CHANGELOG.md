@@ -9,6 +9,24 @@ Dates are commit dates (KST). Entries before 2026-10-29 were reconstructed from 
 
 ---
 
+## 2026-11-24
+
+### Content
+- **New journal template:** `assets/files/kspai-journal-template.hwp` now holds the November 2026 「KSPAI 논문양식」 (journal renamed 「피지컬AI 연구」 inside the template). The URL is unchanged; the download buttons on `/submit/`, `/resources/` and the boards save it as `KSPAI 논문양식.hwp` via the `download` attribute. The previous version is in git history.
+- **2027 Winter Conference:** the society added a second deadline. 1차 마감 2026-12-31, 2차 (final) 2027-01-07, both 23:59 KST. Updated `key_dates`, both descriptions and the CFP text in `_conferences/2027-winter.md` (now with a "submit a paper" button). `submit_link` → `/submit/conference/`; `template_link` → the joint conference template.
+- **News (공지사항):** `_posts/2026-11-24-call-for-papers-boards.md` at `/news/call-for-papers/` announces both boards. The site banner now points there.
+- `/privacy/` Article 5: added what the submission boards collect, where it is stored (Google Drive/Sheets, servers outside Korea), who sees it, and the 3-year retention period.
+
+### Features
+- **Paper submission boards (논문 모집 게시판):** `/submit/inaugural/` (「피지컬AI 연구」 창간호, temporary page open until 2027-01-31) and `/submit/conference/` (2027 동계 공동학술대회, KSPAI + KLife tracks). Each shows status, deadlines and D-day, the template, an upload form (paper info, submitter, all authors, files, consent + ethics pledge + copyright transfer for the journal), and a masked public list of submissions received. Config in `_data/paper_boards.yml`; markup `_includes/paper-board.html`; behaviour `assets/js/paper-board.js`; styles under "PAPER SUBMISSION BOARD" in `style.scss`.
+- **Submission backend:** `scripts/submission-backend/` (Google Apps Script, $0). Saves files to the society's Google Drive, logs one row per paper in the 「KSPAI 논문투고 접수대장」 Sheet, and emails the submitter and editors. **Not live until someone deploys it and pastes its URL into `paper_boards.yml` → `endpoint`.** Until then the boards show an email-submission notice. Setup steps: that folder's `README.md`.
+- Nav (학술활동): added 창간호 논문 모집 and 학술대회 논문 투고. `/submit/` now links to both boards.
+
+### Tooling / Docs
+- `_config.yml`: `scripts` added to `exclude`. Before this, `scripts/compress-images.mjs` was being published.
+
+---
+
 ## 2026-11-20
 
 ### Content

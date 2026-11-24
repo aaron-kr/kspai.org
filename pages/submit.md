@@ -20,16 +20,16 @@ permalink: /submit/
   <div class="download-card-body">
     <div class="download-badge">논문 작성 양식 · Paper Template</div>
     <div class="download-card-title">
-      <span data-lang="ko">피지컬 AI 연구 (JKPAI) 논문 양식 — HWP</span>
+      <span data-lang="ko">피지컬AI 연구 (JKPAI) 논문 양식 — HWP</span>
       <span data-lang="en">Physical AI Research (JKPAI) Paper Template — HWP</span>
     </div>
     <p class="download-card-desc">
-      <span data-lang="ko">공식 HWP 논문 양식을 내려받아 작성 후 제출하시기 바랍니다. 반드시 최신 버전을 사용하시기 바랍니다. (최종 수정: 2025)</span>
-      <span data-lang="en">Please download and use the official HWP template. Always use the latest version. (Last updated: 2025)</span>
+      <span data-lang="ko">공식 HWP 논문 양식을 내려받아 작성 후 제출하시기 바랍니다. 반드시 최신 버전을 사용하시기 바랍니다. (최종 수정: 2026년 11월)</span>
+      <span data-lang="en">Please download and use the official HWP template. Always use the latest version. (Last updated: November 2026)</span>
     </p>
   </div>
   <div class="download-card-actions">
-    <a href="/assets/files/kspai-journal-template.hwp" class="btn btn-primary" download>
+    <a href="/assets/files/kspai-journal-template.hwp" class="btn btn-primary" download="KSPAI 논문양식.hwp">
       <span data-lang="ko">↓ 학술지 양식 다운로드</span>
       <span data-lang="en">↓ Download Journal Template</span>
     </a>
@@ -225,8 +225,8 @@ permalink: /submit/
   <div class="submit-note">
     <span class="submit-note-icon">📬</span>
     <div>
-      <span data-lang="ko"><strong>현재 이메일 투고 방식으로 운영합니다.</strong> 온라인 투고 시스템은 추후 개설 예정이며, 별도 공지 후 전환됩니다.</span>
-      <span data-lang="en"><strong>Submissions are currently accepted by email only.</strong> An online submission portal will be launched at a future date and announced separately.</span>
+      <span data-lang="ko"><strong>지금 열려 있는 논문 모집 게시판:</strong> <a href="/submit/inaugural/">「피지컬AI 연구」 창간호 논문 모집</a> · <a href="/submit/conference/">2027 동계 공동학술대회 논문 투고</a>. 게시판에서 바로 파일을 올리실 수 있으며, 아래 이메일 투고도 계속 받습니다. 학술지 온라인 논문투고심사시스템은 창간호 이후 개설하여 별도로 공지합니다.</span>
+      <span data-lang="en"><strong>Open submission boards:</strong> <a href="/submit/inaugural/">Physical AI Research — inaugural issue</a> · <a href="/submit/conference/">2027 Winter Joint Conference</a>. You can upload files there directly; email submission below still works. A full online submission and review system will open after the inaugural issue.</span>
     </div>
   </div>
 

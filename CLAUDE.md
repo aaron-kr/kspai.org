@@ -294,8 +294,11 @@ A `description:` containing `: ` (e.g. `분야: 로보틱스`) is invalid YAML; 
 | `/conferences/<id>/` | `_conferences/<id>.md` | ✅ Data-driven | `_layouts/conference.html` looks up `conference_id` in `_data/conferences.yml`; body content (if any) renders below the info block. Current: `2027-winter` (upcoming, CFP open); past: `2026-amsti` (partner event), `2026-summer` |
 | `/resources/` | `pages/resources.md` | ✅ New | Journal + conference template downloads |
 | `/gallery/` | `pages/gallery.md` | ✅ New | Photo gallery; albums driven by `_data/gallery.yml` |
+| `/submit/inaugural/` | `pages/submit-inaugural.md` | ✅ New (temp) | 창간호 board — `paper-board.html` with `board="inaugural"` |
+| `/submit/conference/` | `pages/submit-conference.md` | ✅ New | 2027 winter conference board |
+| `/news/call-for-papers/` | `_posts/2026-11-24-call-for-papers-boards.md` | ✅ New | 공지사항 for both boards (explicit permalink) |
 
-**Template file required:** `assets/files/kspai-journal-template.hwp` — the HWP template download button on `/submit/` and `/resources/` points here. Create the `assets/files/` directory and place the file there before deploying.
+**Template file:** `assets/files/kspai-journal-template.hwp` — the HWP template download button on `/submit/`, `/resources/` and the 창간호 board points here.
 
 ---
 
@@ -317,12 +320,12 @@ The old "설립준비위원회" placeholder `status:` block is commented out at 
 
 ## Journal & submission system
 
-The journal `피지컬 AI 연구` (Physical AI Research, JKPAI) uses email submission for now:
-- **Submission email:** `paper@physicalai.or.kr`
+The journal `피지컬 AI 연구` (Physical AI Research, JKPAI; the Nov 2026 template writes it `피지컬AI 연구`):
+- **Submission email:** `paper@physicalai.or.kr` (still accepted)
 - **Email subject format:** `[JKPAI 논문투고] 논문 제목`
-- **Template location:** `assets/files/kspai-journal-template.hwp`
-- Conference paper template: pending inaugural conference — placeholder on `/conferences/`
-- Online submission portal: planned for professional rebuild phase
+- **Template location:** `assets/files/kspai-journal-template.hwp` (replace the file in place to update; links use `download="KSPAI 논문양식.hwp"`)
+- **Submission boards (since 2026-11-24):** `/submit/inaugural/` (창간호, temporary, until 2027-01-31) and `/submit/conference/` (2027 winter). Config `_data/paper_boards.yml`, include `paper-board.html`, JS `paper-board.js`. Backend is Google Apps Script in `scripts/submission-backend/` (files go to the society's Drive, rows to a Sheet). **Deadlines are duplicated** in `paper_boards.yml` (display) and `Code.gs` `BOARDS` (enforced): change both. Blank `endpoint` = boards show an email fallback.
+- **After the inaugural issue:** journal submissions move to the online submission/review system that (주)학술교육원 is building. The temporary 창간호 board should then be retired.
 
 ---
 

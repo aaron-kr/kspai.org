@@ -41,6 +41,12 @@
     - title_ko: "논문투고"
       title_en: "Submit a Paper"
       url: /submit/
+    - title_ko: "창간호 논문 모집"
+      title_en: "Inaugural Issue CFP"
+      url: /submit/inaugural/
+    - title_ko: "학술대회 논문 투고"
+      title_en: "Conference Submission"
+      url: /submit/conference/
     - divider: true
     - title_ko: "학회지"
       title_en: "Journal"

@@ -66,3 +66,4 @@ exclude:
   - .sass-cache
   - vendor
   - "*.sh"
+  - scripts

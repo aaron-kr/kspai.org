@@ -1,0 +1,304 @@
+{%- comment -%}
+  Paper submission board (논문 모집 게시판).
+  Usage: (% include paper-board.html board="inaugural" %)
+  Config: _data/paper_boards.yml · Backend: scripts/submission-backend/
+  Behaviour: assets/js/paper-board.js
+{%- endcomment -%}
+{%- assign cfg = site.data.paper_boards -%}
+{%- assign b = cfg.boards[include.board] -%}
+{%- assign uid = "pb-" | append: b.id -%}
+{%- assign has_endpoint = false -%}
+{%- if cfg.endpoint and cfg.endpoint != "" -%}{%- assign has_endpoint = true -%}{%- endif -%}
+
+<div class="paper-board" id="{{ uid }}"
+     data-board="{{ b.id }}"
+     data-kind="{{ b.kind }}"
+     data-endpoint="{{ cfg.endpoint }}"
+     data-max-mb="{{ cfg.max_file_mb }}"
+     data-max-total-mb="{{ cfg.max_total_mb | default: 25 }}"
+     data-opens="{{ b.opens }}"
+     data-rounds='{{ b.rounds | jsonify }}'>
+
+  <!-- ── Status + deadlines ── -->
+  <div class="pb-status">
+    <div class="pb-status-head">
+      <span class="pb-state" data-pb-state>
+        <span data-lang="ko">접수 상태 확인 중</span><span data-lang="en">Checking status</span>
+      </span>
+      <span class="pb-dday mono" data-pb-dday></span>
+    </div>
+    <ol class="pb-rounds">
+      {%- for r in b.rounds %}
+      <li class="pb-round" data-closes="{{ r.closes }}">
+        <span class="pb-round-label"><span data-lang="ko">{{ r.label_ko }}</span><span data-lang="en">{{ r.label_en }}</span></span>
+        <span class="pb-round-date"><span data-lang="ko">{{ r.display_ko }}</span><span data-lang="en">{{ r.display_en }}</span></span>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+
+  <!-- ── Template ── -->
+  <div class="download-card">
+    <div class="download-card-icon" aria-hidden="true">📄</div>
+    <div class="download-card-body">
+      <div class="download-badge">TEMPLATE</div>
+      <div class="download-card-title">{{ b.template_name }}</div>
+      <p class="download-card-desc">
+        <span data-lang="ko">반드시 이 양식으로 작성하여 제출해 주십시오.</span>
+        <span data-lang="en">Please prepare your paper with this template.</span>
+      </p>
+    </div>
+    <div class="download-card-actions">
+      <a href="{{ b.template_url | relative_url }}" class="btn btn-primary" download="{{ b.template_name }}">
+        <span data-lang="ko">↓ 양식 다운로드</span><span data-lang="en">↓ Download template</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Form ── -->
+  <div class="page-section" id="{{ uid }}-form-section">
+    <h2 class="page-section-title">
+      <span data-lang="ko">논문 제출</span><span data-lang="en">Submit Your Paper</span>
+    </h2>
+
+    {%- unless has_endpoint %}
+    <div class="submit-note">
+      <span class="submit-note-icon" aria-hidden="true">📬</span>
+      <div>
+        <span data-lang="ko"><strong>온라인 접수 창을 준비하고 있습니다.</strong> 그동안에는 양식으로 작성한 논문을 <a href="mailto:{{ cfg.contact_email }}?subject=[{{ b.title_ko }}] 논문 제목">{{ cfg.contact_email }}</a>로 보내 주십시오.</span>
+        <span data-lang="en"><strong>The online form is being set up.</strong> Until then, please email your paper to <a href="mailto:{{ cfg.contact_email }}">{{ cfg.contact_email }}</a>.</span>
+      </div>
+    </div>
+    {%- endunless %}
+
+    <form class="pb-form" data-pb-form novalidate {% unless has_endpoint %}hidden{% endunless %}>
+
+      <!-- Honeypot: hidden from people, filled by bots -->
+      <div class="pb-hp" aria-hidden="true">
+        <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+      </div>
+
+      <fieldset class="pb-fieldset">
+        <legend><span data-lang="ko">논문 정보</span><span data-lang="en">Paper</span></legend>
+
+        <div class="pb-field pb-field--wide">
+          <label for="{{ uid }}-title_ko"><span data-lang="ko">논문 제목 (국문)</span><span data-lang="en">Title (Korean)</span> <b class="pb-req">*</b></label>
+          <input id="{{ uid }}-title_ko" name="title_ko" type="text" maxlength="300" required>
+        </div>
+        <div class="pb-field pb-field--wide">
+          <label for="{{ uid }}-title_en"><span data-lang="ko">논문 제목 (영문)</span><span data-lang="en">Title (English)</span>{% if b.kind == "journal" %} <b class="pb-req">*</b>{% endif %}</label>
+          <input id="{{ uid }}-title_en" name="title_en" type="text" maxlength="300" {% if b.kind == "journal" %}required{% endif %}>
+        </div>
+
+        <div class="pb-field">
+          <label for="{{ uid }}-track"><span data-lang="ko">투고 분야</span><span data-lang="en">Track</span> <b class="pb-req">*</b></label>
+          <select id="{{ uid }}-track" name="track" required>
+            <option value="">— 선택 / Select —</option>
+            {%- if b.kind == "journal" %}
+              {%- for area in site.data.research %}
+            <option value="{{ area.track_ko }}">{{ area.track_ko }} ({{ area.track_en }})</option>
+              {%- endfor %}
+            {%- else %}
+              {%- assign conf = site.data.conferences.upcoming | where: "id", b.conference_id | first -%}
+            <optgroup label="한국피지컬인공지능학회 (KSPAI)">
+              {%- for t in conf.topics %}
+              <option value="KSPAI · {{ t.ko }}">{{ t.ko }} ({{ t.en }})</option>
+              {%- endfor %}
+            </optgroup>
+            <optgroup label="{{ b.partner_society_ko }} ({{ b.partner_society_en }})">
+              {%- for t in b.partner_tracks %}
+              <option value="{{ b.partner_society_ko }} · {{ t.ko }}">{{ t.ko }} ({{ t.en }})</option>
+              {%- endfor %}
+            </optgroup>
+            {%- endif %}
+            <option value="기타">기타 (Other)</option>
+          </select>
+        </div>
+
+        <div class="pb-field">
+          {%- if b.kind == "journal" %}
+          <label for="{{ uid }}-type"><span data-lang="ko">논문 종류</span><span data-lang="en">Article type</span> <b class="pb-req">*</b></label>
+          <select id="{{ uid }}-type" name="type" required>
+            <option value="">— 선택 / Select —</option>
+            {%- for t in b.types %}<option value="{{ t.ko }}">{{ t.ko }} ({{ t.en }})</option>{%- endfor %}
+          </select>
+          {%- else %}
+          <label for="{{ uid }}-type"><span data-lang="ko">발표 형식</span><span data-lang="en">Presentation format</span> <b class="pb-req">*</b></label>
+          <select id="{{ uid }}-type" name="type" required>
+            <option value="">— 선택 / Select —</option>
+            {%- for t in b.formats %}<option value="{{ t.ko }}">{{ t.ko }} ({{ t.en }})</option>{%- endfor %}
+          </select>
+          {%- endif %}
+        </div>
+
+        <div class="pb-field pb-field--wide">
+          <label for="{{ uid }}-keywords"><span data-lang="ko">키워드 (국문·영문 각 5개 이상, 쉼표로 구분)</span><span data-lang="en">Keywords (5+ in Korean and English, comma-separated)</span>{% if b.kind == "journal" %} <b class="pb-req">*</b>{% endif %}</label>
+          <input id="{{ uid }}-keywords" name="keywords" type="text" maxlength="500" {% if b.kind == "journal" %}required{% endif %}>
+        </div>
+      </fieldset>
+
+      <fieldset class="pb-fieldset">
+        <legend>
+          {%- if b.kind == "journal" -%}
+          <span data-lang="ko">투고자 (교신저자)</span><span data-lang="en">Submitting / corresponding author</span>
+          {%- else -%}
+          <span data-lang="ko">투고자 (발표자)</span><span data-lang="en">Submitter / presenter</span>
+          {%- endif -%}
+        </legend>
+        <div class="pb-field">
+          <label for="{{ uid }}-name"><span data-lang="ko">성명</span><span data-lang="en">Name</span> <b class="pb-req">*</b></label>
+          <input id="{{ uid }}-name" name="name" type="text" maxlength="80" autocomplete="name" required>
+        </div>
+        <div class="pb-field">
+          <label for="{{ uid }}-affiliation"><span data-lang="ko">소속</span><span data-lang="en">Affiliation</span> <b class="pb-req">*</b></label>
+          <input id="{{ uid }}-affiliation" name="affiliation" type="text" maxlength="200" autocomplete="organization" required>
+        </div>
+        <div class="pb-field">
+          <label for="{{ uid }}-position"><span data-lang="ko">직위</span><span data-lang="en">Position</span></label>
+          <input id="{{ uid }}-position" name="position" type="text" maxlength="80" placeholder="교수 / 박사과정 / 연구원 …">
+        </div>
+        <div class="pb-field">
+          <label for="{{ uid }}-email"><span data-lang="ko">이메일</span><span data-lang="en">Email</span> <b class="pb-req">*</b></label>
+          <input id="{{ uid }}-email" name="email" type="email" maxlength="200" autocomplete="email" required>
+        </div>
+        <div class="pb-field">
+          <label for="{{ uid }}-phone"><span data-lang="ko">연락처</span><span data-lang="en">Phone</span> <b class="pb-req">*</b></label>
+          <input id="{{ uid }}-phone" name="phone" type="tel" maxlength="40" autocomplete="tel" required placeholder="010-0000-0000">
+        </div>
+        <div class="pb-field">
+          <label for="{{ uid }}-student"><span data-lang="ko">학생 논문 여부</span><span data-lang="en">Student paper</span></label>
+          <select id="{{ uid }}-student" name="student">
+            <option value="해당 없음">해당 없음 (No)</option>
+            {%- if b.kind == "journal" %}
+            <option value="학생 제1저자">학생 제1저자 — 재학증명서 첨부 (Student first author — attach proof)</option>
+            {%- else %}
+            <option value="대학원생">대학원생 (Graduate student)</option>
+            <option value="대학생">대학생 (Undergraduate)</option>
+            <option value="고등학생">고등학생 (High-school student)</option>
+            {%- endif %}
+          </select>
+        </div>
+        <div class="pb-field pb-field--wide">
+          <label for="{{ uid }}-authors"><span data-lang="ko">저자 전원 (성명·소속, 제1저자·교신저자 표시)</span><span data-lang="en">All authors (name, affiliation; mark first and corresponding author)</span> <b class="pb-req">*</b></label>
+          <textarea id="{{ uid }}-authors" name="authors" rows="3" maxlength="2000" required placeholder="홍길동(한국대학교, 제1저자), 김철수(서울대학교), 이영희(한국대학교, 교신저자)"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset class="pb-fieldset">
+        <legend><span data-lang="ko">첨부 파일</span><span data-lang="en">Files</span></legend>
+        <p class="pb-hint">
+          <span data-lang="ko">파일당 최대 {{ cfg.max_file_mb }}MB, 합계 {{ cfg.max_total_mb | default: 25 }}MB. HWP·HWPX·DOCX·PDF.</span>
+          <span data-lang="en">Up to {{ cfg.max_file_mb }} MB per file, {{ cfg.max_total_mb | default: 25 }} MB in total. HWP, HWPX, DOCX, PDF.</span>
+        </p>
+        {%- for f in b.files %}
+        <div class="pb-field pb-field--wide">
+          <label for="{{ uid }}-file-{{ f.key }}"><span data-lang="ko">{{ f.label_ko }}</span><span data-lang="en">{{ f.label_en }}</span>{% if f.required %} <b class="pb-req">*</b>{% endif %}</label>
+          <input id="{{ uid }}-file-{{ f.key }}" name="file_{{ f.key }}" type="file" accept="{{ f.accept }}" data-pb-file="{{ f.key }}" {% if f.required %}required{% endif %}>
+        </div>
+        {%- endfor %}
+      </fieldset>
+
+      <fieldset class="pb-fieldset">
+        <legend><span data-lang="ko">기타</span><span data-lang="en">Other</span></legend>
+        <div class="pb-field">
+          <label for="{{ uid }}-prev_id"><span data-lang="ko">기존 접수번호 (수정본 제출 시)</span><span data-lang="en">Previous submission ID (for revisions)</span></label>
+          <input id="{{ uid }}-prev_id" name="prev_id" type="text" maxlength="40" placeholder="{{ b.prefix }}-001">
+        </div>
+        <div class="pb-field pb-field--wide">
+          <label for="{{ uid }}-memo"><span data-lang="ko">편집위원회에 남길 말</span><span data-lang="en">Note to the editors</span></label>
+          <textarea id="{{ uid }}-memo" name="memo" rows="3" maxlength="2000"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset class="pb-fieldset pb-consents">
+        <legend><span data-lang="ko">동의 및 서약</span><span data-lang="en">Consent &amp; pledges</span></legend>
+
+        <details class="pb-consent-detail">
+          <summary><span data-lang="ko">개인정보 수집·이용 안내 (펼쳐 보기)</span><span data-lang="en">How we use your personal information (expand)</span></summary>
+          <div data-lang="ko">
+            <ul>
+              <li><b>수집 항목:</b> 성명, 소속, 직위, 이메일, 연락처, 저자 정보, 제출 파일</li>
+              <li><b>이용 목적:</b> 논문 접수·심사·{% if b.kind == "journal" %}게재{% else %}발표{% endif %} 및 관련 연락</li>
+              <li><b>보유 기간:</b> 심사·{% if b.kind == "journal" %}게재{% else %}발표{% endif %} 절차 완료 후 3년 (이후 지체 없이 파기)</li>
+              <li><b>보관 위치:</b> 학회 Google 계정의 Google Drive·Google Sheets (Google LLC, 국외 서버)</li>
+              <li>동의를 거부할 수 있으나, 거부 시 논문 투고가 불가합니다. 자세한 내용은 <a href="{{ '/privacy/' | relative_url }}">개인정보처리방침</a>을 참고하십시오.</li>
+            </ul>
+          </div>
+          <div data-lang="en">
+            <ul>
+              <li><b>Collected:</b> name, affiliation, position, email, phone, author list, uploaded files</li>
+              <li><b>Purpose:</b> receiving, reviewing and {% if b.kind == "journal" %}publishing{% else %}presenting{% endif %} the paper, and contacting you about it</li>
+              <li><b>Kept for:</b> 3 years after review and {% if b.kind == "journal" %}publication{% else %}presentation{% endif %}, then deleted</li>
+              <li><b>Stored in:</b> the Society's Google Drive and Google Sheets (Google LLC, servers outside Korea)</li>
+              <li>You may refuse, but the paper cannot be submitted without consent. See the <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>.</li>
+            </ul>
+          </div>
+        </details>
+
+        <label class="pb-check">
+          <input type="checkbox" name="consent_privacy" required>
+          <span><span data-lang="ko">개인정보 수집·이용에 동의합니다.</span><span data-lang="en">I consent to the collection and use of my personal information.</span> <b class="pb-req">*</b></span>
+        </label>
+        <label class="pb-check">
+          <input type="checkbox" name="consent_ethics" required>
+          <span>
+            <span data-lang="ko">본 논문은 독창적인 연구로서 다른 학술지·학술대회에 중복 투고하지 않았으며, 표절·위조·변조 등 연구부정행위가 없고 학회 <a href="{{ '/journal/#ethics-reg' | relative_url }}">연구윤리규정</a>을 준수하였음을 서약합니다.</span>
+            <span data-lang="en">I pledge that this is original work, not submitted elsewhere at the same time, free of plagiarism, fabrication and falsification, and that it follows the Society's <a href="{{ '/journal/#ethics-reg' | relative_url }}">research ethics rules</a>.</span>
+            <b class="pb-req">*</b>
+          </span>
+        </label>
+        {%- if b.kind == "journal" %}
+        <label class="pb-check">
+          <input type="checkbox" name="consent_copyright" required>
+          <span>
+            <span data-lang="ko">게재가 확정되면 논문의 저작권을 한국피지컬인공지능학회에 양도하는 데 동의합니다 (<a href="{{ '/journal/' | relative_url }}">투고규정</a>).</span>
+            <span data-lang="en">If the paper is accepted, I agree to transfer its copyright to the Korean Society for Physical AI (see the <a href="{{ '/journal/' | relative_url }}">submission rules</a>).</span>
+            <b class="pb-req">*</b>
+          </span>
+        </label>
+        {%- endif %}
+      </fieldset>
+
+      <div class="pb-actions">
+        <button type="submit" class="btn btn-primary" data-pb-submit>
+          <span data-lang="ko">논문 제출하기</span><span data-lang="en">Submit paper</span>
+        </button>
+        <p class="pb-message" data-pb-message role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+
+  <!-- ── Public list (masked) ── -->
+  {%- if has_endpoint %}
+  <div class="page-section" id="{{ uid }}-list">
+    <h2 class="page-section-title">
+      <span data-lang="ko">접수 현황</span><span data-lang="en">Submissions Received</span>
+      <span class="pb-count mono" data-pb-count></span>
+    </h2>
+    <p class="pb-hint">
+      <span data-lang="ko">논문 제목과 투고자 정보는 비공개입니다. 접수번호와 접수일로 본인의 접수 여부를 확인하십시오.</span>
+      <span data-lang="en">Titles and names are private. Use your submission ID and date to confirm your entry.</span>
+    </p>
+    <div class="fee-table-wrapper">
+      <table class="fee-table pb-table">
+        <thead>
+          <tr>
+            <th scope="col"><span data-lang="ko">접수번호</span><span data-lang="en">ID</span></th>
+            <th scope="col"><span data-lang="ko">분야</span><span data-lang="en">Track</span></th>
+            <th scope="col"><span data-lang="ko">논문 제목</span><span data-lang="en">Title</span></th>
+            <th scope="col"><span data-lang="ko">투고자</span><span data-lang="en">Submitter</span></th>
+            <th scope="col"><span data-lang="ko">접수일</span><span data-lang="en">Date</span></th>
+            {%- if b.rounds.size > 1 %}<th scope="col"><span data-lang="ko">차수</span><span data-lang="en">Round</span></th>{% endif %}
+            <th scope="col"><span data-lang="ko">첨부</span><span data-lang="en">Files</span></th>
+          </tr>
+        </thead>
+        <tbody data-pb-rows data-show-round="{% if b.rounds.size > 1 %}1{% endif %}">
+          <tr><td colspan="7"><span data-lang="ko">불러오는 중…</span><span data-lang="en">Loading…</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  {%- endif %}
+</div>
+
+<script src="{{ '/assets/js/paper-board.js' | relative_url }}" defer></script>

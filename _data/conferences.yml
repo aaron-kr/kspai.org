@@ -42,10 +42,15 @@ upcoming:
 
     # ── Key Dates (from the CFP poster v2.2, Nov 2026) ──
     key_dates:
-      - label_ko: "발표문 접수"
-        label_en: "Paper Submission"
+      - label_ko: "발표문 접수 (1차 마감)"
+        label_en: "Paper Submission (first deadline)"
         date_ko: "2026-12-01 (화) ~ 12-31 (목) 23:59"
         date_en: "Dec 1 – Dec 31, 2026, 23:59 KST"
+        status: "confirmed"
+      - label_ko: "2차 마감 (최종)"
+        label_en: "Second (final) deadline"
+        date_ko: "2027-01-07 (목) 23:59"
+        date_en: "January 7, 2027, 23:59 KST"
         status: "confirmed"
       - label_ko: "사전등록 마감"
         label_en: "Early Registration Deadline"
@@ -62,12 +67,13 @@ upcoming:
     description_ko: >
       한국피지컬인공지능학회와 삶의질정보학회가 전주교육대학교와 함께 개최하는 제2회 공동학술대회입니다.
       전주교육대학교 교사교육센터에서 이틀간 온라인·현장 구두 발표, 포스터 발표, 패들렛 발표로 진행됩니다.
-      발표문은 2026년 12월 1일부터 31일까지 접수합니다.
+      발표문은 2026년 12월 1일부터 접수하며, 1차 마감은 12월 31일, 2차(최종) 마감은 2027년 1월 7일입니다.
     description_en: >
       The 2nd KSPAI–KLife Joint Conference, co-hosted by KSPAI and the Korea Quality of Life Information
       Society together with Jeonju National University of Education. Held over two days at the university's
       Teacher Education Center, with online and on-site oral, poster, and Padlet presentations.
-      Papers are accepted from December 1 to 31, 2026.
+      Papers are accepted from December 1, 2026; the first deadline is December 31 and the second (final)
+      deadline is January 7, 2027.
 
     # ── Topics (KSPAI tracks — KLife tracks are listed on the conference page) ──
     topics:
@@ -104,9 +110,9 @@ upcoming:
     fee_note_en: "Early registration closes January 22, 2027. See Registration Fees above for amounts and bank accounts. How to register will be announced."
 
     # ── Links ──
-    submit_link: "/submit/"
+    submit_link: "/submit/conference/"
     cfp_link: ""
-    template_link: ""
+    template_link: "/assets/files/2026 공동하계학술대회 논문양식.hwp"
 
     # ── Media ──
     # Call-for-papers poster (v2.2). Shown on the homepage spotlight, /conferences/ and the detail page.

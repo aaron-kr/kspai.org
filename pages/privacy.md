@@ -87,6 +87,10 @@ permalink: /privacy/
     <span data-lang="ko">학회는 원칙적으로 이용자의 개인정보를 외부에 제공하지 않습니다. 다만, 이용자의 동의가 있거나 법령의 규정에 의한 경우는 예외로 합니다.</span>
     <span data-lang="en">As a rule, the Society does not disclose users' personal information to third parties. Exceptions apply where the user has given consent or disclosure is required by law.</span>
   </p>
+  <p class="page-section-text">
+    <span data-lang="ko"><strong>논문 투고 게시판:</strong> <a href="/submit/inaugural/">창간호 논문 모집</a> 및 <a href="/submit/conference/">학술대회 논문 투고</a> 게시판으로 제출된 정보(성명, 소속, 직위, 이메일, 연락처, 저자 정보, 제출 파일)는 학회 Google 계정의 Google Drive·Google Sheets(Google LLC, 국외 서버)에 저장되며, 편집위원회와 학술위원회만 열람합니다. 심사·게재(발표) 절차 완료 후 3년간 보관한 뒤 파기합니다.</span>
+    <span data-lang="en"><strong>Paper submission boards:</strong> information submitted through the <a href="/submit/inaugural/">inaugural issue</a> and <a href="/submit/conference/">conference</a> boards (name, affiliation, position, email, phone, author list, uploaded files) is stored in the Society's Google Drive and Google Sheets (Google LLC, servers outside Korea) and is seen only by the editorial and academic committees. It is kept for 3 years after review and publication or presentation, then deleted.</span>
+  </p>
 </div>
 
 <div class="page-section">

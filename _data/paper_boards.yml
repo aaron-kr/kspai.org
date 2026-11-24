@@ -1,0 +1,114 @@
+# ═══════════════════════════════════════════════════════════════
+#  _data/paper_boards.yml — 논문 모집 게시판 (paper submission boards)
+#
+#  Each board renders with _includes/paper-board.html and posts to the
+#  Google Apps Script backend in scripts/submission-backend/ (see its
+#  README). Files land in the society's Google Drive and every submission
+#  becomes one row in the "KSPAI 논문투고 접수대장" Google Sheet.
+#
+#  endpoint: the Apps Script web-app URL (ends in /exec). While it is
+#            blank, the boards show an "email us" fallback instead of a form.
+#
+#  DEADLINES ARE IN TWO PLACES: here (what the page shows) and in
+#  scripts/submission-backend/Code.gs → BOARDS (what the server enforces).
+#  Change both. Times are KST (+09:00).
+#
+#  To close a board early: set closes to a past time here AND in Code.gs.
+# ═══════════════════════════════════════════════════════════════
+
+endpoint: "https://script.google.com/macros/s/AKfycbwjrDqa8E6TH-lYYbmD8tZHSoG4_1Z1HSxWDLzcOJkbUw01Ojkvtubia5riA68BL6WeTw/exec"
+max_file_mb: 15                 # per file; the server enforces the same limit
+max_total_mb: 25                # per submission (Apps Script request bodies cap near 50 MB of base64)
+contact_email: "paper@physicalai.or.kr"
+
+boards:
+
+  # ── 창간호 (journal inaugural issue) — temporary page ──
+  # After the inaugural issue, journal papers move to the 학술교육원
+  # online submission system. Keep this open through January 2027.
+  inaugural:
+    id: "inaugural"
+    prefix: "J"                 # submission IDs: J-001, J-002 …
+    kind: "journal"
+    title_ko: "「피지컬AI 연구」 창간호 논문 모집"
+    title_en: "Call for Papers — Physical AI Research, Inaugural Issue"
+    opens: "2026-11-24T00:00:00+09:00"
+    rounds:
+      - label_ko: "상시 접수"
+        label_en: "Rolling submissions"
+        closes: "2027-01-31T23:59:59+09:00"
+        display_ko: "2027년 1월 31일(일) 23:59 (상시 접수, 연장 가능)"
+        display_en: "Sunday, January 31, 2027, 23:59 KST (rolling; may be extended)"
+    template_url: "/assets/files/kspai-journal-template.hwp"
+    template_name: "KSPAI 논문양식.hwp"
+    types:
+      - { ko: "연구논문", en: "Research article" }
+      - { ko: "종설논문", en: "Review article" }
+      - { ko: "기타", en: "Other" }
+    files:
+      - key: "manuscript"
+        label_ko: "원고 (저자 정보 포함)"
+        label_en: "Manuscript (with author information)"
+        required: true
+        accept: ".hwp,.hwpx,.doc,.docx,.pdf"
+      - key: "blind"
+        label_ko: "심사용 원고 (저자 정보 삭제본)"
+        label_en: "Blind review copy (author information removed)"
+        required: true
+        accept: ".hwp,.hwpx,.doc,.docx,.pdf"
+      - key: "extra"
+        label_ko: "기타 첨부 (재학증명서 등, 선택)"
+        label_en: "Other attachment (e.g. proof of enrollment, optional)"
+        required: false
+        accept: ".hwp,.hwpx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.zip"
+
+  # ── 2027 동계학술대회 (conference) ──
+  conference:
+    id: "conference"
+    prefix: "C"                 # submission IDs: C-001, C-002 …
+    kind: "conference"
+    conference_id: "2027-winter"
+    title_ko: "2027 동계 공동학술대회 논문 투고"
+    title_en: "2027 Winter Joint Conference — Paper Submission"
+    opens: "2026-11-24T00:00:00+09:00"
+    rounds:
+      - label_ko: "1차 마감"
+        label_en: "First deadline"
+        closes: "2026-12-31T23:59:59+09:00"
+        display_ko: "2026년 12월 31일(목) 23:59"
+        display_en: "Thursday, December 31, 2026, 23:59 KST"
+      - label_ko: "2차 마감 (최종)"
+        label_en: "Second (final) deadline"
+        closes: "2027-01-07T23:59:59+09:00"
+        display_ko: "2027년 1월 7일(목) 23:59"
+        display_en: "Thursday, January 7, 2027, 23:59 KST"
+    template_url: "/assets/files/2026 공동하계학술대회 논문양식.hwp"
+    template_name: "공동학술대회 논문양식.hwp"
+    formats:
+      - { ko: "구두 발표 (현장)", en: "Oral (on-site)" }
+      - { ko: "구두 발표 (온라인)", en: "Oral (online)" }
+      - { ko: "포스터 발표 (현장)", en: "Poster (on-site)" }
+      - { ko: "포스터 발표 (온라인)", en: "Poster (online)" }
+      - { ko: "패들렛 발표", en: "Padlet" }
+    # KSPAI tracks come from _data/conferences.yml (topics); KLife tracks:
+    partner_society_ko: "삶의질정보학회"
+    partner_society_en: "KLife"
+    partner_tracks:
+      - { ko: "삶과 교육", en: "Life & Education" }
+      - { ko: "삶과 기술", en: "Life & Technology" }
+      - { ko: "삶과 간호", en: "Life & Nursing" }
+      - { ko: "삶과 치료", en: "Life & Therapy" }
+      - { ko: "삶과 보건", en: "Life & Public Health" }
+      - { ko: "삶과 복지", en: "Life & Welfare" }
+      - { ko: "삶과 관광문화", en: "Life, Tourism & Culture" }
+    files:
+      - key: "manuscript"
+        label_ko: "발표 논문 (2페이지)"
+        label_en: "Paper (2 pages)"
+        required: true
+        accept: ".hwp,.hwpx,.doc,.docx,.pdf"
+      - key: "extra"
+        label_ko: "기타 첨부 (포스터 초안 등, 선택)"
+        label_en: "Other attachment (e.g. draft poster, optional)"
+        required: false
+        accept: ".hwp,.hwpx,.doc,.docx,.pdf,.jpg,.jpeg,.png,.ppt,.pptx,.zip"

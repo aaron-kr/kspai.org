@@ -21,16 +21,16 @@ permalink: /resources/
       <div class="download-card-body">
         <div class="download-badge"><span data-lang="ko">학술지 논문 양식</span><span data-lang="en">Journal Template</span></div>
         <div class="download-card-title">
-          <span data-lang="ko">피지컬 AI 연구 (JKPAI) 논문 양식 — HWP</span>
+          <span data-lang="ko">피지컬AI 연구 (JKPAI) 논문 양식 — HWP</span>
           <span data-lang="en">Physical AI Research (JKPAI) Paper Template — HWP</span>
         </div>
         <p class="download-card-desc">
-          <span data-lang="ko">학술지 「피지컬 AI 연구」에 투고하는 논문에 사용합니다.</span>
-          <span data-lang="en">For papers submitted to the journal <em>Physical AI Research</em> (JKPAI).</span>
+          <span data-lang="ko">학술지 「피지컬AI 연구」에 투고하는 논문에 사용합니다. (2026년 11월 개정)</span>
+          <span data-lang="en">For papers submitted to the journal <em>Physical AI Research</em> (JKPAI). (Revised November 2026)</span>
         </p>
       </div>
       <div class="download-card-actions">
-        <a href="/assets/files/kspai-journal-template.hwp" class="btn btn-primary" download>
+        <a href="/assets/files/kspai-journal-template.hwp" class="btn btn-primary" download="KSPAI 논문양식.hwp">
           <span data-lang="ko">↓ 학술지 양식</span>
           <span data-lang="en">↓ Journal Template</span>
         </a>
