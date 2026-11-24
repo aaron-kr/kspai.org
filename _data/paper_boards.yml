@@ -72,16 +72,21 @@ boards:
     title_en: "2027 Winter Joint Conference — Paper Submission"
     opens: "2026-11-24T00:00:00+09:00"
     rounds:
-      - label_ko: "1차 마감"
-        label_en: "First deadline"
+      - label_ko: "접수 마감"
+        label_en: "Submissions close"
         closes: "2026-12-31T23:59:59+09:00"
         display_ko: "2026년 12월 31일(목) 23:59"
         display_en: "Thursday, December 31, 2026, 23:59 KST"
-      - label_ko: "2차 마감 (최종)"
-        label_en: "Second (final) deadline"
-        closes: "2027-01-07T23:59:59+09:00"
-        display_ko: "2027년 1월 7일(목) 23:59"
-        display_en: "Thursday, January 7, 2027, 23:59 KST"
+      # 2차 모집 (Jan 7, 2027) is planned but NOT announced yet — the society asked
+      # not to post it. When announced: rename the round above to "1차 마감" /
+      # "First deadline", uncomment below, uncomment the matching line in
+      # Code.gs (and redeploy), and restore the 2차 mentions in conferences.yml,
+      # _conferences/2027-winter.md, the banner and the news post.
+      # - label_ko: "2차 마감 (최종)"
+      #   label_en: "Second (final) deadline"
+      #   closes: "2027-01-07T23:59:59+09:00"
+      #   display_ko: "2027년 1월 7일(목) 23:59"
+      #   display_en: "Thursday, January 7, 2027, 23:59 KST"
     template_url: "/assets/files/2026 공동하계학술대회 논문양식.hwp"
     template_name: "공동학술대회 논문양식.hwp"
     formats:

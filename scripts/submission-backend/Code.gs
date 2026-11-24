@@ -52,8 +52,9 @@ var BOARDS = {
     kind: 'conference',
     opens: '2026-11-24T00:00:00+09:00',
     rounds: [
-      { label: '1차', closes: '2026-12-31T23:59:59+09:00' },
-      { label: '2차', closes: '2027-01-07T23:59:59+09:00' }
+      { label: '1차', closes: '2026-12-31T23:59:59+09:00' }
+      // 2차 not announced yet; when it is, add the line below (and redeploy):
+      // , { label: '2차', closes: '2027-01-07T23:59:59+09:00' }
     ],
     files: {
       manuscript: { label: '논문', required: true,  ext: ['hwp', 'hwpx', 'doc', 'docx', 'pdf'] },

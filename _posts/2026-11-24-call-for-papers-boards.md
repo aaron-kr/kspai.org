@@ -3,9 +3,9 @@ layout: post
 title: "논문 모집 안내 — 학술지 「피지컬 AI 연구」 창간호 · 2027 동계 공동학술대회"
 title_ko: "논문 모집 안내 — 학술지 「피지컬 AI 연구」 창간호 · 2027 동계 공동학술대회"
 title_en: "Call for Papers — Physical AI Research Inaugural Issue & 2027 Winter Joint Conference"
-excerpt_ko: "학술지 창간호 논문과 2027 동계 공동학술대회 발표 논문을 학회 홈페이지 게시판에서 온라인으로 접수합니다. 학술대회 1차 마감 12월 31일, 2차 마감 1월 7일."
-excerpt_en: "Papers for the journal's inaugural issue and the 2027 Winter Joint Conference can now be submitted online. Conference deadlines: December 31 (first) and January 7 (final)."
-description: "한국피지컬인공지능학회 논문 모집 공지 — 학술지 「피지컬 AI 연구」 창간호 논문 모집(2027년 1월까지) 및 2027 동계 공동학술대회 발표 논문 투고(1차 마감 2026년 12월 31일, 2차 마감 2027년 1월 7일)."
+excerpt_ko: "학술지 창간호 논문과 2027 동계 공동학술대회 발표 논문을 학회 홈페이지 게시판에서 온라인으로 접수합니다. 학술대회 접수 마감은 12월 31일입니다."
+excerpt_en: "Papers for the journal's inaugural issue and the 2027 Winter Joint Conference can now be submitted online. The conference deadline is December 31."
+description: "한국피지컬인공지능학회 논문 모집 공지 — 학술지 「피지컬 AI 연구」 창간호 논문 모집(2027년 1월까지) 및 2027 동계 공동학술대회 발표 논문 투고(2026년 12월 31일 마감)."
 permalink: /news/call-for-papers/
 tag_ko: "공지사항"
 tag_en: "NOTICE"
@@ -16,8 +16,8 @@ date: 2026-11-24
 expires: 2027-02-01
 
 event:
-  date_ko: "학술대회: 1차 12/31 · 2차 1/7 (23:59)<br>창간호: 2027년 1월 31일까지"
-  date_en: "Conference: Dec 31 / Jan 7 (23:59 KST)<br>Inaugural issue: until January 31, 2027"
+  date_ko: "학술대회: 12월 31일 (23:59)<br>창간호: 2027년 1월 31일까지"
+  date_en: "Conference: December 31 (23:59 KST)<br>Inaugural issue: until January 31, 2027"
   contact_ko: "paper@kspai.org"
   contact_en: "paper@kspai.org"
 links:
@@ -51,8 +51,7 @@ links:
 
 ## 2. 2027 동계 공동학술대회 발표 논문 투고
 
-- **1차 마감** : 2026년 12월 31일(목) 23:59
-- **2차 마감 (최종)** : 2027년 1월 7일(목) 23:59
+- **접수 마감** : 2026년 12월 31일(목) 23:59
 - **학술대회** : 2027년 1월 28일(목) ~ 29일(금), 전주교육대학교 교사교육센터
 - **분량** : 2페이지 (3페이지부터 장당 1만원 추가)
 - **발표 형식** : 구두 · 포스터 · 패들렛 (현장/온라인)
@@ -82,8 +81,7 @@ This board is a temporary page for the inaugural issue. Later issues will use th
 
 ## 2. 2027 Winter Joint Conference
 
-- **First deadline** : Thursday, December 31, 2026, 23:59 KST
-- **Second (final) deadline** : Thursday, January 7, 2027, 23:59 KST
+- **Deadline** : Thursday, December 31, 2026, 23:59 KST
 - **Conference** : January 28–29, 2027, Teacher Education Center, Jeonju National University of Education
 - **Length** : 2 pages (10,000 KRW per additional page from page 3)
 - **Formats** : oral, poster, Padlet (on-site or online)

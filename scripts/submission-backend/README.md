@@ -56,7 +56,7 @@ Deadlines live in two places. Change both:
 
 Current settings (KST):
 - **창간호:** open until 2027-01-31 23:59 (temporary page; the 학술교육원 system takes over after the first issue).
-- **학술대회:** 1차 2026-12-31 23:59, 2차 (final) 2027-01-07 23:59. The `차수` column records which round each paper arrived in.
+- **학술대회:** closes 2026-12-31 23:59. A 2차 round (2027-01-07) is planned but not announced; it is commented out in both files. The `차수` column records which round each paper arrived in.
 
 To add another board (e.g. next summer's conference), add an entry to both `BOARDS` and `paper_boards.yml`, run `setup()` again (it only creates what's missing), redeploy a new version, and create a page that uses the paper-board include.
 

@@ -16,7 +16,7 @@ permalink: /submit/inaugural/
   </h2>
   <p class="page-section-text">
     <span data-lang="ko">한국피지컬인공지능학회는 학술지 <strong>「피지컬 AI 연구」(Physical AI Research, JKPAI)</strong> 창간호에 실을 논문을 모집합니다. 피지컬 AI 및 관련 융합 분야의 연구논문과 종설논문을 받으며, 아래 양식으로 작성하여 이 페이지에서 바로 제출하시면 됩니다.</span>
-    <span data-lang="en">The Korean Society for Physical Artificial Intelligence invites papers for the first issue of its journal, <strong><em>Physical AI Research</em> (JKPAI)</strong>. Research and review articles in Physical AI and related fields are welcome. Prepare your paper with the template below and submit it on this page.</span>
+    <span data-lang="en">The Korean Society for Physical AI invites papers for the first issue of its journal, <strong><em>Physical AI Research</em> (JKPAI)</strong>. Research and review articles in Physical AI and related fields are welcome. Prepare your paper with the template below and submit it on this page.</span>
   </p>
 
   <div class="submit-note">

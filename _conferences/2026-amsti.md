@@ -31,7 +31,7 @@ permalink: /conferences/2026-amsti/
       <p class="conf-prose-sign">2026년 11월<br>강원대학교 총장 <strong>정재연</strong></p>
     </div>
     <div data-lang="en">
-      <p>Kangwon National University, together with Gangwon State, the Gangwon Research Institute, the KNU Anchor Project Group, the KNU SW-Centered University Project Group, and the Korean Society for Physical Artificial Intelligence, will hold the <em>2026 Advanced Military Science &amp; Convergence Technology Conference</em> on Thursday–Friday, November 5–6, 2026.</p>
+      <p>Kangwon National University, together with Gangwon State, the Gangwon Research Institute, the KNU Anchor Project Group, the KNU SW-Centered University Project Group, and the Korean Society for Physical AI, will hold the <em>2026 Advanced Military Science &amp; Convergence Technology Conference</em> on Thursday–Friday, November 5–6, 2026.</p>
       <p>Day 1 features the opening ceremony, keynote lectures, and paper sessions; Day 2 continues with paper sessions. About 60 papers will be presented across 9 tracks, including Defense AI. We hope the conference will be a place to share research in military science, convergence technology, and defense; to expand exchange and cooperation among civilian, government, military, industry, academic, and research communities; and to explore together the future of the defense industry in the Gangwon region.</p>
       <p>We sincerely invite you to attend and look forward to your interest and participation.</p>
       <p class="conf-prose-sign">November 2026<br><strong>Jae-yeon Jeong</strong>, President, Kangwon National University</p>

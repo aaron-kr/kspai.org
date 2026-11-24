@@ -38,7 +38,7 @@ This file gives a new Claude instance full context on the KSPAI website project 
 ## What this project is
 
 Two sister Korean academic organizations share one website:
-- **한국피지컬인공지능학회** (Korean Society for Physical Artificial Intelligence, KSPAI) — `kspai.org`. These are the official names: never "Korean Society for Physical AI", "…of Physical…", or 한국피지컬AI학회.
+- **한국피지컬인공지능학회** (Korean Society for Physical AI, KSPAI) — `kspai.org`. These are the official names (the logo is designed around them): not "Korean Society for Physical Artificial Intelligence" (tried and reverted 2026-11-24 as too long), not "…of Physical…", not 한국피지컬AI학회.
 - **한국피지컬인공지능교육연구소** (Korean Institute of Physical AI Education & Research)
 
 The site is fully bilingual (Korean/English), built with Jekyll, hosted on GitHub Pages at `https://github.com/aaron-kr/kspai.org` (originally named `physical-ai-home`).
@@ -321,7 +321,7 @@ The old "설립준비위원회" placeholder `status:` block is commented out at 
 
 ## Journal & submission system
 
-The journal `피지컬 AI 연구` (Physical AI Research, JKPAI). The Nov 2026 HWP template spells it `피지컬AI 연구`, but the site spelling (with a space) is the official one:
+The journal `피지컬 AI 연구` (Physical AI Research, JKPAI). The Nov 2026 HWP template (sent by the society, correct as is) writes `피지컬AI 연구`:
 - **Submission email:** `paper@kspai.org` (still accepted)
 - **Email subject format:** `[JKPAI 논문투고] 논문 제목`
 - **Template location:** `assets/files/kspai-journal-template.hwp` (replace the file in place to update; links use `download="KSPAI 논문양식.hwp"`)

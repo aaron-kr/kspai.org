@@ -5,7 +5,7 @@ title_ko: "2027 동계 공동학술대회 논문 투고"
 title_en: "2027 Winter Joint Conference — Paper Submission"
 subtitle_ko: 한국피지컬인공지능학회·삶의질정보학회 공동학술대회 발표 논문 접수
 subtitle_en: Paper submission for the KSPAI–KLife Joint Conference
-description: "2027 동계 공동학술대회(2027년 1월 28-29일, 전주교육대학교) 발표 논문 온라인 접수 — 1차 마감 2026년 12월 31일, 2차 마감 2027년 1월 7일."
+description: "2027 동계 공동학술대회(2027년 1월 28-29일, 전주교육대학교) 발표 논문 온라인 접수 — 접수 마감 2026년 12월 31일."
 permalink: /submit/conference/
 ---
 

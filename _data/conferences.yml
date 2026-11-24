@@ -42,15 +42,10 @@ upcoming:
 
     # ── Key Dates (from the CFP poster v2.2, Nov 2026) ──
     key_dates:
-      - label_ko: "발표문 접수 (1차 마감)"
-        label_en: "Paper Submission (first deadline)"
+      - label_ko: "발표문 접수"
+        label_en: "Paper Submission"
         date_ko: "2026-12-01 (화) ~ 12-31 (목) 23:59"
         date_en: "Dec 1 – Dec 31, 2026, 23:59 KST"
-        status: "confirmed"
-      - label_ko: "2차 마감 (최종)"
-        label_en: "Second (final) deadline"
-        date_ko: "2027-01-07 (목) 23:59"
-        date_en: "January 7, 2027, 23:59 KST"
         status: "confirmed"
       - label_ko: "사전등록 마감"
         label_en: "Early Registration Deadline"
@@ -67,13 +62,12 @@ upcoming:
     description_ko: >
       한국피지컬인공지능학회와 삶의질정보학회가 전주교육대학교와 함께 개최하는 제2회 공동학술대회입니다.
       전주교육대학교 교사교육센터에서 이틀간 온라인·현장 구두 발표, 포스터 발표, 패들렛 발표로 진행됩니다.
-      발표문은 2026년 12월 1일부터 접수하며, 1차 마감은 12월 31일, 2차(최종) 마감은 2027년 1월 7일입니다.
+      발표문은 2026년 12월 1일부터 31일까지 접수합니다.
     description_en: >
       The 2nd KSPAI–KLife Joint Conference, co-hosted by KSPAI and the Korea Quality of Life Information
       Society together with Jeonju National University of Education. Held over two days at the university's
       Teacher Education Center, with online and on-site oral, poster, and Padlet presentations.
-      Papers are accepted from December 1, 2026; the first deadline is December 31 and the second (final)
-      deadline is January 7, 2027.
+      Papers are accepted from December 1 to 31, 2026.
 
     # ── Topics (KSPAI tracks — KLife tracks are listed on the conference page) ──
     topics:
@@ -271,7 +265,7 @@ past:
         name_en: "KNU SW-Centered University Project Group"
         url: ""
       - name_ko: "한국피지컬인공지능학회"
-        name_en: "Korean Society for Physical Artificial Intelligence (KSPAI)"
+        name_en: "Korean Society for Physical AI (KSPAI)"
         url: ""
     organizers:
       - name_ko: "강원대학교 첨단군사과학기술연구소 (AMSTI)"
@@ -342,7 +336,7 @@ past:
       발표하고 산학연 전문가들과 교류하는 자리입니다. 기조강연, 구두 발표, 포스터 세션,
       특별 워크숍 등으로 구성될 예정이며, 한국삶의질정보학회와 공동 개최합니다.
     description_en: >
-      The inaugural conference of the Korean Society for Physical Artificial Intelligence, bringing together
+      The inaugural conference of the Korean Society for Physical AI, bringing together
       researchers from academia, industry, and research institutes to present and discuss
       the latest advances in Physical AI. The program will include keynote talks, oral
       presentations, poster sessions, and special workshops. Co-hosted with the Korea
